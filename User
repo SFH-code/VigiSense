@@ -1,9 +1,0 @@
-typedef long long phoneNum;
-typedef string name;
-typedef string email;
-
-class userProfile{
-    public:
-    name user;
-    std::map<name, email, phoneNum> contactInfo;
-}
