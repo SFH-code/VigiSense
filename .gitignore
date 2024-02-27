@@ -1,1 +1,32 @@
-#xcode specificbuild/**.pbxuser*.mode2v3*.mode1v3*.perspective*.perspectivev3*~.nib#ignore private workspace stuff added by Xcode4xcuserdataproject.xcworkspace## generic files to ignore*~*.lock*.DS_Store*.swp*.out# Compiled Object files*.slo*.lo*.o*.obj# Compiled Dynamic libraries*.so*.dylib*.dll# Fortran module files*.mod# Compiled Static libraries*.lai*.la*.a*.lib# Executables*.exe*.out*.app
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
