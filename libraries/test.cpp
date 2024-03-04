@@ -16,17 +16,19 @@ int main(void) {
 	}
 	cout << "Device found (revision: " << result << ")!" << endl;
 
+	// only call for setup, setup for A_FULL INT mode, led mode 2 (red+IR)
 	heartSensor.setup();
+
 	//heartSensor.softReset();
-	heartSensor.setPulseAmplitudeRed(0x0A);
-	while (1) {
-		//cout << "Temperature: " << heartSensor.readTemperatureF() << endl;
-		cout << "IR: " << heartSensor.getIR();
-		cout << ", RED: " << heartSensor.getRed();
-		cout << endl;
-		usleep(500);
-		//break;
-	}
+	// heartSensor.setPulseAmplitudeRed(0x0A);
+	// while (1) {
+	// 	//cout << "Temperature: " << heartSensor.readTemperatureF() << endl;
+	// 	cout << "IR: " << heartSensor.getIR();
+	// 	cout << ", RED: " << heartSensor.getRed();
+	// 	cout << endl;
+	// 	usleep(500);
+	// 	//break;
+	// }
 	//heartSensor.shutDown();
 
 	return 0;
