@@ -1,3 +1,20 @@
+/***************************************************
+  This is a library written for the Maxim MAX30102 Optical Smoke Detector
+  It should also work with the MAX30102. However, the MAX30102 does not have a Green LED.
+
+  These sensors use I2C to communicate, as well as a single (optional)
+  interrupt line that is not currently supported in this driver.
+
+  Written by Garettluu (https://github.com/garrettluu)
+  BSD license, all text above must be included in any redistribution.
+ *****************************************************/
+
+/*
+Edited by Yu Kit Foo, to include data extraction using Interrupts
+Functions changed: setup(), begin(), getRed(), getIR(), hasSample(), dataReady()
+*/
+
+#include <pigpio.h>
 #include <chrono>
 #include <cstring>
 #include <unistd.h>
@@ -156,6 +173,14 @@ int MAX30102::begin(uint32_t i2cSpeed, uint8_t i2cAddr) {
 		return -3;
 	}
 
+
+	int cfg = gpioCfgGetInternals();
+	cfg |= PI_CFG_NOSIGHANDLER;
+	gpioCfgSetInternals(cfg);
+	int r = gpioInitialise();
+	if (r < 0) {
+		printf("Cannot init pigpio.");
+	}
 	return i2c_smbus_read_byte_data(fd, REG_REVISIONID);
 }
 
@@ -459,7 +484,19 @@ uint8_t MAX30102::getRevisionID() {
 }
 
 
-// Setup the Sensor
+/**
+ * Setup the Sensor
+ * use led mode 2 where ir and red is used. Default averages 4 samples, with samepleRate of 400, resulting in effective sampleRate of 100, giving a period of 10ms between each averaged sample. Meaning that the 32 sample FIFO will fill up in approx 320ms
+ * 
+ * Defaults: 
+ * 	powerLevel = 0x1F (6.2mA)
+ * 	sampleAverage = 4
+ * 	ledMode = 2
+ * 	sampleRate = 400
+ * 	pulseWidth = 411
+ * 	adcRange = 4096
+ * 
+*/
 void MAX30102::setup(uint8_t powerLevel, uint8_t sampleAverage, uint8_t ledMode, int sampleRate, int pulseWidth, int adcRange) {
 	// Reset all configuration, threshold, and data registers to POR values
 	softReset();
@@ -478,9 +515,12 @@ void MAX30102::setup(uint8_t powerLevel, uint8_t sampleAverage, uint8_t ledMode,
 	// Allow FIFO to wrap/roll over
 	enableFIFORollover();
 
+	// Set interrupt mode into FIFO almost full flag
+	enableAFULL();
+
 	// Mode Configuration //
-	if (ledMode == 3) setLEDMode(LEDMODE_MULTILED); // Watch all three led channels [TODO] there are only 2!
-	else if (ledMode == 2) setLEDMode(LEDMODE_REDIRONLY);
+	// use case is for LED mode 3 with red and IR
+	if (ledMode == 2) setLEDMode(LEDMODE_REDIRONLY);
 	else setLEDMode(LEDMODE_REDONLY);
 	activeLEDs = ledMode; // used to control how many bytes to read from FIFO buffer
 	
@@ -519,6 +559,12 @@ void MAX30102::setup(uint8_t powerLevel, uint8_t sampleAverage, uint8_t ledMode,
 
 	// Reset the FIFO before we begin checking the sensor.
 	clearFIFO();
+
+	// Add interrupt callback function
+	// ISR timeout needs to be less than the time taken to fill out half of the FIFO
+	gpioSetMode(DEFAULT_INT_GPIO,PI_INPUT);
+	gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,320,gpioISR,(void*)this);
+
 }
 
 
@@ -536,24 +582,20 @@ uint8_t MAX30102::available(void)
 
 /**
  * Report the most recent Red value.
+ * change to only return without calling checks
  */
 uint32_t MAX30102::getRed(void)
 {
-	if(safeCheck(250))
-		return (sense.red[sense.head]);
-	else
-		return(0);
+	return (sense.red[sense.head]);
 }
 
 /**
  * Report the most recent IR value.
+ * change to only return without calling checks
  */
 uint32_t MAX30102::getIR(void)
 {
-	if(safeCheck(250))
-		return (sense.IR[sense.head]);
-	else
-		return(0);
+	return (sense.IR[sense.head]);
 }
 
 /**
@@ -581,6 +623,16 @@ void MAX30102::nextSample(void)
 		sense.tail++;
 		sense.tail %= STORAGE_SIZE;
 	}
+}
+
+void MAX30102::hasSample() {
+    printf("%" PRIu32 "\n",getIR());
+    printf("%" PRIu32 "\n",getRed());
+}
+
+void MAX30102::dataReady() {
+	check();
+	hasSample();
 }
 
 uint16_t MAX30102::check(void) {

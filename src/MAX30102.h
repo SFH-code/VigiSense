@@ -1,5 +1,23 @@
+/***************************************************
+  This is a library written for the Maxim MAX30102 Optical Smoke Detector
+  It should also work with the MAX30102. However, the MAX30102 does not have a Green LED.
+
+  These sensors use I2C to communicate, as well as a single (optional)
+  interrupt line that is not currently supported in this driver.
+
+  Written by Garettluu (https://github.com/garrettluu)
+  BSD license, all text above must be included in any redistribution.
+ *****************************************************/
+
+/*
+Edited by Yu Kit Foo, to include data extraction using Interrupts
+Functions changed: changed DEFAULT_INT_GPIO, added hasSample(), dataReady(), gpioISR()
+*/
+
 #include <cstdint>
 #include <vector>
+#include <stdio.h>
+#include <inttypes.h>
 
 #define MAX30102_ADDRESS	0x57
 
@@ -7,6 +25,9 @@
 #define I2C_SPEED_FAST		400000
 
 #define I2C_BUFFER_LENGTH	32
+
+// define the GPIO used for the sensor here
+#define DEFAULT_INT_GPIO	7
 
 class MAX30102 {
 	public:
@@ -83,6 +104,9 @@ class MAX30102 {
 		uint8_t getRevisionID();
 		uint8_t readPartID();
 
+
+		virtual void hasSample();
+
 		// Setup the sensor with user selectable settings
 		void setup(uint8_t powerLevel = 0x1F, uint8_t sampleAverage = 4, uint8_t ledMode = 2, int sampleRate = 400, int pulseWidth = 411, int adcRange = 4096);
 	private:
@@ -107,4 +131,10 @@ class MAX30102 {
 			uint8_t tail;
 		} sense_struct;
 		sense_struct sense;
+
+		void dataReady();
+
+		static void gpioISR(int, int, uint32_t, void* userdata) {
+			((MAX30102*)userdata)->dataReady();
+		}
 };
