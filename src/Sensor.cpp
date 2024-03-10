@@ -1,6 +1,8 @@
+#include <iostream>
 #include <vector>
 #include <list>
 #include <string>
+#include "MAX30102.h"
 
 struct symptomRange{
     float min;
@@ -15,6 +17,20 @@ class sensor{ //Should this be specific to a sensor or should it be a general cl
         virtual float processInput() { return 0; } //Processes input from sensor
 
     public:
+        // Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
+        // Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
+        sensor() {
+	    if (_sensor->begin() < 0) { //begins I2C communication with the sensor
+		std::cout << "Failed i2c." << std::endl;
+		// Failed i2c.
+		throw;
+	}
+//	sensor->setup(0x2F);
+	_sensor->setup(); // Configures the sensor with default settings & setup the interrupt to fire when new buffer is almost full
+}
+
+        MAX30102* _sensor; // Pointer to the MAX30102 sensor object
+
         virtual std::vector<symptomRange> symptomRanges() { return {}; } //Contains the ranges of the biosignal and the symptoms associated with it.
 
         virtual float critHigh() { return 0; } //Sets the critical high value of the biosignal
