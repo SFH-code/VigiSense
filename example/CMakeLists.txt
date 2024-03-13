@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.1.3)
 project(testExample VERSION 1.0 LANGUAGES CXX)
 
-include_directories("../src")
-add_subdirectory("../src")
-add_executable($(PROJECT_NAME) test.cpp)
-target_link_libraries($(PROJECT_NAME) max30102)
+
+add_executable(testExample test.cpp)
+target_link_directories(testExample PRIVATE ${CMAKE_SOURCE_DIR}/../src/build)
+target_link_libraries(testExample libmax30102)
