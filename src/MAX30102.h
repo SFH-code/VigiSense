@@ -13,7 +13,7 @@
 Edited by Yu Kit Foo, to include data extraction using Interrupts
 Functions changed: changed DEFAULT_INT_GPIO, added hasSample(), dataReady(), gpioISR()
 */
-
+#pragma once
 #include <cstdint>
 #include <vector>
 #include <stdio.h>

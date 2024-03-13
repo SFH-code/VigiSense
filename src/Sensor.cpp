@@ -33,7 +33,7 @@ HighPassFilter hpf(0.08, M_PI);
 	_sensor->shutDown();
     }
 
-    int sensor::HRcalc() {
+    void sensor::HRcalc() {
 	    if (runningHR) return;
 	    runningHR = true;
 

@@ -16,7 +16,7 @@ class sensor{
 		int getLatestIRHeartRate();
 		int getLatestRedHeartRate();
 		float getLatestTemperatureF();
-		int HRcalc();
+		void HRcalc();
 		void stopHRcalc();
 		int getSpO2();
 	private:
