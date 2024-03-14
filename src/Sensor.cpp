@@ -307,6 +307,9 @@ int heartRateMeasure::getSafeIRHeartRate() {
 		}
 	}
 	if (bpmCount > 0) avgBPM /= bpmCount;
+	if (avgBPM<critLow||avgBPM>critHigh){
+		//insert critical response interrupt
+	}
 	return (avgBPM == 0) ? -1 : avgBPM;
 }
 
@@ -319,6 +322,9 @@ int sp02Measure::getSpO2() {
 		
 	}
 	if (SPO2Count > 0) avgSPO2 /= SPO2Count;
+	if(avgSPO2<critLow){
+		//insert critical response interrupt
+	}
 	return (avgSPO2 == 0) ? -1 : avgSPO2;
 }
 

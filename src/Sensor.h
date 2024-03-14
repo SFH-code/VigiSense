@@ -71,11 +71,14 @@ class sensor{
 
 class sp02Measure : public sensor{
 	public:
+		float critLow = 88;
 		int getSpO2();
 };
 
 class heartRateMeasure : public sensor{
 	public:
+		float critHigh = 120;
+		float critLow = 60;
 		int getSafeIRHeartRate();
 		int getLatestIRHeartRate();
 		int getLatestRedHeartRate();
