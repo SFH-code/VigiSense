@@ -285,7 +285,7 @@ void sensor::resetCalculations() {
 /**
  * Returns the latest calculated IR heart rate. (unchecked!)
  */
-int sensor::getLatestIRHeartRate() {
+int heartRateMeasure::getLatestIRHeartRate() {
 	if (latestIRBPM == 0) {
 		return -1;
 	}
@@ -296,7 +296,7 @@ int sensor::getLatestIRHeartRate() {
  * Returns the average measured heart rate.
  * This method ignores heart rate values greater than 150 or lower than 45.
  */
-int sensor::getSafeIRHeartRate() {
+int heartRateMeasure::getSafeIRHeartRate() {
 	int avgBPM = 0;
 	int bpmCount = 0;
 	for (int i = 0; i < BPM_BUFFER_SIZE; i++) {
@@ -310,7 +310,7 @@ int sensor::getSafeIRHeartRate() {
 	return (avgBPM == 0) ? -1 : avgBPM;
 }
 
-int sensor::getSpO2() {
+int sp02Measure::getSpO2() {
 	int avgSPO2 = 0;
 	int SPO2Count = 0;
 	for (int i = 0; i < SPO2_BUFFER_SIZE; i++) {
@@ -325,7 +325,7 @@ int sensor::getSpO2() {
 /**
  * Returns the latest calculated Red heart rate. (unchecked!)
  */
-int sensor::getLatestRedHeartRate() {
+int heartRateMeasure::getLatestRedHeartRate() {
 	if (latestRedBPM == 0) {
 		return -1;
 	}

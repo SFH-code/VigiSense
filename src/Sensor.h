@@ -12,14 +12,12 @@ class sensor{
 		//Check which functions are fine as is and which need editing/removing
 		void begin();
 		void stop();
-		int getSafeIRHeartRate();
-		int getLatestIRHeartRate();
-		int getLatestRedHeartRate();
+		
 		float getLatestTemperatureF();
 		void HRcalc();
 		void stopHRcalc();
-		int getSpO2();
-	private:
+
+	protected:
 		MAX30102* _sensor;
 		bool running = false;
 		bool runningHR = false;
@@ -69,4 +67,16 @@ class sensor{
 		int32_t Derivative(int32_t data);
 		int32_t getPeakThreshold();
 		bool peakDetect(int32_t data);
+};
+
+class sp02Measure : public sensor{
+	public:
+		int getSpO2();
+};
+
+class heartRateMeasure : public sensor{
+	public:
+		int getSafeIRHeartRate();
+		int getLatestIRHeartRate();
+		int getLatestRedHeartRate();
 };
