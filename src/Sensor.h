@@ -2,6 +2,12 @@
 #include <chrono>
 #include "MAX30102.h"
 
+struct symptomRange{
+    float min;
+    float max;
+    std::string symptom;
+}
+
 //Code refactored from HeartRate.h
 
 class sensor{
@@ -71,8 +77,13 @@ class sensor{
 
 class sp02Measure : public sensor{
 	public:
+		std::vector<symptomRange> symptomRanges {
+			{0,88,"Critically Low Oxygen concentration"},
+			{88,92,"Concerningly Low Oxygen Concentration"},
+			{92,100,"Healthy Oxygen Concentration"}};
 		float critLow = 88;
 		int getSpO2();
+		std::string determineSymptom(float baseline);
 };
 
 class heartRateMeasure : public sensor{

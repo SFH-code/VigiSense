@@ -328,6 +328,17 @@ int sp02Measure::getSpO2() {
 	return (avgSPO2 == 0) ? -1 : avgSPO2;
 }
 
+std::string sp02Measure::determineSymptom(float baseline){
+	int spO2 = this->getSpO2();
+	for (int i = 0; i < symptomRanges.size(); ++i){
+            if (spO2>symptomRanges[i].min && spO2<symptomRanges[i].max){
+                return symptomRanges[i].symptom;
+            }
+        }    
+    return "undefined range";
+
+}
+
 /**
  * Returns the latest calculated Red heart rate. (unchecked!)
  */
