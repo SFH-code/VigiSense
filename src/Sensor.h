@@ -16,8 +16,10 @@ class sensor{
 		int getLatestIRHeartRate();
 		int getLatestRedHeartRate();
 		float getLatestTemperatureF();
-		void HRcalc();
-		void stopHRcalc();
+        void fillBufferThread();
+        void continuousGetSPO2HR();
+        void HRcalc();
+        void stopHRcalc();
 		int getSpO2();
 	private:
 		MAX30102* _sensor;
@@ -69,4 +71,5 @@ class sensor{
 		int32_t Derivative(int32_t data);
 		int32_t getPeakThreshold();
 		bool peakDetect(int32_t data);
+
 };

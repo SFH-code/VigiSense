@@ -6,61 +6,143 @@
 #include "MAX30102.h"
 #include "Sensor.h"
 #include "DigitalFilters.h"
+#include "SPO2.h"
 
 //Some code refactored from HeartRate.cpp
         
 LowPassFilter lpf(0.08, M_PI);
 HighPassFilter hpf(0.08, M_PI);
+bool crest = false;
+bool trough = false;
+uint8_t dataBeenIncreasing = 0;
+uint8_t nextPastPeaksIndex = 0;
+//R value calculation from sensor input
+float R;
+//SpO2 value calculation from R value
+float SpO2;
 
-        // Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
-        // Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
-    sensor::sensor() {
-	    if (_sensor->begin() < 0) { //begins I2C communication with the sensor
-		std::cout << "Failed i2c." << std::endl;
-		// Failed i2c.
-		throw;
-	    }
-        //	sensor->setup(0x2F);
-	    _sensor->setup(); // Configures the sensor with default settings & setup the interrupt to fire when new buffer is almost full
+// new calculation for SPO2
+int32_t spo2;
+int8_t validSPO2;
+int32_t heartRate;
+int8_t validHeartRate;
+const int32_t bufferLength = 100;
+uint32_t irBuffer[100];
+uint32_t redBuffer[100];
+
+    // Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
+    // Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
+sensor::sensor() {
+    if (_sensor->begin() < 0) { //begins I2C communication with the sensor
+    std::cout << "Failed i2c." << std::endl;
+    // Failed i2c.
+    throw;
     }
+    //	sensor->setup(0x2F);
+    _sensor->setup(); // Configures the sensor with default settings & setup the interrupt to fire when new buffer is almost full
+}
 
-        // Destructor
-    sensor::~sensor() {
-	    // Stop calculation if running.
-	running = false;
+    // Destructor
+sensor::~sensor() {
+    // Stop calculation if running.
+    running = false;
 
-	    // Shutdown sensor->
-	_sensor->shutDown();
-    }
+    // Shutdown sensor->
+    _sensor->shutDown();
+}
 
-    void sensor::HRcalc() {
-	    if (runningHR) return;
-	    runningHR = true;
+void sensor::begin() {
+	if (runningHR) return;
+	runningHR = true;
+	// define startup function to fill buffer
+	std::thread fillbuffer(&sensor::fillBufferThread, this);
+	fillbuffer.detach();
+	// obtain first measurement of SPO2
+	maxim_heart_rate_and_oxygen_saturation(
+		irBuffer, 
+		bufferLength, 
+		redBuffer, 
+		&spo2, 
+		&validSPO2, 
+		&heartRate, 
+		&validHeartRate);
+	
+	// start thread for calculating continuous HR and SPO2
+	std::thread SPO2andHRthread(&sensor::continuousGetSPO2HR, this);
+	fillbuffer.detach();
+	
+}
 
-        // Init last values.
-	    irLastValue = -999;
-	    redLastValue = -999;
-	    // Init local maxima/minima for peak detection
-	    localMaximaIR = -9999;
-	    localMinimaIR = 9999;
-	    // Get current time.
-	    auto timeCurrent = std::chrono::system_clock::now();
-	    // Init last heartbeat times.
-	    timeLastIRHeartBeat = timeCurrent;
-	    timeLastRedHeartBeat = timeCurrent;
+// define begin loop thread to fill buffer
+void sensor::fillBufferThread() {
+	if (runningHR == false) return;
+	for (int i = 0; i < bufferLength; i++) {
+		// has blocking IO
+		while (_sensor->available() == false)
+		_sensor->check();
+		redBuffer[i] = _sensor->getRed();
+		irBuffer[i] = _sensor->getIR();
+		_sensor->nextSample();
+	}
+}
 
-		std::thread t1(&sensor::loopThread, this);
-		t1.detach();
+void sensor::continuousGetSPO2HR() {
+	if (runningHR == false) return;
+	// reset buffer to shift 75 values forward
+	for (int i = 25; i < bufferLength; i++) {
+		redBuffer[i - 25] = redBuffer[i];
+		irBuffer[i - 25] = irBuffer[i];
 	}
 
-	void sensor::loopThread() {
-		while (runningHR) {
-		runHRCalculationLoop();
-//		updateTemperature();
-		}
+	for (int i = 75; i < bufferLength; i++) {
+		// has blocking IO
+		while (_sensor->available() == false) 
+		_sensor->check();
+		redBuffer[i] = _sensor->getRed();
+		irBuffer[i] = _sensor->getIR();
+		_sensor->nextSample();
 	}
+
+	maxim_heart_rate_and_oxygen_saturation(
+		irBuffer, 
+		bufferLength, 
+		redBuffer, 
+		&spo2, 
+		&validSPO2, 
+		&heartRate, 
+		&validHeartRate);
+	
+	std::cout<< "SPO2: " <<validSPO2<<std::endl;
+	std::cout<< "HR: " <<validHeartRate<<std::endl;
+}
+
+void sensor::HRcalc() {
+	if (runningHR) return;
+	runningHR = true;
+
+	// Init last values.
+	irLastValue = -999;
+	redLastValue = -999;
+	// Init local maxima/minima for peak detection
+	localMaximaIR = -9999;
+	localMinimaIR = 9999;
+	// Get current time.
+	auto timeCurrent = std::chrono::system_clock::now();
+	// Init last heartbeat times.
+	timeLastIRHeartBeat = timeCurrent;
+	timeLastRedHeartBeat = timeCurrent;
+
+	std::thread t1(&sensor::loopThread, this);
+	t1.detach();
+}
+
+void sensor::loopThread() {
+	while (runningHR) {
+	runHRCalculationLoop();
+	}
+}
     
-	/**
+/**
  * Stops the calculation loop.
  * You may no longer get heart rate data after calling this function.
  */
@@ -163,10 +245,6 @@ void sensor::updateTemperature() {
  * Returns true when input data is a peak.
  * Warning: Algorithm isn't that good.
  */
-bool crest = false;
-bool trough = false;
-uint8_t dataBeenIncreasing = 0;
-uint8_t nextPastPeaksIndex = 0;
 
 int32_t sensor::getPeakThreshold() {
 	int32_t avgMaximas = 0;
@@ -185,6 +263,8 @@ int32_t sensor::getPeakThreshold() {
 	}
 	return threshold;
 }
+
+
 bool sensor::peakDetect(int32_t data) {
 	//std::cout << "Data: " << data << ", irLastValue: " << irLastValue << ", localMaxima: " << localMaxima << ", localMinima: "<< localMinima << std::endl;
 	if (irLastValue == -999) {
@@ -336,9 +416,23 @@ float sensor::getLatestTemperatureF() {
 	return latestTemperature;
 }
 
-    //R value calculation from sensor input
-    float R;
-    //SpO2 value calculation from R value
-    float SpO2;
+
 
    
+/**
+ * Test for new way to detect peak, using batches 
+ * refactored from Sparkfun Arduino module: https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library/blob/master/src/spo2_algorithm.cpp#L210
+ * 
+ * Author: Yu Kit
+ * Refactoring: made to fit data structure provided in the project as well as made it real time compatible (non arduino using threads and ISR)
+*/
+
+/**
+ * New thread to only call function every second
+*/
+
+/**
+ * Porting functions from the repo
+*/
+
+
