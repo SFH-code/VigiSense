@@ -3,6 +3,8 @@
 #include <vector>
 #include <list>
 #include <string>
+#include <unistd.h>
+#include <chrono>
 #include "MAX30102.h"
 #include "Sensor.h"
 #include "DigitalFilters.h"
@@ -32,21 +34,25 @@ uint32_t redBuffer[100];
 
     // Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
     // Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
-sensor::sensor() {
+sensor::sensor() {	}
+
+sensor::sensor(MAX30102 *sensor) {
+	_sensor = sensor;
     if (_sensor->begin() < 0) { //begins I2C communication with the sensor
-    std::cout << "Failed i2c." << std::endl;
-    // Failed i2c.
-    throw;
+		std::cout << "Failed i2c." << std::endl;
+		// Failed i2c.
+		throw;
     }
     //	sensor->setup(0x2F);
     _sensor->setup(); // Configures the sensor with default settings & setup the interrupt to fire when new buffer is almost full
+	
 }
 
     // Destructor
 sensor::~sensor() {
     // Stop calculation if running.
     running = false;
-
+	stopHRcalc();
     // Shutdown sensor->
     _sensor->shutDown();
 }

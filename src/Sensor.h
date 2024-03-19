@@ -6,10 +6,11 @@
 
 class sensor{
 	public:
-		
+		// fake constructor
 		sensor();
-		~sensor();
-		//Check which functions are fine as is and which need editing/removing
+        sensor(MAX30102 *sensor);
+        ~sensor();
+        //Check which functions are fine as is and which need editing/removing
 		void begin();
 		void stop();
 		int getSafeIRHeartRate();
