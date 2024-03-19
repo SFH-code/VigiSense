@@ -11,6 +11,5 @@ int main() {
     MAX30102 s;
     sensor sensortest(&s);
     sensortest.begin();
-	sensor sensortest;
     getchar();
 }
