@@ -62,12 +62,13 @@
 #ifndef SPO2
 #define SPO2
 
-#define FreqS 25    //sampling frequency
+#define FreqS 30    //sampling frequency changed to 5
 #define BUFFER_SIZE (FreqS * 4) 
 #define MA4_SIZE 4 // DONOT CHANGE
 
-#include <stdint.h>
+#include <cstdint>
 #include <algorithm>
+#include <iostream>
 
 //#define min(x,y) ((x) < (y) ? (x) : (y)) //Defined in Arduino.h
 

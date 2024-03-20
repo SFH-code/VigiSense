@@ -4,10 +4,12 @@
 
 //Code refactored from HeartRate.h
 
+// define the GPIO used for the sensor here
+#define DEFAULT_INT_GPIO	0
+
 class sensor{
 	public:
 		// fake constructor
-		sensor();
         sensor(MAX30102 *sensor);
         ~sensor();
         //Check which functions are fine as is and which need editing/removing
@@ -22,8 +24,8 @@ class sensor{
         void HRcalc();
         void stopHRcalc();
 		int getSpO2();
-	private:
 		MAX30102* _sensor;
+	private:
 		bool running = false;
 		bool runningHR = false;
 
@@ -66,11 +68,19 @@ class sensor{
 
 
 		void loopThread();
+		void reportStatus();
 		void runHRCalculationLoop();
 		void updateTemperature();
 		void resetCalculations();
 		int32_t Derivative(int32_t data);
 		int32_t getPeakThreshold();
 		bool peakDetect(int32_t data);
+
+
+		void dataReady();
+
+		static void gpioISR(int, int, uint32_t, void* userdata) {
+			((sensor*)userdata)->dataReady();
+		}
 
 };

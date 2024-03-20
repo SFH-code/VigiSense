@@ -95,6 +95,8 @@ void maxim_heart_rate_and_oxygen_saturation(uint32_t *pun_ir_buffer, int32_t n_i
     int32_t n_x_dc_max_idx = 0; 
     int32_t an_ratio[5], n_ratio_average; 
     int32_t n_nume, n_denom ;
+    
+    std::cout<<"inside spo2 calculation" << std::endl;
 
     // calculates DC mean and subtract DC from ir
     un_ir_mean =0; 
@@ -122,10 +124,13 @@ void maxim_heart_rate_and_oxygen_saturation(uint32_t *pun_ir_buffer, int32_t n_i
     // since we flipped signal, we use peak detector as valley detector
     maxim_find_peaks( an_ir_valley_locs, &n_npks, an_x, BUFFER_SIZE, n_th1, 4, 15 );//peak_height, peak_distance, max_num_peaks 
     n_peak_interval_sum =0;
+    std::cout<<"Number of peaks: "<< n_npks <<std::endl;
     if (n_npks>=2){
         for (k=1; k<n_npks; k++) n_peak_interval_sum += (an_ir_valley_locs[k] -an_ir_valley_locs[k -1] ) ;
         n_peak_interval_sum =n_peak_interval_sum/(n_npks-1);
         *pn_heart_rate =(int32_t)( (FreqS*60)/ n_peak_interval_sum );
+        
+        std::cout << "HR inside function: " <<  (FreqS*60)/ n_peak_interval_sum << std::endl;
         *pch_hr_valid  = 1;
     }
     else  { 
@@ -188,16 +193,18 @@ void maxim_heart_rate_and_oxygen_saturation(uint32_t *pun_ir_buffer, int32_t n_i
         n_ratio_average =( an_ratio[n_middle_idx-1] +an_ratio[n_middle_idx])/2; // use median
     else
         n_ratio_average = an_ratio[n_middle_idx ];
-
+    
     if( n_ratio_average>2 && n_ratio_average <184){
         n_spo2_calc= uch_spo2_table[n_ratio_average] ;
         *pn_spo2 = n_spo2_calc ;
+        std::cout << "SPO2 inside function: " << n_spo2_calc << std::endl;
         *pch_spo2_valid  = 1;//  float_SPO2 =  -45.060*n_ratio_average* n_ratio_average/10000 + 30.354 *n_ratio_average/100 + 94.845 ;  // for comparison with table
     }
     else{
         *pn_spo2 =  -999 ; // do not use SPO2 since signal an_ratio is out of range
         *pch_spo2_valid  = 0; 
-}
+    }
+    
 }
 
 

@@ -27,7 +27,7 @@ Functions changed: changed DEFAULT_INT_GPIO, added hasSample(), dataReady(), gpi
 #define I2C_BUFFER_LENGTH	32
 
 // define the GPIO used for the sensor here
-#define DEFAULT_INT_GPIO	7
+#define DEFAULT_INT_GPIO	0
 
 class MAX30102 {
 	public:
@@ -108,7 +108,7 @@ class MAX30102 {
 		virtual void hasSample();
 
 		// Setup the sensor with user selectable settings
-		void setup(uint8_t powerLevel = 0x1F, uint8_t sampleAverage = 4, uint8_t ledMode = 2, int sampleRate = 400, int pulseWidth = 411, int adcRange = 4096);
+		void setup(uint8_t powerLevel = 60, uint8_t sampleAverage = 4, uint8_t ledMode = 2, int sampleRate = 100, int pulseWidth = 411, int adcRange = 4096);
 	private:
 		int _i2c;
 		uint8_t _i2caddr;
@@ -132,9 +132,9 @@ class MAX30102 {
 		} sense_struct;
 		sense_struct sense;
 
-		void dataReady();
+		// void dataReady();
 
-		static void gpioISR(int, int, uint32_t, void* userdata) {
-			((MAX30102*)userdata)->dataReady();
-		}
+		// static void gpioISR(int, int, uint32_t, void* userdata) {
+		// 	((MAX30102*)userdata)->dataReady();
+		// }
 };

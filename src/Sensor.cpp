@@ -1,6 +1,7 @@
 #include <iostream>
 #include <thread>
 #include <vector>
+#include <pigpio.h>
 #include <list>
 #include <string>
 #include <unistd.h>
@@ -9,6 +10,7 @@
 #include "Sensor.h"
 #include "DigitalFilters.h"
 #include "SPO2.h"
+#include <ctime>
 
 //Some code refactored from HeartRate.cpp
         
@@ -22,6 +24,7 @@ uint8_t nextPastPeaksIndex = 0;
 float R;
 //SpO2 value calculation from R value
 float SpO2;
+int dataRead = 0;
 
 // new calculation for SPO2
 int32_t spo2;
@@ -34,10 +37,10 @@ uint32_t redBuffer[100];
 
     // Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
     // Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
-sensor::sensor() {	}
+//sensor::sensor() {}
 
-sensor::sensor(MAX30102 *sensor) {
-	_sensor = sensor;
+sensor::sensor(MAX30102 *s) {
+	sensor::_sensor = s;
     if (_sensor->begin() < 0) { //begins I2C communication with the sensor
 		std::cout << "Failed i2c." << std::endl;
 		// Failed i2c.
@@ -60,32 +63,77 @@ sensor::~sensor() {
 void sensor::begin() {
 	if (runningHR) return;
 	runningHR = true;
+
+	int cfg = gpioCfgGetInternals();
+	cfg |= PI_CFG_NOSIGHANDLER;
+	gpioCfgSetInternals(cfg);
+	int r = gpioInitialise();
+	if (r < 0) {
+		printf("Cannot init pigpio.");
+	}
+	
+	
+	gpioSetMode(DEFAULT_INT_GPIO,PI_INPUT);
+	gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,30,gpioISR,(void*)this);
+	
 	// define startup function to fill buffer
-	std::thread fillbuffer(&sensor::fillBufferThread, this);
-	fillbuffer.detach();
+//	std::thread fillbuffer(&sensor::fillBufferThread, this);
+//	fillbuffer.detach();
 	// obtain first measurement of SPO2
-	maxim_heart_rate_and_oxygen_saturation(
-		irBuffer, 
-		bufferLength, 
-		redBuffer, 
-		&spo2, 
-		&validSPO2, 
-		&heartRate, 
-		&validHeartRate);
+//	maxim_heart_rate_and_oxygen_saturation(
+//		irBuffer, 
+//		bufferLength, 
+//		redBuffer, 
+//		&spo2, 
+//		&validSPO2, 
+//		&heartRate, 
+//		&validHeartRate);
 	
 	// start thread for calculating continuous HR and SPO2
-	std::thread SPO2andHRthread(&sensor::continuousGetSPO2HR, this);
-	fillbuffer.detach();
+	//std::thread SPO2andHRthread(&sensor::continuousGetSPO2HR, this);
+	//SPO2andHRthread.detach();
 	
+}
+
+void sensor::dataReady() {
+	_sensor->check();
+	if (dataRead >= 100) {
+		maxim_heart_rate_and_oxygen_saturation(
+			irBuffer, 
+			bufferLength, 
+			redBuffer, 
+			&spo2, 
+			&validSPO2, 
+			&heartRate, 
+			&validHeartRate);
+		for (int i = 25; i < bufferLength; i++) {
+			redBuffer[i - 25] = redBuffer[i];
+			irBuffer[i - 25] = irBuffer[i];
+		}
+		dataRead = 75;
+	}
+	uint32_t redVal = _sensor->getRed();
+	uint32_t irVal = _sensor->getIR();
+	auto tt = std::chrono::system_clock::now();
+	std::time_t curr = std::chrono::system_clock::to_time_t(tt);
+	
+	std::cout<< std::ctime(&curr) << " " << dataRead << " " << redVal << " " << irVal <<std::endl;
+	redBuffer[dataRead] = redVal;
+	irBuffer[dataRead] = irVal;
+	_sensor->nextSample();
+	dataRead++;
 }
 
 // define begin loop thread to fill buffer
 void sensor::fillBufferThread() {
+	std::cout<<"entered fill buffer thread"<<std::endl;
 	if (runningHR == false) return;
 	for (int i = 0; i < bufferLength; i++) {
+		std::cout<<"Red: "<<_sensor->getRed()<<std::endl;
+		std::cout<<"IR: "<<_sensor->getIR()<<std::endl;
 		// has blocking IO
-		while (_sensor->available() == false)
-		_sensor->check();
+		while (_sensor->available() == false);
+		//  _sensor->check();
 		redBuffer[i] = _sensor->getRed();
 		irBuffer[i] = _sensor->getIR();
 		_sensor->nextSample();
@@ -93,33 +141,41 @@ void sensor::fillBufferThread() {
 }
 
 void sensor::continuousGetSPO2HR() {
-	if (runningHR == false) return;
-	// reset buffer to shift 75 values forward
-	for (int i = 25; i < bufferLength; i++) {
-		redBuffer[i - 25] = redBuffer[i];
-		irBuffer[i - 25] = irBuffer[i];
-	}
+	//if (runningHR == false) return;
+	//// reset buffer to shift 75 values forward
+	//for (int i = 25; i < bufferLength; i++) {
+		//redBuffer[i - 25] = redBuffer[i];
+		//irBuffer[i - 25] = irBuffer[i];
+	//}
 
-	for (int i = 75; i < bufferLength; i++) {
-		// has blocking IO
-		while (_sensor->available() == false) 
-		_sensor->check();
-		redBuffer[i] = _sensor->getRed();
-		irBuffer[i] = _sensor->getIR();
-		_sensor->nextSample();
-	}
+	//for (int i = 75; i < bufferLength; i++) {
+		//// has blocking IO
+		//while (_sensor->available() == false) 
+		//_sensor->check();
+		//redBuffer[i] = _sensor->getRed();
+		//irBuffer[i] = _sensor->getIR();
+		//_sensor->nextSample();
+	//}
 
-	maxim_heart_rate_and_oxygen_saturation(
-		irBuffer, 
-		bufferLength, 
-		redBuffer, 
-		&spo2, 
-		&validSPO2, 
-		&heartRate, 
-		&validHeartRate);
+	//maxim_heart_rate_and_oxygen_saturation(
+		//irBuffer, 
+		//bufferLength, 
+		//redBuffer, 
+		//&spo2, 
+		//&validSPO2, 
+		//&heartRate, 
+		//&validHeartRate);
 	
-	std::cout<< "SPO2: " <<validSPO2<<std::endl;
-	std::cout<< "HR: " <<validHeartRate<<std::endl;
+	//std::cout<< "SPO2: " <<validSPO2<<std::endl;
+	//std::cout<< "HR: " <<validHeartRate<<std::endl;
+	while (runningHR) {
+		std::cout<< "SPO2: " <<validSPO2<<std::endl;
+		std::cout<< "HR: " <<validHeartRate<<std::endl;
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+		
+	}
+	
+	
 }
 
 void sensor::HRcalc() {
@@ -137,14 +193,25 @@ void sensor::HRcalc() {
 	// Init last heartbeat times.
 	timeLastIRHeartBeat = timeCurrent;
 	timeLastRedHeartBeat = timeCurrent;
-
+	std::cout<<"starting thread" << std::endl;
 	std::thread t1(&sensor::loopThread, this);
+	std::thread statusReporter(&sensor::reportStatus, this);
 	t1.detach();
+	statusReporter.detach();
 }
 
 void sensor::loopThread() {
 	while (runningHR) {
 	runHRCalculationLoop();
+	}
+}
+
+
+void sensor::reportStatus() {
+	while (runningHR) {
+		std::cout << "SpO2: " << getSpO2() << std::endl;
+		std::cout << "HR: " << getLatestIRHeartRate() << std::endl;
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
 	}
 }
     
@@ -155,6 +222,8 @@ void sensor::loopThread() {
 void sensor::stopHRcalc() {
 	runningHR = false;
 	resetCalculations();
+	gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,-1,NULL,(void*)this);
+	gpioTerminate();
 }
 
 //Heart rate calculation loop in detached thread

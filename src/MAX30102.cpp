@@ -14,7 +14,7 @@ Edited by Yu Kit Foo, to include data extraction using Interrupts
 Functions changed: setup(), begin(), getRed(), getIR(), hasSample(), dataReady()
 */
 
-#include <pigpio.h>
+// #include <pigpio.h>
 #include <chrono>
 #include <cstring>
 #include <unistd.h>
@@ -174,14 +174,14 @@ int MAX30102::begin(uint32_t i2cSpeed, uint8_t i2cAddr) {
 		return -3;
 	}
 
-
-	int cfg = gpioCfgGetInternals();
-	cfg |= PI_CFG_NOSIGHANDLER;
-	gpioCfgSetInternals(cfg);
-	int r = gpioInitialise();
-	if (r < 0) {
-		printf("Cannot init pigpio.");
-	}
+// test having isr in sensor instead
+	// int cfg = gpioCfgGetInternals();
+	// cfg |= PI_CFG_NOSIGHANDLER;
+	// gpioCfgSetInternals(cfg);
+	// int r = gpioInitialise();
+	// if (r < 0) {
+	// 	printf("Cannot init pigpio.");
+	// }
 	return i2c_smbus_read_byte_data(fd, REG_REVISIONID);
 }
 
@@ -247,6 +247,9 @@ void MAX30102::wakeUp(void) {
  */
 void MAX30102::shutDown(void) {
 	bitMask(REG_MODECONFIG, MASK_SHUTDOWN, SHUTDOWN);
+	
+	//gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,-1,NULL,(void*)this);
+	//gpioTerminate();
 }
 
 /**
@@ -517,7 +520,8 @@ void MAX30102::setup(uint8_t powerLevel, uint8_t sampleAverage, uint8_t ledMode,
 	enableFIFORollover();
 
 	// Set interrupt mode into FIFO almost full flag
-	enableAFULL();
+	// enableAFULL();
+	enableDATARDY();
 
 	// Mode Configuration //
 	// use case is for LED mode 3 with red and IR
@@ -563,8 +567,11 @@ void MAX30102::setup(uint8_t powerLevel, uint8_t sampleAverage, uint8_t ledMode,
 
 	// Add interrupt callback function
 	// ISR timeout needs to be less than the time taken to fill out half of the FIFO
-	gpioSetMode(DEFAULT_INT_GPIO,PI_INPUT);
-	gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,320,gpioISR,(void*)this);
+	
+	//gpioSetMode(DEFAULT_INT_GPIO,PI_INPUT);
+	//gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,200,gpioISR,(void*)this);
+
+	std::cout<<"Done setup"<<std::endl;
 
 }
 
@@ -631,10 +638,10 @@ void MAX30102::hasSample() {
     printf("%" PRIu32 "\n",getRed());
 }
 
-void MAX30102::dataReady() {
-	check();
-	hasSample();
-}
+// void MAX30102::dataReady() {
+// 	check();
+// 	hasSample();
+// }
 
 uint16_t MAX30102::check(void) {
 	uint8_t readPointer = getReadPointer();
@@ -646,7 +653,7 @@ uint16_t MAX30102::check(void) {
 	if (readPointer != writePointer) {
 		// Calculate the number of readings we need to get from sensor
 		numberOfSamples = writePointer - readPointer;
-		//std::cout << "There are " << (int)numberOfSamples << " available samples." << std::endl;
+		// std::cout << "There are " << (int)numberOfSamples << " available samples." << std::endl;
 		if (numberOfSamples < 0) numberOfSamples += 32;
 
 		// We know have the number of readings, now calculate bytes to read.
