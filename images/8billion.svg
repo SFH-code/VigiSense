@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="209.70609mm"
+   height="105.85642mm"
+   viewBox="0 0 209.70609 105.85642"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:export-bgcolor="#ffffff00" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0">
+      <rect
+         x="59"
+         y="82"
+         width="1146"
+         height="528"
+         id="rect1" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.50168921,-96.826009)">
+    <rect
+       style="fill:#000000;stroke-width:0.285097"
+       id="rect2"
+       width="209.70609"
+       height="105.85642"
+       x="0.5016892"
+       y="96.826012" />
+    <g
+       clip-path="url(#clip0)"
+       transform="matrix(0.18812268,0,0,0.19957918,-14.244905,78.667549)"
+       id="g17">
+      <g
+         id="g1">
+        <path
+           d="m 497.68,212.912 c 86.687,-78.053 220.234,-71.054 298.287,15.632 78.054,86.687 71.055,220.235 -15.632,298.288 -33.147,29.845 -74.891,48.431 -119.25,53.093 L 639.008,369.872 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           fill-opacity="0.258824"
+           id="path1" />
+      </g>
+      <g
+         id="g2">
+        <path
+           d="M 659.156,580.784 C 543.146,592.977 439.218,508.818 427.024,392.808 419.957,325.569 445.507,259.01 495.751,213.771 l 141.327,156.96 z"
+           fill="#4472c4"
+           fill-rule="evenodd"
+           id="path2" />
+      </g>
+      <text
+         fill="#d9d9d9"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         id="text2"
+         x="102.44871"
+         y="514.43134">Injury (equivalent to unit cost of £1.9m</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         id="text3"
+         x="101.44841"
+         y="531.77539">per fatal injury,</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         id="text4"
+         x="193.94829"
+         y="533.03229">£12.200 per non</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         id="text5"
+         x="302.61542"
+         y="532.56097">-</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         id="text6"
+         x="306.44836"
+         y="532.63953">fatal</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         id="text7"
+         style="line-height:0"
+         x="336.3009"
+         y="532.24432"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           x="336.3009"
+           y="532.24432"
+           style="line-height:0">injury): <tspan
+   style="font-size:43.6953px"
+   id="tspan4" /></tspan></text>
+      <text
+         fill="#4472c4"
+         font-family="'Calibri Light', 'Calibri Light_MSFontService', sans-serif"
+         font-weight="700"
+         font-size="64px"
+         transform="translate(178.616,482)"
+         id="text8">37.1%</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         transform="translate(940.321,350)"
+         id="text9">III health (equivalent to unit cost of</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="15px"
+         transform="translate(940.321,373)"
+         id="text10">£19,300 per case): £13.1 bn</text>
+      <text
+         fill="#44546a"
+         font-family="'Calibri Light', 'Calibri Light_MSFontService', sans-serif"
+         font-weight="700"
+         font-size="64px"
+         transform="translate(940.321,282)"
+         id="text11">62.9%</text>
+      <text
+         fill="#4472c4"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="700"
+         font-size="32px"
+         transform="translate(78.9333,122)"
+         id="text12">£20.7bn Cost of</text>
+      <text
+         fill="#4472c4"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="700"
+         font-size="32px"
+         transform="translate(78.9333,160)"
+         id="text13">workplace injury and ill</text>
+      <text
+         fill="#4472c4"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="700"
+         font-size="32px"
+         transform="translate(78.9333,199)"
+         id="text14">health</text>
+      <text
+         fill="#d9d9d9"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="700"
+         font-size="32px"
+         transform="translate(171.433,199)"
+         id="text15">in 2021/22</text>
+      <text
+         fill="#d9d9d9"
+         fill-opacity="0.701961"
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(78.9332,243)"
+         id="text16">Source: hse.gov.uk</text>
+      <path
+         d="m 794.4857,353.92 65.89964,57 -0.21555,-0.087 h 196.16581 c 0.2424,0 0.439,0.299 0.439,0.667 0,0.368 -0.1966,0.667 -0.439,0.667 H 860.05448 L 794.0546,355.08 c -0.20965,-0.181 -0.28303,-0.588 -0.16445,-0.909 0.11924,-0.32 0.38524,-0.432 0.59555,-0.251 z m 261.8499,53.58 c 1.4479,0 2.6207,1.791 2.6207,4 0,2.209 -1.1728,4 -2.6207,4 -1.4479,0 -2.6206,-1.791 -2.6206,-4 0,-2.209 1.1727,-4 2.6206,-4 z"
+         fill="#44546a"
+         id="path16"
+         style="stroke-width:0.809422" />
+      <path
+         d="m 541.55413,547.90174 -73.90935,56.99996 0.18744,-0.0684 H 247.82275 c -0.23463,0 -0.42526,0.2985 -0.42526,0.6667 0,0.3682 0.19063,0.6667 0.42526,0.6667 h 220.1083 l 73.99817,-57.06844 c 0.21066,-0.16246 0.29747,-0.56202 0.19389,-0.89242 -0.10359,-0.33041 -0.35833,-0.46656 -0.56898,-0.3041 z M 247.82275,601.5 c -1.40839,0 -2.55027,1.7909 -2.55027,4 0,2.2091 1.14188,4 2.55027,4 1.40839,0 2.55027,-1.7909 2.55027,-4 0,-2.2091 -1.14188,-4 -2.55027,-4 z"
+         fill="#4472c4"
+         id="path17"
+         style="stroke-width:0.798479" />
+      <text
+         xml:space="preserve"
+         style="font-size:43.6953px;line-height:0;fill:#000000;stroke-width:1.36762"
+         x="275.36191"
+         y="596.37262"
+         id="text17"
+         transform="scale(1.0299996,0.97087417)"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           style="fill:#f9f9f9;stroke-width:1.36763"
+           x="275.36191"
+           y="596.37262">£7.7 bn</tspan></text>
+    </g>
+  </g>
+</svg>
