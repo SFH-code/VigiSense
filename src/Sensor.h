@@ -75,7 +75,7 @@ class sensor{
 		bool peakDetect(int32_t data);
 };
 
-class sp02Measure : public sensor{
+class spO2Measure : public sensor{
 	public:
 		std::vector<symptomRange> symptomRanges {
 			{0,88,"Critically Low Oxygen concentration"},
