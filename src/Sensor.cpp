@@ -353,6 +353,17 @@ float sensor::getLatestTemperatureF() {
 	return latestTemperature;
 }
 
+std::string heartRateMeasure::determineSymptom(float baseline){
+	int spO2 = this->getSafeIRHeartRate();
+	for (int i = 0; i < symptomRanges.size(); ++i){
+            if (spO2>symptomRanges[i].min && spO2<symptomRanges[i].max){
+                return symptomRanges[i].symptom;
+            }
+        }    
+    return "undefined range";
+
+}
+
     //R value calculation from sensor input
     float R;
     //SpO2 value calculation from R value

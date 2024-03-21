@@ -88,9 +88,14 @@ class spO2Measure : public sensor{
 
 class heartRateMeasure : public sensor{
 	public:
+		std::vector<symptomRange> symptomRanges {
+			{0,60,"Bradycardia"},
+			{60,100,"Normal resting heart rate"},
+			{100,200,"Tachyacardia"}};
 		float critHigh = 120;
-		float critLow = 60;
+		float critLow = 40;
 		int getSafeIRHeartRate();
 		int getLatestIRHeartRate();
 		int getLatestRedHeartRate();
+		std::string determineSymptom(float baseline);
 };
