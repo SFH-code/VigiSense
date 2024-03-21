@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 
 	cout << "Starting..." << endl;
-	sensor sensortest;
+	spO2Measure sensortest;
 	sensortest.HRcalc();
     while (1) {
     sensortest.getSpO2();
