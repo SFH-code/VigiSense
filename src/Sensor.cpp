@@ -12,55 +12,64 @@
 LowPassFilter lpf(0.08, M_PI);
 HighPassFilter hpf(0.08, M_PI);
 
-        // Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
-        // Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
-    sensor::sensor() {
-	    if (_sensor->begin() < 0) { //begins I2C communication with the sensor
-		std::cout << "Failed i2c." << std::endl;
-		// Failed i2c.
-		throw;
-	    }
-        //	sensor->setup(0x2F);
-	    _sensor->setup(); // Configures the sensor with default settings & setup the interrupt to fire when new buffer is almost full
-    }
+//R value calculation from sensor input
+float R;
+//SpO2 value calculation from R value
+float SpO2;
+bool crest = false;
+bool trough = false;
+uint8_t dataBeenIncreasing = 0;
+uint8_t nextPastPeaksIndex = 0;
 
-        // Destructor
-    sensor::~sensor() {
-	    // Stop calculation if running.
+
+/**
+ * Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
+ * Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
+*/
+sensor::sensor() {
+	if (_sensor->begin() < 0) { //begins I2C communication with the sensor
+	std::cout << "Failed i2c." << std::endl;
+	// Failed i2c.
+	throw;
+	}
+	//	sensor->setup(0x2F);
+	_sensor->setup(); // Configures the sensor with default settings & setup the interrupt to fire when new buffer is almost full
+}
+
+	// Destructor
+sensor::~sensor() {
 	running = false;
-
-	    // Shutdown sensor->
 	_sensor->shutDown();
-    }
+}
 
-    void sensor::HRcalc() {
-	    if (runningHR) return;
-	    runningHR = true;
+void sensor::HRcalc() {
+	if (runningHR) return;
+	runningHR = true;
 
-        // Init last values.
-	    irLastValue = -999;
-	    redLastValue = -999;
-	    // Init local maxima/minima for peak detection
-	    localMaximaIR = -9999;
-	    localMinimaIR = 9999;
-	    // Get current time.
-	    auto timeCurrent = std::chrono::system_clock::now();
-	    // Init last heartbeat times.
-	    timeLastIRHeartBeat = timeCurrent;
-	    timeLastRedHeartBeat = timeCurrent;
+	// Init last values.
+	irLastValue = -999;
+	redLastValue = -999;
+	// Init local maxima/minima for peak detection
+	localMaximaIR = -9999;
+	localMinimaIR = 9999;
+	// Get current time.
+	auto timeCurrent = std::chrono::system_clock::now();
+	// Init last heartbeat times.
+	timeLastIRHeartBeat = timeCurrent;
+	timeLastRedHeartBeat = timeCurrent;
 
-		std::thread t1(&sensor::loopThread, this);
-		t1.detach();
-	}
+	std::thread t1(&sensor::loopThread, this);
+	t1.detach();
+}
 
-	void sensor::loopThread() {
-		while (runningHR) {
-		runHRCalculationLoop();
+void sensor::loopThread() {
+	while (runningHR) {
+	runHRCalculationLoop();
 //		updateTemperature();
-		}
 	}
+}
     
-	/**
+/**
  * Stops the calculation loop.
  * You may no longer get heart rate data after calling this function.
  */
@@ -77,7 +86,7 @@ void sensor::runHRCalculationLoop() {
 	uint32_t irValue =  _sensor->getIR();
 	
 
-	// Let's get the number of miliseconds passed since we last ran the loop.
+	// get the number of miliseconds passed since we last ran the loop.
 	int loopDelta = std::chrono::duration_cast<std::chrono::milliseconds>(timeCurrent - timeLastLoopRan).count();
 	// We're finished with timeLastLoopRan, so let's update it's value for next time.
 	timeLastLoopRan = timeCurrent;
@@ -95,10 +104,6 @@ void sensor::runHRCalculationLoop() {
 	int32_t filteredIRValue = static_cast<int32_t>(irValue);
 	filteredIRValue = lpf.update(filteredIRValue);
 	filteredIRValue = hpf.update(filteredIRValue);
-
-//	[DEBUG] Uncomment lines below to disable heart rate calculation and display raw data.
-//	std::cout << loopCount++ << "," << filteredIRValue << std::endl;
-//	return;
 
 	int timeSinceLastIRHeartBeat = std::chrono::duration_cast<std::chrono::milliseconds>(timeCurrent - timeLastIRHeartBeat).count();
 
@@ -124,31 +129,6 @@ void sensor::runHRCalculationLoop() {
 	irLastValue = filteredIRValue;
 	
 	// Calculate the Red heart rate //
-/*	
-	int32_t filteredRedValue = static_cast<int32_t>(redValue);
-	filteredRedValue = LowPassFilter(filteredRedValue);
-	filteredRedValue = HighPassFilter(filteredRedValue);
-	filteredRedValue = Derivative(filteredRedValue);
-	filteredRedValue = Derivative(filteredRedValue);
-	int redValueDelta = filteredRedValue - redLastValue; // Get the change in value.
-	int timeSinceLastRedHeartBeat = std::chrono::duration_cast<std::chrono::milliseconds>(timeCurrent - timeLastRedHeartBeat).count();
-	// We're finished with redLastValue, so let's update it's value for next time.
-	redLastValue = filteredRedValue;
-
-	if (filteredRedValue < -10 && redHasBeat == false && timeSinceLastRedHeartBeat > 0) {
-		int _redBPM = 60000/timeSinceLastRedHeartBeat;
-		if (_redBPM > 35) { // Ignore result if BPM is a crazy number.
-			if (_redBPM < 200) {
-				latestRedBPM = _redBPM;
-			}
-			redHasBeat = true;
-			// Update timeLastRedHeartBeat for next time.
-			timeLastRedHeartBeat = timeCurrent;
-		}
-	} else if (filteredRedValue > 0 && redHasBeat == true) {
-		redHasBeat = false;
-	}
-*/
 }
 
 /**
@@ -161,12 +141,8 @@ void sensor::updateTemperature() {
 /**
  * Detects peaks in heart data.
  * Returns true when input data is a peak.
- * Warning: Algorithm isn't that good.
  */
-bool crest = false;
-bool trough = false;
-uint8_t dataBeenIncreasing = 0;
-uint8_t nextPastPeaksIndex = 0;
+
 
 int32_t sensor::getPeakThreshold() {
 	int32_t avgMaximas = 0;
@@ -185,6 +161,8 @@ int32_t sensor::getPeakThreshold() {
 	}
 	return threshold;
 }
+
+
 bool sensor::peakDetect(int32_t data) {
 	//std::cout << "Data: " << data << ", irLastValue: " << irLastValue << ", localMaxima: " << localMaxima << ", localMinima: "<< localMinima << std::endl;
 	if (irLastValue == -999) {
@@ -211,7 +189,6 @@ bool sensor::peakDetect(int32_t data) {
 			dataBeenIncreasing = 0;
 			localMaximaIR = -9999;
 			localMinimaIR = 9999;
-			
 			
 			return true;
 		}
@@ -364,9 +341,5 @@ std::string heartRateMeasure::determineSymptom(float baseline){
 
 }
 
-    //R value calculation from sensor input
-    float R;
-    //SpO2 value calculation from R value
-    float SpO2;
 
    

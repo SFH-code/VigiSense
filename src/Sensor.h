@@ -6,7 +6,7 @@ struct symptomRange{
     float min;
     float max;
     std::string symptom;
-}
+};
 
 //Code refactored from HeartRate.h
 
