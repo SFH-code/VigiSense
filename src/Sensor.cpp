@@ -26,7 +26,8 @@ uint8_t nextPastPeaksIndex = 0;
  * Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
  * Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
 */
-sensor::sensor() {
+sensor::sensor(MAX30102 *s) {
+	sensor::_sensor = s;
 	if (_sensor->begin() < 0) { //begins I2C communication with the sensor
 	std::cout << "Failed i2c." << std::endl;
 	// Failed i2c.
@@ -64,8 +65,7 @@ void sensor::HRcalc() {
 
 void sensor::loopThread() {
 	while (runningHR) {
-	runHRCalculationLoop();
-//		updateTemperature();
+		runHRCalculationLoop();
 	}
 }
     
@@ -107,14 +107,11 @@ void sensor::runHRCalculationLoop() {
 
 	int timeSinceLastIRHeartBeat = std::chrono::duration_cast<std::chrono::milliseconds>(timeCurrent - timeLastIRHeartBeat).count();
 
-	//std::cout << loopCount++ << "," << filteredIRValue << ": ";
 	if (peakDetect(filteredIRValue)) {
 		int _irBPM = 60000/timeSinceLastIRHeartBeat;
 		latestIRBPM = _irBPM;
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
-		//std::cout << "BPM : " << _irBPM;
-		
 		R = ((localMaximaRed-localMinimaRed)/localMinimaRed)/((localMaximaIR-localMinimaIR)/localMinimaIR);
 		latestSpO2 = 104-17*R;
 		spo2Buffer[nextSPO2BufferIndex++] = latestSpO2;
@@ -123,12 +120,9 @@ void sensor::runHRCalculationLoop() {
 		// Update timeLastIRHeartBeat for next time.
 		timeLastIRHeartBeat = timeCurrent;
 	}
-	//std::cout << std::endl;
-
 	// We're finished with irLastValue, so let's update their value for next time.
 	irLastValue = filteredIRValue;
 	
-	// Calculate the Red heart rate //
 }
 
 /**
@@ -148,11 +142,9 @@ int32_t sensor::getPeakThreshold() {
 	int32_t avgMaximas = 0;
 	int32_t avgMinimas = 0;
 	for (int i = 0; i < sensor::PAST_PEAKS_SIZE; i++) {
-		//std::cout << "Index " << i << ": " << pastMaximas[i] << "/" << pastMinimas[i] << ", ";
 		avgMaximas += pastMaximasIR[i];
 		avgMinimas += pastMinimasIR[i];
 	}
-	//std::cout << "Average Maximas: " << avgMaximas << ", Minimas: " << avgMinimas << std::endl;
 	avgMaximas /= sensor::PAST_PEAKS_SIZE;
 	avgMinimas /= sensor::PAST_PEAKS_SIZE;
 	int32_t threshold = (avgMaximas+avgMinimas)/1.5;
@@ -164,7 +156,6 @@ int32_t sensor::getPeakThreshold() {
 
 
 bool sensor::peakDetect(int32_t data) {
-	//std::cout << "Data: " << data << ", irLastValue: " << irLastValue << ", localMaxima: " << localMaxima << ", localMinima: "<< localMinima << std::endl;
 	if (irLastValue == -999) {
 		// This is first time peakDetect is called.
 		return false;
@@ -193,6 +184,7 @@ bool sensor::peakDetect(int32_t data) {
 			return true;
 		}
 	}
+
 	//int32_t threshold = getPeakThreshold();
 	//std::cout << "Threshold: " << threshold << ", max: " << localMaxima << ", min: " << localMinima << std::endl;
 	if (data > localMaximaIR) {
@@ -206,6 +198,7 @@ bool sensor::peakDetect(int32_t data) {
 			localMaximaRed = hpf.update(filteredRedValue);
 		}
 	}
+
 	if (crest && data < localMinimaIR) {
 		localMinimaIR = data;
 		if (crest && data < -100) { //might want to calibrate this everytime sensor is used
@@ -217,8 +210,10 @@ bool sensor::peakDetect(int32_t data) {
 			localMinimaRed = hpf.update(filteredRedValue);
 		}
 	}
+
 	return false;
 }
+
 
 /**
  * Clears all calculations.
@@ -226,11 +221,8 @@ bool sensor::peakDetect(int32_t data) {
 void sensor::resetCalculations() {
 	// Clear stored heart rates.
 	latestIRBPM = 0;
-	//lastIRBPM = 0;
 	latestRedBPM = 0;
-	//lastRedBPM = 0;
 
-//	calculateMiddle = true;
 	// Reset peak detection.
 	crest = trough = false;
 	nextPastPeaksIndex = 0;
@@ -262,18 +254,19 @@ void sensor::resetCalculations() {
 /**
  * Returns the latest calculated IR heart rate. (unchecked!)
  */
-int heartRateMeasure::getLatestIRHeartRate() {
-	if (latestIRBPM == 0) {
-		return -1;
-	}
-	return latestIRBPM;
-}
+// int heartRateMeasure::getLatestIRHeartRate() {
+// 	if (latestIRBPM == 0) {
+// 		return -1;
+// 	}
+// 	return latestIRBPM;
+// }
+
 
 /**
  * Returns the average measured heart rate.
  * This method ignores heart rate values greater than 150 or lower than 45.
  */
-int heartRateMeasure::getSafeIRHeartRate() {
+int sensor::getHR() {
 	int avgBPM = 0;
 	int bpmCount = 0;
 	for (int i = 0; i < BPM_BUFFER_SIZE; i++) {
@@ -284,13 +277,14 @@ int heartRateMeasure::getSafeIRHeartRate() {
 		}
 	}
 	if (bpmCount > 0) avgBPM /= bpmCount;
-	if (avgBPM<critLow||avgBPM>critHigh){
-		//insert critical response interrupt
-	}
+	// if (avgBPM<critLow||avgBPM>critHigh){
+	// 	//insert critical response interrupt
+	// }
 	return (avgBPM == 0) ? -1 : avgBPM;
 }
 
-int spO2Measure::getSpO2() {
+
+int sensor::getSpO2() {
 	int avgSPO2 = 0;
 	int SPO2Count = 0;
 	for (int i = 0; i < SPO2_BUFFER_SIZE; i++) {
@@ -299,47 +293,51 @@ int spO2Measure::getSpO2() {
 		
 	}
 	if (SPO2Count > 0) avgSPO2 /= SPO2Count;
-	if(avgSPO2<critLow){
-		//insert critical response interrupt
-	}
+	// if(avgSPO2<critLow){
+	// 	//insert critical response interrupt
+	// }
 	return (avgSPO2 == 0) ? -1 : avgSPO2;
 }
 
-std::string spO2Measure::determineSymptom(float baseline){
-	int spO2 = this->getSpO2();
-	for (int i = 0; i < symptomRanges.size(); ++i){
-            if (spO2>symptomRanges[i].min && spO2<symptomRanges[i].max){
-                return symptomRanges[i].symptom;
-            }
-        }    
-    return "undefined range";
 
-}
+// std::string spO2Measure::determineSymptom(float baseline){
+// 	int spO2 = this->getSpO2();
+// 	for (int i = 0; i < symptomRanges.size(); ++i){
+//             if (spO2>symptomRanges[i].min && spO2<symptomRanges[i].max){
+//                 return symptomRanges[i].symptom;
+//             }
+//         }    
+//     return "undefined range";
+
+// }
+
 
 /**
  * Returns the latest calculated Red heart rate. (unchecked!)
  */
-int heartRateMeasure::getLatestRedHeartRate() {
-	if (latestRedBPM == 0) {
-		return -1;
-	}
-	return latestRedBPM;
-}
+// int heartRateMeasure::getLatestRedHeartRate() {
+// 	if (latestRedBPM == 0) {
+// 		return -1;
+// 	}
+// 	return latestRedBPM;
+// }
+
 
 float sensor::getLatestTemperatureF() {
 	return latestTemperature;
 }
 
-std::string heartRateMeasure::determineSymptom(float baseline){
-	int spO2 = this->getSafeIRHeartRate();
-	for (int i = 0; i < symptomRanges.size(); ++i){
-            if (spO2>symptomRanges[i].min && spO2<symptomRanges[i].max){
-                return symptomRanges[i].symptom;
-            }
-        }    
-    return "undefined range";
 
-}
+// std::string heartRateMeasure::determineSymptom(float baseline){
+// 	int spO2 = this->getSafeIRHeartRate();
+// 	for (int i = 0; i < symptomRanges.size(); ++i){
+//             if (spO2>symptomRanges[i].min && spO2<symptomRanges[i].max){
+//                 return symptomRanges[i].symptom;
+//             }
+//         }    
+//     return "undefined range";
+
+// }
 
 
    

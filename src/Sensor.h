@@ -2,18 +2,18 @@
 #include <chrono>
 #include "MAX30102.h"
 
-struct symptomRange{
-    float min;
-    float max;
-    std::string symptom;
-};
+// struct symptomRange{
+//     float min;
+//     float max;
+//     std::string symptom;
+// };
 
 //Code refactored from HeartRate.h
 
 class sensor{
 	public:
 		
-		sensor();
+		sensor(MAX30102 *sensor);
 		~sensor();
 		//Check which functions are fine as is and which need editing/removing
 		void begin();
@@ -22,6 +22,10 @@ class sensor{
 		float getLatestTemperatureF();
 		void HRcalc();
 		void stopHRcalc();
+
+		// getter for SPO2 and HR
+		int getSpO2();
+		int getHR();
 
 	protected:
 		MAX30102* _sensor;
@@ -75,27 +79,27 @@ class sensor{
 		bool peakDetect(int32_t data);
 };
 
-class spO2Measure : public sensor{
-	public:
-		std::vector<symptomRange> symptomRanges {
-			{0,88,"Critically Low Oxygen concentration"},
-			{88,92,"Concerningly Low Oxygen Concentration"},
-			{92,100,"Healthy Oxygen Concentration"}};
-		float critLow = 88;
-		int getSpO2();
-		std::string determineSymptom(float baseline);
-};
+// class spO2Measure : public sensor{
+// 	public:
+// 		std::vector<symptomRange> symptomRanges {
+// 			{0,88,"Critically Low Oxygen concentration"},
+// 			{88,92,"Concerningly Low Oxygen Concentration"},
+// 			{92,100,"Healthy Oxygen Concentration"}};
+// 		float critLow = 88;
+// 		int getSpO2();
+// 		std::string determineSymptom(float baseline);
+// };
 
-class heartRateMeasure : public sensor{
-	public:
-		std::vector<symptomRange> symptomRanges {
-			{0,60,"Bradycardia"},
-			{60,100,"Normal resting heart rate"},
-			{100,200,"Tachyacardia"}};
-		float critHigh = 120;
-		float critLow = 40;
-		int getSafeIRHeartRate();
-		int getLatestIRHeartRate();
-		int getLatestRedHeartRate();
-		std::string determineSymptom(float baseline);
-};
+// class heartRateMeasure : public sensor{
+// 	public:
+// 		std::vector<symptomRange> symptomRanges {
+// 			{0,60,"Bradycardia"},
+// 			{60,100,"Normal resting heart rate"},
+// 			{100,200,"Tachyacardia"}};
+// 		float critHigh = 120;
+// 		float critLow = 40;
+// 		int getSafeIRHeartRate();
+// 		int getLatestIRHeartRate();
+// 		int getLatestRedHeartRate();
+// 		std::string determineSymptom(float baseline);
+// };
