@@ -4,6 +4,13 @@ SPO2Tracker::SPO2Tracker(sensor *s) {
     SPO2Tracker::_s = s;
 }
 
+
+// constructor for new class for testing
+SPO2Tracker::SPO2Tracker(sensorTest *s) {
+    test = true;
+    SPO2Tracker::_s = reinterpret_cast<sensor*>(s);
+}
+
 void SPO2Tracker::start() {
     // start threads
     threadRunning = true;
@@ -55,7 +62,7 @@ void SPO2Tracker::tracker(){
     // thread that checks using determineSymptom() and calls alert if conditions are met
     // use threadRunning to stop the thread
     while (threadRunning) {
-        std::string symptom = determineSymptom();
+        std::string symptom = determineSymptom(getVal());
         if (false) {
             // define out of range behaviour (check if crit low)
             alert();

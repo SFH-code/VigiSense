@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "Sensor.h"
+#include "SPO2Tracker.h"
 
 using namespace std;
 
@@ -14,4 +15,6 @@ int main() {
 	MAX30102_sensor.HRcalc();
     // constructor for functionality of sensor
     // Eg: SPO2_tracker and HR_tracker
+    SPO2Tracker spo2(&MAX30102_sensor);
+    spo2.start();
 }

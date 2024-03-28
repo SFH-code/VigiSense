@@ -15,8 +15,7 @@ class diagnosisInterface {
         virtual void ping() = 0;
         virtual int getVal() = 0;
 
-        std::string determineSymptom(){
-        	int val = this->getVal();
+        std::string determineSymptom(int val){
         	for (int i = 0; i < symptomRanges.size(); ++i){
                 if (val>symptomRanges[i].min && val<symptomRanges[i].max){
                     return symptomRanges[i].symptom;
@@ -30,4 +29,5 @@ class diagnosisInterface {
         std::vector<symptomRange> symptomRanges;
         int critHigh;
         int critLow;
+        bool test = false;
 };
