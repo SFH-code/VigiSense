@@ -17,7 +17,7 @@
  *
  */
 // change when makefile is created
-#include "HelloWorldMsgPubSubTypes.h"
+#include "alertPubSubTypes.h"
 
 #include <chrono>
 #include <thread>
@@ -79,13 +79,12 @@ private:
         void on_data_available(DataReader* reader) override
         {
             SampleInfo info;
-	    HelloWorldMsg hello;
+	    alert hello;
             if (reader->take_next_sample(&hello, &info) == ReturnCode_t::RETCODE_OK)
             {
                 if (info.valid_data)
                 {
-                    std::cout << "Message: " << hello.message() << " with index: " << hello.index()
-                                << " RECEIVED." << std::endl;
+                    std::cout << "Message: " << hello.message() << " RECEIVED." << std::endl;
                 }
             }
         }
@@ -94,7 +93,7 @@ private:
 
 public:
 
-    DeviceSubscriber() : type_(new HelloWorldMsgPubSubType()) {}
+    DeviceSubscriber() : type_(new alertPubSubType()) {}
 
     virtual ~DeviceSubscriber()
     {

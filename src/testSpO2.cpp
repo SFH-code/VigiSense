@@ -8,11 +8,10 @@ using namespace std;
 int main() {
 
 	cout << "Starting..." << endl;
-	sensor sensortest;
-	sensortest.HRcalc();
-    while (1) {
-    sensortest.getSpO2();
-    cout << "Began SpO2 calculation..." << endl;
-    usleep(1000000);
-    }
+    MAX30102 s;
+	sensor MAX30102_sensor(&s);
+    // initialise sensor with calculation for HR and SPO2
+	MAX30102_sensor.HRcalc();
+    // constructor for functionality of sensor
+    // Eg: SPO2_tracker and HR_tracker
 }

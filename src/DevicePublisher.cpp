@@ -17,7 +17,7 @@
  *
  */
 // change this when make file is added
-#include "HelloWorldMsgPubSubTypes.h"
+#include "alertPubSubTypes.h"
 
 #include <chrono>
 #include <thread>
@@ -85,7 +85,7 @@ private:
 
 public:
 
-    DevicePublisher() : type_(new HelloWorldMsgPubSubType()) {}
+    DevicePublisher() : type_(new alertPubSubType()) {}
 
     virtual ~DevicePublisher()
     {
@@ -148,7 +148,7 @@ public:
 
     //!Send a publication
     // change this when make file is created with new alert h file 
-    bool publish(HelloWorldMsg& hello)
+    bool publish(alert& hello)
     {
         if (listener_.matched_ > 0)
         {
