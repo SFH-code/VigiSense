@@ -1,5 +1,6 @@
 #include "Sensor.h"
 #include <string>
+#include "DevicePublisher.cpp"
 
 struct symptomRange{
     float min;
@@ -11,7 +12,7 @@ class diagnosisInterface {
     public:
         virtual void start() = 0;
         virtual void stop() = 0;
-        virtual void alert() = 0;
+        virtual void ping() = 0;
         virtual int getVal() = 0;
 
         std::string determineSymptom(){

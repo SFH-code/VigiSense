@@ -7,12 +7,13 @@ class SPO2Tracker:public diagnosisInterface {
         ~SPO2Tracker();
         void start();
         void stop();
-        void alert();
+        void ping();
         int getVal();
         void tracker();
     protected:
         sensor* _s; 
         bool threadRunning = false;
+        void pingThread();
         // define symptom table here
 
 };

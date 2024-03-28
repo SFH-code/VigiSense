@@ -11,13 +11,44 @@ void SPO2Tracker::start() {
     t1.detach();
 }
 
+// set false for thread and terminates it
 void SPO2Tracker::stop() {
     threadRunning = false;
 }
 
 
-void SPO2Tracker::alert() {
+void SPO2Tracker::ping() {
+	std::thread t2(&SPO2Tracker::pingThread, this);
+	t2.detach();
+}
+
+// thread for pinging SPO2 critical values, 
+void SPO2Tracker::pingThread() {
     // start threads for FastDDS
+    std::cout<<"Starting alert message"<<std::endl;
+    // sends the same message 3 times
+    uint32_t tries = 3;
+
+    DevicePublisher alertPub;
+    if (!alertPub.init()) {
+        std::cerr << "Pub not init'd." << std::endl;
+        return;
+    }
+
+    alert alertMessage;
+    // add more specific message
+    alertMessage.message();
+    uint32_t pingTries = 0;
+    // tries to send a message every 1 second for 3 times
+    while (pingTries < tries) {
+        if (alertPub.publish(alertMessage)) {
+            pingTries++;
+        } else {
+            std::cout << "Waiting for listener" << std::endl;
+        }
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    }
 }
 
 void SPO2Tracker::tracker(){
