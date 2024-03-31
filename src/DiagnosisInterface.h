@@ -1,4 +1,3 @@
-#include "Sensor.h"
 #include <string>
 #include "DevicePublisher.cpp"
 

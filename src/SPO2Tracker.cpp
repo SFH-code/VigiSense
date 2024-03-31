@@ -1,15 +1,9 @@
 #include "SPO2Tracker.h"
 
-SPO2Tracker::SPO2Tracker(sensor *s) {
+SPO2Tracker::SPO2Tracker(testParent *s) {
     SPO2Tracker::_s = s;
 }
 
-
-// constructor for new class for testing
-SPO2Tracker::SPO2Tracker(sensorTest *s) {
-    test = true;
-    SPO2Tracker::_s = reinterpret_cast<sensor*>(s);
-}
 
 void SPO2Tracker::start() {
     // start threads

@@ -1,6 +1,7 @@
 #include <cstdint>
 #include <chrono>
 #include "MAX30102.h"
+#include "testParent.h"
 
 // struct symptomRange{
 //     float min;
@@ -10,7 +11,7 @@
 
 //Code refactored from HeartRate.h
 
-class sensor{
+class sensor: public testParent{
 	public:
 		
 		sensor(MAX30102 *sensor);
@@ -24,8 +25,9 @@ class sensor{
 		void stopHRcalc();
 
 		// getter for SPO2 and HR
-		int getSpO2();
-		int getHR();
+		// functions that are to be tested include override keyword
+		int getSpO2() override;
+		int getHR() override;
 
 	protected:
 		MAX30102* _sensor;
