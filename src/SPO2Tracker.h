@@ -26,5 +26,11 @@ class SPO2Tracker:public diagnosisInterface {
         bool threadRunning = false;
         void pingThread();
         // define symptom table here
-
+        std::vector<symptomRange> symptomRanges = {
+            {0, 89, "Hypoxia"},
+            {89, 92, "Hypoxemia"},
+            {92, 98, "Normal"}
+        };
+        int critHigh = 100; // 100 is the highest value for SpO2, any higher is an error
+        int critLow = 89; // 89 is the lowest value for SpO2, any lower is a critical condition
 };
