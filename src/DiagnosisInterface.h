@@ -15,14 +15,20 @@ class diagnosisInterface {
         virtual int getVal() = 0;
 
         std::string determineSymptom(int val){
-        	for (int i = 0; i < symptomRanges.size(); ++i){
-                if (val>symptomRanges[i].min && val<symptomRanges[i].max){
+            for (int i = 0; i < symptomRanges.size(); ++i){
+                if (val > symptomRanges[i].min && val < symptomRanges[i].max){
                     return symptomRanges[i].symptom;
                 }
             }    
-            return NULL;
+            return "";
         }
 
+        bool isCritical(int val){
+            if (val > critHigh || val < critLow){
+                return true;
+            }
+            return false;
+        }
 
     protected:
         std::vector<symptomRange> symptomRanges;

@@ -12,6 +12,7 @@ class sensorTest:public testParent{
 		int getSpO2() override;
 		int getHR() override;
         void setSpO2(int i);
+		void setData();
         int spo2 =0;
 
 

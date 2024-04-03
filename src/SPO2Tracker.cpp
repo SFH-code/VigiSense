@@ -1,7 +1,7 @@
 #include "SPO2Tracker.h"
 
 SPO2Tracker::SPO2Tracker(testParent *s) {
-    SPO2Tracker::_s = s;
+    SPO2Tracker::_s = s; 
 }
 
 
@@ -56,6 +56,7 @@ void SPO2Tracker::tracker(){
     // thread that checks using determineSymptom() and calls alert if conditions are met
     // use threadRunning to stop the thread
     while (threadRunning) {
+        
         std::string symptom = determineSymptom(getVal());
         if (false) {
             // define out of range behaviour (check if crit low)
