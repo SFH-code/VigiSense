@@ -25,7 +25,14 @@ target_link_libraries(max30102 pigpio)
 add_library(sensor Sensor.cpp)
 target_link_libraries(sensor max30102)
 
+add_library(diagnosis DiagnosisInterface.h)
+target_link_libraries(diagnosis fastcdr fastrtps alert)
+
 add_library(spo2 SPO2Tracker.cpp)
+target_link_libraries(spo2 diagnosis sensor)
+
+add_library(hr HRTracker.cpp)
+target_link_libraries(hr diagnosis sensor)
 
 
 add_executable(test
@@ -37,5 +44,5 @@ target_link_libraries(test max30102)
 add_executable(testSpO2 
   testSpO2.cpp
 )
-target_link_libraries(testSpO2 sensor)
+target_link_libraries(testSpO2 sensor spo2 hr)
 
