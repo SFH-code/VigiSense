@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "DevicePublisher.cpp"
 
 struct symptomRange{
     float min;

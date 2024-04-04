@@ -25,17 +25,11 @@ target_link_libraries(max30102 pigpio)
 add_library(sensor Sensor.cpp)
 target_link_libraries(sensor max30102)
 
-add_library(publisher DevicePublisher.cpp)
-target_link_libraries(publisher fastcdr fastrtps alert)
-
-add_library(diagnosis DiagnosisInterface.h)
-target_link_libraries(diagnosis publisher)
-
 add_library(spo2 SPO2Tracker.cpp)
-target_link_libraries(spo2 diagnosis sensor)
+target_link_libraries(spo2 sensor fastcdr fastrtps alert)
 
 add_library(hr HRTracker.cpp)
-target_link_libraries(hr diagnosis sensor)
+target_link_libraries(hr sensor fastcdr fastrtps alert)
 
 
 add_executable(test

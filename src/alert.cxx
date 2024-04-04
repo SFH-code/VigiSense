@@ -36,24 +36,29 @@ using namespace eprosima::fastcdr::exception;
 
 alert::alert()
 {
-    // m_message com.eprosima.idl.parser.typecode.StringTypeCode@c46bcd4
+    // m_index com.eprosima.idl.parser.typecode.PrimitiveTypeCode@60285225
+    m_index = 0;
+    // m_message com.eprosima.idl.parser.typecode.StringTypeCode@42d8062c
     m_message ="";
 
 }
 
 alert::~alert()
 {
+
 }
 
 alert::alert(
         const alert& x)
 {
+    m_index = x.m_index;
     m_message = x.m_message;
 }
 
 alert::alert(
         alert&& x) noexcept 
 {
+    m_index = x.m_index;
     m_message = std::move(x.m_message);
 }
 
@@ -61,6 +66,7 @@ alert& alert::operator =(
         const alert& x)
 {
 
+    m_index = x.m_index;
     m_message = x.m_message;
 
     return *this;
@@ -70,6 +76,7 @@ alert& alert::operator =(
         alert&& x) noexcept
 {
 
+    m_index = x.m_index;
     m_message = std::move(x.m_message);
 
     return *this;
@@ -79,7 +86,7 @@ bool alert::operator ==(
         const alert& x) const
 {
 
-    return (m_message == x.m_message);
+    return (m_index == x.m_index && m_message == x.m_message);
 }
 
 bool alert::operator !=(
@@ -94,7 +101,11 @@ size_t alert::getMaxCdrSerializedSize(
     size_t initial_alignment = current_alignment;
 
 
+    current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4);
+
+
     current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4) + 255 + 1;
+
 
     return current_alignment - initial_alignment;
 }
@@ -107,7 +118,11 @@ size_t alert::getCdrSerializedSize(
     size_t initial_alignment = current_alignment;
 
 
+    current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4);
+
+
     current_alignment += 4 + eprosima::fastcdr::Cdr::alignment(current_alignment, 4) + data.message().size() + 1;
+
 
     return current_alignment - initial_alignment;
 }
@@ -116,6 +131,7 @@ void alert::serialize(
         eprosima::fastcdr::Cdr& scdr) const
 {
 
+    scdr << m_index;
     scdr << m_message.c_str();
 
 }
@@ -124,7 +140,37 @@ void alert::deserialize(
         eprosima::fastcdr::Cdr& dcdr)
 {
 
-    dcdr >> m_message;}
+    dcdr >> m_index;
+    dcdr >> m_message;
+}
+
+/*!
+ * @brief This function sets a value in member index
+ * @param _index New value for member index
+ */
+void alert::index(
+        uint32_t _index)
+{
+    m_index = _index;
+}
+
+/*!
+ * @brief This function returns the value of member index
+ * @return Value of member index
+ */
+uint32_t alert::index() const
+{
+    return m_index;
+}
+
+/*!
+ * @brief This function returns a reference to member index
+ * @return Reference to member index
+ */
+uint32_t& alert::index()
+{
+    return m_index;
+}
 
 /*!
  * @brief This function copies the value in member message
@@ -183,5 +229,5 @@ void alert::serializeKey(
         eprosima::fastcdr::Cdr& scdr) const
 {
     (void) scdr;
-     
+      
 }
