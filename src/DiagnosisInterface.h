@@ -28,7 +28,7 @@ class diagnosisInterface {
                 return "critHigh";
             }
             
-        }
+        };
 
 
     protected:
