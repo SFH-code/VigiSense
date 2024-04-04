@@ -26,8 +26,9 @@ class diagnosisInterface {
             } else if (val > symptomRanges[symptomRanges.size() -1].max)
             {
                 return "critHigh";
+            } else {
+                return "Out of range";
             }
-            
         };
 
 
