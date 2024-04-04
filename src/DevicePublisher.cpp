@@ -13,10 +13,10 @@
 // limitations under the License.
 
 /**
- * @file HelloWorldPublisher.cpp
+ * @file DevicePublisher.cpp
  *
  */
-// change this when make file is added
+
 #include "alertPubSubTypes.h"
 
 #include <chrono>
@@ -121,7 +121,7 @@ public:
 
         // Create the publications Topic
 	// !! Important that this matches with the name of message defined in HelloWorldMsg.idl !!
-        topic_ = participant_->create_topic("HelloWorldTopic", "HelloWorldMsg", TOPIC_QOS_DEFAULT);
+        topic_ = participant_->create_topic("HelloWorldTopic", "alert", TOPIC_QOS_DEFAULT);
 
         if (topic_ == nullptr)
         {
@@ -147,7 +147,6 @@ public:
     }
 
     //!Send a publication
-    // change this when make file is created with new alert h file 
     bool publish(alert& hello)
     {
         if (listener_.matched_ > 0)
@@ -159,40 +158,3 @@ public:
     }
 
 };
-
-// int main(
-//         int,
-//         char**)
-// {
-//     std::cout << "Starting publisher." << std::endl;
-//     uint32_t samples = 10;
-
-//     HelloWorldPublisher mypub;
-
-//     if(!mypub.init())
-//     {
-// 	std::cerr << "Pub not init'd." << std::endl;
-// 	return -1;
-//     }
-    
-//     //!Run the Publisher
-//     // message
-//     HelloWorldMsg hello;
-//     hello.message("Hullo!");
-//     uint32_t samples_sent = 0;
-//     while (samples_sent < samples)
-//     {
-// 	if (mypub.publish(hello))
-// 	{
-// 	    samples_sent++;
-// 	    hello.index(samples_sent);
-// 	    std::cout << "Message: " << hello.message() << " with index: " << hello.index()
-// 		      << " SENT" << std::endl;
-// 	} else {
-// 	    std::cout << "No messages sent as there is no listener." << std::endl;
-// 	}
-// 	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-//     }
-
-//     return 0;
-// }

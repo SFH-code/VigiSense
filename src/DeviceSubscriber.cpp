@@ -129,7 +129,7 @@ public:
 
         // Create the subscriptions Topic
 	// !! Important that this matches with the name of message defined in HelloWorldMsg.idl !!
-        topic_ = participant_->create_topic("HelloWorldTopic", "HelloWorldMsg", TOPIC_QOS_DEFAULT);
+        topic_ = participant_->create_topic("HelloWorldTopic", "alert", TOPIC_QOS_DEFAULT);
 
         if (topic_ == nullptr)
         {
