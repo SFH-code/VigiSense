@@ -12,7 +12,7 @@ add_custom_target(
     messages
     COMMAND fastddsgen ../alert.idl
 )
-add_library(alert STATIC ../alert.cxx ../alertPubSubTypes.cxx)
+add_library(alert STATIC alert.cxx alertPubSubTypes.cxx)
 add_dependencies(alert messages)
 
 # example on how to call
