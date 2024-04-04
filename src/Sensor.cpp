@@ -112,8 +112,13 @@ void sensor::runHRCalculationLoop() {
 		latestIRBPM = _irBPM;
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
-		R = ((localMaximaRed-localMinimaRed)/localMinimaRed)/((localMaximaIR-localMinimaIR)/localMinimaIR);
-		latestSpO2 = 104-17*R;
+		if (localMinimaIR != 0 && localMinimaRed != 0) {
+			R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
+			latestSpO2 = 104 - 17 * R;
+		} else {
+			// Division by zero alert
+			std::cout << "Division by zero error for R calculation!" << std::endl;
+		}
 		spo2Buffer[nextSPO2BufferIndex++] = latestSpO2;
 		if (nextSPO2BufferIndex >= SPO2_BUFFER_SIZE) nextSPO2BufferIndex = 0;
 
