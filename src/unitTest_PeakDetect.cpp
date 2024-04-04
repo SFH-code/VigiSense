@@ -9,7 +9,7 @@
 #include <string>
 #include <cmath> // For sine wave generation
 #include "MAX30102.h"
-#include "Sensor.h"
+#include "sensorTest.h"
 #include "DigitalFilters.h"
 #include <boost/test/unit_test.hpp> // Include Boost.Test
 
@@ -38,6 +38,7 @@ BOOST_AUTO_TEST_CASE(SineWavePeakDetection)
         }
          
     }
+    return numPeaksDetected;
 }BOOST_CHECK_EQUAL(numPeaksDetected, 3); //3 beats only since it counts two peaks as a single beat of the heart
 
 BOOST_AUTO_TEST_SUITE_END()
