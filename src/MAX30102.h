@@ -27,7 +27,7 @@ Functions changed: changed DEFAULT_INT_GPIO, added hasSample(), dataReady(), gpi
 #define I2C_BUFFER_LENGTH	32
 
 // define the GPIO used for the sensor here
-#define DEFAULT_INT_GPIO	7
+#define DEFAULT_INT_GPIO	0
 
 class MAX30102 {
 	public:

@@ -35,11 +35,11 @@ target_link_libraries(hr sensor fastcdr fastrtps alert)
 add_executable(test
   test.cpp
 )
-target_link_libraries(test max30102)
+target_link_libraries(test max30102 sensor spo2 fastcdr fastrtps alert)
 
 
 add_executable(testSpO2 
   testSpO2.cpp
 )
-target_link_libraries(testSpO2 sensor spo2 hr fastcdr fastrtps alert)
+target_link_libraries(testSpO2 max30102 sensor spo2 hr fastcdr fastrtps alert)
 
