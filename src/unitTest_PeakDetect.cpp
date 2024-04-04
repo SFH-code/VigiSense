@@ -13,7 +13,7 @@
 #include "DigitalFilters.h"
 #include <boost/test/unit_test.hpp> // Include Boost.Test
 
-// ... your existing code ...
+
 
 BOOST_AUTO_TEST_SUITE(PeakDetectTests)
 
