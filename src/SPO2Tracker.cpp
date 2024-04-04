@@ -5,6 +5,10 @@ SPO2Tracker::SPO2Tracker(sensor *s) {
     SPO2Tracker::_s = s;
 }
 
+SPO2Tracker::~SPO2Tracker() {
+    stop();
+}
+
 void SPO2Tracker::start() {
     // start threads
     threadRunning = true;

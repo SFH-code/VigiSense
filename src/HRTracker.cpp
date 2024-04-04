@@ -5,6 +5,10 @@ HRTracker::HRTracker(sensor *s) {
     HRTracker::_s = s;
 }
 
+HRTracker::~HRTracker() {
+    stop();
+}
+
 void HRTracker::start() {
     // start threads
     threadRunning = true;

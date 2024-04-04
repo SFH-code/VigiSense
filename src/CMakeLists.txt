@@ -41,5 +41,5 @@ target_link_libraries(test max30102)
 add_executable(testSpO2 
   testSpO2.cpp
 )
-target_link_libraries(testSpO2 sensor spo2 hr)
+target_link_libraries(testSpO2 sensor spo2 hr fastcdr fastrtps alert)
 
