@@ -1,4 +1,6 @@
+#pragma once
 #include "DiagnosisInterface.h"
+#include "Sensor.h"
 #include <thread>
 
 class HRTracker:public diagnosisInterface {
@@ -15,5 +17,9 @@ class HRTracker:public diagnosisInterface {
         bool threadRunning = false;
         void pingThread();
         // define symptom table here
+		std::vector<symptomRange> symptomRanges {
+			{0,60,"Bradycardia"},
+			{60,100,"Normal resting heart rate"},
+			{100,200,"Tachyacardia"}};
 
 };

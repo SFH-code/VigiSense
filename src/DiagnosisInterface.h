@@ -1,4 +1,4 @@
-#include "Sensor.h"
+#pragma once
 #include <string>
 #include "DevicePublisher.cpp"
 
@@ -15,19 +15,22 @@ class diagnosisInterface {
         virtual void ping() = 0;
         virtual int getVal() = 0;
 
-        std::string determineSymptom(){
-        	int val = this->getVal();
+        static std::string determineSymptom(std::vector<symptomRange> symptomRanges, int val){
         	for (int i = 0; i < symptomRanges.size(); ++i){
                 if (val>symptomRanges[i].min && val<symptomRanges[i].max){
                     return symptomRanges[i].symptom;
                 }
             }    
-            return NULL;
+            if (val < symptomRanges[0].min) {
+                return "critLow";
+            } else if (val > symptomRanges[symptomRanges.size() -1].max)
+            {
+                return "critHigh";
+            }
+            
         }
 
 
     protected:
         std::vector<symptomRange> symptomRanges;
-        int critHigh;
-        int critLow;
 };

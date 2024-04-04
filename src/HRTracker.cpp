@@ -54,12 +54,16 @@ void HRTracker::pingThread() {
 void HRTracker::tracker(){
     // thread that checks using determineSymptom() and calls alert if conditions are met
     // use threadRunning to stop the thread
+    std::cout<<"Started HR tracker"<<std::endl;
     while (threadRunning) {
-        std::string symptom = determineSymptom();
-        if (false) {
-            // define out of range behaviour (check if crit low)
-            alert();
-        }
+        int val = getVal();
+        std::cout<<"HR value: "<< val << " ";
+        std::string symptom = determineSymptom(symptomRanges, val);
+        std::cout<<symptom<<std::endl;
+        // if (false) {
+        //     // define out of range behaviour (check if crit low)
+        //     // alert();
+        // }
     }
 }
 
