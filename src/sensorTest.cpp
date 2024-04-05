@@ -1,5 +1,6 @@
 #include <cmath> // For sine wave generation
 #include "sensorTest.h"
+#include <iostream>
 
 sensorTest::sensorTest() {
 
@@ -21,26 +22,35 @@ void sensorTest::setSpO2(int i ) {
     spo2 = i;
 }
 
-void sensorTest::setData(){
-// Test Parameters
-    double testFrequency = 1.2;  // Hz (Approximate normal heart rate) 
-    double samplingRate = 50.0;  // Hz (Adjust based on sensor)
-    double testDuration = 5.0;   // Seconds
-    int numSamples = testDuration * samplingRate;
+void sensorTest::setData(double testFrequency, bool flat) {
+	// Test Parameters
+	bool flat = false;
+	double testFrequency = 1.2;  // Hz (Approximate normal heart rate) 
+	double samplingRate = 50.0;  // Hz (Adjust based on sensor)
+	double testDuration = 5.0;   // Seconds
+	int numSamples = testDuration * samplingRate;
 
-    // Generate sine wave data
-    std::vector<int32_t> testData;
-    // include the -999 to indicate the beginning of peak detection calling
-    testData.push_back(static_cast<int32_t>(-999));
-    
-    for (int i = 0; i < numSamples; ++i) 
-    {
-        double time = i / samplingRate;
-        double amplitude = 1000;  // Adjust amplitude as needed
-        double sineValue = amplitude * std::sin(2 * M_PI * testFrequency * time);
-        testData.push_back(static_cast<int32_t>(sineValue));
-    }
-    
+	// Generate sine wave data
+	std::vector<int32_t> testData;
+	// include the -999 to indicate the beginning of peak detection calling
+	testData.push_back(static_cast<int32_t>(-999));
+	
+	for (int i = 0; i < numSamples; ++i) 
+	{ 
+		if (flat) {
+			double time = i / samplingRate;
+			double amplitude = 1000;  // Adjust amplitude as needed
+			double sineValue = amplitude * std::sin(2 * M_PI * testFrequency * time);
+			testData.push_back(static_cast<int32_t>(sineValue));
+		}
+		else if (!flat) {
+			testData.push_back(0);
+		}
+	}
+}
+
+std::vector<int32_t> sensorTest::getData(){
+	return testData;
 }
 
 //Peak Detection
@@ -112,4 +122,16 @@ bool sensorTest::peakDetect(int32_t testdata) {
 	return false;
 
 	
+}
+
+
+
+int32_t sensorTest::SpO2Calc(int32_t localMaximaIR, int32_t localMinimaIR, int32_t localMaximaRed, int32_t localMinimaRed){
+		if (localMinimaIR != 0 && localMinimaRed != 0) {
+			R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
+			latestSpO2 = 104 - 17 * R;
+		} else {
+			// Division by zero alert
+			std::cout << "Division by zero error for R calculation!" << std::endl;
+		}
 }
