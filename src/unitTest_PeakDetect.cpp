@@ -41,7 +41,7 @@ BOOST_AUTO_TEST_CASE(SuccessSineWavePeakDetection)
     return numPeaksDetected;
 }BOOST_CHECK_EQUAL(numPeaksDetected, 3); //3 beats only since it counts two peaks as a single beat of the heart
 
-BOOST_AUTO_TEST_CASE(FailedflatwavePeakDetection) 
+BOOST_AUTO_TEST_CASE(SuccessflatwavePeakDetection) 
 {
 
     // Simulate feeding data to peak detection
@@ -63,6 +63,6 @@ BOOST_AUTO_TEST_CASE(FailedflatwavePeakDetection)
          
     }
     return numPeaksDetected;
-}BOOST_CHECK_EQUAL(numPeaksDetected, 3); //3 beats only since it counts two peaks as a single beat of the heart
+}BOOST_CHECK_EQUAL(numPeaksDetected, 0); //3 beats only since it counts two peaks as a single beat of the heart
 
 BOOST_AUTO_TEST_SUITE_END()
