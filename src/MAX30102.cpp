@@ -11,7 +11,7 @@
 
 /*
 Edited by Yu Kit Foo, to include data extraction using Interrupts
-Functions changed: setup(), begin(), getRed(), getIR(), hasSample(), dataReady()
+Functions changed: setup(), begin(), getRed(), getIR(), hasSample(), dataReady(), shutDown()
 */
 
 #include <pigpio.h>
@@ -246,7 +246,10 @@ void MAX30102::wakeUp(void) {
  * but will not update or take new readings, such as temperature.
  */
 void MAX30102::shutDown(void) {
+	gpioSetISRFuncEx(DEFAULT_INT_GPIO,FALLING_EDGE,-1,NULL,(void*)this);
+	gpioTerminate();
 	bitMask(REG_MODECONFIG, MASK_SHUTDOWN, SHUTDOWN);
+	
 }
 
 /**

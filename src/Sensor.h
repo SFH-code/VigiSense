@@ -1,3 +1,4 @@
+#pragma once
 #include <cstdint>
 #include <chrono>
 #include "MAX30102.h"

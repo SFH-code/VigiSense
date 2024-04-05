@@ -1,35 +1,21 @@
 #include <iostream>
 #include <unistd.h>
 #include "MAX30102.h"
+#include "Sensor.h"
+#include "SPO2Tracker.h"
 
 using namespace std;
 
 MAX30102 heartSensor;
 
 int main(void) {
-	cout << "MAX30102 Heart Sensor Tester" << endl << "-----------------------------------------" << endl;
-	// Start i2c
-	int result = heartSensor.begin();
-	if (result < 0) {
-		cout << "Failed to start I2C (Error: " << result << ")." << endl;
-		return (-1*result);
-	}
-	cout << "Device found (revision: " << result << ")!" << endl;
-
-	// only call for setup, setup for A_FULL INT mode, led mode 2 (red+IR)
-	heartSensor.setup();
-
-	//heartSensor.softReset();
-	// heartSensor.setPulseAmplitudeRed(0x0A);
-	// while (1) {
-	// 	//cout << "Temperature: " << heartSensor.readTemperatureF() << endl;
-	// 	cout << "IR: " << heartSensor.getIR();
-	// 	cout << ", RED: " << heartSensor.getRed();
-	// 	cout << endl;
-	// 	usleep(500);
-	// 	//break;
-	// }
-	//heartSensor.shutDown();
-
+	MAX30102 s;
+	sensor MAX30102_sensor(&s);
+	MAX30102_sensor.HRcalc();
+	SPO2Tracker spo2(&MAX30102_sensor);
+	spo2.start();
+	getchar();
+	spo2.stop();
+	// at end of block destructor of sensor class is called which shutsdown max30102 instance s.
 	return 0;
 }

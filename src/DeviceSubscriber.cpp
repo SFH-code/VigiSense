@@ -13,10 +13,10 @@
 // limitations under the License.
 
 /**
- * @file HelloWorldSubscriber.cpp
+ * @file DeviceSubscriber.cpp
  *
  */
-// change when makefile is created
+
 #include "alertPubSubTypes.h"
 
 #include <chrono>
@@ -75,7 +75,6 @@ private:
         }
 
 	// callback
-    // change to way to alert info
         void on_data_available(DataReader* reader) override
         {
             SampleInfo info;
@@ -84,7 +83,8 @@ private:
             {
                 if (info.valid_data)
                 {
-                    std::cout << "Message: " << hello.message() << " RECEIVED." << std::endl;
+                    std::cout << "Message: " << hello.message() << " with index: " << hello.index()
+                                << " RECEIVED." << std::endl;
                 }
             }
         }
@@ -129,7 +129,7 @@ public:
 
         // Create the subscriptions Topic
 	// !! Important that this matches with the name of message defined in HelloWorldMsg.idl !!
-        topic_ = participant_->create_topic("HelloWorldTopic", "HelloWorldMsg", TOPIC_QOS_DEFAULT);
+        topic_ = participant_->create_topic("HelloWorldTopic", "alert", TOPIC_QOS_DEFAULT);
 
         if (topic_ == nullptr)
         {
@@ -156,22 +156,3 @@ public:
     }
 
 };
-
-// int main(
-//         int,
-//         char**)
-// {
-//     std::cout << "Starting subscriber. Press any key to stop it." << std::endl;
-
-//     HelloWorldSubscriber mysub;
-//     if(!mysub.init())
-//     {
-// 	std::cerr << "Could not init the subscriber." << std::endl;
-// 	return -1;
-//     }
-
-//     // do nothing here
-//     getchar();
-
-//     return 0;
-// }

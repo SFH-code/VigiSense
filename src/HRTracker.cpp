@@ -1,34 +1,34 @@
-#include "SPO2Tracker.h"
+#include "HRTracker.h"
 #include "DevicePublisher.cpp"
 
-SPO2Tracker::SPO2Tracker(testParent *s) {
-    SPO2Tracker::_s = s; 
+HRTracker::HRTracker(sensor *s) {
+    HRTracker::_s = s;
 }
 
-SPO2Tracker::~SPO2Tracker() {
+HRTracker::~HRTracker() {
     stop();
 }
 
-void SPO2Tracker::start() {
+void HRTracker::start() {
     // start threads
     threadRunning = true;
-    std::thread t1(&SPO2Tracker::tracker, this);
+    std::thread t1(&HRTracker::tracker, this);
     t1.detach();
 }
 
 // set false for thread and terminates it
-void SPO2Tracker::stop() {
+void HRTracker::stop() {
     threadRunning = false;
 }
 
 
-void SPO2Tracker::ping() {
-	std::thread t2(&SPO2Tracker::pingThread, this);
+void HRTracker::ping() {
+	std::thread t2(&HRTracker::pingThread, this);
 	t2.detach();
 }
 
 // thread for pinging SPO2 critical values, 
-void SPO2Tracker::pingThread() {
+void HRTracker::pingThread() {
     // start threads for FastDDS
     std::cout<<"Starting alert message"<<std::endl;
     // sends the same message 3 times
@@ -56,12 +56,13 @@ void SPO2Tracker::pingThread() {
     }
 }
 
-void SPO2Tracker::tracker(){
+void HRTracker::tracker(){
     // thread that checks using determineSymptom() and calls alert if conditions are met
     // use threadRunning to stop the thread
+    std::cout<<"Started HR tracker"<<std::endl;
     while (threadRunning) {
         int val = getVal();
-        std::cout<<"SPO2 value: "<< val << " ";
+        std::cout<<"HR value: "<< val << " ";
         std::string symptom = determineSymptom(symptomRanges, val);
         std::cout<<symptom<<std::endl;
         // if (false) {
@@ -71,7 +72,7 @@ void SPO2Tracker::tracker(){
     }
 }
 
-int SPO2Tracker::getVal() {
+int HRTracker::getVal() {
     // start threads
-    return _s->getSpO2();
+    return _s->getHR();
 }
