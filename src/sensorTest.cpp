@@ -17,7 +17,6 @@ int sensorTest::getHR() {
     return -1;
 }
 
-
 void sensorTest::setSpO2(int i ) {
     spo2 = i;
 }
