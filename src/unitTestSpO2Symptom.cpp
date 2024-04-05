@@ -15,7 +15,7 @@ BOOST_AUTO_TEST_CASE(SuccessTestRangeLow) {
     spo2.start();
     s.setSpO2(60);
     // BOOST_CHECK_EQUAL("Hypoxia", spo2.determineSymptom(spo2.getVal()));
-    BOOST_CHECK_EQUAL("Hypoxia", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getVal()));
+    BOOST_CHECK_EQUAL("Hypoxia", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
 
 
 }
@@ -25,7 +25,7 @@ BOOST_AUTO_TEST_CASE(SuccessTestRangeMid) {
     SPO2Tracker spo2(&s);
     spo2.start();
     s.setSpO2(90);
-    BOOST_CHECK_EQUAL("Hypoxemia", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getVal()));
+    BOOST_CHECK_EQUAL("Hypoxemia", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
 
 }
 
@@ -34,7 +34,7 @@ BOOST_AUTO_TEST_CASE(SuccessTestRangeTop) {
     SPO2Tracker spo2(&s);
     spo2.start();
     s.setSpO2(95);
-    BOOST_CHECK_EQUAL("Normal", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getVal()));
+    BOOST_CHECK_EQUAL("Normal", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
 
 }
 
@@ -43,7 +43,7 @@ BOOST_AUTO_TEST_CASE(FailTestRange) {
     SPO2Tracker spo2(&s);
     spo2.start();
     s.setSpO2(80);
-    BOOST_CHECK_EQUAL("Normal", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getVal()));
+    BOOST_CHECK_EQUAL("Normal", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
 
 }
 
@@ -52,7 +52,7 @@ BOOST_AUTO_TEST_CASE(SuccessTestCritical) {
     SPO2Tracker spo2(&s);
     spo2.start();
     s.setSpO2(80);
-    BOOST_CHECK_EQUAL(true, diagnosisInterface::isCritical(spo2.getVal()));
+    BOOST_CHECK_EQUAL(true, diagnosisInterface::isCritical(spo2.getSpO2()));
 
 }
 
@@ -61,6 +61,6 @@ BOOST_AUTO_TEST_CASE(FailTestCritical) {
     SPO2Tracker spo2(&s);
     spo2.start();
     s.setSpO2(102);
-    BOOST_CHECK_EQUAL(false, diagnosisInterface::isCritical(spo2.getVal()));
+    BOOST_CHECK_EQUAL(false, diagnosisInterface::isCritical(spo2.getSpO2()));
 
 }
