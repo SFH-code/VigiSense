@@ -37,7 +37,7 @@ apt install fastddsgen fastdds-tools
 To run:
 ```
 git clone https://github.com/2468513H/VigiSense.git
-cd Vigisense/src
+cd VigiSense/src
 mkdir build
 cd build
 cmake ..
