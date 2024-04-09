@@ -11,3 +11,7 @@ const std::unordered_map<std::string, std::string> diagnosisTable { { "HRBSPL", 
                                                , { "HRTSPM", "" }
                                                , { "HRTSPH", "" }
                                                };
+
+std::string getComplexDiagnosis(std::string code){
+    return diagnosisTable.at(code);
+}
