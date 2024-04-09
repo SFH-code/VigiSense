@@ -217,3 +217,9 @@ int main() {
     	MAX30102_sensor.stopHRcalc();
 }
 ```
+
+The sequence diagram of the workflow can be found below:
+
+![SequenceDiagram](https://github.com/2468513H/VigiSense/assets/77401199/fca81127-5f7a-4f9d-97d2-264023954ff4)
+
+
