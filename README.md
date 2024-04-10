@@ -51,7 +51,13 @@ The repo contains refactored code for:
 
 MAX30102 library (edited from: https://github.com/garrettluu/max30102-rpi/tree/08b8e2aa917817f8e57aca7f04da4b7b1180f17a)
 
+
 ## Functionality of each C++/H file:
+
+### UML Class Diagram
+
+![finalised class VigiSense drawio](https://github.com/2468513H/VigiSense/assets/77401199/7f21bd00-3ee8-4322-aa86-fb7be6036402)
+
 
 ### 1. MAX30102.h/MAX30102.cpp
 
