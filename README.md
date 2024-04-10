@@ -222,4 +222,18 @@ The sequence diagram of the workflow can be found below:
 
 ![SequenceDiagram](https://github.com/2468513H/VigiSense/assets/77401199/fca81127-5f7a-4f9d-97d2-264023954ff4)
 
+## Performance Tests:
 
+Performance tests is done by evaluating high-priority and long functions that run in the program, 2 functions are used in this testing. The MAX30102.cpp/h file uses an interrupt service routine that has a pointer to a function that reads a buffer of raw data values on a buffer and retrieves the red and infrared intensity values when an interrupt is called. Since this is called in an interrupt service routine that is called when a falling edge is detected on GPIO 0 (physical pin 11) on a Raspberry Pi Model 3B, the ISR runs on a high priority which if it has a long runtime, it would affect the performance of other parts of the code. Another example would be the calculation for heart rate and SPO2 in the Sensor.cpp/h file, the calculation is done by passing in an infrared value, and the infrared value is then compared with a buffer of previous values to determine if it is a local maxima peak or a local minima trough. The values of infrared and red intensity values at those points then contribute to AC/DC component of the SPO2 calculation, or the period between peaks is used to calculate the heart rate. Even though the function is called periodically inside a thread, the latency is tested as it is one of the longer functions.
+
+When considering the context, having a latency of less than 50ms would be more than sufficient as the system is made for quick response to bodily conditions where 50ms is a short enough period for a person to respond to a change in someone else's bodily function.  
+
+The test is done by using ```chrono``` and ```fstream``` to log values into a csv file and then data is plotted to a histogram to show distribution of data in ```matplotlib``` using Python. 
+
+![image](https://github.com/2468513H/VigiSense/assets/77401199/82d36c4e-5f26-4d93-9f88-da21260e2bd6)
+
+The diagram above shows the time taken for ISR to run. It shows a bimodal distribution with local means at approximately 1.79ms and 2.35ms, which is well below the threshold.
+
+![image](https://github.com/2468513H/VigiSense/assets/77401199/a8d71751-7150-419b-8e09-17028af5620c)
+
+The diagram above shows the time taken to run the calculation for heart rate and SPO2. Showing a normal distribution with a mean around 0.55ms, which is well below the threshold.
