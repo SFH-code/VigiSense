@@ -113,7 +113,13 @@ void sensor::runHRCalculationLoop() {
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
 		if (localMinimaIR != 0 && localMinimaRed != 0) {
-			R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
+			// Calculate R value
+			float MaxR = localMaximaRed;
+			float MinR = localMinimaRed;
+			float MaxIR = localMaximaIR;
+			float MinIR = localMinimaIR;
+			R = ((MaxR-MinR)/MinR)/((MaxIR-MinIR)/MinIR); //converted to float because intermediate decimal value is being rounded to 0
+			//R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
 			latestSpO2 = 104 - 17 * R;
 		} else {
 			// Division by zero alert
