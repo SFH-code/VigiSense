@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.7.0)
-project(VigiSenseLibs VERSION 1.0 LANGUAGES CXX)
+project(UNITTESTING)
 
 set(CMAKE_CXX_STANDARD 17)
 
 
 find_package(fastcdr REQUIRED)
 find_package(fastrtps REQUIRED)
+
 
 # alert section
 add_custom_target(
@@ -19,6 +20,7 @@ add_dependencies(alert messages)
 # add_executable(publisher publisher.cpp)
 # target_link_libraries(publisher fastcdr fastrtps alert)
 
+
 add_library(max30102 MAX30102.cpp)
 target_link_libraries(max30102 pigpio)
 
@@ -31,6 +33,8 @@ target_link_libraries(spo2 sensor fastcdr fastrtps alert)
 add_library(hr HRTracker.cpp)
 target_link_libraries(hr sensor fastcdr fastrtps alert)
 
+add_library(sensortest sensorTest.cpp sensorTest.h)
+target_link_libraries(sensortest spo2 hr sensor)
 
 add_executable(test
   test.cpp
