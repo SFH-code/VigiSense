@@ -114,6 +114,9 @@ void sensor::runHRCalculationLoop() {
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
 		if (localMinimaIR != 0 && localMinimaRed != 0) {
 			// Calculate R value
+			// See https://github.com/2468513H/VigiSense/files/14432156/max3010x-ev-kits-recommended-configurations-and-operating-profiles.pdf
+			// Page 6
+			// Before division, parameters should be transferred into float 
 			float MaxR = localMaximaRed;
 			float MinR = localMinimaRed;
 			float MaxIR = localMaximaIR;
