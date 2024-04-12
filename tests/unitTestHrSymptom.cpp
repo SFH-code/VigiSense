@@ -1,6 +1,6 @@
 //Unit tests for the SPO2 symptom determination function in the SPO2Tracker class
 
-#define BOOST_TEST_MODULE SqrTests
+#define BOOST_TEST_MODULE HrSympCheck
 #include <boost/test/unit_test.hpp>
 
 #include "sensorTest.h"

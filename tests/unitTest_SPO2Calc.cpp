@@ -1,5 +1,5 @@
 //Unit tests for the SPO2 calculation
-#define BOOST_TEST_MODULE SqrTests
+#define BOOST_TEST_MODULE SpO2Calc
 #include <boost/test/unit_test.hpp>
 
 #include "sensorTest.h"
