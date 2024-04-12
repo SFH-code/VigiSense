@@ -208,8 +208,9 @@ bool sensor::peakDetect(int32_t data) {
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMaximaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
 			int32_t filteredRedValue = static_cast<int32_t>(localMaximaRedUnfilt);
-			localMaximaRed = lpf.update(filteredRedValue);
-			localMaximaRed = hpf.update(filteredRedValue);
+			filteredRedValue = lpf.update(filteredRedValue);
+			filteredRedValue = hpf.update(filteredRedValue);
+			localMaximaRed = filteredRedValue;
 		}
 	}
 
@@ -220,8 +221,9 @@ bool sensor::peakDetect(int32_t data) {
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMinimaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
 			int32_t filteredRedValue = static_cast<int32_t>(localMinimaRedUnfilt);
-			localMinimaRed = lpf.update(filteredRedValue);
-			localMinimaRed = hpf.update(filteredRedValue);
+			filteredRedValue = lpf.update(filteredRedValue);
+			filteredRedValue = hpf.update(filteredRedValue);
+			localMinimaRed = filteredRedValue;
 		}
 	}
 
