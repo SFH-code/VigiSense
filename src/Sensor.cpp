@@ -9,8 +9,8 @@
 
 //Some code refactored from HeartRate.cpp
         
-LowPassFilter lpf(0.08, M_PI);
-HighPassFilter hpf(0.08, M_PI);
+LowPassFilter lpf(0.08, M_PI); //lowpass filter
+HighPassFilter hpf(0.08, M_PI); //high pass filter
 
 //R value calculation from sensor input
 float R;
@@ -108,7 +108,7 @@ void sensor::runHRCalculationLoop() {
 	int timeSinceLastIRHeartBeat = std::chrono::duration_cast<std::chrono::milliseconds>(timeCurrent - timeLastIRHeartBeat).count();
 
 	if (peakDetect(filteredIRValue)) {
-		int _irBPM = 60000/timeSinceLastIRHeartBeat;
+		int _irBPM = 60000/timeSinceLastIRHeartBeat; //60000 ms divided by time since last beat in ms to get beats per minute
 		latestIRBPM = _irBPM;
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
