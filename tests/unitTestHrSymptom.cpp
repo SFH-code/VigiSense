@@ -51,7 +51,7 @@ BOOST_AUTO_TEST_CASE(SuccessTestCritical) {
 
 }
 
-BOOST_AUTO_TEST_CASE(FailTestCritical) {
+BOOST_AUTO_TEST_CASE(SuccessTestCritical) {
     sensorTest s;
     HRTracker hr(&s);
     hr.start();

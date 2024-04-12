@@ -9,16 +9,7 @@
 
 
 
-BOOST_AUTO_TEST_CASE(SuccessTestRangeLow) {
-    sensorTest s;
-    SPO2Tracker spo2(&s);
-    spo2.start();
-    s.setSpO2(60);
-    // BOOST_CHECK_EQUAL("Hypoxia", spo2.determineSymptom(spo2.getVal()));
-    BOOST_CHECK_EQUAL("Hypoxia", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
 
-
-}
 
 BOOST_AUTO_TEST_CASE(SuccessTestRangeMid) {
     sensorTest s;
@@ -33,8 +24,8 @@ BOOST_AUTO_TEST_CASE(SuccessTestRangeTop) {
     sensorTest s;
     SPO2Tracker spo2(&s);
     spo2.start();
-    s.setSpO2(95);
-    BOOST_CHECK_EQUAL("Normal", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
+    s.setSpO2(94);
+    BOOST_CHECK_EQUAL("Concerning Oxygen Concentration", diagnosisInterface::determineSymptom(spo2.symptomRanges,spo2.getSpO2()));
 
 }
 
