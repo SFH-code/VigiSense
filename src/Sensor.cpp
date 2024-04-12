@@ -112,7 +112,7 @@ void sensor::runHRCalculationLoop() {
 		latestIRBPM = _irBPM;
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
-		if (localMinimaIR != 0 && localMinimaRed != 0) {
+		if (localMinimaIR != 0 && localMinimaRed != 0) { //Avoid division by zero
 			// Calculate R value
 			// See https://github.com/2468513H/VigiSense/files/14432156/max3010x-ev-kits-recommended-configurations-and-operating-profiles.pdf
 			// Page 6
@@ -123,7 +123,7 @@ void sensor::runHRCalculationLoop() {
 			float MinIR = localMinimaIR;
 			R = ((MaxR-MinR)/MinR)/((MaxIR-MinIR)/MinIR); //converted to float because intermediate decimal value is being rounded to 0
 			//R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
-			latestSpO2 = 104 - 17 * R;
+			latestSpO2 = 104 - 17 * R; //  best-fit straight-line approximation of SpO2 vs. R data.
 		} else {
 			// Division by zero alert
 			std::cout << "Division by zero error for R calculation!" << std::endl;
