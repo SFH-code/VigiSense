@@ -116,7 +116,7 @@ void sensor::runHRCalculationLoop() {
 			// Calculate R value
 			// See https://github.com/2468513H/VigiSense/files/14432156/max3010x-ev-kits-recommended-configurations-and-operating-profiles.pdf
 			// Page 6
-			// Before division, parameters should be transferred into float 
+			// Before division, parameters should be transferred into float to avoid rounding to 0
 			float MaxR = localMaximaRed;
 			float MinR = localMinimaRed;
 			float MaxIR = localMaximaIR;
