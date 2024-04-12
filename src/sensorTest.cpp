@@ -22,6 +22,10 @@ void sensorTest::setSpO2(int i ) {
     spo2 = i;
 }
 
+void sensorTest::setHr(int i ) {
+    hr = i;
+}
+
 void sensorTest::setData(double testFrequency, bool flat) {
 	// Test Parameters
 	bool flat = false;
