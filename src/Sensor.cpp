@@ -102,13 +102,13 @@ void sensor::runHRCalculationLoop() {
 	// Calculate the IR heart rate //
 	
 	int32_t filteredIRValue = static_cast<int32_t>(irValue);
-	filteredIRValue = lpf.update(filteredIRValue);
-	filteredIRValue = hpf.update(filteredIRValue);
+	filteredIRValue = lpf.update(filteredIRValue); // low pass filter
+	filteredIRValue = hpf.update(filteredIRValue); // high pass filter
 
 	int timeSinceLastIRHeartBeat = std::chrono::duration_cast<std::chrono::milliseconds>(timeCurrent - timeLastIRHeartBeat).count();
 
 	if (peakDetect(filteredIRValue)) {
-		int _irBPM = 60000/timeSinceLastIRHeartBeat;
+		int _irBPM = 60000/timeSinceLastIRHeartBeat; //60000 ms divided by time since last beat in ms
 		latestIRBPM = _irBPM;
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
