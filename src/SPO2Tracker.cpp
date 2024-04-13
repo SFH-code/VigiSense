@@ -61,9 +61,12 @@ void SPO2Tracker::tracker(){
     // use threadRunning to stop the thread
     while (threadRunning) {
         int val = getVal();
-        std::cout<<"SPO2 value: "<< val << " ";
-        std::string symptom = determineSymptom(symptomRanges, val);
-        std::cout<<symptom<<std::endl;
+        if(val!=this->lastVal){
+            std::cout<<"SPO2 value: "<< val << " ";
+            std::string symptom = determineSymptom(symptomRanges, val);
+            std::cout<<symptom<<std::endl;
+            this->lastVal = val;
+        }
         // if (false) {
         //     // define out of range behaviour (check if crit low)
         //     // alert();

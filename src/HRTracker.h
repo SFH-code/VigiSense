@@ -12,6 +12,7 @@ class HRTracker:public diagnosisInterface {
         void ping();
         int getVal();
         void tracker();
+        int lastVal=0;
     protected:
         sensor* _s; 
         bool threadRunning = false;

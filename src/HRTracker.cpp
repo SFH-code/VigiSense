@@ -62,9 +62,12 @@ void HRTracker::tracker(){
     std::cout<<"Started HR tracker"<<std::endl;
     while (threadRunning) {
         int val = getVal();
+        if(val!=this->lastVal){
         std::cout<<"HR value: "<< val << " ";
         std::string symptom = determineSymptom(symptomRanges, val);
         std::cout<<symptom<<std::endl;
+        this->lastVal = val;
+        }
         // if (false) {
         //     // define out of range behaviour (check if crit low)
         //     // alert();
