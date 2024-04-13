@@ -1,0 +1,43 @@
+\doxysection{Diagnosis\+Interface.\+h}
+\hypertarget{_diagnosis_interface_8h_source}{}\label{_diagnosis_interface_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h@{/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h}}
+\mbox{\hyperlink{_diagnosis_interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsymptom_range}{symptomRange}}\{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structsymptom_range_ad02690bf7c0d6c2fa54471248d465858}{min}};}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structsymptom_range_a231a11ec05593493673c2ea36e35a3a1}{max}};}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ \mbox{\hyperlink{structsymptom_range_a559ab5532861f62e71399e7fc7ff71ce}{symptom}};}
+\DoxyCodeLine{00009\ \};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdiagnosis_interface}{diagnosisInterface}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdiagnosis_interface_a4aef943bb4435304bd736bfa5c381d5c}{start}}()\ =\ 0;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdiagnosis_interface_a40312067315d0cae8caad4817fec17b8}{stop}}()\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdiagnosis_interface_a9a8c6781d6813c939dfcdbc4ab54f573}{ping}}()\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classdiagnosis_interface_ad6391b6e9fb21261d4353a5d850f6724}{getVal}}()\ =\ 0;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classdiagnosis_interface_ac23cf5e69c20f19de5fda5b55e49f437}{determineSymptom}}(std::vector<symptomRange>\ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}},\ \textcolor{keywordtype}{int}\ val)\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}.size();\ ++i)\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (val>\mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}[i].min\ \&\&\ val<\mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}[i].max)\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}[i].symptom;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (val\ <\ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}[0].min)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}critLow"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (val\ >\ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}[\mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}}.size()\ -\/1].max)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}critHigh"{}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Out\ of\ range"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::vector<symptomRange>\ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptomRanges}};}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

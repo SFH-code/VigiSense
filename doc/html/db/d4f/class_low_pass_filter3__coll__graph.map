@@ -1,0 +1,12 @@
+<map id="LowPassFilter3" name="LowPassFilter3">
+<area shape="rect" id="Node000001" title="Class for third order high pass filter. This is designed using the bilinear transform." alt="" coords="243,196,361,221"/>
+<area shape="rect" id="Node000002" href="$d3/d68/class_digital_filter.html" title=" " alt="" coords="5,108,177,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,136,275,193,273,198,131,141"/>
+<area shape="rect" id="Node000003" href="$db/dba/class_circular_delay.html" title=" " alt="" coords="202,108,402,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="305,147,305,195,299,195,299,147"/>
+<area shape="rect" id="Node000004" href="$d4/db7/class_circular_delay_1_1iterator.html" title=" " alt="" coords="335,5,493,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="382,56,318,110,314,106,379,52"/>
+<area shape="rect" id="Node000005" href="$db/dba/class_circular_delay.html" title=" " alt="" coords="426,108,626,133"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="449,52,514,106,510,110,446,56"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="484,141,333,198,331,193,482,136"/>
+</map>

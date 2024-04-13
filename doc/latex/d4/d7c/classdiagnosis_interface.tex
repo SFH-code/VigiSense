@@ -1,0 +1,100 @@
+\doxysection{diagnosis\+Interface Class Reference}
+\hypertarget{classdiagnosis_interface}{}\label{classdiagnosis_interface}\index{diagnosisInterface@{diagnosisInterface}}
+
+
+{\ttfamily \#include $<$Diagnosis\+Interface.\+h$>$}
+
+
+
+Inheritance diagram for diagnosis\+Interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{d2/d9e/classdiagnosis_interface__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classdiagnosis_interface_a4aef943bb4435304bd736bfa5c381d5c}{start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classdiagnosis_interface_a40312067315d0cae8caad4817fec17b8}{stop}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classdiagnosis_interface_a9a8c6781d6813c939dfcdbc4ab54f573}{ping}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classdiagnosis_interface_ad6391b6e9fb21261d4353a5d850f6724}{get\+Val}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classdiagnosis_interface_ac23cf5e69c20f19de5fda5b55e49f437}{determine\+Symptom}} (std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptom\+Ranges}}, int val)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptom\+Ranges}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdiagnosis_interface_ac23cf5e69c20f19de5fda5b55e49f437}\label{classdiagnosis_interface_ac23cf5e69c20f19de5fda5b55e49f437} 
+\index{diagnosisInterface@{diagnosisInterface}!determineSymptom@{determineSymptom}}
+\index{determineSymptom@{determineSymptom}!diagnosisInterface@{diagnosisInterface}}
+\doxysubsubsection{\texorpdfstring{determineSymptom()}{determineSymptom()}}
+{\footnotesize\ttfamily static std\+::string diagnosis\+Interface\+::determine\+Symptom (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$}]{symptom\+Ranges,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classdiagnosis_interface_ad6391b6e9fb21261d4353a5d850f6724}\label{classdiagnosis_interface_ad6391b6e9fb21261d4353a5d850f6724} 
+\index{diagnosisInterface@{diagnosisInterface}!getVal@{getVal}}
+\index{getVal@{getVal}!diagnosisInterface@{diagnosisInterface}}
+\doxysubsubsection{\texorpdfstring{getVal()}{getVal()}}
+{\footnotesize\ttfamily virtual int diagnosis\+Interface\+::get\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_h_r_tracker_a3c6872477debf2dc825bdae95af99bc8}{HRTracker}}, and \mbox{\hyperlink{class_s_p_o2_tracker_a3c0ccec07835f9120be36775a1e2e64f}{SPO2\+Tracker}}.
+
+\Hypertarget{classdiagnosis_interface_a9a8c6781d6813c939dfcdbc4ab54f573}\label{classdiagnosis_interface_a9a8c6781d6813c939dfcdbc4ab54f573} 
+\index{diagnosisInterface@{diagnosisInterface}!ping@{ping}}
+\index{ping@{ping}!diagnosisInterface@{diagnosisInterface}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily virtual void diagnosis\+Interface\+::ping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_h_r_tracker_aeaa868d55b375843aa8219a340dd6252}{HRTracker}}, and \mbox{\hyperlink{class_s_p_o2_tracker_ad79f6cc0f5be45254e84823f4877eec1}{SPO2\+Tracker}}.
+
+\Hypertarget{classdiagnosis_interface_a4aef943bb4435304bd736bfa5c381d5c}\label{classdiagnosis_interface_a4aef943bb4435304bd736bfa5c381d5c} 
+\index{diagnosisInterface@{diagnosisInterface}!start@{start}}
+\index{start@{start}!diagnosisInterface@{diagnosisInterface}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily virtual void diagnosis\+Interface\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_h_r_tracker_aae9a56f501132e089595e6e830df8dfe}{HRTracker}}, and \mbox{\hyperlink{class_s_p_o2_tracker_a3ca3542f14805182c419b8a2b8627b8c}{SPO2\+Tracker}}.
+
+\Hypertarget{classdiagnosis_interface_a40312067315d0cae8caad4817fec17b8}\label{classdiagnosis_interface_a40312067315d0cae8caad4817fec17b8} 
+\index{diagnosisInterface@{diagnosisInterface}!stop@{stop}}
+\index{stop@{stop}!diagnosisInterface@{diagnosisInterface}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily virtual void diagnosis\+Interface\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_h_r_tracker_ac2a3b92fe6643eafab95cc6088ca67df}{HRTracker}}, and \mbox{\hyperlink{class_s_p_o2_tracker_a5af4b45780d7861bf4b075ddb3a9591c}{SPO2\+Tracker}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}\label{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998} 
+\index{diagnosisInterface@{diagnosisInterface}!symptomRanges@{symptomRanges}}
+\index{symptomRanges@{symptomRanges}!diagnosisInterface@{diagnosisInterface}}
+\doxysubsubsection{\texorpdfstring{symptomRanges}{symptomRanges}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsymptom_range}{symptom\+Range}}$>$ diagnosis\+Interface\+::symptom\+Ranges\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_diagnosis_interface_8h}{Diagnosis\+Interface.\+h}}\end{DoxyCompactItemize}

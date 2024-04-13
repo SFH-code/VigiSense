@@ -1,0 +1,777 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}eprosima Namespace Reference}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}eprosima\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::fastcdr Namespace Reference}{9}{section.5.2}%
+\contentsline {section}{\numberline {5.3}tps Namespace Reference}{9}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{9}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}pow()}{9}{subsubsection.5.3.1.1}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}alert Struct Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{12}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}alert()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}$\sim $alert()}{13}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}alert()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{13}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}alert()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{13}{subsubsection.6.1.2.4}%
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{13}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}deserialize()}{13}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}getCdrSerializedSize()}{13}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}getKeyMaxCdrSerializedSize()}{14}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}getMaxCdrSerializedSize()}{14}{subsubsection.6.1.3.4}%
+\contentsline {subsubsection}{\numberline {6.1.3.5}index()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{14}{subsubsection.6.1.3.5}%
+\contentsline {subsubsection}{\numberline {6.1.3.6}index()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{15}{subsubsection.6.1.3.6}%
+\contentsline {subsubsection}{\numberline {6.1.3.7}index()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{15}{subsubsection.6.1.3.7}%
+\contentsline {subsubsection}{\numberline {6.1.3.8}isKeyDefined()}{15}{subsubsection.6.1.3.8}%
+\contentsline {subsubsection}{\numberline {6.1.3.9}message()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{15}{subsubsection.6.1.3.9}%
+\contentsline {subsubsection}{\numberline {6.1.3.10}message()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{15}{subsubsection.6.1.3.10}%
+\contentsline {subsubsection}{\numberline {6.1.3.11}message()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{16}{subsubsection.6.1.3.11}%
+\contentsline {subsubsection}{\numberline {6.1.3.12}message()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{16}{subsubsection.6.1.3.12}%
+\contentsline {subsubsection}{\numberline {6.1.3.13}operator"!=()}{16}{subsubsection.6.1.3.13}%
+\contentsline {subsubsection}{\numberline {6.1.3.14}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{subsubsection.6.1.3.14}%
+\contentsline {subsubsection}{\numberline {6.1.3.15}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{subsubsection.6.1.3.15}%
+\contentsline {subsubsection}{\numberline {6.1.3.16}operator==()}{17}{subsubsection.6.1.3.16}%
+\contentsline {subsubsection}{\numberline {6.1.3.17}serialize()}{17}{subsubsection.6.1.3.17}%
+\contentsline {subsubsection}{\numberline {6.1.3.18}serializeKey()}{17}{subsubsection.6.1.3.18}%
+\contentsline {subsection}{\numberline {6.1.4}Member Data Documentation}{18}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.1}index}{18}{subsubsection.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {6.1.4.2}m\_index}{18}{subsubsection.6.1.4.2}%
+\contentsline {subsubsection}{\numberline {6.1.4.3}m\_message}{18}{subsubsection.6.1.4.3}%
+\contentsline {subsubsection}{\numberline {6.1.4.4}message}{18}{subsubsection.6.1.4.4}%
+\contentsline {section}{\numberline {6.2}alert\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type Class Reference}{19}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{20}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Member Typedef Documentation}{20}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}type}{20}{subsubsection.6.2.2.1}%
+\contentsline {subsection}{\numberline {6.2.3}Constructor \& Destructor Documentation}{20}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}alertPubSubType()}{20}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}$\sim $alertPubSubType()}{21}{subsubsection.6.2.3.2}%
+\contentsline {subsection}{\numberline {6.2.4}Member Function Documentation}{21}{subsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.4.1}createData()}{21}{subsubsection.6.2.4.1}%
+\contentsline {subsubsection}{\numberline {6.2.4.2}deleteData()}{21}{subsubsection.6.2.4.2}%
+\contentsline {subsubsection}{\numberline {6.2.4.3}deserialize()}{21}{subsubsection.6.2.4.3}%
+\contentsline {subsubsection}{\numberline {6.2.4.4}getKey()}{21}{subsubsection.6.2.4.4}%
+\contentsline {subsubsection}{\numberline {6.2.4.5}getSerializedSizeProvider()}{22}{subsubsection.6.2.4.5}%
+\contentsline {subsubsection}{\numberline {6.2.4.6}serialize()}{22}{subsubsection.6.2.4.6}%
+\contentsline {subsection}{\numberline {6.2.5}Member Data Documentation}{22}{subsection.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.5.1}m\_keyBuffer}{22}{subsubsection.6.2.5.1}%
+\contentsline {subsubsection}{\numberline {6.2.5.2}m\_md5}{22}{subsubsection.6.2.5.2}%
+\contentsline {section}{\numberline {6.3}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay$<$ type, size $>$ Class Template Reference}{23}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{24}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{24}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}CircularDelay()}{24}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{25}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}begin()}{25}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}end()}{25}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}get()}{25}{subsubsection.6.3.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.4}push()}{26}{subsubsection.6.3.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.3.5}rbegin()}{26}{subsubsection.6.3.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.3.6}rend()}{26}{subsubsection.6.3.3.6}%
+\contentsline {subsection}{\numberline {6.3.4}Member Data Documentation}{26}{subsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.4.1}data}{26}{subsubsection.6.3.4.1}%
+\contentsline {subsubsection}{\numberline {6.3.4.2}setIterator}{26}{subsubsection.6.3.4.2}%
+\contentsline {section}{\numberline {6.4}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay$<$ type, size $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::const\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}iterator Class Reference}{27}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Member Typedef Documentation}{27}{subsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.1}difference\_type}{27}{subsubsection.6.4.1.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.2}iterator\_category}{27}{subsubsection.6.4.1.2}%
+\contentsline {subsubsection}{\numberline {6.4.1.3}self\_type}{28}{subsubsection.6.4.1.3}%
+\contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{28}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}const\_iterator()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{28}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}const\_iterator()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{28}{subsubsection.6.4.2.2}%
+\contentsline {subsection}{\numberline {6.4.3}Member Function Documentation}{28}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}operator"!=()}{28}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}operator$\ast $()}{28}{subsubsection.6.4.3.2}%
+\contentsline {subsubsection}{\numberline {6.4.3.3}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{28}{subsubsection.6.4.3.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.4}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{28}{subsubsection.6.4.3.4}%
+\contentsline {subsubsection}{\numberline {6.4.3.5}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{29}{subsubsection.6.4.3.5}%
+\contentsline {subsubsection}{\numberline {6.4.3.6}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{29}{subsubsection.6.4.3.6}%
+\contentsline {subsubsection}{\numberline {6.4.3.7}operator-\/$>$()}{29}{subsubsection.6.4.3.7}%
+\contentsline {subsubsection}{\numberline {6.4.3.8}operator==()}{29}{subsubsection.6.4.3.8}%
+\contentsline {subsubsection}{\numberline {6.4.3.9}operator[]()}{29}{subsubsection.6.4.3.9}%
+\contentsline {subsection}{\numberline {6.4.4}Friends And Related Symbol Documentation}{29}{subsection.6.4.4}%
+\contentsline {subsubsection}{\numberline {6.4.4.1}CircularDelay}{29}{subsubsection.6.4.4.1}%
+\contentsline {subsection}{\numberline {6.4.5}Member Data Documentation}{29}{subsection.6.4.5}%
+\contentsline {subsubsection}{\numberline {6.4.5.1}data\_}{29}{subsubsection.6.4.5.1}%
+\contentsline {subsubsection}{\numberline {6.4.5.2}ptr\_}{30}{subsubsection.6.4.5.2}%
+\contentsline {section}{\numberline {6.5}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay$<$ type, size $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::const\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}reverse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}iterator Class Reference}{30}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Member Typedef Documentation}{31}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}difference\_type}{31}{subsubsection.6.5.1.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.2}iterator\_category}{31}{subsubsection.6.5.1.2}%
+\contentsline {subsubsection}{\numberline {6.5.1.3}self\_type}{31}{subsubsection.6.5.1.3}%
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{31}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}const\_reverse\_iterator()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{31}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}const\_reverse\_iterator()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{31}{subsubsection.6.5.2.2}%
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{31}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}operator"!=()}{31}{subsubsection.6.5.3.1}%
+\contentsline {subsubsection}{\numberline {6.5.3.2}operator$\ast $()}{31}{subsubsection.6.5.3.2}%
+\contentsline {subsubsection}{\numberline {6.5.3.3}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{32}{subsubsection.6.5.3.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.4}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{subsubsection.6.5.3.4}%
+\contentsline {subsubsection}{\numberline {6.5.3.5}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{32}{subsubsection.6.5.3.5}%
+\contentsline {subsubsection}{\numberline {6.5.3.6}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{subsubsection.6.5.3.6}%
+\contentsline {subsubsection}{\numberline {6.5.3.7}operator-\/$>$()}{32}{subsubsection.6.5.3.7}%
+\contentsline {subsubsection}{\numberline {6.5.3.8}operator==()}{32}{subsubsection.6.5.3.8}%
+\contentsline {subsubsection}{\numberline {6.5.3.9}operator[]()}{32}{subsubsection.6.5.3.9}%
+\contentsline {subsection}{\numberline {6.5.4}Friends And Related Symbol Documentation}{32}{subsection.6.5.4}%
+\contentsline {subsubsection}{\numberline {6.5.4.1}CircularDelay}{32}{subsubsection.6.5.4.1}%
+\contentsline {subsection}{\numberline {6.5.5}Member Data Documentation}{33}{subsection.6.5.5}%
+\contentsline {subsubsection}{\numberline {6.5.5.1}data\_}{33}{subsubsection.6.5.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.5.2}ptr\_}{33}{subsubsection.6.5.5.2}%
+\contentsline {section}{\numberline {6.6}contact Struct Reference}{33}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Member Data Documentation}{33}{subsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.1}email}{33}{subsubsection.6.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.2}name}{33}{subsubsection.6.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.6.1.3}phoneNum}{33}{subsubsection.6.6.1.3}%
+\contentsline {section}{\numberline {6.7}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Publisher Class Reference}{34}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Constructor \& Destructor Documentation}{34}{subsection.6.7.1}%
+\contentsline {subsubsection}{\numberline {6.7.1.1}DevicePublisher()}{34}{subsubsection.6.7.1.1}%
+\contentsline {subsubsection}{\numberline {6.7.1.2}$\sim $DevicePublisher()}{35}{subsubsection.6.7.1.2}%
+\contentsline {subsection}{\numberline {6.7.2}Member Function Documentation}{35}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}init()}{35}{subsubsection.6.7.2.1}%
+\contentsline {subsubsection}{\numberline {6.7.2.2}publish()}{35}{subsubsection.6.7.2.2}%
+\contentsline {subsection}{\numberline {6.7.3}Member Data Documentation}{35}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}listener\_}{35}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}participant\_}{35}{subsubsection.6.7.3.2}%
+\contentsline {subsubsection}{\numberline {6.7.3.3}publisher\_}{35}{subsubsection.6.7.3.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.4}topic\_}{35}{subsubsection.6.7.3.4}%
+\contentsline {subsubsection}{\numberline {6.7.3.5}type\_}{35}{subsubsection.6.7.3.5}%
+\contentsline {subsubsection}{\numberline {6.7.3.6}writer\_}{36}{subsubsection.6.7.3.6}%
+\contentsline {section}{\numberline {6.8}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subscriber Class Reference}{36}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Constructor \& Destructor Documentation}{37}{subsection.6.8.1}%
+\contentsline {subsubsection}{\numberline {6.8.1.1}DeviceSubscriber()}{37}{subsubsection.6.8.1.1}%
+\contentsline {subsubsection}{\numberline {6.8.1.2}$\sim $DeviceSubscriber()}{37}{subsubsection.6.8.1.2}%
+\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{37}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}init()}{37}{subsubsection.6.8.2.1}%
+\contentsline {subsection}{\numberline {6.8.3}Member Data Documentation}{37}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}listener\_}{37}{subsubsection.6.8.3.1}%
+\contentsline {subsubsection}{\numberline {6.8.3.2}participant\_}{37}{subsubsection.6.8.3.2}%
+\contentsline {subsubsection}{\numberline {6.8.3.3}reader\_}{37}{subsubsection.6.8.3.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.4}subscriber\_}{37}{subsubsection.6.8.3.4}%
+\contentsline {subsubsection}{\numberline {6.8.3.5}topic\_}{37}{subsubsection.6.8.3.5}%
+\contentsline {subsubsection}{\numberline {6.8.3.6}type\_}{38}{subsubsection.6.8.3.6}%
+\contentsline {section}{\numberline {6.9}diagnosis\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Diagnoses\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Struct Reference}{38}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Member Data Documentation}{38}{subsection.6.9.1}%
+\contentsline {subsubsection}{\numberline {6.9.1.1}Diagnoses}{38}{subsubsection.6.9.1.1}%
+\contentsline {section}{\numberline {6.10}diagnosis Class Reference}{38}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Member Typedef Documentation}{39}{subsection.6.10.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.1}\_Diagnoses}{39}{subsubsection.6.10.1.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.2}Diagnosis\_Range}{39}{subsubsection.6.10.1.2}%
+\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{39}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}critCheck()}{39}{subsubsection.6.10.2.1}%
+\contentsline {subsubsection}{\numberline {6.10.2.2}critRangeAlert()}{39}{subsubsection.6.10.2.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.3}determineDiagnosis()}{40}{subsubsection.6.10.2.3}%
+\contentsline {subsubsection}{\numberline {6.10.2.4}displayDiagnosis()}{40}{subsubsection.6.10.2.4}%
+\contentsline {subsubsection}{\numberline {6.10.2.5}findMinMax()}{40}{subsubsection.6.10.2.5}%
+\contentsline {subsubsection}{\numberline {6.10.2.6}SetdiagnosisRanges()}{40}{subsubsection.6.10.2.6}%
+\contentsline {subsection}{\numberline {6.10.3}Member Data Documentation}{40}{subsection.6.10.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.1}CriticalHigh}{40}{subsubsection.6.10.3.1}%
+\contentsline {subsubsection}{\numberline {6.10.3.2}CriticalLow}{40}{subsubsection.6.10.3.2}%
+\contentsline {subsubsection}{\numberline {6.10.3.3}CustomDiagnoses}{40}{subsubsection.6.10.3.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.4}CustomDiagnosis}{40}{subsubsection.6.10.3.4}%
+\contentsline {subsubsection}{\numberline {6.10.3.5}stdDiagnoses}{40}{subsubsection.6.10.3.5}%
+\contentsline {subsubsection}{\numberline {6.10.3.6}stdDiagnosis}{41}{subsubsection.6.10.3.6}%
+\contentsline {section}{\numberline {6.11}diagnosis\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface Class Reference}{41}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Member Function Documentation}{41}{subsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.1}determineSymptom()}{41}{subsubsection.6.11.1.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.2}getVal()}{42}{subsubsection.6.11.1.2}%
+\contentsline {subsubsection}{\numberline {6.11.1.3}ping()}{42}{subsubsection.6.11.1.3}%
+\contentsline {subsubsection}{\numberline {6.11.1.4}start()}{42}{subsubsection.6.11.1.4}%
+\contentsline {subsubsection}{\numberline {6.11.1.5}stop()}{42}{subsubsection.6.11.1.5}%
+\contentsline {subsection}{\numberline {6.11.2}Member Data Documentation}{42}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}symptomRanges}{42}{subsubsection.6.11.2.1}%
+\contentsline {section}{\numberline {6.12}diagnosis\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Diagnosis\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Range Struct Reference}{42}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Member Data Documentation}{43}{subsection.6.12.1}%
+\contentsline {subsubsection}{\numberline {6.12.1.1}diagnosis}{43}{subsubsection.6.12.1.1}%
+\contentsline {subsubsection}{\numberline {6.12.1.2}max}{43}{subsubsection.6.12.1.2}%
+\contentsline {subsubsection}{\numberline {6.12.1.3}min}{43}{subsubsection.6.12.1.3}%
+\contentsline {section}{\numberline {6.13}Differentiator$<$ T $>$ Class Template Reference}{43}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{44}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}Constructor \& Destructor Documentation}{44}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}Differentiator()}{44}{subsubsection.6.13.2.1}%
+\contentsline {subsection}{\numberline {6.13.3}Member Function Documentation}{44}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}getOutput()}{44}{subsubsection.6.13.3.1}%
+\contentsline {subsubsection}{\numberline {6.13.3.2}update()}{44}{subsubsection.6.13.3.2}%
+\contentsline {subsection}{\numberline {6.13.4}Member Data Documentation}{45}{subsection.6.13.4}%
+\contentsline {subsubsection}{\numberline {6.13.4.1}sampleTime}{45}{subsubsection.6.13.4.1}%
+\contentsline {subsubsection}{\numberline {6.13.4.2}x1}{45}{subsubsection.6.13.4.2}%
+\contentsline {subsubsection}{\numberline {6.13.4.3}y}{45}{subsubsection.6.13.4.3}%
+\contentsline {section}{\numberline {6.14}Digital\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter$<$ Type $>$ Class Template Reference}{45}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{45}{subsection.6.14.1}%
+\contentsline {subsection}{\numberline {6.14.2}Member Function Documentation}{46}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}getOutput()}{46}{subsubsection.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.2.2}update()}{46}{subsubsection.6.14.2.2}%
+\contentsline {section}{\numberline {6.15}High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter Class Reference}{46}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{47}{subsection.6.15.1}%
+\contentsline {subsection}{\numberline {6.15.2}Constructor \& Destructor Documentation}{47}{subsection.6.15.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.1}HighPassFilter()}{47}{subsubsection.6.15.2.1}%
+\contentsline {subsection}{\numberline {6.15.3}Member Function Documentation}{48}{subsection.6.15.3}%
+\contentsline {subsubsection}{\numberline {6.15.3.1}configOutput()}{48}{subsubsection.6.15.3.1}%
+\contentsline {subsubsection}{\numberline {6.15.3.2}getOutput()}{48}{subsubsection.6.15.3.2}%
+\contentsline {subsubsection}{\numberline {6.15.3.3}outputPointer()}{48}{subsubsection.6.15.3.3}%
+\contentsline {subsubsection}{\numberline {6.15.3.4}update()}{48}{subsubsection.6.15.3.4}%
+\contentsline {subsection}{\numberline {6.15.4}Member Data Documentation}{49}{subsection.6.15.4}%
+\contentsline {subsubsection}{\numberline {6.15.4.1}amplFac}{49}{subsubsection.6.15.4.1}%
+\contentsline {subsubsection}{\numberline {6.15.4.2}dt}{49}{subsubsection.6.15.4.2}%
+\contentsline {subsubsection}{\numberline {6.15.4.3}output}{49}{subsubsection.6.15.4.3}%
+\contentsline {subsubsection}{\numberline {6.15.4.4}x1}{49}{subsubsection.6.15.4.4}%
+\contentsline {subsubsection}{\numberline {6.15.4.5}y1c}{49}{subsubsection.6.15.4.5}%
+\contentsline {section}{\numberline {6.16}High\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter3 Class Reference}{50}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{51}{subsection.6.16.1}%
+\contentsline {subsection}{\numberline {6.16.2}Constructor \& Destructor Documentation}{51}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}HighPassFilter3()}{51}{subsubsection.6.16.2.1}%
+\contentsline {subsection}{\numberline {6.16.3}Member Function Documentation}{51}{subsection.6.16.3}%
+\contentsline {subsubsection}{\numberline {6.16.3.1}getOutput()}{51}{subsubsection.6.16.3.1}%
+\contentsline {subsubsection}{\numberline {6.16.3.2}update()}{51}{subsubsection.6.16.3.2}%
+\contentsline {subsection}{\numberline {6.16.4}Member Data Documentation}{52}{subsection.6.16.4}%
+\contentsline {subsubsection}{\numberline {6.16.4.1}x}{52}{subsubsection.6.16.4.1}%
+\contentsline {subsubsection}{\numberline {6.16.4.2}xc}{52}{subsubsection.6.16.4.2}%
+\contentsline {subsubsection}{\numberline {6.16.4.3}y}{52}{subsubsection.6.16.4.3}%
+\contentsline {subsubsection}{\numberline {6.16.4.4}yc}{52}{subsubsection.6.16.4.4}%
+\contentsline {section}{\numberline {6.17}HRTracker Class Reference}{52}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Constructor \& Destructor Documentation}{54}{subsection.6.17.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.1}HRTracker()}{54}{subsubsection.6.17.1.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.2}$\sim $HRTracker()}{54}{subsubsection.6.17.1.2}%
+\contentsline {subsection}{\numberline {6.17.2}Member Function Documentation}{54}{subsection.6.17.2}%
+\contentsline {subsubsection}{\numberline {6.17.2.1}getVal()}{54}{subsubsection.6.17.2.1}%
+\contentsline {subsubsection}{\numberline {6.17.2.2}ping()}{55}{subsubsection.6.17.2.2}%
+\contentsline {subsubsection}{\numberline {6.17.2.3}pingThread()}{55}{subsubsection.6.17.2.3}%
+\contentsline {subsubsection}{\numberline {6.17.2.4}start()}{55}{subsubsection.6.17.2.4}%
+\contentsline {subsubsection}{\numberline {6.17.2.5}stop()}{56}{subsubsection.6.17.2.5}%
+\contentsline {subsubsection}{\numberline {6.17.2.6}tracker()}{56}{subsubsection.6.17.2.6}%
+\contentsline {subsection}{\numberline {6.17.3}Member Data Documentation}{56}{subsection.6.17.3}%
+\contentsline {subsubsection}{\numberline {6.17.3.1}\_s}{56}{subsubsection.6.17.3.1}%
+\contentsline {subsubsection}{\numberline {6.17.3.2}symptomRanges}{56}{subsubsection.6.17.3.2}%
+\contentsline {subsubsection}{\numberline {6.17.3.3}threadRunning}{56}{subsubsection.6.17.3.3}%
+\contentsline {section}{\numberline {6.18}i2c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}msg Struct Reference}{57}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Member Data Documentation}{57}{subsection.6.18.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.1}addr}{57}{subsubsection.6.18.1.1}%
+\contentsline {subsubsection}{\numberline {6.18.1.2}buf}{57}{subsubsection.6.18.1.2}%
+\contentsline {subsubsection}{\numberline {6.18.1.3}flags}{57}{subsubsection.6.18.1.3}%
+\contentsline {subsubsection}{\numberline {6.18.1.4}len}{57}{subsubsection.6.18.1.4}%
+\contentsline {section}{\numberline {6.19}i2c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rdwr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ioctl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{57}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Member Data Documentation}{58}{subsection.6.19.1}%
+\contentsline {subsubsection}{\numberline {6.19.1.1}msgs}{58}{subsubsection.6.19.1.1}%
+\contentsline {subsubsection}{\numberline {6.19.1.2}nmsgs}{58}{subsubsection.6.19.1.2}%
+\contentsline {section}{\numberline {6.20}i2c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}smbus\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Union Reference}{58}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Member Data Documentation}{58}{subsection.6.20.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.1}block}{58}{subsubsection.6.20.1.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.2}byte}{58}{subsubsection.6.20.1.2}%
+\contentsline {subsubsection}{\numberline {6.20.1.3}word}{58}{subsubsection.6.20.1.3}%
+\contentsline {section}{\numberline {6.21}i2c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}smbus\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ioctl\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{59}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Member Data Documentation}{59}{subsection.6.21.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.1}command}{59}{subsubsection.6.21.1.1}%
+\contentsline {subsubsection}{\numberline {6.21.1.2}data}{59}{subsubsection.6.21.1.2}%
+\contentsline {subsubsection}{\numberline {6.21.1.3}read\_write}{59}{subsubsection.6.21.1.3}%
+\contentsline {subsubsection}{\numberline {6.21.1.4}size}{59}{subsubsection.6.21.1.4}%
+\contentsline {section}{\numberline {6.22}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay$<$ type, size $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::iterator Class Reference}{60}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Member Typedef Documentation}{60}{subsection.6.22.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.1}difference\_type}{60}{subsubsection.6.22.1.1}%
+\contentsline {subsubsection}{\numberline {6.22.1.2}iterator\_category}{60}{subsubsection.6.22.1.2}%
+\contentsline {subsubsection}{\numberline {6.22.1.3}self\_type}{61}{subsubsection.6.22.1.3}%
+\contentsline {subsection}{\numberline {6.22.2}Constructor \& Destructor Documentation}{61}{subsection.6.22.2}%
+\contentsline {subsubsection}{\numberline {6.22.2.1}iterator()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{61}{subsubsection.6.22.2.1}%
+\contentsline {subsubsection}{\numberline {6.22.2.2}iterator()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{61}{subsubsection.6.22.2.2}%
+\contentsline {subsection}{\numberline {6.22.3}Member Function Documentation}{61}{subsection.6.22.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.1}operator"!=()}{61}{subsubsection.6.22.3.1}%
+\contentsline {subsubsection}{\numberline {6.22.3.2}operator$\ast $()}{61}{subsubsection.6.22.3.2}%
+\contentsline {subsubsection}{\numberline {6.22.3.3}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{61}{subsubsection.6.22.3.3}%
+\contentsline {subsubsection}{\numberline {6.22.3.4}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{61}{subsubsection.6.22.3.4}%
+\contentsline {subsubsection}{\numberline {6.22.3.5}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{62}{subsubsection.6.22.3.5}%
+\contentsline {subsubsection}{\numberline {6.22.3.6}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{62}{subsubsection.6.22.3.6}%
+\contentsline {subsubsection}{\numberline {6.22.3.7}operator-\/$>$()}{62}{subsubsection.6.22.3.7}%
+\contentsline {subsubsection}{\numberline {6.22.3.8}operator==()}{62}{subsubsection.6.22.3.8}%
+\contentsline {subsubsection}{\numberline {6.22.3.9}operator[]()}{62}{subsubsection.6.22.3.9}%
+\contentsline {subsection}{\numberline {6.22.4}Friends And Related Symbol Documentation}{62}{subsection.6.22.4}%
+\contentsline {subsubsection}{\numberline {6.22.4.1}CircularDelay}{62}{subsubsection.6.22.4.1}%
+\contentsline {subsection}{\numberline {6.22.5}Member Data Documentation}{62}{subsection.6.22.5}%
+\contentsline {subsubsection}{\numberline {6.22.5.1}data\_}{62}{subsubsection.6.22.5.1}%
+\contentsline {subsubsection}{\numberline {6.22.5.2}ptr\_}{63}{subsubsection.6.22.5.2}%
+\contentsline {section}{\numberline {6.23}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter Class Reference}{63}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{64}{subsection.6.23.1}%
+\contentsline {subsection}{\numberline {6.23.2}Constructor \& Destructor Documentation}{64}{subsection.6.23.2}%
+\contentsline {subsubsection}{\numberline {6.23.2.1}LowPassFilter()}{64}{subsubsection.6.23.2.1}%
+\contentsline {subsection}{\numberline {6.23.3}Member Function Documentation}{65}{subsection.6.23.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.1}configOutput()}{65}{subsubsection.6.23.3.1}%
+\contentsline {subsubsection}{\numberline {6.23.3.2}getOutput()}{65}{subsubsection.6.23.3.2}%
+\contentsline {subsubsection}{\numberline {6.23.3.3}outputPointer()}{65}{subsubsection.6.23.3.3}%
+\contentsline {subsubsection}{\numberline {6.23.3.4}update()}{65}{subsubsection.6.23.3.4}%
+\contentsline {subsection}{\numberline {6.23.4}Member Data Documentation}{66}{subsection.6.23.4}%
+\contentsline {subsubsection}{\numberline {6.23.4.1}dt}{66}{subsubsection.6.23.4.1}%
+\contentsline {subsubsection}{\numberline {6.23.4.2}epow}{66}{subsubsection.6.23.4.2}%
+\contentsline {subsubsection}{\numberline {6.23.4.3}output}{66}{subsubsection.6.23.4.3}%
+\contentsline {section}{\numberline {6.24}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter2 Class Reference}{66}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Detailed Description}{67}{subsection.6.24.1}%
+\contentsline {subsection}{\numberline {6.24.2}Constructor \& Destructor Documentation}{67}{subsection.6.24.2}%
+\contentsline {subsubsection}{\numberline {6.24.2.1}LowPassFilter2()}{67}{subsubsection.6.24.2.1}%
+\contentsline {subsection}{\numberline {6.24.3}Member Function Documentation}{68}{subsection.6.24.3}%
+\contentsline {subsubsection}{\numberline {6.24.3.1}configOutput()}{68}{subsubsection.6.24.3.1}%
+\contentsline {subsubsection}{\numberline {6.24.3.2}getOutput()}{68}{subsubsection.6.24.3.2}%
+\contentsline {subsubsection}{\numberline {6.24.3.3}update()}{68}{subsubsection.6.24.3.3}%
+\contentsline {subsection}{\numberline {6.24.4}Member Data Documentation}{69}{subsection.6.24.4}%
+\contentsline {subsubsection}{\numberline {6.24.4.1}x}{69}{subsubsection.6.24.4.1}%
+\contentsline {subsubsection}{\numberline {6.24.4.2}xc}{69}{subsubsection.6.24.4.2}%
+\contentsline {subsubsection}{\numberline {6.24.4.3}y}{69}{subsubsection.6.24.4.3}%
+\contentsline {subsubsection}{\numberline {6.24.4.4}yc}{69}{subsubsection.6.24.4.4}%
+\contentsline {section}{\numberline {6.25}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter3 Class Reference}{70}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{71}{subsection.6.25.1}%
+\contentsline {subsection}{\numberline {6.25.2}Constructor \& Destructor Documentation}{71}{subsection.6.25.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.1}LowPassFilter3()}{71}{subsubsection.6.25.2.1}%
+\contentsline {subsection}{\numberline {6.25.3}Member Function Documentation}{71}{subsection.6.25.3}%
+\contentsline {subsubsection}{\numberline {6.25.3.1}getOutput()}{71}{subsubsection.6.25.3.1}%
+\contentsline {subsubsection}{\numberline {6.25.3.2}update()}{71}{subsubsection.6.25.3.2}%
+\contentsline {subsection}{\numberline {6.25.4}Member Data Documentation}{72}{subsection.6.25.4}%
+\contentsline {subsubsection}{\numberline {6.25.4.1}x}{72}{subsubsection.6.25.4.1}%
+\contentsline {subsubsection}{\numberline {6.25.4.2}xc}{72}{subsubsection.6.25.4.2}%
+\contentsline {subsubsection}{\numberline {6.25.4.3}y}{72}{subsubsection.6.25.4.3}%
+\contentsline {subsubsection}{\numberline {6.25.4.4}yc}{72}{subsubsection.6.25.4.4}%
+\contentsline {section}{\numberline {6.26}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Diff\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Approx Class Reference}{72}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Detailed Description}{73}{subsection.6.26.1}%
+\contentsline {subsection}{\numberline {6.26.2}Constructor \& Destructor Documentation}{73}{subsection.6.26.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.1}LowPassFilter3DiffApprox()}{73}{subsubsection.6.26.2.1}%
+\contentsline {subsection}{\numberline {6.26.3}Member Function Documentation}{74}{subsection.6.26.3}%
+\contentsline {subsubsection}{\numberline {6.26.3.1}getOutput()}{74}{subsubsection.6.26.3.1}%
+\contentsline {subsubsection}{\numberline {6.26.3.2}update()}{74}{subsubsection.6.26.3.2}%
+\contentsline {subsection}{\numberline {6.26.4}Member Data Documentation}{74}{subsection.6.26.4}%
+\contentsline {subsubsection}{\numberline {6.26.4.1}x}{74}{subsubsection.6.26.4.1}%
+\contentsline {subsubsection}{\numberline {6.26.4.2}xc}{74}{subsubsection.6.26.4.2}%
+\contentsline {subsubsection}{\numberline {6.26.4.3}y}{75}{subsubsection.6.26.4.3}%
+\contentsline {subsubsection}{\numberline {6.26.4.4}yc}{75}{subsubsection.6.26.4.4}%
+\contentsline {section}{\numberline {6.27}Low\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pass\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MatchedZ Class Reference}{75}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Detailed Description}{76}{subsection.6.27.1}%
+\contentsline {subsection}{\numberline {6.27.2}Constructor \& Destructor Documentation}{76}{subsection.6.27.2}%
+\contentsline {subsubsection}{\numberline {6.27.2.1}LowPassFilter3MatchedZ()}{76}{subsubsection.6.27.2.1}%
+\contentsline {subsection}{\numberline {6.27.3}Member Function Documentation}{76}{subsection.6.27.3}%
+\contentsline {subsubsection}{\numberline {6.27.3.1}getOutput()}{76}{subsubsection.6.27.3.1}%
+\contentsline {subsubsection}{\numberline {6.27.3.2}update()}{77}{subsubsection.6.27.3.2}%
+\contentsline {subsection}{\numberline {6.27.4}Member Data Documentation}{77}{subsection.6.27.4}%
+\contentsline {subsubsection}{\numberline {6.27.4.1}amplFac}{77}{subsubsection.6.27.4.1}%
+\contentsline {subsubsection}{\numberline {6.27.4.2}y}{77}{subsubsection.6.27.4.2}%
+\contentsline {subsubsection}{\numberline {6.27.4.3}yc}{77}{subsubsection.6.27.4.3}%
+\contentsline {section}{\numberline {6.28}MAX30102 Class Reference}{78}{section.6.28}%
+\contentsline {subsection}{\numberline {6.28.1}Member Typedef Documentation}{80}{subsection.6.28.1}%
+\contentsline {subsubsection}{\numberline {6.28.1.1}sense\_struct}{80}{subsubsection.6.28.1.1}%
+\contentsline {subsection}{\numberline {6.28.2}Constructor \& Destructor Documentation}{80}{subsection.6.28.2}%
+\contentsline {subsubsection}{\numberline {6.28.2.1}MAX30102()}{80}{subsubsection.6.28.2.1}%
+\contentsline {subsection}{\numberline {6.28.3}Member Function Documentation}{80}{subsection.6.28.3}%
+\contentsline {subsubsection}{\numberline {6.28.3.1}available()}{80}{subsubsection.6.28.3.1}%
+\contentsline {subsubsection}{\numberline {6.28.3.2}begin()}{80}{subsubsection.6.28.3.2}%
+\contentsline {subsubsection}{\numberline {6.28.3.3}bitMask()}{81}{subsubsection.6.28.3.3}%
+\contentsline {subsubsection}{\numberline {6.28.3.4}check()}{81}{subsubsection.6.28.3.4}%
+\contentsline {subsubsection}{\numberline {6.28.3.5}clearFIFO()}{81}{subsubsection.6.28.3.5}%
+\contentsline {subsubsection}{\numberline {6.28.3.6}dataReady()}{82}{subsubsection.6.28.3.6}%
+\contentsline {subsubsection}{\numberline {6.28.3.7}disableAFULL()}{82}{subsubsection.6.28.3.7}%
+\contentsline {subsubsection}{\numberline {6.28.3.8}disableALCOVF()}{82}{subsubsection.6.28.3.8}%
+\contentsline {subsubsection}{\numberline {6.28.3.9}disableDATARDY()}{83}{subsubsection.6.28.3.9}%
+\contentsline {subsubsection}{\numberline {6.28.3.10}disableDIETEMPRDY()}{83}{subsubsection.6.28.3.10}%
+\contentsline {subsubsection}{\numberline {6.28.3.11}disableFIFORollover()}{83}{subsubsection.6.28.3.11}%
+\contentsline {subsubsection}{\numberline {6.28.3.12}disablePROXINT()}{84}{subsubsection.6.28.3.12}%
+\contentsline {subsubsection}{\numberline {6.28.3.13}disableSlots()}{84}{subsubsection.6.28.3.13}%
+\contentsline {subsubsection}{\numberline {6.28.3.14}enableAFULL()}{84}{subsubsection.6.28.3.14}%
+\contentsline {subsubsection}{\numberline {6.28.3.15}enableALCOVF()}{85}{subsubsection.6.28.3.15}%
+\contentsline {subsubsection}{\numberline {6.28.3.16}enableDATARDY()}{85}{subsubsection.6.28.3.16}%
+\contentsline {subsubsection}{\numberline {6.28.3.17}enableDIETEMPRDY()}{85}{subsubsection.6.28.3.17}%
+\contentsline {subsubsection}{\numberline {6.28.3.18}enableFIFORollover()}{86}{subsubsection.6.28.3.18}%
+\contentsline {subsubsection}{\numberline {6.28.3.19}enablePROXINT()}{86}{subsubsection.6.28.3.19}%
+\contentsline {subsubsection}{\numberline {6.28.3.20}enableSlot()}{86}{subsubsection.6.28.3.20}%
+\contentsline {subsubsection}{\numberline {6.28.3.21}getFIFOIR()}{87}{subsubsection.6.28.3.21}%
+\contentsline {subsubsection}{\numberline {6.28.3.22}getFIFORed()}{87}{subsubsection.6.28.3.22}%
+\contentsline {subsubsection}{\numberline {6.28.3.23}getINT1()}{87}{subsubsection.6.28.3.23}%
+\contentsline {subsubsection}{\numberline {6.28.3.24}getINT2()}{87}{subsubsection.6.28.3.24}%
+\contentsline {subsubsection}{\numberline {6.28.3.25}getIR()}{88}{subsubsection.6.28.3.25}%
+\contentsline {subsubsection}{\numberline {6.28.3.26}getReadPointer()}{88}{subsubsection.6.28.3.26}%
+\contentsline {subsubsection}{\numberline {6.28.3.27}getRed()}{88}{subsubsection.6.28.3.27}%
+\contentsline {subsubsection}{\numberline {6.28.3.28}getRevisionID()}{88}{subsubsection.6.28.3.28}%
+\contentsline {subsubsection}{\numberline {6.28.3.29}getWritePointer()}{88}{subsubsection.6.28.3.29}%
+\contentsline {subsubsection}{\numberline {6.28.3.30}gpioISR()}{89}{subsubsection.6.28.3.30}%
+\contentsline {subsubsection}{\numberline {6.28.3.31}hasSample()}{89}{subsubsection.6.28.3.31}%
+\contentsline {subsubsection}{\numberline {6.28.3.32}nextSample()}{89}{subsubsection.6.28.3.32}%
+\contentsline {subsubsection}{\numberline {6.28.3.33}readMany()}{90}{subsubsection.6.28.3.33}%
+\contentsline {subsubsection}{\numberline {6.28.3.34}readPartID()}{90}{subsubsection.6.28.3.34}%
+\contentsline {subsubsection}{\numberline {6.28.3.35}readRevisionID()}{90}{subsubsection.6.28.3.35}%
+\contentsline {subsubsection}{\numberline {6.28.3.36}readTemperature()}{91}{subsubsection.6.28.3.36}%
+\contentsline {subsubsection}{\numberline {6.28.3.37}readTemperatureF()}{91}{subsubsection.6.28.3.37}%
+\contentsline {subsubsection}{\numberline {6.28.3.38}safeCheck()}{91}{subsubsection.6.28.3.38}%
+\contentsline {subsubsection}{\numberline {6.28.3.39}setADCRange()}{92}{subsubsection.6.28.3.39}%
+\contentsline {subsubsection}{\numberline {6.28.3.40}setFIFOAlmostFull()}{92}{subsubsection.6.28.3.40}%
+\contentsline {subsubsection}{\numberline {6.28.3.41}setFIFOAverage()}{92}{subsubsection.6.28.3.41}%
+\contentsline {subsubsection}{\numberline {6.28.3.42}setLEDMode()}{93}{subsubsection.6.28.3.42}%
+\contentsline {subsubsection}{\numberline {6.28.3.43}setProximityThreshold()}{93}{subsubsection.6.28.3.43}%
+\contentsline {subsubsection}{\numberline {6.28.3.44}setPROXINTTHRESH()}{93}{subsubsection.6.28.3.44}%
+\contentsline {subsubsection}{\numberline {6.28.3.45}setPulseAmplitudeIR()}{94}{subsubsection.6.28.3.45}%
+\contentsline {subsubsection}{\numberline {6.28.3.46}setPulseAmplitudeProximity()}{94}{subsubsection.6.28.3.46}%
+\contentsline {subsubsection}{\numberline {6.28.3.47}setPulseAmplitudeRed()}{94}{subsubsection.6.28.3.47}%
+\contentsline {subsubsection}{\numberline {6.28.3.48}setPulseWidth()}{95}{subsubsection.6.28.3.48}%
+\contentsline {subsubsection}{\numberline {6.28.3.49}setSampleRate()}{95}{subsubsection.6.28.3.49}%
+\contentsline {subsubsection}{\numberline {6.28.3.50}setup()}{95}{subsubsection.6.28.3.50}%
+\contentsline {subsubsection}{\numberline {6.28.3.51}shutDown()}{96}{subsubsection.6.28.3.51}%
+\contentsline {subsubsection}{\numberline {6.28.3.52}softReset()}{96}{subsubsection.6.28.3.52}%
+\contentsline {subsubsection}{\numberline {6.28.3.53}wakeUp()}{97}{subsubsection.6.28.3.53}%
+\contentsline {subsection}{\numberline {6.28.4}Member Data Documentation}{97}{subsection.6.28.4}%
+\contentsline {subsubsection}{\numberline {6.28.4.1}\_i2c}{97}{subsubsection.6.28.4.1}%
+\contentsline {subsubsection}{\numberline {6.28.4.2}\_i2caddr}{97}{subsubsection.6.28.4.2}%
+\contentsline {subsubsection}{\numberline {6.28.4.3}activeLEDs}{97}{subsubsection.6.28.4.3}%
+\contentsline {subsubsection}{\numberline {6.28.4.4}revisionID}{97}{subsubsection.6.28.4.4}%
+\contentsline {subsubsection}{\numberline {6.28.4.5}sense}{98}{subsubsection.6.28.4.5}%
+\contentsline {section}{\numberline {6.29}Moving\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Avarage\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filter$<$ size $>$ Class Template Reference}{98}{section.6.29}%
+\contentsline {subsection}{\numberline {6.29.1}Member Function Documentation}{99}{subsection.6.29.1}%
+\contentsline {subsubsection}{\numberline {6.29.1.1}update()}{99}{subsubsection.6.29.1.1}%
+\contentsline {subsection}{\numberline {6.29.2}Member Data Documentation}{99}{subsection.6.29.2}%
+\contentsline {subsubsection}{\numberline {6.29.2.1}buffer}{99}{subsubsection.6.29.2.1}%
+\contentsline {subsubsection}{\numberline {6.29.2.2}output}{99}{subsubsection.6.29.2.2}%
+\contentsline {section}{\numberline {6.30}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Publisher\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Pub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Listener Class Reference}{100}{section.6.30}%
+\contentsline {subsection}{\numberline {6.30.1}Constructor \& Destructor Documentation}{100}{subsection.6.30.1}%
+\contentsline {subsubsection}{\numberline {6.30.1.1}PubListener()}{100}{subsubsection.6.30.1.1}%
+\contentsline {subsubsection}{\numberline {6.30.1.2}$\sim $PubListener()}{101}{subsubsection.6.30.1.2}%
+\contentsline {subsection}{\numberline {6.30.2}Member Function Documentation}{101}{subsection.6.30.2}%
+\contentsline {subsubsection}{\numberline {6.30.2.1}on\_publication\_matched()}{101}{subsubsection.6.30.2.1}%
+\contentsline {subsection}{\numberline {6.30.3}Member Data Documentation}{101}{subsection.6.30.3}%
+\contentsline {subsubsection}{\numberline {6.30.3.1}matched\_}{101}{subsubsection.6.30.3.1}%
+\contentsline {section}{\numberline {6.31}MAX30102\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Record Struct Reference}{101}{section.6.31}%
+\contentsline {subsection}{\numberline {6.31.1}Member Data Documentation}{101}{subsection.6.31.1}%
+\contentsline {subsubsection}{\numberline {6.31.1.1}head}{101}{subsubsection.6.31.1.1}%
+\contentsline {subsubsection}{\numberline {6.31.1.2}IR}{101}{subsubsection.6.31.1.2}%
+\contentsline {subsubsection}{\numberline {6.31.1.3}red}{101}{subsubsection.6.31.1.3}%
+\contentsline {subsubsection}{\numberline {6.31.1.4}tail}{102}{subsubsection.6.31.1.4}%
+\contentsline {section}{\numberline {6.32}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay$<$ type, size $>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::reverse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}iterator Class Reference}{102}{section.6.32}%
+\contentsline {subsection}{\numberline {6.32.1}Member Typedef Documentation}{103}{subsection.6.32.1}%
+\contentsline {subsubsection}{\numberline {6.32.1.1}difference\_type}{103}{subsubsection.6.32.1.1}%
+\contentsline {subsubsection}{\numberline {6.32.1.2}iterator\_category}{103}{subsubsection.6.32.1.2}%
+\contentsline {subsubsection}{\numberline {6.32.1.3}self\_type}{103}{subsubsection.6.32.1.3}%
+\contentsline {subsection}{\numberline {6.32.2}Constructor \& Destructor Documentation}{103}{subsection.6.32.2}%
+\contentsline {subsubsection}{\numberline {6.32.2.1}reverse\_iterator()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{103}{subsubsection.6.32.2.1}%
+\contentsline {subsubsection}{\numberline {6.32.2.2}reverse\_iterator()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{103}{subsubsection.6.32.2.2}%
+\contentsline {subsection}{\numberline {6.32.3}Member Function Documentation}{103}{subsection.6.32.3}%
+\contentsline {subsubsection}{\numberline {6.32.3.1}operator"!=()}{103}{subsubsection.6.32.3.1}%
+\contentsline {subsubsection}{\numberline {6.32.3.2}operator$\ast $()}{103}{subsubsection.6.32.3.2}%
+\contentsline {subsubsection}{\numberline {6.32.3.3}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{104}{subsubsection.6.32.3.3}%
+\contentsline {subsubsection}{\numberline {6.32.3.4}operator++()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{104}{subsubsection.6.32.3.4}%
+\contentsline {subsubsection}{\numberline {6.32.3.5}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{104}{subsubsection.6.32.3.5}%
+\contentsline {subsubsection}{\numberline {6.32.3.6}operator-\/-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{104}{subsubsection.6.32.3.6}%
+\contentsline {subsubsection}{\numberline {6.32.3.7}operator-\/$>$()}{104}{subsubsection.6.32.3.7}%
+\contentsline {subsubsection}{\numberline {6.32.3.8}operator==()}{104}{subsubsection.6.32.3.8}%
+\contentsline {subsubsection}{\numberline {6.32.3.9}operator[]()}{104}{subsubsection.6.32.3.9}%
+\contentsline {subsection}{\numberline {6.32.4}Friends And Related Symbol Documentation}{104}{subsection.6.32.4}%
+\contentsline {subsubsection}{\numberline {6.32.4.1}CircularDelay}{104}{subsubsection.6.32.4.1}%
+\contentsline {subsection}{\numberline {6.32.5}Member Data Documentation}{105}{subsection.6.32.5}%
+\contentsline {subsubsection}{\numberline {6.32.5.1}data\_}{105}{subsubsection.6.32.5.1}%
+\contentsline {subsubsection}{\numberline {6.32.5.2}ptr\_}{105}{subsubsection.6.32.5.2}%
+\contentsline {section}{\numberline {6.33}sensor Class Reference}{105}{section.6.33}%
+\contentsline {subsection}{\numberline {6.33.1}Constructor \& Destructor Documentation}{107}{subsection.6.33.1}%
+\contentsline {subsubsection}{\numberline {6.33.1.1}sensor()}{107}{subsubsection.6.33.1.1}%
+\contentsline {subsubsection}{\numberline {6.33.1.2}$\sim $sensor()}{107}{subsubsection.6.33.1.2}%
+\contentsline {subsection}{\numberline {6.33.2}Member Function Documentation}{107}{subsection.6.33.2}%
+\contentsline {subsubsection}{\numberline {6.33.2.1}begin()}{107}{subsubsection.6.33.2.1}%
+\contentsline {subsubsection}{\numberline {6.33.2.2}Derivative()}{108}{subsubsection.6.33.2.2}%
+\contentsline {subsubsection}{\numberline {6.33.2.3}getHR()}{108}{subsubsection.6.33.2.3}%
+\contentsline {subsubsection}{\numberline {6.33.2.4}getLatestTemperatureF()}{108}{subsubsection.6.33.2.4}%
+\contentsline {subsubsection}{\numberline {6.33.2.5}getPeakThreshold()}{108}{subsubsection.6.33.2.5}%
+\contentsline {subsubsection}{\numberline {6.33.2.6}getSpO2()}{108}{subsubsection.6.33.2.6}%
+\contentsline {subsubsection}{\numberline {6.33.2.7}HRcalc()}{108}{subsubsection.6.33.2.7}%
+\contentsline {subsubsection}{\numberline {6.33.2.8}loopThread()}{109}{subsubsection.6.33.2.8}%
+\contentsline {subsubsection}{\numberline {6.33.2.9}peakDetect()}{109}{subsubsection.6.33.2.9}%
+\contentsline {subsubsection}{\numberline {6.33.2.10}resetCalculations()}{109}{subsubsection.6.33.2.10}%
+\contentsline {subsubsection}{\numberline {6.33.2.11}runHRCalculationLoop()}{110}{subsubsection.6.33.2.11}%
+\contentsline {subsubsection}{\numberline {6.33.2.12}stop()}{110}{subsubsection.6.33.2.12}%
+\contentsline {subsubsection}{\numberline {6.33.2.13}stopHRcalc()}{110}{subsubsection.6.33.2.13}%
+\contentsline {subsubsection}{\numberline {6.33.2.14}updateTemperature()}{110}{subsubsection.6.33.2.14}%
+\contentsline {subsection}{\numberline {6.33.3}Member Data Documentation}{111}{subsection.6.33.3}%
+\contentsline {subsubsection}{\numberline {6.33.3.1}\_sensor}{111}{subsubsection.6.33.3.1}%
+\contentsline {subsubsection}{\numberline {6.33.3.2}averageIRBPM}{111}{subsubsection.6.33.3.2}%
+\contentsline {subsubsection}{\numberline {6.33.3.3}BPM\_BUFFER\_SIZE}{111}{subsubsection.6.33.3.3}%
+\contentsline {subsubsection}{\numberline {6.33.3.4}bpmBuffer}{111}{subsubsection.6.33.3.4}%
+\contentsline {subsubsection}{\numberline {6.33.3.5}irLastValue}{111}{subsubsection.6.33.3.5}%
+\contentsline {subsubsection}{\numberline {6.33.3.6}latestIRBPM}{111}{subsubsection.6.33.3.6}%
+\contentsline {subsubsection}{\numberline {6.33.3.7}latestRedBPM}{111}{subsubsection.6.33.3.7}%
+\contentsline {subsubsection}{\numberline {6.33.3.8}latestSpO2}{111}{subsubsection.6.33.3.8}%
+\contentsline {subsubsection}{\numberline {6.33.3.9}latestTemperature}{111}{subsubsection.6.33.3.9}%
+\contentsline {subsubsection}{\numberline {6.33.3.10}localMaximaIR}{111}{subsubsection.6.33.3.10}%
+\contentsline {subsubsection}{\numberline {6.33.3.11}localMaximaRed}{112}{subsubsection.6.33.3.11}%
+\contentsline {subsubsection}{\numberline {6.33.3.12}localMinimaIR}{112}{subsubsection.6.33.3.12}%
+\contentsline {subsubsection}{\numberline {6.33.3.13}localMinimaRed}{112}{subsubsection.6.33.3.13}%
+\contentsline {subsubsection}{\numberline {6.33.3.14}nextBPMBufferIndex}{112}{subsubsection.6.33.3.14}%
+\contentsline {subsubsection}{\numberline {6.33.3.15}nextSPO2BufferIndex}{112}{subsubsection.6.33.3.15}%
+\contentsline {subsubsection}{\numberline {6.33.3.16}PAST\_PEAKS\_SIZE}{112}{subsubsection.6.33.3.16}%
+\contentsline {subsubsection}{\numberline {6.33.3.17}pastMaximasIR}{112}{subsubsection.6.33.3.17}%
+\contentsline {subsubsection}{\numberline {6.33.3.18}pastMaximasRed}{112}{subsubsection.6.33.3.18}%
+\contentsline {subsubsection}{\numberline {6.33.3.19}pastMinimasIR}{112}{subsubsection.6.33.3.19}%
+\contentsline {subsubsection}{\numberline {6.33.3.20}pastMinimasRed}{112}{subsubsection.6.33.3.20}%
+\contentsline {subsubsection}{\numberline {6.33.3.21}R}{113}{subsubsection.6.33.3.21}%
+\contentsline {subsubsection}{\numberline {6.33.3.22}redLastValue}{113}{subsubsection.6.33.3.22}%
+\contentsline {subsubsection}{\numberline {6.33.3.23}running}{113}{subsubsection.6.33.3.23}%
+\contentsline {subsubsection}{\numberline {6.33.3.24}runningHR}{113}{subsubsection.6.33.3.24}%
+\contentsline {subsubsection}{\numberline {6.33.3.25}SPO2\_BUFFER\_SIZE}{113}{subsubsection.6.33.3.25}%
+\contentsline {subsubsection}{\numberline {6.33.3.26}spo2Buffer}{113}{subsubsection.6.33.3.26}%
+\contentsline {subsubsection}{\numberline {6.33.3.27}timeLastIRHeartBeat}{113}{subsubsection.6.33.3.27}%
+\contentsline {subsubsection}{\numberline {6.33.3.28}timeLastLoopRan}{113}{subsubsection.6.33.3.28}%
+\contentsline {subsubsection}{\numberline {6.33.3.29}timeLastRedHeartBeat}{113}{subsubsection.6.33.3.29}%
+\contentsline {section}{\numberline {6.34}SPO2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tracker Class Reference}{114}{section.6.34}%
+\contentsline {subsection}{\numberline {6.34.1}Constructor \& Destructor Documentation}{115}{subsection.6.34.1}%
+\contentsline {subsubsection}{\numberline {6.34.1.1}SPO2Tracker()}{115}{subsubsection.6.34.1.1}%
+\contentsline {subsubsection}{\numberline {6.34.1.2}$\sim $SPO2Tracker()}{115}{subsubsection.6.34.1.2}%
+\contentsline {subsection}{\numberline {6.34.2}Member Function Documentation}{116}{subsection.6.34.2}%
+\contentsline {subsubsection}{\numberline {6.34.2.1}getVal()}{116}{subsubsection.6.34.2.1}%
+\contentsline {subsubsection}{\numberline {6.34.2.2}ping()}{116}{subsubsection.6.34.2.2}%
+\contentsline {subsubsection}{\numberline {6.34.2.3}pingThread()}{116}{subsubsection.6.34.2.3}%
+\contentsline {subsubsection}{\numberline {6.34.2.4}start()}{117}{subsubsection.6.34.2.4}%
+\contentsline {subsubsection}{\numberline {6.34.2.5}stop()}{117}{subsubsection.6.34.2.5}%
+\contentsline {subsubsection}{\numberline {6.34.2.6}tracker()}{117}{subsubsection.6.34.2.6}%
+\contentsline {subsection}{\numberline {6.34.3}Member Data Documentation}{117}{subsection.6.34.3}%
+\contentsline {subsubsection}{\numberline {6.34.3.1}\_s}{117}{subsubsection.6.34.3.1}%
+\contentsline {subsubsection}{\numberline {6.34.3.2}symptomRanges}{118}{subsubsection.6.34.3.2}%
+\contentsline {subsubsection}{\numberline {6.34.3.3}threadRunning}{118}{subsubsection.6.34.3.3}%
+\contentsline {section}{\numberline {6.35}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subscriber\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Sub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Listener Class Reference}{118}{section.6.35}%
+\contentsline {subsection}{\numberline {6.35.1}Constructor \& Destructor Documentation}{119}{subsection.6.35.1}%
+\contentsline {subsubsection}{\numberline {6.35.1.1}SubListener()}{119}{subsubsection.6.35.1.1}%
+\contentsline {subsubsection}{\numberline {6.35.1.2}$\sim $SubListener()}{119}{subsubsection.6.35.1.2}%
+\contentsline {subsection}{\numberline {6.35.2}Member Function Documentation}{119}{subsection.6.35.2}%
+\contentsline {subsubsection}{\numberline {6.35.2.1}on\_data\_available()}{119}{subsubsection.6.35.2.1}%
+\contentsline {subsubsection}{\numberline {6.35.2.2}on\_subscription\_matched()}{119}{subsubsection.6.35.2.2}%
+\contentsline {section}{\numberline {6.36}symptom\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Range Struct Reference}{119}{section.6.36}%
+\contentsline {subsection}{\numberline {6.36.1}Member Data Documentation}{120}{subsection.6.36.1}%
+\contentsline {subsubsection}{\numberline {6.36.1.1}max}{120}{subsubsection.6.36.1.1}%
+\contentsline {subsubsection}{\numberline {6.36.1.2}min}{120}{subsubsection.6.36.1.2}%
+\contentsline {subsubsection}{\numberline {6.36.1.3}symptom}{120}{subsubsection.6.36.1.3}%
+\contentsline {chapter}{\numberline {7}File Documentation}{121}{chapter.7}%
+\contentsline {section}{\numberline {7.1}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/alert.cxx File Reference}{121}{section.7.1}%
+\contentsline {section}{\numberline {7.2}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/alert.h File Reference}{121}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{122}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Macro Definition Documentation}{123}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}alert\_DllAPI}{123}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}eProsima\_user\_DllExport}{123}{subsubsection.7.2.2.2}%
+\contentsline {section}{\numberline {7.3}alert.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{123}{section.7.3}%
+\contentsline {section}{\numberline {7.4}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/alert.idl File Reference}{124}{section.7.4}%
+\contentsline {section}{\numberline {7.5}alert.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}idl}{125}{section.7.5}%
+\contentsline {section}{\numberline {7.6}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/alert\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Types.cxx File Reference}{125}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Typedef Documentation}{125}{subsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.1.1}InstanceHandle\_t}{125}{subsubsection.7.6.1.1}%
+\contentsline {subsubsection}{\numberline {7.6.1.2}SerializedPayload\_t}{125}{subsubsection.7.6.1.2}%
+\contentsline {section}{\numberline {7.7}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/alert\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Types.h File Reference}{126}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{126}{subsection.7.7.1}%
+\contentsline {section}{\numberline {7.8}alert\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{127}{section.7.8}%
+\contentsline {section}{\numberline {7.9}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay.hpp File Reference}{128}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Circular\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delay.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{129}{section.7.10}%
+\contentsline {section}{\numberline {7.11}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Publisher.cpp File Reference}{131}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Publisher.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{132}{section.7.12}%
+\contentsline {section}{\numberline {7.13}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Subscriber.cpp File Reference}{134}{section.7.13}%
+\contentsline {section}{\numberline {7.14}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Diagnosis.cpp File Reference}{135}{section.7.14}%
+\contentsline {section}{\numberline {7.15}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Diagnosis.h File Reference}{135}{section.7.15}%
+\contentsline {section}{\numberline {7.16}Diagnosis.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{136}{section.7.16}%
+\contentsline {section}{\numberline {7.17}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Diagnosis\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface.h File Reference}{137}{section.7.17}%
+\contentsline {section}{\numberline {7.18}Diagnosis\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{138}{section.7.18}%
+\contentsline {section}{\numberline {7.19}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Digital\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filters.h File Reference}{138}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Function Documentation}{140}{subsection.7.19.1}%
+\contentsline {subsubsection}{\numberline {7.19.1.1}calcC\_Cr()}{140}{subsubsection.7.19.1.1}%
+\contentsline {subsubsection}{\numberline {7.19.1.2}squareOf()}{140}{subsubsection.7.19.1.2}%
+\contentsline {section}{\numberline {7.20}Digital\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Filters.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{141}{section.7.20}%
+\contentsline {section}{\numberline {7.21}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}HRTracker.cpp File Reference}{145}{section.7.21}%
+\contentsline {section}{\numberline {7.22}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}HRTracker.h File Reference}{145}{section.7.22}%
+\contentsline {section}{\numberline {7.23}HRTracker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{146}{section.7.23}%
+\contentsline {section}{\numberline {7.24}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/i2c-\/dev.h File Reference}{147}{section.7.24}%
+\contentsline {subsection}{\numberline {7.24.1}Macro Definition Documentation}{149}{subsection.7.24.1}%
+\contentsline {subsubsection}{\numberline {7.24.1.1}I2C\_FUNC\_10BIT\_ADDR}{149}{subsubsection.7.24.1.1}%
+\contentsline {subsubsection}{\numberline {7.24.1.2}I2C\_FUNC\_I2C}{149}{subsubsection.7.24.1.2}%
+\contentsline {subsubsection}{\numberline {7.24.1.3}I2C\_FUNC\_PROTOCOL\_MANGLING}{149}{subsubsection.7.24.1.3}%
+\contentsline {subsubsection}{\numberline {7.24.1.4}I2C\_FUNC\_SMBUS\_BLOCK\_DATA}{149}{subsubsection.7.24.1.4}%
+\contentsline {subsubsection}{\numberline {7.24.1.5}I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL}{149}{subsubsection.7.24.1.5}%
+\contentsline {subsubsection}{\numberline {7.24.1.6}I2C\_FUNC\_SMBUS\_BYTE}{150}{subsubsection.7.24.1.6}%
+\contentsline {subsubsection}{\numberline {7.24.1.7}I2C\_FUNC\_SMBUS\_BYTE\_DATA}{150}{subsubsection.7.24.1.7}%
+\contentsline {subsubsection}{\numberline {7.24.1.8}I2C\_FUNC\_SMBUS\_HWPEC\_CALC}{150}{subsubsection.7.24.1.8}%
+\contentsline {subsubsection}{\numberline {7.24.1.9}I2C\_FUNC\_SMBUS\_I2C\_BLOCK}{150}{subsubsection.7.24.1.9}%
+\contentsline {subsubsection}{\numberline {7.24.1.10}I2C\_FUNC\_SMBUS\_PEC}{150}{subsubsection.7.24.1.10}%
+\contentsline {subsubsection}{\numberline {7.24.1.11}I2C\_FUNC\_SMBUS\_PROC\_CALL}{150}{subsubsection.7.24.1.11}%
+\contentsline {subsubsection}{\numberline {7.24.1.12}I2C\_FUNC\_SMBUS\_QUICK}{150}{subsubsection.7.24.1.12}%
+\contentsline {subsubsection}{\numberline {7.24.1.13}I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA}{150}{subsubsection.7.24.1.13}%
+\contentsline {subsubsection}{\numberline {7.24.1.14}I2C\_FUNC\_SMBUS\_READ\_BYTE}{151}{subsubsection.7.24.1.14}%
+\contentsline {subsubsection}{\numberline {7.24.1.15}I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA}{151}{subsubsection.7.24.1.15}%
+\contentsline {subsubsection}{\numberline {7.24.1.16}I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK}{151}{subsubsection.7.24.1.16}%
+\contentsline {subsubsection}{\numberline {7.24.1.17}I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA}{151}{subsubsection.7.24.1.17}%
+\contentsline {subsubsection}{\numberline {7.24.1.18}I2C\_FUNC\_SMBUS\_WORD\_DATA}{151}{subsubsection.7.24.1.18}%
+\contentsline {subsubsection}{\numberline {7.24.1.19}I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA}{151}{subsubsection.7.24.1.19}%
+\contentsline {subsubsection}{\numberline {7.24.1.20}I2C\_FUNC\_SMBUS\_WRITE\_BYTE}{151}{subsubsection.7.24.1.20}%
+\contentsline {subsubsection}{\numberline {7.24.1.21}I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA}{151}{subsubsection.7.24.1.21}%
+\contentsline {subsubsection}{\numberline {7.24.1.22}I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK}{151}{subsubsection.7.24.1.22}%
+\contentsline {subsubsection}{\numberline {7.24.1.23}I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA}{151}{subsubsection.7.24.1.23}%
+\contentsline {subsubsection}{\numberline {7.24.1.24}I2C\_FUNCS}{152}{subsubsection.7.24.1.24}%
+\contentsline {subsubsection}{\numberline {7.24.1.25}I2C\_M\_IGNORE\_NAK}{152}{subsubsection.7.24.1.25}%
+\contentsline {subsubsection}{\numberline {7.24.1.26}I2C\_M\_NO\_RD\_ACK}{152}{subsubsection.7.24.1.26}%
+\contentsline {subsubsection}{\numberline {7.24.1.27}I2C\_M\_NOSTART}{152}{subsubsection.7.24.1.27}%
+\contentsline {subsubsection}{\numberline {7.24.1.28}I2C\_M\_RD}{152}{subsubsection.7.24.1.28}%
+\contentsline {subsubsection}{\numberline {7.24.1.29}I2C\_M\_REV\_DIR\_ADDR}{152}{subsubsection.7.24.1.29}%
+\contentsline {subsubsection}{\numberline {7.24.1.30}I2C\_M\_TEN}{152}{subsubsection.7.24.1.30}%
+\contentsline {subsubsection}{\numberline {7.24.1.31}I2C\_PEC}{152}{subsubsection.7.24.1.31}%
+\contentsline {subsubsection}{\numberline {7.24.1.32}I2C\_RDRW\_IOCTL\_MAX\_MSGS}{152}{subsubsection.7.24.1.32}%
+\contentsline {subsubsection}{\numberline {7.24.1.33}I2C\_RDWR}{152}{subsubsection.7.24.1.33}%
+\contentsline {subsubsection}{\numberline {7.24.1.34}I2C\_RETRIES}{153}{subsubsection.7.24.1.34}%
+\contentsline {subsubsection}{\numberline {7.24.1.35}I2C\_SLAVE}{153}{subsubsection.7.24.1.35}%
+\contentsline {subsubsection}{\numberline {7.24.1.36}I2C\_SLAVE\_FORCE}{153}{subsubsection.7.24.1.36}%
+\contentsline {subsubsection}{\numberline {7.24.1.37}I2C\_SMBUS}{153}{subsubsection.7.24.1.37}%
+\contentsline {subsubsection}{\numberline {7.24.1.38}I2C\_SMBUS\_BLOCK\_DATA}{153}{subsubsection.7.24.1.38}%
+\contentsline {subsubsection}{\numberline {7.24.1.39}I2C\_SMBUS\_BLOCK\_MAX}{153}{subsubsection.7.24.1.39}%
+\contentsline {subsubsection}{\numberline {7.24.1.40}I2C\_SMBUS\_BLOCK\_PROC\_CALL}{153}{subsubsection.7.24.1.40}%
+\contentsline {subsubsection}{\numberline {7.24.1.41}I2C\_SMBUS\_BYTE}{153}{subsubsection.7.24.1.41}%
+\contentsline {subsubsection}{\numberline {7.24.1.42}I2C\_SMBUS\_BYTE\_DATA}{153}{subsubsection.7.24.1.42}%
+\contentsline {subsubsection}{\numberline {7.24.1.43}I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}{154}{subsubsection.7.24.1.43}%
+\contentsline {subsubsection}{\numberline {7.24.1.44}I2C\_SMBUS\_I2C\_BLOCK\_DATA}{154}{subsubsection.7.24.1.44}%
+\contentsline {subsubsection}{\numberline {7.24.1.45}I2C\_SMBUS\_I2C\_BLOCK\_MAX}{154}{subsubsection.7.24.1.45}%
+\contentsline {subsubsection}{\numberline {7.24.1.46}I2C\_SMBUS\_PROC\_CALL}{154}{subsubsection.7.24.1.46}%
+\contentsline {subsubsection}{\numberline {7.24.1.47}I2C\_SMBUS\_QUICK}{154}{subsubsection.7.24.1.47}%
+\contentsline {subsubsection}{\numberline {7.24.1.48}I2C\_SMBUS\_READ}{154}{subsubsection.7.24.1.48}%
+\contentsline {subsubsection}{\numberline {7.24.1.49}I2C\_SMBUS\_WORD\_DATA}{154}{subsubsection.7.24.1.49}%
+\contentsline {subsubsection}{\numberline {7.24.1.50}I2C\_SMBUS\_WRITE}{154}{subsubsection.7.24.1.50}%
+\contentsline {subsubsection}{\numberline {7.24.1.51}I2C\_TENBIT}{154}{subsubsection.7.24.1.51}%
+\contentsline {subsubsection}{\numberline {7.24.1.52}I2C\_TIMEOUT}{154}{subsubsection.7.24.1.52}%
+\contentsline {subsection}{\numberline {7.24.2}Function Documentation}{155}{subsection.7.24.2}%
+\contentsline {subsubsection}{\numberline {7.24.2.1}i2c\_smbus\_access()}{155}{subsubsection.7.24.2.1}%
+\contentsline {subsubsection}{\numberline {7.24.2.2}i2c\_smbus\_block\_process\_call()}{155}{subsubsection.7.24.2.2}%
+\contentsline {subsubsection}{\numberline {7.24.2.3}i2c\_smbus\_process\_call()}{155}{subsubsection.7.24.2.3}%
+\contentsline {subsubsection}{\numberline {7.24.2.4}i2c\_smbus\_read\_block\_data()}{155}{subsubsection.7.24.2.4}%
+\contentsline {subsubsection}{\numberline {7.24.2.5}i2c\_smbus\_read\_byte()}{156}{subsubsection.7.24.2.5}%
+\contentsline {subsubsection}{\numberline {7.24.2.6}i2c\_smbus\_read\_byte\_data()}{156}{subsubsection.7.24.2.6}%
+\contentsline {subsubsection}{\numberline {7.24.2.7}i2c\_smbus\_read\_i2c\_block\_data()}{156}{subsubsection.7.24.2.7}%
+\contentsline {subsubsection}{\numberline {7.24.2.8}i2c\_smbus\_read\_word\_data()}{156}{subsubsection.7.24.2.8}%
+\contentsline {subsubsection}{\numberline {7.24.2.9}i2c\_smbus\_write\_block\_data()}{156}{subsubsection.7.24.2.9}%
+\contentsline {subsubsection}{\numberline {7.24.2.10}i2c\_smbus\_write\_byte()}{157}{subsubsection.7.24.2.10}%
+\contentsline {subsubsection}{\numberline {7.24.2.11}i2c\_smbus\_write\_byte\_data()}{157}{subsubsection.7.24.2.11}%
+\contentsline {subsubsection}{\numberline {7.24.2.12}i2c\_smbus\_write\_i2c\_block\_data()}{157}{subsubsection.7.24.2.12}%
+\contentsline {subsubsection}{\numberline {7.24.2.13}i2c\_smbus\_write\_quick()}{157}{subsubsection.7.24.2.13}%
+\contentsline {subsubsection}{\numberline {7.24.2.14}i2c\_smbus\_write\_word\_data()}{157}{subsubsection.7.24.2.14}%
+\contentsline {section}{\numberline {7.25}i2c-\/dev.h}{158}{section.7.25}%
+\contentsline {section}{\numberline {7.26}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MAX30102.cpp File Reference}{161}{section.7.26}%
+\contentsline {subsection}{\numberline {7.26.1}Variable Documentation}{164}{subsection.7.26.1}%
+\contentsline {subsubsection}{\numberline {7.26.1.1}ADCRANGE\_16384}{164}{subsubsection.7.26.1.1}%
+\contentsline {subsubsection}{\numberline {7.26.1.2}ADCRANGE\_2048}{164}{subsubsection.7.26.1.2}%
+\contentsline {subsubsection}{\numberline {7.26.1.3}ADCRANGE\_4096}{164}{subsubsection.7.26.1.3}%
+\contentsline {subsubsection}{\numberline {7.26.1.4}ADCRANGE\_8192}{164}{subsubsection.7.26.1.4}%
+\contentsline {subsubsection}{\numberline {7.26.1.5}INT\_A\_FULL\_DISABLE}{164}{subsubsection.7.26.1.5}%
+\contentsline {subsubsection}{\numberline {7.26.1.6}INT\_A\_FULL\_ENABLE}{164}{subsubsection.7.26.1.6}%
+\contentsline {subsubsection}{\numberline {7.26.1.7}INT\_ALC\_OVF\_DISABLE}{164}{subsubsection.7.26.1.7}%
+\contentsline {subsubsection}{\numberline {7.26.1.8}INT\_ALC\_OVF\_ENABLE}{164}{subsubsection.7.26.1.8}%
+\contentsline {subsubsection}{\numberline {7.26.1.9}INT\_DATA\_RDY\_DISABLE}{164}{subsubsection.7.26.1.9}%
+\contentsline {subsubsection}{\numberline {7.26.1.10}INT\_DATA\_RDY\_ENABLE}{164}{subsubsection.7.26.1.10}%
+\contentsline {subsubsection}{\numberline {7.26.1.11}INT\_DIE\_TEMP\_RDY\_DISABLE}{165}{subsubsection.7.26.1.11}%
+\contentsline {subsubsection}{\numberline {7.26.1.12}INT\_DIE\_TEMP\_RDY\_ENABLE}{165}{subsubsection.7.26.1.12}%
+\contentsline {subsubsection}{\numberline {7.26.1.13}INT\_PROX\_INT\_DISABLE}{165}{subsubsection.7.26.1.13}%
+\contentsline {subsubsection}{\numberline {7.26.1.14}INT\_PROX\_INT\_ENABLE}{165}{subsubsection.7.26.1.14}%
+\contentsline {subsubsection}{\numberline {7.26.1.15}LEDMODE\_MULTILED}{165}{subsubsection.7.26.1.15}%
+\contentsline {subsubsection}{\numberline {7.26.1.16}LEDMODE\_REDIRONLY}{165}{subsubsection.7.26.1.16}%
+\contentsline {subsubsection}{\numberline {7.26.1.17}LEDMODE\_REDONLY}{165}{subsubsection.7.26.1.17}%
+\contentsline {subsubsection}{\numberline {7.26.1.18}MASK\_A\_FULL}{165}{subsubsection.7.26.1.18}%
+\contentsline {subsubsection}{\numberline {7.26.1.19}MASK\_ADCRANGE}{165}{subsubsection.7.26.1.19}%
+\contentsline {subsubsection}{\numberline {7.26.1.20}MASK\_INT\_A\_FULL}{165}{subsubsection.7.26.1.20}%
+\contentsline {subsubsection}{\numberline {7.26.1.21}MASK\_INT\_ALC\_OVF}{166}{subsubsection.7.26.1.21}%
+\contentsline {subsubsection}{\numberline {7.26.1.22}MASK\_INT\_DATA\_RDY}{166}{subsubsection.7.26.1.22}%
+\contentsline {subsubsection}{\numberline {7.26.1.23}MASK\_INT\_DIE\_TEMP\_RDY}{166}{subsubsection.7.26.1.23}%
+\contentsline {subsubsection}{\numberline {7.26.1.24}MASK\_INT\_PROX\_INT}{166}{subsubsection.7.26.1.24}%
+\contentsline {subsubsection}{\numberline {7.26.1.25}MASK\_LEDMODE}{166}{subsubsection.7.26.1.25}%
+\contentsline {subsubsection}{\numberline {7.26.1.26}MASK\_PULSEWIDTH}{166}{subsubsection.7.26.1.26}%
+\contentsline {subsubsection}{\numberline {7.26.1.27}MASK\_RESET}{166}{subsubsection.7.26.1.27}%
+\contentsline {subsubsection}{\numberline {7.26.1.28}MASK\_ROLLOVER}{166}{subsubsection.7.26.1.28}%
+\contentsline {subsubsection}{\numberline {7.26.1.29}MASK\_SAMPLEAVG}{166}{subsubsection.7.26.1.29}%
+\contentsline {subsubsection}{\numberline {7.26.1.30}MASK\_SAMPLERATE}{166}{subsubsection.7.26.1.30}%
+\contentsline {subsubsection}{\numberline {7.26.1.31}MASK\_SHUTDOWN}{167}{subsubsection.7.26.1.31}%
+\contentsline {subsubsection}{\numberline {7.26.1.32}MASK\_SLOT1}{167}{subsubsection.7.26.1.32}%
+\contentsline {subsubsection}{\numberline {7.26.1.33}MASK\_SLOT2}{167}{subsubsection.7.26.1.33}%
+\contentsline {subsubsection}{\numberline {7.26.1.34}MASK\_SLOT3}{167}{subsubsection.7.26.1.34}%
+\contentsline {subsubsection}{\numberline {7.26.1.35}MASK\_SLOT4}{167}{subsubsection.7.26.1.35}%
+\contentsline {subsubsection}{\numberline {7.26.1.36}MAX30102\_EXPECTEDPARTID}{167}{subsubsection.7.26.1.36}%
+\contentsline {subsubsection}{\numberline {7.26.1.37}PULSEWIDTH\_118}{167}{subsubsection.7.26.1.37}%
+\contentsline {subsubsection}{\numberline {7.26.1.38}PULSEWIDTH\_215}{167}{subsubsection.7.26.1.38}%
+\contentsline {subsubsection}{\numberline {7.26.1.39}PULSEWIDTH\_411}{167}{subsubsection.7.26.1.39}%
+\contentsline {subsubsection}{\numberline {7.26.1.40}PULSEWIDTH\_69}{167}{subsubsection.7.26.1.40}%
+\contentsline {subsubsection}{\numberline {7.26.1.41}REG\_DIETEMPCONFIG}{168}{subsubsection.7.26.1.41}%
+\contentsline {subsubsection}{\numberline {7.26.1.42}REG\_DIETEMPFRAC}{168}{subsubsection.7.26.1.42}%
+\contentsline {subsubsection}{\numberline {7.26.1.43}REG\_DIETEMPINT}{168}{subsubsection.7.26.1.43}%
+\contentsline {subsubsection}{\numberline {7.26.1.44}REG\_FIFOCONFIG}{168}{subsubsection.7.26.1.44}%
+\contentsline {subsubsection}{\numberline {7.26.1.45}REG\_FIFODATA}{168}{subsubsection.7.26.1.45}%
+\contentsline {subsubsection}{\numberline {7.26.1.46}REG\_FIFOOVERFLOW}{168}{subsubsection.7.26.1.46}%
+\contentsline {subsubsection}{\numberline {7.26.1.47}REG\_FIFOREADPTR}{168}{subsubsection.7.26.1.47}%
+\contentsline {subsubsection}{\numberline {7.26.1.48}REG\_FIFOWRITEPTR}{168}{subsubsection.7.26.1.48}%
+\contentsline {subsubsection}{\numberline {7.26.1.49}REG\_INTENABLE1}{168}{subsubsection.7.26.1.49}%
+\contentsline {subsubsection}{\numberline {7.26.1.50}REG\_INTENABLE2}{168}{subsubsection.7.26.1.50}%
+\contentsline {subsubsection}{\numberline {7.26.1.51}REG\_INTSTAT1}{169}{subsubsection.7.26.1.51}%
+\contentsline {subsubsection}{\numberline {7.26.1.52}REG\_INTSTAT2}{169}{subsubsection.7.26.1.52}%
+\contentsline {subsubsection}{\numberline {7.26.1.53}REG\_LED1\_PULSEAMP}{169}{subsubsection.7.26.1.53}%
+\contentsline {subsubsection}{\numberline {7.26.1.54}REG\_LED2\_PULSEAMP}{169}{subsubsection.7.26.1.54}%
+\contentsline {subsubsection}{\numberline {7.26.1.55}REG\_LED\_PROX\_AMP}{169}{subsubsection.7.26.1.55}%
+\contentsline {subsubsection}{\numberline {7.26.1.56}REG\_MODECONFIG}{169}{subsubsection.7.26.1.56}%
+\contentsline {subsubsection}{\numberline {7.26.1.57}REG\_MULTILEDCONFIG1}{169}{subsubsection.7.26.1.57}%
+\contentsline {subsubsection}{\numberline {7.26.1.58}REG\_MULTILEDCONFIG2}{169}{subsubsection.7.26.1.58}%
+\contentsline {subsubsection}{\numberline {7.26.1.59}REG\_PARTICLECONFIG}{169}{subsubsection.7.26.1.59}%
+\contentsline {subsubsection}{\numberline {7.26.1.60}REG\_PARTID}{169}{subsubsection.7.26.1.60}%
+\contentsline {subsubsection}{\numberline {7.26.1.61}REG\_PROXINTTHRESH}{170}{subsubsection.7.26.1.61}%
+\contentsline {subsubsection}{\numberline {7.26.1.62}REG\_REVISIONID}{170}{subsubsection.7.26.1.62}%
+\contentsline {subsubsection}{\numberline {7.26.1.63}RESET}{170}{subsubsection.7.26.1.63}%
+\contentsline {subsubsection}{\numberline {7.26.1.64}ROLLOVER\_DISABLE}{170}{subsubsection.7.26.1.64}%
+\contentsline {subsubsection}{\numberline {7.26.1.65}ROLLOVER\_ENABLE}{170}{subsubsection.7.26.1.65}%
+\contentsline {subsubsection}{\numberline {7.26.1.66}SAMPLEAVG\_1}{170}{subsubsection.7.26.1.66}%
+\contentsline {subsubsection}{\numberline {7.26.1.67}SAMPLEAVG\_16}{170}{subsubsection.7.26.1.67}%
+\contentsline {subsubsection}{\numberline {7.26.1.68}SAMPLEAVG\_2}{170}{subsubsection.7.26.1.68}%
+\contentsline {subsubsection}{\numberline {7.26.1.69}SAMPLEAVG\_32}{170}{subsubsection.7.26.1.69}%
+\contentsline {subsubsection}{\numberline {7.26.1.70}SAMPLEAVG\_4}{170}{subsubsection.7.26.1.70}%
+\contentsline {subsubsection}{\numberline {7.26.1.71}SAMPLEAVG\_8}{171}{subsubsection.7.26.1.71}%
+\contentsline {subsubsection}{\numberline {7.26.1.72}SAMPLERATE\_100}{171}{subsubsection.7.26.1.72}%
+\contentsline {subsubsection}{\numberline {7.26.1.73}SAMPLERATE\_1000}{171}{subsubsection.7.26.1.73}%
+\contentsline {subsubsection}{\numberline {7.26.1.74}SAMPLERATE\_1600}{171}{subsubsection.7.26.1.74}%
+\contentsline {subsubsection}{\numberline {7.26.1.75}SAMPLERATE\_200}{171}{subsubsection.7.26.1.75}%
+\contentsline {subsubsection}{\numberline {7.26.1.76}SAMPLERATE\_3200}{171}{subsubsection.7.26.1.76}%
+\contentsline {subsubsection}{\numberline {7.26.1.77}SAMPLERATE\_400}{171}{subsubsection.7.26.1.77}%
+\contentsline {subsubsection}{\numberline {7.26.1.78}SAMPLERATE\_50}{171}{subsubsection.7.26.1.78}%
+\contentsline {subsubsection}{\numberline {7.26.1.79}SAMPLERATE\_800}{171}{subsubsection.7.26.1.79}%
+\contentsline {subsubsection}{\numberline {7.26.1.80}SHUTDOWN}{171}{subsubsection.7.26.1.80}%
+\contentsline {subsubsection}{\numberline {7.26.1.81}SLOT\_IR\_LED}{172}{subsubsection.7.26.1.81}%
+\contentsline {subsubsection}{\numberline {7.26.1.82}SLOT\_IR\_PILOT}{172}{subsubsection.7.26.1.82}%
+\contentsline {subsubsection}{\numberline {7.26.1.83}SLOT\_NONE}{172}{subsubsection.7.26.1.83}%
+\contentsline {subsubsection}{\numberline {7.26.1.84}SLOT\_NONE\_PILOT}{172}{subsubsection.7.26.1.84}%
+\contentsline {subsubsection}{\numberline {7.26.1.85}SLOT\_RED\_LED}{172}{subsubsection.7.26.1.85}%
+\contentsline {subsubsection}{\numberline {7.26.1.86}SLOT\_RED\_PILOT}{172}{subsubsection.7.26.1.86}%
+\contentsline {subsubsection}{\numberline {7.26.1.87}WAKEUP}{172}{subsubsection.7.26.1.87}%
+\contentsline {section}{\numberline {7.27}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MAX30102.h File Reference}{172}{section.7.27}%
+\contentsline {subsection}{\numberline {7.27.1}Macro Definition Documentation}{173}{subsection.7.27.1}%
+\contentsline {subsubsection}{\numberline {7.27.1.1}DEFAULT\_INT\_GPIO}{173}{subsubsection.7.27.1.1}%
+\contentsline {subsubsection}{\numberline {7.27.1.2}I2C\_BUFFER\_LENGTH}{173}{subsubsection.7.27.1.2}%
+\contentsline {subsubsection}{\numberline {7.27.1.3}I2C\_SPEED\_FAST}{173}{subsubsection.7.27.1.3}%
+\contentsline {subsubsection}{\numberline {7.27.1.4}I2C\_SPEED\_STANDARD}{173}{subsubsection.7.27.1.4}%
+\contentsline {subsubsection}{\numberline {7.27.1.5}MAX30102\_ADDRESS}{173}{subsubsection.7.27.1.5}%
+\contentsline {subsubsection}{\numberline {7.27.1.6}STORAGE\_SIZE}{174}{subsubsection.7.27.1.6}%
+\contentsline {section}{\numberline {7.28}MAX30102.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{174}{section.7.28}%
+\contentsline {section}{\numberline {7.29}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sensor.cpp File Reference}{175}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Variable Documentation}{176}{subsection.7.29.1}%
+\contentsline {subsubsection}{\numberline {7.29.1.1}crest}{176}{subsubsection.7.29.1.1}%
+\contentsline {subsubsection}{\numberline {7.29.1.2}dataBeenIncreasing}{176}{subsubsection.7.29.1.2}%
+\contentsline {subsubsection}{\numberline {7.29.1.3}hpf}{176}{subsubsection.7.29.1.3}%
+\contentsline {subsubsection}{\numberline {7.29.1.4}lpf}{176}{subsubsection.7.29.1.4}%
+\contentsline {subsubsection}{\numberline {7.29.1.5}nextPastPeaksIndex}{177}{subsubsection.7.29.1.5}%
+\contentsline {subsubsection}{\numberline {7.29.1.6}R}{177}{subsubsection.7.29.1.6}%
+\contentsline {subsubsection}{\numberline {7.29.1.7}SpO2}{177}{subsubsection.7.29.1.7}%
+\contentsline {subsubsection}{\numberline {7.29.1.8}trough}{177}{subsubsection.7.29.1.8}%
+\contentsline {section}{\numberline {7.30}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sensor.h File Reference}{177}{section.7.30}%
+\contentsline {section}{\numberline {7.31}Sensor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{178}{section.7.31}%
+\contentsline {section}{\numberline {7.32}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/shutdown.cpp File Reference}{179}{section.7.32}%
+\contentsline {subsection}{\numberline {7.32.1}Function Documentation}{180}{subsection.7.32.1}%
+\contentsline {subsubsection}{\numberline {7.32.1.1}main()}{180}{subsubsection.7.32.1.1}%
+\contentsline {subsection}{\numberline {7.32.2}Variable Documentation}{180}{subsection.7.32.2}%
+\contentsline {subsubsection}{\numberline {7.32.2.1}heartSensor}{180}{subsubsection.7.32.2.1}%
+\contentsline {section}{\numberline {7.33}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SPO2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tracker.cpp File Reference}{180}{section.7.33}%
+\contentsline {section}{\numberline {7.34}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SPO2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tracker.h File Reference}{181}{section.7.34}%
+\contentsline {section}{\numberline {7.35}SPO2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tracker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{181}{section.7.35}%
+\contentsline {section}{\numberline {7.36}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/test.cpp File Reference}{182}{section.7.36}%
+\contentsline {subsection}{\numberline {7.36.1}Function Documentation}{183}{subsection.7.36.1}%
+\contentsline {subsubsection}{\numberline {7.36.1.1}main()}{183}{subsubsection.7.36.1.1}%
+\contentsline {subsection}{\numberline {7.36.2}Variable Documentation}{183}{subsection.7.36.2}%
+\contentsline {subsubsection}{\numberline {7.36.2.1}heartSensor}{183}{subsubsection.7.36.2.1}%
+\contentsline {section}{\numberline {7.37}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O2.cpp File Reference}{183}{section.7.37}%
+\contentsline {subsection}{\numberline {7.37.1}Function Documentation}{184}{subsection.7.37.1}%
+\contentsline {subsubsection}{\numberline {7.37.1.1}main()}{184}{subsubsection.7.37.1.1}%
+\contentsline {section}{\numberline {7.38}/home/sitcomlab/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projects/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vigi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sense/src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User.cpp File Reference}{185}{section.7.38}%
+\contentsline {subsection}{\numberline {7.38.1}Function Documentation}{185}{subsection.7.38.1}%
+\contentsline {subsubsection}{\numberline {7.38.1.1}addContact()}{185}{subsubsection.7.38.1.1}%
+\contentsline {subsubsection}{\numberline {7.38.1.2}User()}{185}{subsubsection.7.38.1.2}%
+\contentsline {subsection}{\numberline {7.38.2}Variable Documentation}{186}{subsection.7.38.2}%
+\contentsline {subsubsection}{\numberline {7.38.2.1}contacts}{186}{subsubsection.7.38.2.1}%
+\contentsline {subsubsection}{\numberline {7.38.2.2}name}{186}{subsubsection.7.38.2.2}%
+\contentsline {chapter}{Index}{187}{section*.297}%

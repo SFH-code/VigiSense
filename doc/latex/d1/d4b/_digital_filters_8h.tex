@@ -1,0 +1,75 @@
+\doxysection{/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\+Digital\+Filters.h File Reference}
+\hypertarget{_digital_filters_8h}{}\label{_digital_filters_8h}\index{/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h@{/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h}}
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}Circular\+Delay.\+hpp"{}}\newline
+Include dependency graph for Digital\+Filters.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{d6/d02/_digital_filters_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d7/d8c/_digital_filters_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_digital_filter}{Digital\+Filter$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for digital moving filters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_differentiator}{Differentiator$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Class for differentiator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_low_pass_filter}{Low\+Pass\+Filter}}
+\begin{DoxyCompactList}\small\item\em Class for a low pass filter. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_low_pass_filter2}{Low\+Pass\+Filter2}}
+\begin{DoxyCompactList}\small\item\em Class for a 2nd order low pass filter. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_high_pass_filter}{High\+Pass\+Filter}}
+\begin{DoxyCompactList}\small\item\em Class for high pass filter using bilinear transform. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_high_pass_filter3}{High\+Pass\+Filter3}}
+\begin{DoxyCompactList}\small\item\em Class for third order high pass filter. This is designed using the bilinear transform. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_low_pass_filter3}{Low\+Pass\+Filter3}}
+\begin{DoxyCompactList}\small\item\em Class for third order high pass filter. This is designed using the bilinear transform. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_low_pass_filter3_matched_z}{Low\+Pass\+Filter3\+MatchedZ}}
+\begin{DoxyCompactList}\small\item\em Class for third order high pass filter. This is designed using the matched Z transform. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_low_pass_filter3_diff_approx}{Low\+Pass\+Filter3\+Diff\+Approx}}
+\begin{DoxyCompactList}\small\item\em Class for third order high pass filter. This is designed using the approximated differtial approuch where s=(Z-\/1)/(Z\texorpdfstring{$\ast$}{*}T). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_moving_avarage_filter}{Moving\+Avarage\+Filter$<$ size $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetps}{tps}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr T \mbox{\hyperlink{_digital_filters_8h_a2186e3c748b2f275583dcae30f1e21d1}{square\+Of}} (T input)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr T \mbox{\hyperlink{namespacetps_a4ba84c64ef7f752a77bd0adc41dc1900}{tps\+::pow}} (T input, unsigned int power)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr T \mbox{\hyperlink{_digital_filters_8h_a7cb8f04610b43d68652382e672de2ec4}{calc\+C\+\_\+\+Cr}} (T k, T m)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_digital_filters_8h_a7cb8f04610b43d68652382e672de2ec4}\label{_digital_filters_8h_a7cb8f04610b43d68652382e672de2ec4} 
+\index{DigitalFilters.h@{DigitalFilters.h}!calcC\_Cr@{calcC\_Cr}}
+\index{calcC\_Cr@{calcC\_Cr}!DigitalFilters.h@{DigitalFilters.h}}
+\doxysubsubsection{\texorpdfstring{calcC\_Cr()}{calcC\_Cr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T calc\+C\+\_\+\+Cr (\begin{DoxyParamCaption}\item[{T}]{k,  }\item[{T}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{_digital_filters_8h_a2186e3c748b2f275583dcae30f1e21d1}\label{_digital_filters_8h_a2186e3c748b2f275583dcae30f1e21d1} 
+\index{DigitalFilters.h@{DigitalFilters.h}!squareOf@{squareOf}}
+\index{squareOf@{squareOf}!DigitalFilters.h@{DigitalFilters.h}}
+\doxysubsubsection{\texorpdfstring{squareOf()}{squareOf()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T square\+Of (\begin{DoxyParamCaption}\item[{T}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+

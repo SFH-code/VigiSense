@@ -1,0 +1,5 @@
+<map id="MAX30102::clearFIFO" name="MAX30102::clearFIFO">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,168,31"/>
+<area shape="rect" id="Node000002" href="$df/dbf/i2c-dev_8h.html#a77fd74b2c8d519ec584b44f182365f98" title=" " alt="" coords="216,5,419,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,15,202,15,202,21,168,21"/>
+</map>

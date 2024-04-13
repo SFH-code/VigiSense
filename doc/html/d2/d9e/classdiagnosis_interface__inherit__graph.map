@@ -1,0 +1,7 @@
+<map id="diagnosisInterface" name="diagnosisInterface">
+<area shape="rect" id="Node000001" title=" " alt="" coords="36,5,179,31"/>
+<area shape="rect" id="Node000002" href="$df/dc0/class_h_r_tracker.html" title=" " alt="" coords="5,79,92,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,43,60,80,56,77,87,40"/>
+<area shape="rect" id="Node000003" href="$dd/d3d/class_s_p_o2_tracker.html" title=" " alt="" coords="116,79,219,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,40,160,77,156,80,124,43"/>
+</map>

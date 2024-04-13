@@ -1,0 +1,725 @@
+\doxysection{/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\+MAX30102.cpp File Reference}
+\hypertarget{_m_a_x30102_8cpp}{}\label{_m_a_x30102_8cpp}\index{/home/sitcomlab/Projects/VigiSense/src/MAX30102.cpp@{/home/sitcomlab/Projects/VigiSense/src/MAX30102.cpp}}
+{\ttfamily \#include $<$pigpio.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include "{}i2c-\/dev.\+h"{}}\newline
+{\ttfamily \#include "{}MAX30102.\+h"{}}\newline
+Include dependency graph for MAX30102.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/da5/_m_a_x30102_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a9fc04679194234f3ce8fd31c411c4735}{REG\+\_\+\+INTSTAT1}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a453b5d75b73f803c4aea1923da3124d2}{REG\+\_\+\+INTSTAT2}} = 0x01
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_af294aebcdd4a0d211f6e78fba3197f90}{REG\+\_\+\+INTENABLE1}} = 0x02
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae6a565bfbd0611953991679a2b618506}{REG\+\_\+\+INTENABLE2}} = 0x03
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a0f21b7f1b90394a47902bb62c51e2398}{REG\+\_\+\+FIFOWRITEPTR}} = 0x04
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a2ad0d0ef65beae0ffad8c7aefb19f8d6}{REG\+\_\+\+FIFOOVERFLOW}} = 0x05
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a7c6ff2b825b612c9405c0790e07638e5}{REG\+\_\+\+FIFOREADPTR}} = 0x06
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aab743137e235610d07ac3ba56991cb7c}{REG\+\_\+\+FIFODATA}} = 0x07
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a84ae04ba579f0c6976e2437c6301fb82}{REG\+\_\+\+FIFOCONFIG}} = 0x08
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a989323542810698044e83966044b3ff3}{REG\+\_\+\+MODECONFIG}} = 0x09
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a69b69b4802751f4bffe16096cc9c78ab}{REG\+\_\+\+PARTICLECONFIG}} = 0x0A
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a2a7aa7f8ad6ba7b1a15c4fca55d5106b}{REG\+\_\+\+LED1\+\_\+\+PULSEAMP}} = 0x0C
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aff4e6af75cd2a8490c346f16ad8c12fb}{REG\+\_\+\+LED2\+\_\+\+PULSEAMP}} = 0x0D
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac32c39744023702bd3ac86e4ada6caf2}{REG\+\_\+\+LED\+\_\+\+PROX\+\_\+\+AMP}} = 0x10
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae243f120d96cd0e1d19b60a9961ba1c3}{REG\+\_\+\+MULTILEDCONFIG1}} = 0x11
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a7f1aaf345eaba1a8dc5e7d30891a6d6a}{REG\+\_\+\+MULTILEDCONFIG2}} = 0x12
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae85f92b70afce56c3b91e02d5a844bd2}{REG\+\_\+\+DIETEMPINT}} = 0x1F
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac080ed86364a118c45b8ac8efda7a24d}{REG\+\_\+\+DIETEMPFRAC}} = 0x20
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a4a907debf49fc1232dcd5dc213dc403e}{REG\+\_\+\+DIETEMPCONFIG}} = 0x21
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aa757aa2898c0aca23d6cfae98dbe477c}{REG\+\_\+\+PROXINTTHRESH}} = 0x30
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a91537717402f68338dccb36edbee38a3}{REG\+\_\+\+REVISIONID}} = 0x\+FE
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac638b2cd2cd87653037a98c05cc0ff9f}{REG\+\_\+\+PARTID}} = 0x\+FF
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a7bdba06754b128169b9667aad587164a}{MAX30102\+\_\+\+EXPECTEDPARTID}} = 0x15
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac4602af8de0ede526ae023eda4a72789}{MASK\+\_\+\+INT\+\_\+\+A\+\_\+\+FULL}} = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b10000000
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ace5428c2620ce0fad7b96720c270e1bb}{INT\+\_\+\+A\+\_\+\+FULL\+\_\+\+ENABLE}} = 0x80
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ab668c7bd4df550eebb7854bcd0194589}{INT\+\_\+\+A\+\_\+\+FULL\+\_\+\+DISABLE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aee1488fa353f0e37387f8c58a065ebd8}{MASK\+\_\+\+INT\+\_\+\+DATA\+\_\+\+RDY}} = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b01000000
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae6a49054810bab89f63b61d59e011156}{INT\+\_\+\+DATA\+\_\+\+RDY\+\_\+\+ENABLE}} = 0x40
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aa8ce7e06b304a6ac93ec4d802684400f}{INT\+\_\+\+DATA\+\_\+\+RDY\+\_\+\+DISABLE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac1b76c1e9b1d46d4852e26fbde3667a1}{MASK\+\_\+\+INT\+\_\+\+ALC\+\_\+\+OVF}} = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b00100000
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a3c68e98d6e9fb78899cb43f3f5b23b48}{INT\+\_\+\+ALC\+\_\+\+OVF\+\_\+\+ENABLE}} = 0x20
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_afba6ff4c68a6c3c5de974cd50222b8e1}{INT\+\_\+\+ALC\+\_\+\+OVF\+\_\+\+DISABLE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a588cd17a9f8c03bec97084f39fc1f49e}{MASK\+\_\+\+INT\+\_\+\+PROX\+\_\+\+INT}} = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b00010000
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a44f1b357ce47920c9f79c863e6017a65}{INT\+\_\+\+PROX\+\_\+\+INT\+\_\+\+ENABLE}} = 0x10
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a550dac1bb4e39a6560a01f76cb50c4e4}{INT\+\_\+\+PROX\+\_\+\+INT\+\_\+\+DISABLE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a6482890a4486e59fdef0a2a75871afcf}{MASK\+\_\+\+INT\+\_\+\+DIE\+\_\+\+TEMP\+\_\+\+RDY}} = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b00000010
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ad416066ffecf8de49fe7144190965ba8}{INT\+\_\+\+DIE\+\_\+\+TEMP\+\_\+\+RDY\+\_\+\+ENABLE}} = 0x02
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a79634221b6584e14110d2226a8b19661}{INT\+\_\+\+DIE\+\_\+\+TEMP\+\_\+\+RDY\+\_\+\+DISABLE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_adfc6fa061604689067ed8b4342dd59dc}{MASK\+\_\+\+SAMPLEAVG}} = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b11100000
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ab190176337bc788d37196dc4b374af13}{SAMPLEAVG\+\_\+1}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a7539a38764d10b26d95130cb4f0d4601}{SAMPLEAVG\+\_\+2}} = 0x20
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a268fa38bce86129a7ddca7cb8255d6d3}{SAMPLEAVG\+\_\+4}} = 0x40
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a97787d26390c31a96d4b63e2662006e4}{SAMPLEAVG\+\_\+8}} = 0x60
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_afd632ccbbb3781d04961dfc91f6767e2}{SAMPLEAVG\+\_\+16}} = 0x80
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ab06a790ef9fdded932bd4efc464aab4a}{SAMPLEAVG\+\_\+32}} = 0x\+A0
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a8a38b4b8a406d0765d0009cdea10a218}{MASK\+\_\+\+ROLLOVER}} = 0x\+EF
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_adfb01625964788ed4ef32f2b26286270}{ROLLOVER\+\_\+\+ENABLE}} = 0x10
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac92b4c3fb792d58b3183130f6e9ebe89}{ROLLOVER\+\_\+\+DISABLE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a56146ad541189c9682a4bf1df1c77ee1}{MASK\+\_\+\+A\+\_\+\+FULL}} = 0x\+F0
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_afa0b6ca18f9579c4b0ea7e11becdfab5}{MASK\+\_\+\+SHUTDOWN}} = 0x7f
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_abc0f4a5e2b199955aed5c36b4eb74815}{SHUTDOWN}} = 0x80
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a2eb88722eea9120189725813a65503a1}{WAKEUP}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a85dbed613a134a4c438b39485e16dd8b}{MASK\+\_\+\+RESET}} = 0x\+BF
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a403de5627c8157c37ebff66b69a2cbba}{RESET}} = 0\+X40
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae78ed09b7135add8614bb7dd0e4b344d}{MASK\+\_\+\+LEDMODE}} = 0x\+F8
+\begin{DoxyCompactList}\small\item\em IR led mode. \end{DoxyCompactList}\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a88d03085451094e65ba3e70ee3268216}{LEDMODE\+\_\+\+REDONLY}} = 0x02
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac16bb9e75402082dd9a9576b66be4b49}{LEDMODE\+\_\+\+REDIRONLY}} = 0x03
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a62651a73cc10c9da85a487c49f9cebe5}{LEDMODE\+\_\+\+MULTILED}} = 0x07
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aa6c6c531707a512007739fb3522309af}{MASK\+\_\+\+ADCRANGE}} = 0x9F
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae5dd0cce626def61361019d3fb79ae68}{ADCRANGE\+\_\+2048}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aab55fe0ead7ccace3f794a4dcd9cf1a9}{ADCRANGE\+\_\+4096}} = 0x20
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a1a20fec1b7af897d79b64a7f230ea7f0}{ADCRANGE\+\_\+8192}} = 0x40
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a4807d411ac930f8318700edf1c66ccce}{ADCRANGE\+\_\+16384}} = 0x60
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a5fede05409e3c282f0609a39bfc953f8}{MASK\+\_\+\+SAMPLERATE}} = 0x\+E3
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a6c88245eb44ce8cf136f1b27cf10594f}{SAMPLERATE\+\_\+50}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a33d054bb1db1c71dd92772cc2cb5fa35}{SAMPLERATE\+\_\+100}} = 0x04
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a6e0cf2d5c01d9cae5e4470fc0b41e954}{SAMPLERATE\+\_\+200}} = 0x08
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac71eb9967339ba444e862f427196a94b}{SAMPLERATE\+\_\+400}} = 0x0C
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a75cbc2a51435fe245ece07d345b2d69d}{SAMPLERATE\+\_\+800}} = 0x10
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ab9ed8295f4f34944fa0f466f9602db19}{SAMPLERATE\+\_\+1000}} = 0x14
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a9b3709a78eecd00c3811beb50e39f3b8}{SAMPLERATE\+\_\+1600}} = 0x18
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ab9418aeca4041a83766f42fbb5e1edc5}{SAMPLERATE\+\_\+3200}} = 0x1C
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a1885ea6b1ef736e902620d9e40277282}{MASK\+\_\+\+PULSEWIDTH}} = 0x\+FC
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a3151a5ef5093c10190cfb8a9e5e98b2d}{PULSEWIDTH\+\_\+69}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_aa1d3299c7fb44e53b3e2af3ae0a24c21}{PULSEWIDTH\+\_\+118}} = 0x01
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a4228d57c5578a026471b2b02149159ac}{PULSEWIDTH\+\_\+215}} = 0x02
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a65f6fbe2fac976fcb4b14608bb3e9551}{PULSEWIDTH\+\_\+411}} = 0x03
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a64861159899f95948340ec645e389895}{MASK\+\_\+\+SLOT1}} = 0x\+F8
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a44e74d62a1f4a07f9542d6967daee4e8}{MASK\+\_\+\+SLOT2}} = 0x8F
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a1dac5f9b84b5480227e1db89db9149fd}{MASK\+\_\+\+SLOT3}} = 0x\+F8
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a54d6f98cb1aac8014c4ad9ef1eaa91d5}{MASK\+\_\+\+SLOT4}} = 0x8F
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_acbd6b8bc1a2d82c46215c15155de0cae}{SLOT\+\_\+\+NONE}} = 0x00
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a2028674a9efc76e276d604479b16257e}{SLOT\+\_\+\+RED\+\_\+\+LED}} = 0x01
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a760423b1a89f5bef86b152e0c1b301d8}{SLOT\+\_\+\+IR\+\_\+\+LED}} = 0x02
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_a7e22fbda9f6be0c6b0e4a7b7806ef509}{SLOT\+\_\+\+NONE\+\_\+\+PILOT}} = 0x04
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ae03fb1754013f7da5c4541efd93e8315}{SLOT\+\_\+\+RED\+\_\+\+PILOT}} = 0x05
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{_m_a_x30102_8cpp_ac15f4d103519d7223c633dd3902e322b}{SLOT\+\_\+\+IR\+\_\+\+PILOT}} = 0x06
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_m_a_x30102_8cpp_a4807d411ac930f8318700edf1c66ccce}\label{_m_a_x30102_8cpp_a4807d411ac930f8318700edf1c66ccce} 
+\index{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_16384@{ADCRANGE\_16384}}
+\index{ADCRANGE\_16384@{ADCRANGE\_16384}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{ADCRANGE\_16384}{ADCRANGE\_16384}}
+{\footnotesize\ttfamily const uint8\+\_\+t ADCRANGE\+\_\+16384 = 0x60\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae5dd0cce626def61361019d3fb79ae68}\label{_m_a_x30102_8cpp_ae5dd0cce626def61361019d3fb79ae68} 
+\index{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_2048@{ADCRANGE\_2048}}
+\index{ADCRANGE\_2048@{ADCRANGE\_2048}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{ADCRANGE\_2048}{ADCRANGE\_2048}}
+{\footnotesize\ttfamily const uint8\+\_\+t ADCRANGE\+\_\+2048 = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aab55fe0ead7ccace3f794a4dcd9cf1a9}\label{_m_a_x30102_8cpp_aab55fe0ead7ccace3f794a4dcd9cf1a9} 
+\index{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_4096@{ADCRANGE\_4096}}
+\index{ADCRANGE\_4096@{ADCRANGE\_4096}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{ADCRANGE\_4096}{ADCRANGE\_4096}}
+{\footnotesize\ttfamily const uint8\+\_\+t ADCRANGE\+\_\+4096 = 0x20\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a1a20fec1b7af897d79b64a7f230ea7f0}\label{_m_a_x30102_8cpp_a1a20fec1b7af897d79b64a7f230ea7f0} 
+\index{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_8192@{ADCRANGE\_8192}}
+\index{ADCRANGE\_8192@{ADCRANGE\_8192}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{ADCRANGE\_8192}{ADCRANGE\_8192}}
+{\footnotesize\ttfamily const uint8\+\_\+t ADCRANGE\+\_\+8192 = 0x40\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ab668c7bd4df550eebb7854bcd0194589}\label{_m_a_x30102_8cpp_ab668c7bd4df550eebb7854bcd0194589} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_A\_FULL\_DISABLE@{INT\_A\_FULL\_DISABLE}}
+\index{INT\_A\_FULL\_DISABLE@{INT\_A\_FULL\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_A\_FULL\_DISABLE}{INT\_A\_FULL\_DISABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+A\+\_\+\+FULL\+\_\+\+DISABLE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ace5428c2620ce0fad7b96720c270e1bb}\label{_m_a_x30102_8cpp_ace5428c2620ce0fad7b96720c270e1bb} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_A\_FULL\_ENABLE@{INT\_A\_FULL\_ENABLE}}
+\index{INT\_A\_FULL\_ENABLE@{INT\_A\_FULL\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_A\_FULL\_ENABLE}{INT\_A\_FULL\_ENABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+A\+\_\+\+FULL\+\_\+\+ENABLE = 0x80\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_afba6ff4c68a6c3c5de974cd50222b8e1}\label{_m_a_x30102_8cpp_afba6ff4c68a6c3c5de974cd50222b8e1} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_ALC\_OVF\_DISABLE@{INT\_ALC\_OVF\_DISABLE}}
+\index{INT\_ALC\_OVF\_DISABLE@{INT\_ALC\_OVF\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_ALC\_OVF\_DISABLE}{INT\_ALC\_OVF\_DISABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+ALC\+\_\+\+OVF\+\_\+\+DISABLE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a3c68e98d6e9fb78899cb43f3f5b23b48}\label{_m_a_x30102_8cpp_a3c68e98d6e9fb78899cb43f3f5b23b48} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_ALC\_OVF\_ENABLE@{INT\_ALC\_OVF\_ENABLE}}
+\index{INT\_ALC\_OVF\_ENABLE@{INT\_ALC\_OVF\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_ALC\_OVF\_ENABLE}{INT\_ALC\_OVF\_ENABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+ALC\+\_\+\+OVF\+\_\+\+ENABLE = 0x20\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aa8ce7e06b304a6ac93ec4d802684400f}\label{_m_a_x30102_8cpp_aa8ce7e06b304a6ac93ec4d802684400f} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_DATA\_RDY\_DISABLE@{INT\_DATA\_RDY\_DISABLE}}
+\index{INT\_DATA\_RDY\_DISABLE@{INT\_DATA\_RDY\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_DATA\_RDY\_DISABLE}{INT\_DATA\_RDY\_DISABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+DATA\+\_\+\+RDY\+\_\+\+DISABLE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae6a49054810bab89f63b61d59e011156}\label{_m_a_x30102_8cpp_ae6a49054810bab89f63b61d59e011156} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_DATA\_RDY\_ENABLE@{INT\_DATA\_RDY\_ENABLE}}
+\index{INT\_DATA\_RDY\_ENABLE@{INT\_DATA\_RDY\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_DATA\_RDY\_ENABLE}{INT\_DATA\_RDY\_ENABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+DATA\+\_\+\+RDY\+\_\+\+ENABLE = 0x40\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a79634221b6584e14110d2226a8b19661}\label{_m_a_x30102_8cpp_a79634221b6584e14110d2226a8b19661} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_DIE\_TEMP\_RDY\_DISABLE@{INT\_DIE\_TEMP\_RDY\_DISABLE}}
+\index{INT\_DIE\_TEMP\_RDY\_DISABLE@{INT\_DIE\_TEMP\_RDY\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_DIE\_TEMP\_RDY\_DISABLE}{INT\_DIE\_TEMP\_RDY\_DISABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+DIE\+\_\+\+TEMP\+\_\+\+RDY\+\_\+\+DISABLE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ad416066ffecf8de49fe7144190965ba8}\label{_m_a_x30102_8cpp_ad416066ffecf8de49fe7144190965ba8} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_DIE\_TEMP\_RDY\_ENABLE@{INT\_DIE\_TEMP\_RDY\_ENABLE}}
+\index{INT\_DIE\_TEMP\_RDY\_ENABLE@{INT\_DIE\_TEMP\_RDY\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_DIE\_TEMP\_RDY\_ENABLE}{INT\_DIE\_TEMP\_RDY\_ENABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+DIE\+\_\+\+TEMP\+\_\+\+RDY\+\_\+\+ENABLE = 0x02\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a550dac1bb4e39a6560a01f76cb50c4e4}\label{_m_a_x30102_8cpp_a550dac1bb4e39a6560a01f76cb50c4e4} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_PROX\_INT\_DISABLE@{INT\_PROX\_INT\_DISABLE}}
+\index{INT\_PROX\_INT\_DISABLE@{INT\_PROX\_INT\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_PROX\_INT\_DISABLE}{INT\_PROX\_INT\_DISABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+PROX\+\_\+\+INT\+\_\+\+DISABLE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a44f1b357ce47920c9f79c863e6017a65}\label{_m_a_x30102_8cpp_a44f1b357ce47920c9f79c863e6017a65} 
+\index{MAX30102.cpp@{MAX30102.cpp}!INT\_PROX\_INT\_ENABLE@{INT\_PROX\_INT\_ENABLE}}
+\index{INT\_PROX\_INT\_ENABLE@{INT\_PROX\_INT\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_PROX\_INT\_ENABLE}{INT\_PROX\_INT\_ENABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t INT\+\_\+\+PROX\+\_\+\+INT\+\_\+\+ENABLE = 0x10\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a62651a73cc10c9da85a487c49f9cebe5}\label{_m_a_x30102_8cpp_a62651a73cc10c9da85a487c49f9cebe5} 
+\index{MAX30102.cpp@{MAX30102.cpp}!LEDMODE\_MULTILED@{LEDMODE\_MULTILED}}
+\index{LEDMODE\_MULTILED@{LEDMODE\_MULTILED}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{LEDMODE\_MULTILED}{LEDMODE\_MULTILED}}
+{\footnotesize\ttfamily const uint8\+\_\+t LEDMODE\+\_\+\+MULTILED = 0x07\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac16bb9e75402082dd9a9576b66be4b49}\label{_m_a_x30102_8cpp_ac16bb9e75402082dd9a9576b66be4b49} 
+\index{MAX30102.cpp@{MAX30102.cpp}!LEDMODE\_REDIRONLY@{LEDMODE\_REDIRONLY}}
+\index{LEDMODE\_REDIRONLY@{LEDMODE\_REDIRONLY}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{LEDMODE\_REDIRONLY}{LEDMODE\_REDIRONLY}}
+{\footnotesize\ttfamily const uint8\+\_\+t LEDMODE\+\_\+\+REDIRONLY = 0x03\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a88d03085451094e65ba3e70ee3268216}\label{_m_a_x30102_8cpp_a88d03085451094e65ba3e70ee3268216} 
+\index{MAX30102.cpp@{MAX30102.cpp}!LEDMODE\_REDONLY@{LEDMODE\_REDONLY}}
+\index{LEDMODE\_REDONLY@{LEDMODE\_REDONLY}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{LEDMODE\_REDONLY}{LEDMODE\_REDONLY}}
+{\footnotesize\ttfamily const uint8\+\_\+t LEDMODE\+\_\+\+REDONLY = 0x02\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a56146ad541189c9682a4bf1df1c77ee1}\label{_m_a_x30102_8cpp_a56146ad541189c9682a4bf1df1c77ee1} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_A\_FULL@{MASK\_A\_FULL}}
+\index{MASK\_A\_FULL@{MASK\_A\_FULL}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_A\_FULL}{MASK\_A\_FULL}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+A\+\_\+\+FULL = 0x\+F0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aa6c6c531707a512007739fb3522309af}\label{_m_a_x30102_8cpp_aa6c6c531707a512007739fb3522309af} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_ADCRANGE@{MASK\_ADCRANGE}}
+\index{MASK\_ADCRANGE@{MASK\_ADCRANGE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_ADCRANGE}{MASK\_ADCRANGE}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+ADCRANGE = 0x9F\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac4602af8de0ede526ae023eda4a72789}\label{_m_a_x30102_8cpp_ac4602af8de0ede526ae023eda4a72789} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_A\_FULL@{MASK\_INT\_A\_FULL}}
+\index{MASK\_INT\_A\_FULL@{MASK\_INT\_A\_FULL}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_INT\_A\_FULL}{MASK\_INT\_A\_FULL}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+INT\+\_\+\+A\+\_\+\+FULL = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b10000000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac1b76c1e9b1d46d4852e26fbde3667a1}\label{_m_a_x30102_8cpp_ac1b76c1e9b1d46d4852e26fbde3667a1} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_ALC\_OVF@{MASK\_INT\_ALC\_OVF}}
+\index{MASK\_INT\_ALC\_OVF@{MASK\_INT\_ALC\_OVF}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_INT\_ALC\_OVF}{MASK\_INT\_ALC\_OVF}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+INT\+\_\+\+ALC\+\_\+\+OVF = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b00100000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aee1488fa353f0e37387f8c58a065ebd8}\label{_m_a_x30102_8cpp_aee1488fa353f0e37387f8c58a065ebd8} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_DATA\_RDY@{MASK\_INT\_DATA\_RDY}}
+\index{MASK\_INT\_DATA\_RDY@{MASK\_INT\_DATA\_RDY}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_INT\_DATA\_RDY}{MASK\_INT\_DATA\_RDY}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+INT\+\_\+\+DATA\+\_\+\+RDY = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b01000000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a6482890a4486e59fdef0a2a75871afcf}\label{_m_a_x30102_8cpp_a6482890a4486e59fdef0a2a75871afcf} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_DIE\_TEMP\_RDY@{MASK\_INT\_DIE\_TEMP\_RDY}}
+\index{MASK\_INT\_DIE\_TEMP\_RDY@{MASK\_INT\_DIE\_TEMP\_RDY}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_INT\_DIE\_TEMP\_RDY}{MASK\_INT\_DIE\_TEMP\_RDY}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+INT\+\_\+\+DIE\+\_\+\+TEMP\+\_\+\+RDY = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b00000010\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a588cd17a9f8c03bec97084f39fc1f49e}\label{_m_a_x30102_8cpp_a588cd17a9f8c03bec97084f39fc1f49e} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_PROX\_INT@{MASK\_INT\_PROX\_INT}}
+\index{MASK\_INT\_PROX\_INT@{MASK\_INT\_PROX\_INT}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_INT\_PROX\_INT}{MASK\_INT\_PROX\_INT}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+INT\+\_\+\+PROX\+\_\+\+INT = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b00010000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae78ed09b7135add8614bb7dd0e4b344d}\label{_m_a_x30102_8cpp_ae78ed09b7135add8614bb7dd0e4b344d} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_LEDMODE@{MASK\_LEDMODE}}
+\index{MASK\_LEDMODE@{MASK\_LEDMODE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_LEDMODE}{MASK\_LEDMODE}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+LEDMODE = 0x\+F8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+IR led mode. 
+
+\Hypertarget{_m_a_x30102_8cpp_a1885ea6b1ef736e902620d9e40277282}\label{_m_a_x30102_8cpp_a1885ea6b1ef736e902620d9e40277282} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_PULSEWIDTH@{MASK\_PULSEWIDTH}}
+\index{MASK\_PULSEWIDTH@{MASK\_PULSEWIDTH}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_PULSEWIDTH}{MASK\_PULSEWIDTH}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+PULSEWIDTH = 0x\+FC\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a85dbed613a134a4c438b39485e16dd8b}\label{_m_a_x30102_8cpp_a85dbed613a134a4c438b39485e16dd8b} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_RESET@{MASK\_RESET}}
+\index{MASK\_RESET@{MASK\_RESET}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_RESET}{MASK\_RESET}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+RESET = 0x\+BF\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a8a38b4b8a406d0765d0009cdea10a218}\label{_m_a_x30102_8cpp_a8a38b4b8a406d0765d0009cdea10a218} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_ROLLOVER@{MASK\_ROLLOVER}}
+\index{MASK\_ROLLOVER@{MASK\_ROLLOVER}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_ROLLOVER}{MASK\_ROLLOVER}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+ROLLOVER = 0x\+EF\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_adfc6fa061604689067ed8b4342dd59dc}\label{_m_a_x30102_8cpp_adfc6fa061604689067ed8b4342dd59dc} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SAMPLEAVG@{MASK\_SAMPLEAVG}}
+\index{MASK\_SAMPLEAVG@{MASK\_SAMPLEAVG}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SAMPLEAVG}{MASK\_SAMPLEAVG}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SAMPLEAVG = (uint8\+\_\+t)\texorpdfstring{$\sim$}{\string~}0b11100000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a5fede05409e3c282f0609a39bfc953f8}\label{_m_a_x30102_8cpp_a5fede05409e3c282f0609a39bfc953f8} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SAMPLERATE@{MASK\_SAMPLERATE}}
+\index{MASK\_SAMPLERATE@{MASK\_SAMPLERATE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SAMPLERATE}{MASK\_SAMPLERATE}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SAMPLERATE = 0x\+E3\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_afa0b6ca18f9579c4b0ea7e11becdfab5}\label{_m_a_x30102_8cpp_afa0b6ca18f9579c4b0ea7e11becdfab5} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SHUTDOWN@{MASK\_SHUTDOWN}}
+\index{MASK\_SHUTDOWN@{MASK\_SHUTDOWN}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SHUTDOWN}{MASK\_SHUTDOWN}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SHUTDOWN = 0x7f\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a64861159899f95948340ec645e389895}\label{_m_a_x30102_8cpp_a64861159899f95948340ec645e389895} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT1@{MASK\_SLOT1}}
+\index{MASK\_SLOT1@{MASK\_SLOT1}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SLOT1}{MASK\_SLOT1}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SLOT1 = 0x\+F8\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a44e74d62a1f4a07f9542d6967daee4e8}\label{_m_a_x30102_8cpp_a44e74d62a1f4a07f9542d6967daee4e8} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT2@{MASK\_SLOT2}}
+\index{MASK\_SLOT2@{MASK\_SLOT2}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SLOT2}{MASK\_SLOT2}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SLOT2 = 0x8F\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a1dac5f9b84b5480227e1db89db9149fd}\label{_m_a_x30102_8cpp_a1dac5f9b84b5480227e1db89db9149fd} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT3@{MASK\_SLOT3}}
+\index{MASK\_SLOT3@{MASK\_SLOT3}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SLOT3}{MASK\_SLOT3}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SLOT3 = 0x\+F8\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a54d6f98cb1aac8014c4ad9ef1eaa91d5}\label{_m_a_x30102_8cpp_a54d6f98cb1aac8014c4ad9ef1eaa91d5} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT4@{MASK\_SLOT4}}
+\index{MASK\_SLOT4@{MASK\_SLOT4}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MASK\_SLOT4}{MASK\_SLOT4}}
+{\footnotesize\ttfamily const uint8\+\_\+t MASK\+\_\+\+SLOT4 = 0x8F\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a7bdba06754b128169b9667aad587164a}\label{_m_a_x30102_8cpp_a7bdba06754b128169b9667aad587164a} 
+\index{MAX30102.cpp@{MAX30102.cpp}!MAX30102\_EXPECTEDPARTID@{MAX30102\_EXPECTEDPARTID}}
+\index{MAX30102\_EXPECTEDPARTID@{MAX30102\_EXPECTEDPARTID}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX30102\_EXPECTEDPARTID}{MAX30102\_EXPECTEDPARTID}}
+{\footnotesize\ttfamily const uint8\+\_\+t MAX30102\+\_\+\+EXPECTEDPARTID = 0x15\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aa1d3299c7fb44e53b3e2af3ae0a24c21}\label{_m_a_x30102_8cpp_aa1d3299c7fb44e53b3e2af3ae0a24c21} 
+\index{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_118@{PULSEWIDTH\_118}}
+\index{PULSEWIDTH\_118@{PULSEWIDTH\_118}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{PULSEWIDTH\_118}{PULSEWIDTH\_118}}
+{\footnotesize\ttfamily const uint8\+\_\+t PULSEWIDTH\+\_\+118 = 0x01\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a4228d57c5578a026471b2b02149159ac}\label{_m_a_x30102_8cpp_a4228d57c5578a026471b2b02149159ac} 
+\index{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_215@{PULSEWIDTH\_215}}
+\index{PULSEWIDTH\_215@{PULSEWIDTH\_215}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{PULSEWIDTH\_215}{PULSEWIDTH\_215}}
+{\footnotesize\ttfamily const uint8\+\_\+t PULSEWIDTH\+\_\+215 = 0x02\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a65f6fbe2fac976fcb4b14608bb3e9551}\label{_m_a_x30102_8cpp_a65f6fbe2fac976fcb4b14608bb3e9551} 
+\index{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_411@{PULSEWIDTH\_411}}
+\index{PULSEWIDTH\_411@{PULSEWIDTH\_411}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{PULSEWIDTH\_411}{PULSEWIDTH\_411}}
+{\footnotesize\ttfamily const uint8\+\_\+t PULSEWIDTH\+\_\+411 = 0x03\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a3151a5ef5093c10190cfb8a9e5e98b2d}\label{_m_a_x30102_8cpp_a3151a5ef5093c10190cfb8a9e5e98b2d} 
+\index{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_69@{PULSEWIDTH\_69}}
+\index{PULSEWIDTH\_69@{PULSEWIDTH\_69}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{PULSEWIDTH\_69}{PULSEWIDTH\_69}}
+{\footnotesize\ttfamily const uint8\+\_\+t PULSEWIDTH\+\_\+69 = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a4a907debf49fc1232dcd5dc213dc403e}\label{_m_a_x30102_8cpp_a4a907debf49fc1232dcd5dc213dc403e} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_DIETEMPCONFIG@{REG\_DIETEMPCONFIG}}
+\index{REG\_DIETEMPCONFIG@{REG\_DIETEMPCONFIG}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_DIETEMPCONFIG}{REG\_DIETEMPCONFIG}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+DIETEMPCONFIG = 0x21\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac080ed86364a118c45b8ac8efda7a24d}\label{_m_a_x30102_8cpp_ac080ed86364a118c45b8ac8efda7a24d} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_DIETEMPFRAC@{REG\_DIETEMPFRAC}}
+\index{REG\_DIETEMPFRAC@{REG\_DIETEMPFRAC}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_DIETEMPFRAC}{REG\_DIETEMPFRAC}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+DIETEMPFRAC = 0x20\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae85f92b70afce56c3b91e02d5a844bd2}\label{_m_a_x30102_8cpp_ae85f92b70afce56c3b91e02d5a844bd2} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_DIETEMPINT@{REG\_DIETEMPINT}}
+\index{REG\_DIETEMPINT@{REG\_DIETEMPINT}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_DIETEMPINT}{REG\_DIETEMPINT}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+DIETEMPINT = 0x1F\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a84ae04ba579f0c6976e2437c6301fb82}\label{_m_a_x30102_8cpp_a84ae04ba579f0c6976e2437c6301fb82} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOCONFIG@{REG\_FIFOCONFIG}}
+\index{REG\_FIFOCONFIG@{REG\_FIFOCONFIG}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_FIFOCONFIG}{REG\_FIFOCONFIG}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+FIFOCONFIG = 0x08\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aab743137e235610d07ac3ba56991cb7c}\label{_m_a_x30102_8cpp_aab743137e235610d07ac3ba56991cb7c} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFODATA@{REG\_FIFODATA}}
+\index{REG\_FIFODATA@{REG\_FIFODATA}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_FIFODATA}{REG\_FIFODATA}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+FIFODATA = 0x07\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a2ad0d0ef65beae0ffad8c7aefb19f8d6}\label{_m_a_x30102_8cpp_a2ad0d0ef65beae0ffad8c7aefb19f8d6} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOOVERFLOW@{REG\_FIFOOVERFLOW}}
+\index{REG\_FIFOOVERFLOW@{REG\_FIFOOVERFLOW}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_FIFOOVERFLOW}{REG\_FIFOOVERFLOW}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+FIFOOVERFLOW = 0x05\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a7c6ff2b825b612c9405c0790e07638e5}\label{_m_a_x30102_8cpp_a7c6ff2b825b612c9405c0790e07638e5} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOREADPTR@{REG\_FIFOREADPTR}}
+\index{REG\_FIFOREADPTR@{REG\_FIFOREADPTR}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_FIFOREADPTR}{REG\_FIFOREADPTR}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+FIFOREADPTR = 0x06\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a0f21b7f1b90394a47902bb62c51e2398}\label{_m_a_x30102_8cpp_a0f21b7f1b90394a47902bb62c51e2398} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOWRITEPTR@{REG\_FIFOWRITEPTR}}
+\index{REG\_FIFOWRITEPTR@{REG\_FIFOWRITEPTR}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_FIFOWRITEPTR}{REG\_FIFOWRITEPTR}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+FIFOWRITEPTR = 0x04\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_af294aebcdd4a0d211f6e78fba3197f90}\label{_m_a_x30102_8cpp_af294aebcdd4a0d211f6e78fba3197f90} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_INTENABLE1@{REG\_INTENABLE1}}
+\index{REG\_INTENABLE1@{REG\_INTENABLE1}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_INTENABLE1}{REG\_INTENABLE1}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+INTENABLE1 = 0x02\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae6a565bfbd0611953991679a2b618506}\label{_m_a_x30102_8cpp_ae6a565bfbd0611953991679a2b618506} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_INTENABLE2@{REG\_INTENABLE2}}
+\index{REG\_INTENABLE2@{REG\_INTENABLE2}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_INTENABLE2}{REG\_INTENABLE2}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+INTENABLE2 = 0x03\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a9fc04679194234f3ce8fd31c411c4735}\label{_m_a_x30102_8cpp_a9fc04679194234f3ce8fd31c411c4735} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_INTSTAT1@{REG\_INTSTAT1}}
+\index{REG\_INTSTAT1@{REG\_INTSTAT1}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_INTSTAT1}{REG\_INTSTAT1}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+INTSTAT1 = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a453b5d75b73f803c4aea1923da3124d2}\label{_m_a_x30102_8cpp_a453b5d75b73f803c4aea1923da3124d2} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_INTSTAT2@{REG\_INTSTAT2}}
+\index{REG\_INTSTAT2@{REG\_INTSTAT2}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_INTSTAT2}{REG\_INTSTAT2}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+INTSTAT2 = 0x01\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a2a7aa7f8ad6ba7b1a15c4fca55d5106b}\label{_m_a_x30102_8cpp_a2a7aa7f8ad6ba7b1a15c4fca55d5106b} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_LED1\_PULSEAMP@{REG\_LED1\_PULSEAMP}}
+\index{REG\_LED1\_PULSEAMP@{REG\_LED1\_PULSEAMP}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_LED1\_PULSEAMP}{REG\_LED1\_PULSEAMP}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+LED1\+\_\+\+PULSEAMP = 0x0C\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aff4e6af75cd2a8490c346f16ad8c12fb}\label{_m_a_x30102_8cpp_aff4e6af75cd2a8490c346f16ad8c12fb} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_LED2\_PULSEAMP@{REG\_LED2\_PULSEAMP}}
+\index{REG\_LED2\_PULSEAMP@{REG\_LED2\_PULSEAMP}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_LED2\_PULSEAMP}{REG\_LED2\_PULSEAMP}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+LED2\+\_\+\+PULSEAMP = 0x0D\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac32c39744023702bd3ac86e4ada6caf2}\label{_m_a_x30102_8cpp_ac32c39744023702bd3ac86e4ada6caf2} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_LED\_PROX\_AMP@{REG\_LED\_PROX\_AMP}}
+\index{REG\_LED\_PROX\_AMP@{REG\_LED\_PROX\_AMP}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_LED\_PROX\_AMP}{REG\_LED\_PROX\_AMP}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+LED\+\_\+\+PROX\+\_\+\+AMP = 0x10\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a989323542810698044e83966044b3ff3}\label{_m_a_x30102_8cpp_a989323542810698044e83966044b3ff3} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_MODECONFIG@{REG\_MODECONFIG}}
+\index{REG\_MODECONFIG@{REG\_MODECONFIG}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_MODECONFIG}{REG\_MODECONFIG}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+MODECONFIG = 0x09\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae243f120d96cd0e1d19b60a9961ba1c3}\label{_m_a_x30102_8cpp_ae243f120d96cd0e1d19b60a9961ba1c3} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_MULTILEDCONFIG1@{REG\_MULTILEDCONFIG1}}
+\index{REG\_MULTILEDCONFIG1@{REG\_MULTILEDCONFIG1}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_MULTILEDCONFIG1}{REG\_MULTILEDCONFIG1}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+MULTILEDCONFIG1 = 0x11\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a7f1aaf345eaba1a8dc5e7d30891a6d6a}\label{_m_a_x30102_8cpp_a7f1aaf345eaba1a8dc5e7d30891a6d6a} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_MULTILEDCONFIG2@{REG\_MULTILEDCONFIG2}}
+\index{REG\_MULTILEDCONFIG2@{REG\_MULTILEDCONFIG2}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_MULTILEDCONFIG2}{REG\_MULTILEDCONFIG2}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+MULTILEDCONFIG2 = 0x12\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a69b69b4802751f4bffe16096cc9c78ab}\label{_m_a_x30102_8cpp_a69b69b4802751f4bffe16096cc9c78ab} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_PARTICLECONFIG@{REG\_PARTICLECONFIG}}
+\index{REG\_PARTICLECONFIG@{REG\_PARTICLECONFIG}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_PARTICLECONFIG}{REG\_PARTICLECONFIG}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+PARTICLECONFIG = 0x0A\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac638b2cd2cd87653037a98c05cc0ff9f}\label{_m_a_x30102_8cpp_ac638b2cd2cd87653037a98c05cc0ff9f} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_PARTID@{REG\_PARTID}}
+\index{REG\_PARTID@{REG\_PARTID}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_PARTID}{REG\_PARTID}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+PARTID = 0x\+FF\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_aa757aa2898c0aca23d6cfae98dbe477c}\label{_m_a_x30102_8cpp_aa757aa2898c0aca23d6cfae98dbe477c} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_PROXINTTHRESH@{REG\_PROXINTTHRESH}}
+\index{REG\_PROXINTTHRESH@{REG\_PROXINTTHRESH}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_PROXINTTHRESH}{REG\_PROXINTTHRESH}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+PROXINTTHRESH = 0x30\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a91537717402f68338dccb36edbee38a3}\label{_m_a_x30102_8cpp_a91537717402f68338dccb36edbee38a3} 
+\index{MAX30102.cpp@{MAX30102.cpp}!REG\_REVISIONID@{REG\_REVISIONID}}
+\index{REG\_REVISIONID@{REG\_REVISIONID}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{REG\_REVISIONID}{REG\_REVISIONID}}
+{\footnotesize\ttfamily const uint8\+\_\+t REG\+\_\+\+REVISIONID = 0x\+FE\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a403de5627c8157c37ebff66b69a2cbba}\label{_m_a_x30102_8cpp_a403de5627c8157c37ebff66b69a2cbba} 
+\index{MAX30102.cpp@{MAX30102.cpp}!RESET@{RESET}}
+\index{RESET@{RESET}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{RESET}{RESET}}
+{\footnotesize\ttfamily const uint8\+\_\+t RESET = 0\+X40\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac92b4c3fb792d58b3183130f6e9ebe89}\label{_m_a_x30102_8cpp_ac92b4c3fb792d58b3183130f6e9ebe89} 
+\index{MAX30102.cpp@{MAX30102.cpp}!ROLLOVER\_DISABLE@{ROLLOVER\_DISABLE}}
+\index{ROLLOVER\_DISABLE@{ROLLOVER\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{ROLLOVER\_DISABLE}{ROLLOVER\_DISABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t ROLLOVER\+\_\+\+DISABLE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_adfb01625964788ed4ef32f2b26286270}\label{_m_a_x30102_8cpp_adfb01625964788ed4ef32f2b26286270} 
+\index{MAX30102.cpp@{MAX30102.cpp}!ROLLOVER\_ENABLE@{ROLLOVER\_ENABLE}}
+\index{ROLLOVER\_ENABLE@{ROLLOVER\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{ROLLOVER\_ENABLE}{ROLLOVER\_ENABLE}}
+{\footnotesize\ttfamily const uint8\+\_\+t ROLLOVER\+\_\+\+ENABLE = 0x10\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ab190176337bc788d37196dc4b374af13}\label{_m_a_x30102_8cpp_ab190176337bc788d37196dc4b374af13} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_1@{SAMPLEAVG\_1}}
+\index{SAMPLEAVG\_1@{SAMPLEAVG\_1}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLEAVG\_1}{SAMPLEAVG\_1}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLEAVG\+\_\+1 = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_afd632ccbbb3781d04961dfc91f6767e2}\label{_m_a_x30102_8cpp_afd632ccbbb3781d04961dfc91f6767e2} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_16@{SAMPLEAVG\_16}}
+\index{SAMPLEAVG\_16@{SAMPLEAVG\_16}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLEAVG\_16}{SAMPLEAVG\_16}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLEAVG\+\_\+16 = 0x80\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a7539a38764d10b26d95130cb4f0d4601}\label{_m_a_x30102_8cpp_a7539a38764d10b26d95130cb4f0d4601} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_2@{SAMPLEAVG\_2}}
+\index{SAMPLEAVG\_2@{SAMPLEAVG\_2}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLEAVG\_2}{SAMPLEAVG\_2}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLEAVG\+\_\+2 = 0x20\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ab06a790ef9fdded932bd4efc464aab4a}\label{_m_a_x30102_8cpp_ab06a790ef9fdded932bd4efc464aab4a} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_32@{SAMPLEAVG\_32}}
+\index{SAMPLEAVG\_32@{SAMPLEAVG\_32}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLEAVG\_32}{SAMPLEAVG\_32}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLEAVG\+\_\+32 = 0x\+A0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a268fa38bce86129a7ddca7cb8255d6d3}\label{_m_a_x30102_8cpp_a268fa38bce86129a7ddca7cb8255d6d3} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_4@{SAMPLEAVG\_4}}
+\index{SAMPLEAVG\_4@{SAMPLEAVG\_4}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLEAVG\_4}{SAMPLEAVG\_4}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLEAVG\+\_\+4 = 0x40\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a97787d26390c31a96d4b63e2662006e4}\label{_m_a_x30102_8cpp_a97787d26390c31a96d4b63e2662006e4} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_8@{SAMPLEAVG\_8}}
+\index{SAMPLEAVG\_8@{SAMPLEAVG\_8}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLEAVG\_8}{SAMPLEAVG\_8}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLEAVG\+\_\+8 = 0x60\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a33d054bb1db1c71dd92772cc2cb5fa35}\label{_m_a_x30102_8cpp_a33d054bb1db1c71dd92772cc2cb5fa35} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_100@{SAMPLERATE\_100}}
+\index{SAMPLERATE\_100@{SAMPLERATE\_100}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_100}{SAMPLERATE\_100}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+100 = 0x04\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ab9ed8295f4f34944fa0f466f9602db19}\label{_m_a_x30102_8cpp_ab9ed8295f4f34944fa0f466f9602db19} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_1000@{SAMPLERATE\_1000}}
+\index{SAMPLERATE\_1000@{SAMPLERATE\_1000}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_1000}{SAMPLERATE\_1000}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+1000 = 0x14\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a9b3709a78eecd00c3811beb50e39f3b8}\label{_m_a_x30102_8cpp_a9b3709a78eecd00c3811beb50e39f3b8} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_1600@{SAMPLERATE\_1600}}
+\index{SAMPLERATE\_1600@{SAMPLERATE\_1600}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_1600}{SAMPLERATE\_1600}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+1600 = 0x18\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a6e0cf2d5c01d9cae5e4470fc0b41e954}\label{_m_a_x30102_8cpp_a6e0cf2d5c01d9cae5e4470fc0b41e954} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_200@{SAMPLERATE\_200}}
+\index{SAMPLERATE\_200@{SAMPLERATE\_200}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_200}{SAMPLERATE\_200}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+200 = 0x08\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ab9418aeca4041a83766f42fbb5e1edc5}\label{_m_a_x30102_8cpp_ab9418aeca4041a83766f42fbb5e1edc5} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_3200@{SAMPLERATE\_3200}}
+\index{SAMPLERATE\_3200@{SAMPLERATE\_3200}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_3200}{SAMPLERATE\_3200}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+3200 = 0x1C\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac71eb9967339ba444e862f427196a94b}\label{_m_a_x30102_8cpp_ac71eb9967339ba444e862f427196a94b} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_400@{SAMPLERATE\_400}}
+\index{SAMPLERATE\_400@{SAMPLERATE\_400}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_400}{SAMPLERATE\_400}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+400 = 0x0C\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a6c88245eb44ce8cf136f1b27cf10594f}\label{_m_a_x30102_8cpp_a6c88245eb44ce8cf136f1b27cf10594f} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_50@{SAMPLERATE\_50}}
+\index{SAMPLERATE\_50@{SAMPLERATE\_50}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_50}{SAMPLERATE\_50}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+50 = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a75cbc2a51435fe245ece07d345b2d69d}\label{_m_a_x30102_8cpp_a75cbc2a51435fe245ece07d345b2d69d} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_800@{SAMPLERATE\_800}}
+\index{SAMPLERATE\_800@{SAMPLERATE\_800}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SAMPLERATE\_800}{SAMPLERATE\_800}}
+{\footnotesize\ttfamily const uint8\+\_\+t SAMPLERATE\+\_\+800 = 0x10\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_abc0f4a5e2b199955aed5c36b4eb74815}\label{_m_a_x30102_8cpp_abc0f4a5e2b199955aed5c36b4eb74815} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SHUTDOWN@{SHUTDOWN}}
+\index{SHUTDOWN@{SHUTDOWN}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SHUTDOWN}{SHUTDOWN}}
+{\footnotesize\ttfamily const uint8\+\_\+t SHUTDOWN = 0x80\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a760423b1a89f5bef86b152e0c1b301d8}\label{_m_a_x30102_8cpp_a760423b1a89f5bef86b152e0c1b301d8} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SLOT\_IR\_LED@{SLOT\_IR\_LED}}
+\index{SLOT\_IR\_LED@{SLOT\_IR\_LED}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOT\_IR\_LED}{SLOT\_IR\_LED}}
+{\footnotesize\ttfamily const uint8\+\_\+t SLOT\+\_\+\+IR\+\_\+\+LED = 0x02\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ac15f4d103519d7223c633dd3902e322b}\label{_m_a_x30102_8cpp_ac15f4d103519d7223c633dd3902e322b} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SLOT\_IR\_PILOT@{SLOT\_IR\_PILOT}}
+\index{SLOT\_IR\_PILOT@{SLOT\_IR\_PILOT}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOT\_IR\_PILOT}{SLOT\_IR\_PILOT}}
+{\footnotesize\ttfamily const uint8\+\_\+t SLOT\+\_\+\+IR\+\_\+\+PILOT = 0x06\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_acbd6b8bc1a2d82c46215c15155de0cae}\label{_m_a_x30102_8cpp_acbd6b8bc1a2d82c46215c15155de0cae} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SLOT\_NONE@{SLOT\_NONE}}
+\index{SLOT\_NONE@{SLOT\_NONE}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOT\_NONE}{SLOT\_NONE}}
+{\footnotesize\ttfamily const uint8\+\_\+t SLOT\+\_\+\+NONE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a7e22fbda9f6be0c6b0e4a7b7806ef509}\label{_m_a_x30102_8cpp_a7e22fbda9f6be0c6b0e4a7b7806ef509} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SLOT\_NONE\_PILOT@{SLOT\_NONE\_PILOT}}
+\index{SLOT\_NONE\_PILOT@{SLOT\_NONE\_PILOT}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOT\_NONE\_PILOT}{SLOT\_NONE\_PILOT}}
+{\footnotesize\ttfamily const uint8\+\_\+t SLOT\+\_\+\+NONE\+\_\+\+PILOT = 0x04\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a2028674a9efc76e276d604479b16257e}\label{_m_a_x30102_8cpp_a2028674a9efc76e276d604479b16257e} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SLOT\_RED\_LED@{SLOT\_RED\_LED}}
+\index{SLOT\_RED\_LED@{SLOT\_RED\_LED}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOT\_RED\_LED}{SLOT\_RED\_LED}}
+{\footnotesize\ttfamily const uint8\+\_\+t SLOT\+\_\+\+RED\+\_\+\+LED = 0x01\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_ae03fb1754013f7da5c4541efd93e8315}\label{_m_a_x30102_8cpp_ae03fb1754013f7da5c4541efd93e8315} 
+\index{MAX30102.cpp@{MAX30102.cpp}!SLOT\_RED\_PILOT@{SLOT\_RED\_PILOT}}
+\index{SLOT\_RED\_PILOT@{SLOT\_RED\_PILOT}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{SLOT\_RED\_PILOT}{SLOT\_RED\_PILOT}}
+{\footnotesize\ttfamily const uint8\+\_\+t SLOT\+\_\+\+RED\+\_\+\+PILOT = 0x05\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{_m_a_x30102_8cpp_a2eb88722eea9120189725813a65503a1}\label{_m_a_x30102_8cpp_a2eb88722eea9120189725813a65503a1} 
+\index{MAX30102.cpp@{MAX30102.cpp}!WAKEUP@{WAKEUP}}
+\index{WAKEUP@{WAKEUP}!MAX30102.cpp@{MAX30102.cpp}}
+\doxysubsubsection{\texorpdfstring{WAKEUP}{WAKEUP}}
+{\footnotesize\ttfamily const uint8\+\_\+t WAKEUP = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+

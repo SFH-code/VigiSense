@@ -1,0 +1,17 @@
+<map id="/home/sitcomlab/Projects/VigiSense/src/shutdown.cpp" name="/home/sitcomlab/Projects/VigiSense/src/shutdown.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,5,250,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,85,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,48,73,87,70,82,121,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="109,93,184,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,46,149,79,144,79,144,46"/>
+<area shape="rect" id="Node000004" href="$da/d9f/_m_a_x30102_8h.html" title=" " alt="" coords="208,93,312,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,43,233,83,230,87,173,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="92,167,159,192"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="240,121,161,162,158,158,237,116"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="183,167,246,192"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="255,120,232,157,227,154,250,118"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="271,167,337,192"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="270,118,292,154,287,156,265,120"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="362,167,449,192"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="285,116,371,158,368,163,282,121"/>
+</map>

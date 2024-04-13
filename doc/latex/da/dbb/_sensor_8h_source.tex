@@ -1,0 +1,112 @@
+\doxysection{Sensor.\+h}
+\hypertarget{_sensor_8h_source}{}\label{_sensor_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/Sensor.h@{/home/sitcomlab/Projects/VigiSense/src/Sensor.h}}
+\mbox{\hyperlink{_sensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_m_a_x30102_8h}{MAX30102.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ struct\ symptomRange\{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ \ float\ min;}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ \ float\ max;}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ \ std::string\ symptom;}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//Code\ refactored\ from\ HeartRate.h}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsensor}{sensor}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsensor_a77233ada6e575ab61663473ef72ca65a}{sensor}}(\mbox{\hyperlink{class_m_a_x30102}{MAX30102}}\ *\mbox{\hyperlink{classsensor}{sensor}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsensor_a9252346748c0bd090109ee5bcf45f13a}{\string~sensor}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Check\ which\ functions\ are\ fine\ as\ is\ and\ which\ need\ editing/removing}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_a5931bb4b8adbea9ef0522db21a61eedd}{begin}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_a6d55d717f8f15c0b4d7ca995a2816cc8}{stop}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classsensor_aef87eee3f3a77612682cda2976e41d0b}{getLatestTemperatureF}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_a7231bc41acfffa121dc42e5acb69caf3}{HRcalc}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_ae2e8fd099e2f700b6cfcbe0fbbf11074}{stopHRcalc}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ getter\ for\ SPO2\ and\ HR}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_aefa7703703378c34987c71f84b1f0b48}{getSpO2}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_afbc8d2a94866f703003e36941218a9d1}{getHR}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_m_a_x30102}{MAX30102}}*\ \mbox{\hyperlink{classsensor_a92c4ff04f148abf146f54c853f6e81ea}{\_sensor}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsensor_a4741f44161dc42f32c3c241589b518c9}{running}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsensor_a1c3484f518242ed3c4aa85f993fefad4}{runningHR}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Check\ which\ functions\ are\ fine\ as\ is\ and\ which\ need\ editing/removing}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classsensor_a8ef7fbccaeaff569a79217d3136a1f82}{BPM\_BUFFER\_SIZE}}\ =\ 4;\ \textcolor{comment}{//\ Change\ based\ on\ how\ many\ samples\ you\ want\ to\ average}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a72c1d13f35201139bd819ac74bfc2020}{bpmBuffer}}[\mbox{\hyperlink{classsensor_a8ef7fbccaeaff569a79217d3136a1f82}{BPM\_BUFFER\_SIZE}}];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_ae15ef1dfb99844a0befed8db8d264e4f}{nextBPMBufferIndex}}\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647}{SPO2\_BUFFER\_SIZE}}\ =\ 4;\ \textcolor{comment}{//\ Change\ based\ on\ how\ many\ samples\ you\ want\ to\ average}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a30259d4b0f80b81c7fbee607585de071}{spo2Buffer}}[\mbox{\hyperlink{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647}{SPO2\_BUFFER\_SIZE}}];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_ab6b2b8c5cc94502b354090749c35277b}{nextSPO2BufferIndex}}\ =\ 0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::chrono::time\_point<std::chrono::system\_clock>\ \mbox{\hyperlink{classsensor_a0fc149a9204c610efdc2393f2c8701a6}{timeLastLoopRan}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IR\ Data}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::chrono::time\_point<std::chrono::system\_clock>\ \mbox{\hyperlink{classsensor_a08a6ddaaddcc52a5de4f5854be743029}{timeLastIRHeartBeat}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a66750e50cd695d917727c0fddfb3e75d}{irLastValue}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_a0f980bd794237beaf0a512440001457e}{latestIRBPM}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_aca622224fbeb714b205fc99586fc9ab7}{averageIRBPM}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Red\ Data}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::chrono::time\_point<std::chrono::system\_clock>\ \mbox{\hyperlink{classsensor_a62fb0e854812edb6a48db2128369f6a3}{timeLastRedHeartBeat}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{classsensor_a7020b1bebbe506a8aee6f5837b614852}{redLastValue}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_a6a51596aeee7bd8aace5c4ebd99df10b}{latestRedBPM}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Temperature\ Data}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classsensor_ae4cc5b757183e929442f42955eb584ca}{latestTemperature}}\ =\ -\/999;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ Peak\ Detection}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a47fe94016b6974e27564fba7d29c7449}{localMaximaIR}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a116a61f7255877bf57907111904a3ca5}{localMinimaIR}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a4b085d7983ea9e08c4ee2e6749969f95}{localMaximaRed}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_ac0fef9e3e47ffb1a825a7ed712e4fa06}{localMinimaRed}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ int8\_t\ \mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\_PEAKS\_SIZE}}\ =\ 2;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_ae02e3a30573dc3d890bcc7986779f590}{pastMaximasIR}}[\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\_PEAKS\_SIZE}}];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_aab0a219e69741cbd7b6ea7b0608bd7e5}{pastMinimasIR}}[\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\_PEAKS\_SIZE}}];}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a768ce7b0b07b30238edf5d9280512811}{pastMaximasRed}}[\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\_PEAKS\_SIZE}}];}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a643d03f95727a134874cabc3142858c8}{pastMinimasRed}}[\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\_PEAKS\_SIZE}}];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SpO2\ data}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_abf5061567b61f591f396bd5458f92f05}{R}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsensor_aa46e46f8aab46cbd45b14bf16d64bc59}{latestSpO2}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_a1353c46c76d78909dc8dcbac97c27f47}{loopThread}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_ac87df1aaef5f2c64ac6696e5c8cafed2}{runHRCalculationLoop}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_a347cd6cdcb509e8a98d7ec6313a8f4e1}{updateTemperature}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsensor_aed35fe2e0142b5fc538fbbbd02c33c15}{resetCalculations}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_ab6b2d7e0a375b0543d73cfd2c7b2f840}{Derivative}}(int32\_t\ data);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ int32\_t\ \mbox{\hyperlink{classsensor_a68f6719c2b54626fbfa909e96d8311d2}{getPeakThreshold}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsensor_a3b6c046c1bf0e42dedbdbdaa8b65dbbb}{peakDetect}}(int32\_t\ data);}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ class\ spO2Measure\ :\ public\ sensor\{}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ \ public:}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ \ \ \ \ \ std::vector<symptomRange>\ symptomRanges\ \{}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \{0,88,"{}Critically\ Low\ Oxygen\ concentration"{}\},}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \{88,92,"{}Concerningly\ Low\ Oxygen\ Concentration"{}\},}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \{92,100,"{}Healthy\ Oxygen\ Concentration"{}\}\};}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ \ \ \ \ \ float\ critLow\ =\ 88;}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//\ \ \ \ \ \ int\ getSpO2();}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ \ \ \ \ \ std::string\ determineSymptom(float\ baseline);}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ class\ heartRateMeasure\ :\ public\ sensor\{}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ \ public:}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ \ \ \ \ \ std::vector<symptomRange>\ symptomRanges\ \{}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \{0,60,"{}Bradycardia"{}\},}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \{60,100,"{}Normal\ resting\ heart\ rate"{}\},}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \{100,200,"{}Tachyacardia"{}\}\};}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ \ \ \ \ \ float\ critHigh\ =\ 120;}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ \ \ \ \ \ float\ critLow\ =\ 40;}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ \ \ \ \ \ int\ getSafeIRHeartRate();}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//\ \ \ \ \ \ int\ getLatestIRHeartRate();}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ \ \ \ \ \ int\ getLatestRedHeartRate();}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ \ \ \ \ \ std::string\ determineSymptom(float\ baseline);}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ \};}}
+
+\end{DoxyCode}

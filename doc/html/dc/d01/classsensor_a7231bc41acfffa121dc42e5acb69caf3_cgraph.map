@@ -1,0 +1,21 @@
+<map id="sensor::HRcalc" name="sensor::HRcalc">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,124,132"/>
+<area shape="rect" id="Node000002" href="$dc/d01/classsensor.html#a1353c46c76d78909dc8dcbac97c27f47" title=" " alt="" coords="172,107,319,132"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,117,158,117,158,122,124,122"/>
+<area shape="rect" id="Node000003" href="$dc/d01/classsensor.html#ac87df1aaef5f2c64ac6696e5c8cafed2" title=" " alt="" coords="367,107,584,132"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,117,353,117,353,122,319,122"/>
+<area shape="rect" id="Node000004" href="$de/d0d/class_m_a_x30102.html#ad06cdfa399f91057cc2e8e7c872877e0" title=" " alt="" coords="658,5,793,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="502,104,631,48,671,33,673,38,633,52,504,109"/>
+<area shape="rect" id="Node000005" href="$dc/d01/classsensor.html#a3b6c046c1bf0e42dedbdbdaa8b65dbbb" title=" " alt="" coords="651,107,799,132"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="584,117,638,117,638,122,584,122"/>
+<area shape="rect" id="Node000007" href="$d7/d25/class_low_pass_filter.html#a2c228363bfb581898a16dac854682160" title="Update function to push new value into the low pass filter." alt="" coords="869,57,1031,83"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="551,104,632,93,855,73,855,78,632,98,552,109"/>
+<area shape="rect" id="Node000008" href="$d7/d39/class_high_pass_filter.html#a4a409f17d0baf751719d99d29e2b1c93" title="Update function to push new value into the low pass filter." alt="" coords="867,156,1033,181"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="547,129,632,142,853,161,853,166,632,147,546,135"/>
+<area shape="rect" id="Node000009" href="$dc/d01/classsensor.html#aed35fe2e0142b5fc538fbbbd02c33c15" title=" " alt="" coords="632,208,819,233"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="504,130,633,186,673,201,671,206,631,191,502,134"/>
+<area shape="rect" id="Node000006" href="$de/d0d/class_m_a_x30102.html#a824883df0943c7accc013f05792e557d" title=" " alt="" coords="877,107,1023,132"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="799,117,863,117,863,122,799,122"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="783,104,878,83,879,88,784,109"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="784,129,879,150,878,156,783,135"/>
+</map>

@@ -1,0 +1,468 @@
+\doxysection{sensor Class Reference}
+\hypertarget{classsensor}{}\label{classsensor}\index{sensor@{sensor}}
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Collaboration diagram for sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{d8/d50/classsensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsensor_a77233ada6e575ab61663473ef72ca65a}{sensor}} (\mbox{\hyperlink{class_m_a_x30102}{MAX30102}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classsensor}{sensor}})
+\item 
+\mbox{\hyperlink{classsensor_a9252346748c0bd090109ee5bcf45f13a}{\texorpdfstring{$\sim$}{\string~}sensor}} ()
+\item 
+void \mbox{\hyperlink{classsensor_a5931bb4b8adbea9ef0522db21a61eedd}{begin}} ()
+\item 
+void \mbox{\hyperlink{classsensor_a6d55d717f8f15c0b4d7ca995a2816cc8}{stop}} ()
+\item 
+float \mbox{\hyperlink{classsensor_aef87eee3f3a77612682cda2976e41d0b}{get\+Latest\+TemperatureF}} ()
+\item 
+void \mbox{\hyperlink{classsensor_a7231bc41acfffa121dc42e5acb69caf3}{HRcalc}} ()
+\item 
+void \mbox{\hyperlink{classsensor_ae2e8fd099e2f700b6cfcbe0fbbf11074}{stop\+HRcalc}} ()
+\item 
+int \mbox{\hyperlink{classsensor_aefa7703703378c34987c71f84b1f0b48}{get\+Sp\+O2}} ()
+\item 
+int \mbox{\hyperlink{classsensor_afbc8d2a94866f703003e36941218a9d1}{get\+HR}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsensor_a1353c46c76d78909dc8dcbac97c27f47}{loop\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classsensor_ac87df1aaef5f2c64ac6696e5c8cafed2}{run\+HRCalculation\+Loop}} ()
+\item 
+void \mbox{\hyperlink{classsensor_a347cd6cdcb509e8a98d7ec6313a8f4e1}{update\+Temperature}} ()
+\item 
+void \mbox{\hyperlink{classsensor_aed35fe2e0142b5fc538fbbbd02c33c15}{reset\+Calculations}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_ab6b2d7e0a375b0543d73cfd2c7b2f840}{Derivative}} (int32\+\_\+t data)
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a68f6719c2b54626fbfa909e96d8311d2}{get\+Peak\+Threshold}} ()
+\item 
+bool \mbox{\hyperlink{classsensor_a3b6c046c1bf0e42dedbdbdaa8b65dbbb}{peak\+Detect}} (int32\+\_\+t data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_a_x30102}{MAX30102}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsensor_a92c4ff04f148abf146f54c853f6e81ea}{\+\_\+sensor}}
+\item 
+bool \mbox{\hyperlink{classsensor_a4741f44161dc42f32c3c241589b518c9}{running}} = false
+\item 
+bool \mbox{\hyperlink{classsensor_a1c3484f518242ed3c4aa85f993fefad4}{running\+HR}} = false
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a72c1d13f35201139bd819ac74bfc2020}{bpm\+Buffer}} \mbox{[}\mbox{\hyperlink{classsensor_a8ef7fbccaeaff569a79217d3136a1f82}{BPM\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}
+\item 
+int \mbox{\hyperlink{classsensor_ae15ef1dfb99844a0befed8db8d264e4f}{next\+BPMBuffer\+Index}} = 0
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a30259d4b0f80b81c7fbee607585de071}{spo2\+Buffer}} \mbox{[}\mbox{\hyperlink{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647}{SPO2\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}
+\item 
+int \mbox{\hyperlink{classsensor_ab6b2b8c5cc94502b354090749c35277b}{next\+SPO2\+Buffer\+Index}} = 0
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ \mbox{\hyperlink{classsensor_a0fc149a9204c610efdc2393f2c8701a6}{time\+Last\+Loop\+Ran}}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ \mbox{\hyperlink{classsensor_a08a6ddaaddcc52a5de4f5854be743029}{time\+Last\+IRHeart\+Beat}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a66750e50cd695d917727c0fddfb3e75d}{ir\+Last\+Value}}
+\item 
+int \mbox{\hyperlink{classsensor_a0f980bd794237beaf0a512440001457e}{latest\+IRBPM}}
+\item 
+int \mbox{\hyperlink{classsensor_aca622224fbeb714b205fc99586fc9ab7}{average\+IRBPM}}
+\item 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::system\+\_\+clock $>$ \mbox{\hyperlink{classsensor_a62fb0e854812edb6a48db2128369f6a3}{time\+Last\+Red\+Heart\+Beat}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classsensor_a7020b1bebbe506a8aee6f5837b614852}{red\+Last\+Value}}
+\item 
+int \mbox{\hyperlink{classsensor_a6a51596aeee7bd8aace5c4ebd99df10b}{latest\+Red\+BPM}}
+\item 
+float \mbox{\hyperlink{classsensor_ae4cc5b757183e929442f42955eb584ca}{latest\+Temperature}} = -\/999
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a47fe94016b6974e27564fba7d29c7449}{local\+Maxima\+IR}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a116a61f7255877bf57907111904a3ca5}{local\+Minima\+IR}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a4b085d7983ea9e08c4ee2e6749969f95}{local\+Maxima\+Red}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_ac0fef9e3e47ffb1a825a7ed712e4fa06}{local\+Minima\+Red}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_ae02e3a30573dc3d890bcc7986779f590}{past\+Maximas\+IR}} \mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_aab0a219e69741cbd7b6ea7b0608bd7e5}{past\+Minimas\+IR}} \mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a768ce7b0b07b30238edf5d9280512811}{past\+Maximas\+Red}} \mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classsensor_a643d03f95727a134874cabc3142858c8}{past\+Minimas\+Red}} \mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}
+\item 
+int \mbox{\hyperlink{classsensor_abf5061567b61f591f396bd5458f92f05}{R}}
+\item 
+int \mbox{\hyperlink{classsensor_aa46e46f8aab46cbd45b14bf16d64bc59}{latest\+Sp\+O2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const static int \mbox{\hyperlink{classsensor_a8ef7fbccaeaff569a79217d3136a1f82}{BPM\+\_\+\+BUFFER\+\_\+\+SIZE}} = 4
+\item 
+const static int \mbox{\hyperlink{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647}{SPO2\+\_\+\+BUFFER\+\_\+\+SIZE}} = 4
+\item 
+static const int8\+\_\+t \mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsensor_a77233ada6e575ab61663473ef72ca65a}\label{classsensor_a77233ada6e575ab61663473ef72ca65a} 
+\index{sensor@{sensor}!sensor@{sensor}}
+\index{sensor@{sensor}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{sensor()}{sensor()}}
+{\footnotesize\ttfamily sensor\+::sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_m_a_x30102}{MAX30102}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+Constructor to initialize the \doxylink{class_m_a_x30102}{MAX30102} sensor with the default I2C address and start communication Could also change the class name to "{}\+MAX30102\+Sensor"{} OR have "{}\+MAX30102\+Sensor"{} inherit from "{}sensor"{}. ~\newline
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_a77233ada6e575ab61663473ef72ca65a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsensor_a9252346748c0bd090109ee5bcf45f13a}\label{classsensor_a9252346748c0bd090109ee5bcf45f13a} 
+\index{sensor@{sensor}!````~sensor@{\texorpdfstring{$\sim$}{\string~}sensor}}
+\index{````~sensor@{\texorpdfstring{$\sim$}{\string~}sensor}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}sensor()}{\string~sensor()}}
+{\footnotesize\ttfamily sensor\+::\texorpdfstring{$\sim$}{\string~}sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_a9252346748c0bd090109ee5bcf45f13a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsensor_a5931bb4b8adbea9ef0522db21a61eedd}\label{classsensor_a5931bb4b8adbea9ef0522db21a61eedd} 
+\index{sensor@{sensor}!begin@{begin}}
+\index{begin@{begin}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void sensor\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classsensor_ab6b2d7e0a375b0543d73cfd2c7b2f840}\label{classsensor_ab6b2d7e0a375b0543d73cfd2c7b2f840} 
+\index{sensor@{sensor}!Derivative@{Derivative}}
+\index{Derivative@{Derivative}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{Derivative()}{Derivative()}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::\+Derivative (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_afbc8d2a94866f703003e36941218a9d1}\label{classsensor_afbc8d2a94866f703003e36941218a9d1} 
+\index{sensor@{sensor}!getHR@{getHR}}
+\index{getHR@{getHR}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{getHR()}{getHR()}}
+{\footnotesize\ttfamily int sensor\+::get\+HR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the latest calculated IR heart rate. (unchecked!) Returns the average measured heart rate. This method ignores heart rate values greater than 150 or lower than 45. \Hypertarget{classsensor_aef87eee3f3a77612682cda2976e41d0b}\label{classsensor_aef87eee3f3a77612682cda2976e41d0b} 
+\index{sensor@{sensor}!getLatestTemperatureF@{getLatestTemperatureF}}
+\index{getLatestTemperatureF@{getLatestTemperatureF}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{getLatestTemperatureF()}{getLatestTemperatureF()}}
+{\footnotesize\ttfamily float sensor\+::get\+Latest\+TemperatureF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the latest calculated Red heart rate. (unchecked!) \Hypertarget{classsensor_a68f6719c2b54626fbfa909e96d8311d2}\label{classsensor_a68f6719c2b54626fbfa909e96d8311d2} 
+\index{sensor@{sensor}!getPeakThreshold@{getPeakThreshold}}
+\index{getPeakThreshold@{getPeakThreshold}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{getPeakThreshold()}{getPeakThreshold()}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::get\+Peak\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Detects peaks in heart data. Returns true when input data is a peak. \Hypertarget{classsensor_aefa7703703378c34987c71f84b1f0b48}\label{classsensor_aefa7703703378c34987c71f84b1f0b48} 
+\index{sensor@{sensor}!getSpO2@{getSpO2}}
+\index{getSpO2@{getSpO2}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{getSpO2()}{getSpO2()}}
+{\footnotesize\ttfamily int sensor\+::get\+Sp\+O2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classsensor_a7231bc41acfffa121dc42e5acb69caf3}\label{classsensor_a7231bc41acfffa121dc42e5acb69caf3} 
+\index{sensor@{sensor}!HRcalc@{HRcalc}}
+\index{HRcalc@{HRcalc}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{HRcalc()}{HRcalc()}}
+{\footnotesize\ttfamily void sensor\+::\+HRcalc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_a7231bc41acfffa121dc42e5acb69caf3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsensor_a1353c46c76d78909dc8dcbac97c27f47}\label{classsensor_a1353c46c76d78909dc8dcbac97c27f47} 
+\index{sensor@{sensor}!loopThread@{loopThread}}
+\index{loopThread@{loopThread}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{loopThread()}{loopThread()}}
+{\footnotesize\ttfamily void sensor\+::loop\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_a1353c46c76d78909dc8dcbac97c27f47_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsensor_a3b6c046c1bf0e42dedbdbdaa8b65dbbb}\label{classsensor_a3b6c046c1bf0e42dedbdbdaa8b65dbbb} 
+\index{sensor@{sensor}!peakDetect@{peakDetect}}
+\index{peakDetect@{peakDetect}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{peakDetect()}{peakDetect()}}
+{\footnotesize\ttfamily bool sensor\+::peak\+Detect (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_a3b6c046c1bf0e42dedbdbdaa8b65dbbb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsensor_aed35fe2e0142b5fc538fbbbd02c33c15}\label{classsensor_aed35fe2e0142b5fc538fbbbd02c33c15} 
+\index{sensor@{sensor}!resetCalculations@{resetCalculations}}
+\index{resetCalculations@{resetCalculations}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{resetCalculations()}{resetCalculations()}}
+{\footnotesize\ttfamily void sensor\+::reset\+Calculations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Clears all calculations. \Hypertarget{classsensor_ac87df1aaef5f2c64ac6696e5c8cafed2}\label{classsensor_ac87df1aaef5f2c64ac6696e5c8cafed2} 
+\index{sensor@{sensor}!runHRCalculationLoop@{runHRCalculationLoop}}
+\index{runHRCalculationLoop@{runHRCalculationLoop}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{runHRCalculationLoop()}{runHRCalculationLoop()}}
+{\footnotesize\ttfamily void sensor\+::run\+HRCalculation\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_ac87df1aaef5f2c64ac6696e5c8cafed2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsensor_a6d55d717f8f15c0b4d7ca995a2816cc8}\label{classsensor_a6d55d717f8f15c0b4d7ca995a2816cc8} 
+\index{sensor@{sensor}!stop@{stop}}
+\index{stop@{stop}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void sensor\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classsensor_ae2e8fd099e2f700b6cfcbe0fbbf11074}\label{classsensor_ae2e8fd099e2f700b6cfcbe0fbbf11074} 
+\index{sensor@{sensor}!stopHRcalc@{stopHRcalc}}
+\index{stopHRcalc@{stopHRcalc}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{stopHRcalc()}{stopHRcalc()}}
+{\footnotesize\ttfamily void sensor\+::stop\+HRcalc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops the calculation loop. You may no longer get heart rate data after calling this function. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_ae2e8fd099e2f700b6cfcbe0fbbf11074_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsensor_a347cd6cdcb509e8a98d7ec6313a8f4e1}\label{classsensor_a347cd6cdcb509e8a98d7ec6313a8f4e1} 
+\index{sensor@{sensor}!updateTemperature@{updateTemperature}}
+\index{updateTemperature@{updateTemperature}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{updateTemperature()}{updateTemperature()}}
+{\footnotesize\ttfamily void sensor\+::update\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Updates the temperature variable. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d01/classsensor_a347cd6cdcb509e8a98d7ec6313a8f4e1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsensor_a92c4ff04f148abf146f54c853f6e81ea}\label{classsensor_a92c4ff04f148abf146f54c853f6e81ea} 
+\index{sensor@{sensor}!\_sensor@{\_sensor}}
+\index{\_sensor@{\_sensor}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{\_sensor}{\_sensor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_a_x30102}{MAX30102}}\texorpdfstring{$\ast$}{*} sensor\+::\+\_\+sensor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_aca622224fbeb714b205fc99586fc9ab7}\label{classsensor_aca622224fbeb714b205fc99586fc9ab7} 
+\index{sensor@{sensor}!averageIRBPM@{averageIRBPM}}
+\index{averageIRBPM@{averageIRBPM}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{averageIRBPM}{averageIRBPM}}
+{\footnotesize\ttfamily int sensor\+::average\+IRBPM\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a8ef7fbccaeaff569a79217d3136a1f82}\label{classsensor_a8ef7fbccaeaff569a79217d3136a1f82} 
+\index{sensor@{sensor}!BPM\_BUFFER\_SIZE@{BPM\_BUFFER\_SIZE}}
+\index{BPM\_BUFFER\_SIZE@{BPM\_BUFFER\_SIZE}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{BPM\_BUFFER\_SIZE}{BPM\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily const static int sensor\+::\+BPM\+\_\+\+BUFFER\+\_\+\+SIZE = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a72c1d13f35201139bd819ac74bfc2020}\label{classsensor_a72c1d13f35201139bd819ac74bfc2020} 
+\index{sensor@{sensor}!bpmBuffer@{bpmBuffer}}
+\index{bpmBuffer@{bpmBuffer}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{bpmBuffer}{bpmBuffer}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::bpm\+Buffer\mbox{[}\mbox{\hyperlink{classsensor_a8ef7fbccaeaff569a79217d3136a1f82}{BPM\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a66750e50cd695d917727c0fddfb3e75d}\label{classsensor_a66750e50cd695d917727c0fddfb3e75d} 
+\index{sensor@{sensor}!irLastValue@{irLastValue}}
+\index{irLastValue@{irLastValue}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{irLastValue}{irLastValue}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::ir\+Last\+Value\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a0f980bd794237beaf0a512440001457e}\label{classsensor_a0f980bd794237beaf0a512440001457e} 
+\index{sensor@{sensor}!latestIRBPM@{latestIRBPM}}
+\index{latestIRBPM@{latestIRBPM}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{latestIRBPM}{latestIRBPM}}
+{\footnotesize\ttfamily int sensor\+::latest\+IRBPM\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a6a51596aeee7bd8aace5c4ebd99df10b}\label{classsensor_a6a51596aeee7bd8aace5c4ebd99df10b} 
+\index{sensor@{sensor}!latestRedBPM@{latestRedBPM}}
+\index{latestRedBPM@{latestRedBPM}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{latestRedBPM}{latestRedBPM}}
+{\footnotesize\ttfamily int sensor\+::latest\+Red\+BPM\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_aa46e46f8aab46cbd45b14bf16d64bc59}\label{classsensor_aa46e46f8aab46cbd45b14bf16d64bc59} 
+\index{sensor@{sensor}!latestSpO2@{latestSpO2}}
+\index{latestSpO2@{latestSpO2}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{latestSpO2}{latestSpO2}}
+{\footnotesize\ttfamily int sensor\+::latest\+Sp\+O2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_ae4cc5b757183e929442f42955eb584ca}\label{classsensor_ae4cc5b757183e929442f42955eb584ca} 
+\index{sensor@{sensor}!latestTemperature@{latestTemperature}}
+\index{latestTemperature@{latestTemperature}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{latestTemperature}{latestTemperature}}
+{\footnotesize\ttfamily float sensor\+::latest\+Temperature = -\/999\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a47fe94016b6974e27564fba7d29c7449}\label{classsensor_a47fe94016b6974e27564fba7d29c7449} 
+\index{sensor@{sensor}!localMaximaIR@{localMaximaIR}}
+\index{localMaximaIR@{localMaximaIR}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{localMaximaIR}{localMaximaIR}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::local\+Maxima\+IR\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a4b085d7983ea9e08c4ee2e6749969f95}\label{classsensor_a4b085d7983ea9e08c4ee2e6749969f95} 
+\index{sensor@{sensor}!localMaximaRed@{localMaximaRed}}
+\index{localMaximaRed@{localMaximaRed}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{localMaximaRed}{localMaximaRed}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::local\+Maxima\+Red\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a116a61f7255877bf57907111904a3ca5}\label{classsensor_a116a61f7255877bf57907111904a3ca5} 
+\index{sensor@{sensor}!localMinimaIR@{localMinimaIR}}
+\index{localMinimaIR@{localMinimaIR}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{localMinimaIR}{localMinimaIR}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::local\+Minima\+IR\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_ac0fef9e3e47ffb1a825a7ed712e4fa06}\label{classsensor_ac0fef9e3e47ffb1a825a7ed712e4fa06} 
+\index{sensor@{sensor}!localMinimaRed@{localMinimaRed}}
+\index{localMinimaRed@{localMinimaRed}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{localMinimaRed}{localMinimaRed}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::local\+Minima\+Red\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_ae15ef1dfb99844a0befed8db8d264e4f}\label{classsensor_ae15ef1dfb99844a0befed8db8d264e4f} 
+\index{sensor@{sensor}!nextBPMBufferIndex@{nextBPMBufferIndex}}
+\index{nextBPMBufferIndex@{nextBPMBufferIndex}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{nextBPMBufferIndex}{nextBPMBufferIndex}}
+{\footnotesize\ttfamily int sensor\+::next\+BPMBuffer\+Index = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_ab6b2b8c5cc94502b354090749c35277b}\label{classsensor_ab6b2b8c5cc94502b354090749c35277b} 
+\index{sensor@{sensor}!nextSPO2BufferIndex@{nextSPO2BufferIndex}}
+\index{nextSPO2BufferIndex@{nextSPO2BufferIndex}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{nextSPO2BufferIndex}{nextSPO2BufferIndex}}
+{\footnotesize\ttfamily int sensor\+::next\+SPO2\+Buffer\+Index = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}\label{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3} 
+\index{sensor@{sensor}!PAST\_PEAKS\_SIZE@{PAST\_PEAKS\_SIZE}}
+\index{PAST\_PEAKS\_SIZE@{PAST\_PEAKS\_SIZE}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{PAST\_PEAKS\_SIZE}{PAST\_PEAKS\_SIZE}}
+{\footnotesize\ttfamily const int8\+\_\+t sensor\+::\+PAST\+\_\+\+PEAKS\+\_\+\+SIZE = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsensor_ae02e3a30573dc3d890bcc7986779f590}\label{classsensor_ae02e3a30573dc3d890bcc7986779f590} 
+\index{sensor@{sensor}!pastMaximasIR@{pastMaximasIR}}
+\index{pastMaximasIR@{pastMaximasIR}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{pastMaximasIR}{pastMaximasIR}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::past\+Maximas\+IR\mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a768ce7b0b07b30238edf5d9280512811}\label{classsensor_a768ce7b0b07b30238edf5d9280512811} 
+\index{sensor@{sensor}!pastMaximasRed@{pastMaximasRed}}
+\index{pastMaximasRed@{pastMaximasRed}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{pastMaximasRed}{pastMaximasRed}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::past\+Maximas\+Red\mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_aab0a219e69741cbd7b6ea7b0608bd7e5}\label{classsensor_aab0a219e69741cbd7b6ea7b0608bd7e5} 
+\index{sensor@{sensor}!pastMinimasIR@{pastMinimasIR}}
+\index{pastMinimasIR@{pastMinimasIR}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{pastMinimasIR}{pastMinimasIR}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::past\+Minimas\+IR\mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a643d03f95727a134874cabc3142858c8}\label{classsensor_a643d03f95727a134874cabc3142858c8} 
+\index{sensor@{sensor}!pastMinimasRed@{pastMinimasRed}}
+\index{pastMinimasRed@{pastMinimasRed}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{pastMinimasRed}{pastMinimasRed}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::past\+Minimas\+Red\mbox{[}\mbox{\hyperlink{classsensor_a08d4fe3b68ef85ebda9a1575267fb1f3}{PAST\+\_\+\+PEAKS\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_abf5061567b61f591f396bd5458f92f05}\label{classsensor_abf5061567b61f591f396bd5458f92f05} 
+\index{sensor@{sensor}!R@{R}}
+\index{R@{R}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily int sensor\+::R\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a7020b1bebbe506a8aee6f5837b614852}\label{classsensor_a7020b1bebbe506a8aee6f5837b614852} 
+\index{sensor@{sensor}!redLastValue@{redLastValue}}
+\index{redLastValue@{redLastValue}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{redLastValue}{redLastValue}}
+{\footnotesize\ttfamily uint64\+\_\+t sensor\+::red\+Last\+Value\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a4741f44161dc42f32c3c241589b518c9}\label{classsensor_a4741f44161dc42f32c3c241589b518c9} 
+\index{sensor@{sensor}!running@{running}}
+\index{running@{running}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool sensor\+::running = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a1c3484f518242ed3c4aa85f993fefad4}\label{classsensor_a1c3484f518242ed3c4aa85f993fefad4} 
+\index{sensor@{sensor}!runningHR@{runningHR}}
+\index{runningHR@{runningHR}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{runningHR}{runningHR}}
+{\footnotesize\ttfamily bool sensor\+::running\+HR = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647}\label{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647} 
+\index{sensor@{sensor}!SPO2\_BUFFER\_SIZE@{SPO2\_BUFFER\_SIZE}}
+\index{SPO2\_BUFFER\_SIZE@{SPO2\_BUFFER\_SIZE}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{SPO2\_BUFFER\_SIZE}{SPO2\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily const static int sensor\+::\+SPO2\+\_\+\+BUFFER\+\_\+\+SIZE = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a30259d4b0f80b81c7fbee607585de071}\label{classsensor_a30259d4b0f80b81c7fbee607585de071} 
+\index{sensor@{sensor}!spo2Buffer@{spo2Buffer}}
+\index{spo2Buffer@{spo2Buffer}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{spo2Buffer}{spo2Buffer}}
+{\footnotesize\ttfamily int32\+\_\+t sensor\+::spo2\+Buffer\mbox{[}\mbox{\hyperlink{classsensor_a7a95b1e4fb719a1e1c5ff0b884b0e647}{SPO2\+\_\+\+BUFFER\+\_\+\+SIZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a08a6ddaaddcc52a5de4f5854be743029}\label{classsensor_a08a6ddaaddcc52a5de4f5854be743029} 
+\index{sensor@{sensor}!timeLastIRHeartBeat@{timeLastIRHeartBeat}}
+\index{timeLastIRHeartBeat@{timeLastIRHeartBeat}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{timeLastIRHeartBeat}{timeLastIRHeartBeat}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::system\+\_\+clock$>$ sensor\+::time\+Last\+IRHeart\+Beat\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a0fc149a9204c610efdc2393f2c8701a6}\label{classsensor_a0fc149a9204c610efdc2393f2c8701a6} 
+\index{sensor@{sensor}!timeLastLoopRan@{timeLastLoopRan}}
+\index{timeLastLoopRan@{timeLastLoopRan}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{timeLastLoopRan}{timeLastLoopRan}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::system\+\_\+clock$>$ sensor\+::time\+Last\+Loop\+Ran\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classsensor_a62fb0e854812edb6a48db2128369f6a3}\label{classsensor_a62fb0e854812edb6a48db2128369f6a3} 
+\index{sensor@{sensor}!timeLastRedHeartBeat@{timeLastRedHeartBeat}}
+\index{timeLastRedHeartBeat@{timeLastRedHeartBeat}!sensor@{sensor}}
+\doxysubsubsection{\texorpdfstring{timeLastRedHeartBeat}{timeLastRedHeartBeat}}
+{\footnotesize\ttfamily std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::system\+\_\+clock$>$ sensor\+::time\+Last\+Red\+Heart\+Beat\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_sensor_8h}{Sensor.\+h}}\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_sensor_8cpp}{Sensor.\+cpp}}\end{DoxyCompactItemize}

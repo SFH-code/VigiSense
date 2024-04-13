@@ -1,0 +1,11 @@
+<map id="sensor::updateTemperature" name="sensor::updateTemperature">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,205,56"/>
+<area shape="rect" id="Node000002" href="$de/d0d/class_m_a_x30102.html#ac6087868468137544adb009e79ca8485" title=" " alt="" coords="253,31,472,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,41,240,41,240,46,205,46"/>
+<area shape="rect" id="Node000003" href="$de/d0d/class_m_a_x30102.html#a7b9501442c658fdd5f88ceb0b883ccc5" title=" " alt="" coords="520,31,731,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,41,506,41,506,46,472,46"/>
+<area shape="rect" id="Node000004" href="$df/dbf/i2c-dev_8h.html#aea6f5d01ddd9b73cba89994e500e0f57" title=" " alt="" coords="781,5,979,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="731,30,767,27,767,32,731,35"/>
+<area shape="rect" id="Node000005" href="$df/dbf/i2c-dev_8h.html#a77fd74b2c8d519ec584b44f182365f98" title=" " alt="" coords="779,55,981,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="731,51,765,54,765,59,731,56"/>
+</map>

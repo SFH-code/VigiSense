@@ -1,0 +1,68 @@
+\doxysection{Moving\+Avarage\+Filter\texorpdfstring{$<$}{<} size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_moving_avarage_filter}{}\label{class_moving_avarage_filter}\index{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}}
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+
+
+Collaboration diagram for Moving\+Avarage\+Filter\texorpdfstring{$<$}{<} size \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d3/d4e/class_moving_avarage_filter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_moving_avarage_filter_a84c7823e71ebfcc1859d8512cfd8ae81}{update}} (double input)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_moving_avarage_filter_a483543602aa2bd53213fff78ce23323a}{output}} = 0
+\item 
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ int64\+\_\+t, size $>$ \mbox{\hyperlink{class_moving_avarage_filter_a50520eacf783dbf5dfc2b1fc8827e925}{buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_moving_avarage_filter_a84c7823e71ebfcc1859d8512cfd8ae81}\label{class_moving_avarage_filter_a84c7823e71ebfcc1859d8512cfd8ae81} 
+\index{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}!update@{update}}
+\index{update@{update}!MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t size$>$ \\
+double \mbox{\hyperlink{class_moving_avarage_filter}{Moving\+Avarage\+Filter}}$<$ size $>$\+::update (\begin{DoxyParamCaption}\item[{double}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dca/class_moving_avarage_filter_a84c7823e71ebfcc1859d8512cfd8ae81_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_moving_avarage_filter_a50520eacf783dbf5dfc2b1fc8827e925}\label{class_moving_avarage_filter_a50520eacf783dbf5dfc2b1fc8827e925} 
+\index{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}!buffer@{buffer}}
+\index{buffer@{buffer}!MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily template$<$size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$int64\+\_\+t, size$>$ \mbox{\hyperlink{class_moving_avarage_filter}{Moving\+Avarage\+Filter}}$<$ size $>$\+::buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_moving_avarage_filter_a483543602aa2bd53213fff78ce23323a}\label{class_moving_avarage_filter_a483543602aa2bd53213fff78ce23323a} 
+\index{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}!output@{output}}
+\index{output@{output}!MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}}
+\doxysubsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily template$<$size\+\_\+t size$>$ \\
+int64\+\_\+t \mbox{\hyperlink{class_moving_avarage_filter}{Moving\+Avarage\+Filter}}$<$ size $>$\+::output = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

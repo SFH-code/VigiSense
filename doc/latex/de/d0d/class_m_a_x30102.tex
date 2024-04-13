@@ -1,0 +1,909 @@
+\doxysection{MAX30102 Class Reference}
+\hypertarget{class_m_a_x30102}{}\label{class_m_a_x30102}\index{MAX30102@{MAX30102}}
+
+
+{\ttfamily \#include $<$MAX30102.\+h$>$}
+
+
+
+Collaboration diagram for MAX30102\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{d1/d09/class_m_a_x30102__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_a_x30102_1_1_record}{Record}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_m_a_x30102_a631728e610c1c3eab45d2fc33e78dd50}{MAX30102}} (void)
+\item 
+int \mbox{\hyperlink{class_m_a_x30102_a6c1a98fb0974128d0e200fc4f9986efd}{begin}} (uint32\+\_\+t i2c\+Speed=\mbox{\hyperlink{_m_a_x30102_8h_a5ca8c5fbb2caa99ab0b7007ce2c11633}{I2\+C\+\_\+\+SPEED\+\_\+\+STANDARD}}, uint8\+\_\+t i2c\+Addr=\mbox{\hyperlink{_m_a_x30102_8h_ad7327a848315960f1d8828a09316c6a9}{MAX30102\+\_\+\+ADDRESS}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a824883df0943c7accc013f05792e557d}{get\+Red}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_m_a_x30102_ad06cdfa399f91057cc2e8e7c872877e0}{get\+IR}} (void)
+\item 
+bool \mbox{\hyperlink{class_m_a_x30102_a82a6fa3dc9fb7dd83e57582ccd0a0c06}{safe\+Check}} (uint8\+\_\+t max\+Time\+To\+Check)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ab6c07c546e397bd5d87292f434a0ee8c}{wake\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ac5c9b06bf3cf668e018bb81a17d5aa2f}{shut\+Down}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ad78ce89aa47f2c6e1a3cf07a6966c2c9}{soft\+Reset}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a19cae8ee364f876cb34da812d5a657f2}{set\+LEDMode}} (uint8\+\_\+t mode)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ab936f8072cde5aaf5b0bd8b9ec9c0e2f}{set\+ADCRange}} (uint8\+\_\+t adc\+Range)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a78604b395ccf72fbd6366684aa99e646}{set\+Sample\+Rate}} (uint8\+\_\+t sample\+Rate)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_aab527d480ff83e3059157bb793244644}{set\+Pulse\+Width}} (uint8\+\_\+t pulse\+Width)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a92936c050f8a49ba8da5bda2069dd1f6}{set\+Pulse\+Amplitude\+Red}} (uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a80aad8301d5ca50a72e72c02f9c824c9}{set\+Pulse\+Amplitude\+IR}} (uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a2c3d0e2fb0ba82d0a2cbb4e5a5c2edd8}{set\+Pulse\+Amplitude\+Proximity}} (uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a5fd727b3f253f1007750534d5f40b562}{set\+Proximity\+Threshold}} (uint8\+\_\+t thres\+MSB)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a34426debd59ef446363a7af352bdbd8e}{enable\+Slot}} (uint8\+\_\+t slot\+Number, uint8\+\_\+t device)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a07872942c5ee098cde2364b4d86ebec6}{disable\+Slots}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a535f24c507d05409d99bf4311fdb535c}{get\+INT1}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_af9e1c521388e59c718a2ab4c219d8d34}{get\+INT2}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a4d436e6c3874f03fc32ca1412fbd8dfb}{enable\+AFULL}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_aec4831802832defb3f6453f27649f9fd}{disable\+AFULL}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a2e9b9a516572433c2dec4a304acb67f7}{enable\+DATARDY}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a23ac69410cbbbd0479bc195205be492f}{disable\+DATARDY}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ae5b452eb18fbe798c99f238f49f64fe9}{enable\+ALCOVF}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_aeb2a88238a3041b599bdd84269ebbcca}{disable\+ALCOVF}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a9856c2f70a66188bd81cb7200b09d40b}{enable\+PROXINT}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a7b739fbb78fe2e9e5b485e108e8d8d69}{disable\+PROXINT}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ae94096eaaf7aa7e4ad9372675bcfea2a}{enable\+DIETEMPRDY}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a886cc28c8ef63019980fadaf74d059d5}{disable\+DIETEMPRDY}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ae11f7b66a205c5e465668fa401427737}{set\+FIFOAverage}} (uint8\+\_\+t samples)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a13354720f66fc1ec7d579bb3e765a96d}{enable\+FIFORollover}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ac45e805b747d6723f59e41cbd6b0c8e9}{disable\+FIFORollover}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_abd8bade4eb3dbb809c364378f9017d25}{set\+FIFOAlmost\+Full}} (uint8\+\_\+t samples)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a023a175af4f01d54f24f632296f71775}{check}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a1b147f6bf43019fe2fcaf8448657ad5a}{available}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a2c3f09f90f952e44aa2d1d6456c0ea0e}{next\+Sample}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a2dd900a208752875bc47eaaa6de45c60}{get\+FIFORed}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a04ae15b45111ff3345fba97f3e558885}{get\+FIFOIR}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_aeaf1c7ea1764c7d0553386cabfb783e6}{get\+Write\+Pointer}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a99dd07d94cdca56a0116bd3bc40eeb66}{get\+Read\+Pointer}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_afbac1a581d2acb9aeb9dbe12b2d83b00}{clear\+FIFO}} (void)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_aa770f6f38d4169d4e844de2db3443a95}{set\+PROXINTTHRESH}} (uint8\+\_\+t val)
+\item 
+float \mbox{\hyperlink{class_m_a_x30102_a7b9501442c658fdd5f88ceb0b883ccc5}{read\+Temperature}} ()
+\item 
+float \mbox{\hyperlink{class_m_a_x30102_ac6087868468137544adb009e79ca8485}{read\+TemperatureF}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a9864b29afe6f70f866e21f2c0b2a1df3}{get\+Revision\+ID}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_ac17326fd1347d61dfbfd5ab76d039fb2}{read\+Part\+ID}} ()
+\item 
+virtual void \mbox{\hyperlink{class_m_a_x30102_aab729787b966462162f4e007b60c8075}{has\+Sample}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ac20a8b68fcf978b71f3fde1bb516dde8}{setup}} (uint8\+\_\+t power\+Level=0x1F, uint8\+\_\+t sample\+Average=4, uint8\+\_\+t led\+Mode=2, int sample\+Rate=400, int pulse\+Width=411, int adc\+Range=4096)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_m_a_x30102_1_1_record}{MAX30102\+::\+Record}} \mbox{\hyperlink{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4}{sense\+\_\+struct}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a2f5ae5ddfaaaf856424f2b3e0b3a991a}{read\+Revision\+ID}} ()
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_a741f63f91f2b64df29c07311a8deb0ea}{bit\+Mask}} (uint8\+\_\+t reg, uint8\+\_\+t mask, uint8\+\_\+t thing)
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{class_m_a_x30102_af0ad00b5666d727c58998ae2065b216e}{read\+Many}} (uint8\+\_\+t address, uint8\+\_\+t length)
+\item 
+void \mbox{\hyperlink{class_m_a_x30102_ad43296be047dd4d8779a96fd2b1c1d3b}{data\+Ready}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_m_a_x30102_a622d1671f30bbc3217423eda54e2ee96}{gpio\+ISR}} (int, int, uint32\+\_\+t, void \texorpdfstring{$\ast$}{*}userdata)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_m_a_x30102_a9c3f044d300f7f1e0ceb013f94fb5473}{\+\_\+i2c}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_ab4f2278d503855fd5304b21d3654bc52}{\+\_\+i2caddr}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a63b9f6f2d5903ad915a61c7ff040a426}{active\+LEDs}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_m_a_x30102_a263ab7d92815b15faef6bf647c1e5096}{revision\+ID}}
+\item 
+\mbox{\hyperlink{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4}{sense\+\_\+struct}} \mbox{\hyperlink{class_m_a_x30102_a913fc3dc70103ea8e9ecae046125ed63}{sense}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4}\label{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4} 
+\index{MAX30102@{MAX30102}!sense\_struct@{sense\_struct}}
+\index{sense\_struct@{sense\_struct}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{sense\_struct}{sense\_struct}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_m_a_x30102_1_1_record}{MAX30102\+::\+Record}} \mbox{\hyperlink{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4}{MAX30102\+::sense\+\_\+struct}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_m_a_x30102_a631728e610c1c3eab45d2fc33e78dd50}\label{class_m_a_x30102_a631728e610c1c3eab45d2fc33e78dd50} 
+\index{MAX30102@{MAX30102}!MAX30102@{MAX30102}}
+\index{MAX30102@{MAX30102}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{MAX30102()}{MAX30102()}}
+{\footnotesize\ttfamily MAX30102\+::\+MAX30102 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_m_a_x30102_a1b147f6bf43019fe2fcaf8448657ad5a}\label{class_m_a_x30102_a1b147f6bf43019fe2fcaf8448657ad5a} 
+\index{MAX30102@{MAX30102}!available@{available}}
+\index{available@{available}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the number of samples available. \Hypertarget{class_m_a_x30102_a6c1a98fb0974128d0e200fc4f9986efd}\label{class_m_a_x30102_a6c1a98fb0974128d0e200fc4f9986efd} 
+\index{MAX30102@{MAX30102}!begin@{begin}}
+\index{begin@{begin}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily int MAX30102\+::begin (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i2c\+Speed = {\ttfamily \mbox{\hyperlink{_m_a_x30102_8h_a5ca8c5fbb2caa99ab0b7007ce2c11633}{I2\+C\+\_\+\+SPEED\+\_\+\+STANDARD}}},  }\item[{uint8\+\_\+t}]{i2c\+Addr = {\ttfamily \mbox{\hyperlink{_m_a_x30102_8h_ad7327a848315960f1d8828a09316c6a9}{MAX30102\+\_\+\+ADDRESS}}} }\end{DoxyParamCaption})}
+
+Initializes sensor. Returns negative number on failure. Returns sensor revision on success. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a6c1a98fb0974128d0e200fc4f9986efd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a741f63f91f2b64df29c07311a8deb0ea}\label{class_m_a_x30102_a741f63f91f2b64df29c07311a8deb0ea} 
+\index{MAX30102@{MAX30102}!bitMask@{bitMask}}
+\index{bitMask@{bitMask}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{bitMask()}{bitMask()}}
+{\footnotesize\ttfamily void MAX30102\+::bit\+Mask (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{mask,  }\item[{uint8\+\_\+t}]{thing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Set certain thing in register. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a741f63f91f2b64df29c07311a8deb0ea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a023a175af4f01d54f24f632296f71775}\label{class_m_a_x30102_a023a175af4f01d54f24f632296f71775} 
+\index{MAX30102@{MAX30102}!check@{check}}
+\index{check@{check}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily uint16\+\_\+t MAX30102\+::check (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a023a175af4f01d54f24f632296f71775_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_afbac1a581d2acb9aeb9dbe12b2d83b00}\label{class_m_a_x30102_afbac1a581d2acb9aeb9dbe12b2d83b00} 
+\index{MAX30102@{MAX30102}!clearFIFO@{clearFIFO}}
+\index{clearFIFO@{clearFIFO}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{clearFIFO()}{clearFIFO()}}
+{\footnotesize\ttfamily void MAX30102\+::clear\+FIFO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Resets all points to start in a known state. Recommended to clear FIFO before beginning a read. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_afbac1a581d2acb9aeb9dbe12b2d83b00_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ad43296be047dd4d8779a96fd2b1c1d3b}\label{class_m_a_x30102_ad43296be047dd4d8779a96fd2b1c1d3b} 
+\index{MAX30102@{MAX30102}!dataReady@{dataReady}}
+\index{dataReady@{dataReady}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{dataReady()}{dataReady()}}
+{\footnotesize\ttfamily void MAX30102\+::data\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ad43296be047dd4d8779a96fd2b1c1d3b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_aec4831802832defb3f6453f27649f9fd}\label{class_m_a_x30102_aec4831802832defb3f6453f27649f9fd} 
+\index{MAX30102@{MAX30102}!disableAFULL@{disableAFULL}}
+\index{disableAFULL@{disableAFULL}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disableAFULL()}{disableAFULL()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+AFULL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_aec4831802832defb3f6453f27649f9fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_aeb2a88238a3041b599bdd84269ebbcca}\label{class_m_a_x30102_aeb2a88238a3041b599bdd84269ebbcca} 
+\index{MAX30102@{MAX30102}!disableALCOVF@{disableALCOVF}}
+\index{disableALCOVF@{disableALCOVF}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disableALCOVF()}{disableALCOVF()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+ALCOVF (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_aeb2a88238a3041b599bdd84269ebbcca_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a23ac69410cbbbd0479bc195205be492f}\label{class_m_a_x30102_a23ac69410cbbbd0479bc195205be492f} 
+\index{MAX30102@{MAX30102}!disableDATARDY@{disableDATARDY}}
+\index{disableDATARDY@{disableDATARDY}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disableDATARDY()}{disableDATARDY()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+DATARDY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a23ac69410cbbbd0479bc195205be492f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a886cc28c8ef63019980fadaf74d059d5}\label{class_m_a_x30102_a886cc28c8ef63019980fadaf74d059d5} 
+\index{MAX30102@{MAX30102}!disableDIETEMPRDY@{disableDIETEMPRDY}}
+\index{disableDIETEMPRDY@{disableDIETEMPRDY}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disableDIETEMPRDY()}{disableDIETEMPRDY()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+DIETEMPRDY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a886cc28c8ef63019980fadaf74d059d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ac45e805b747d6723f59e41cbd6b0c8e9}\label{class_m_a_x30102_ac45e805b747d6723f59e41cbd6b0c8e9} 
+\index{MAX30102@{MAX30102}!disableFIFORollover@{disableFIFORollover}}
+\index{disableFIFORollover@{disableFIFORollover}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disableFIFORollover()}{disableFIFORollover()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+FIFORollover (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Disable roll over if FIFO over flows. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ac45e805b747d6723f59e41cbd6b0c8e9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a7b739fbb78fe2e9e5b485e108e8d8d69}\label{class_m_a_x30102_a7b739fbb78fe2e9e5b485e108e8d8d69} 
+\index{MAX30102@{MAX30102}!disablePROXINT@{disablePROXINT}}
+\index{disablePROXINT@{disablePROXINT}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disablePROXINT()}{disablePROXINT()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+PROXINT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a7b739fbb78fe2e9e5b485e108e8d8d69_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a07872942c5ee098cde2364b4d86ebec6}\label{class_m_a_x30102_a07872942c5ee098cde2364b4d86ebec6} 
+\index{MAX30102@{MAX30102}!disableSlots@{disableSlots}}
+\index{disableSlots@{disableSlots}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{disableSlots()}{disableSlots()}}
+{\footnotesize\ttfamily void MAX30102\+::disable\+Slots (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Clears all slot assignments. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a07872942c5ee098cde2364b4d86ebec6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a4d436e6c3874f03fc32ca1412fbd8dfb}\label{class_m_a_x30102_a4d436e6c3874f03fc32ca1412fbd8dfb} 
+\index{MAX30102@{MAX30102}!enableAFULL@{enableAFULL}}
+\index{enableAFULL@{enableAFULL}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enableAFULL()}{enableAFULL()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+AFULL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a4d436e6c3874f03fc32ca1412fbd8dfb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ae5b452eb18fbe798c99f238f49f64fe9}\label{class_m_a_x30102_ae5b452eb18fbe798c99f238f49f64fe9} 
+\index{MAX30102@{MAX30102}!enableALCOVF@{enableALCOVF}}
+\index{enableALCOVF@{enableALCOVF}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enableALCOVF()}{enableALCOVF()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+ALCOVF (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ae5b452eb18fbe798c99f238f49f64fe9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a2e9b9a516572433c2dec4a304acb67f7}\label{class_m_a_x30102_a2e9b9a516572433c2dec4a304acb67f7} 
+\index{MAX30102@{MAX30102}!enableDATARDY@{enableDATARDY}}
+\index{enableDATARDY@{enableDATARDY}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enableDATARDY()}{enableDATARDY()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+DATARDY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a2e9b9a516572433c2dec4a304acb67f7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ae94096eaaf7aa7e4ad9372675bcfea2a}\label{class_m_a_x30102_ae94096eaaf7aa7e4ad9372675bcfea2a} 
+\index{MAX30102@{MAX30102}!enableDIETEMPRDY@{enableDIETEMPRDY}}
+\index{enableDIETEMPRDY@{enableDIETEMPRDY}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enableDIETEMPRDY()}{enableDIETEMPRDY()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+DIETEMPRDY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ae94096eaaf7aa7e4ad9372675bcfea2a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a13354720f66fc1ec7d579bb3e765a96d}\label{class_m_a_x30102_a13354720f66fc1ec7d579bb3e765a96d} 
+\index{MAX30102@{MAX30102}!enableFIFORollover@{enableFIFORollover}}
+\index{enableFIFORollover@{enableFIFORollover}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enableFIFORollover()}{enableFIFORollover()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+FIFORollover (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Enable roll over if FIFO over flows. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a13354720f66fc1ec7d579bb3e765a96d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a9856c2f70a66188bd81cb7200b09d40b}\label{class_m_a_x30102_a9856c2f70a66188bd81cb7200b09d40b} 
+\index{MAX30102@{MAX30102}!enablePROXINT@{enablePROXINT}}
+\index{enablePROXINT@{enablePROXINT}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enablePROXINT()}{enablePROXINT()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+PROXINT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a9856c2f70a66188bd81cb7200b09d40b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a34426debd59ef446363a7af352bdbd8e}\label{class_m_a_x30102_a34426debd59ef446363a7af352bdbd8e} 
+\index{MAX30102@{MAX30102}!enableSlot@{enableSlot}}
+\index{enableSlot@{enableSlot}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{enableSlot()}{enableSlot()}}
+{\footnotesize\ttfamily void MAX30102\+::enable\+Slot (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slot\+Number,  }\item[{uint8\+\_\+t}]{device }\end{DoxyParamCaption})}
+
+Given a slot number assign a thing to it. Devices are SLOT\+\_\+\+RED\+\_\+\+LED or SLOT\+\_\+\+RED\+\_\+\+PILOT (proximity) Assigning a SLOT\+\_\+\+RED\+\_\+\+LED will pulse LED Assigning a SLOT\+\_\+\+RED\+\_\+\+PILOT will ?? Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a34426debd59ef446363a7af352bdbd8e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a04ae15b45111ff3345fba97f3e558885}\label{class_m_a_x30102_a04ae15b45111ff3345fba97f3e558885} 
+\index{MAX30102@{MAX30102}!getFIFOIR@{getFIFOIR}}
+\index{getFIFOIR@{getFIFOIR}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getFIFOIR()}{getFIFOIR()}}
+{\footnotesize\ttfamily uint32\+\_\+t MAX30102\+::get\+FIFOIR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Report the next IR value in FIFO. \Hypertarget{class_m_a_x30102_a2dd900a208752875bc47eaaa6de45c60}\label{class_m_a_x30102_a2dd900a208752875bc47eaaa6de45c60} 
+\index{MAX30102@{MAX30102}!getFIFORed@{getFIFORed}}
+\index{getFIFORed@{getFIFORed}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getFIFORed()}{getFIFORed()}}
+{\footnotesize\ttfamily uint32\+\_\+t MAX30102\+::get\+FIFORed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Report the next Red value in FIFO. \Hypertarget{class_m_a_x30102_a535f24c507d05409d99bf4311fdb535c}\label{class_m_a_x30102_a535f24c507d05409d99bf4311fdb535c} 
+\index{MAX30102@{MAX30102}!getINT1@{getINT1}}
+\index{getINT1@{getINT1}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getINT1()}{getINT1()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::get\+INT1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a535f24c507d05409d99bf4311fdb535c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_af9e1c521388e59c718a2ab4c219d8d34}\label{class_m_a_x30102_af9e1c521388e59c718a2ab4c219d8d34} 
+\index{MAX30102@{MAX30102}!getINT2@{getINT2}}
+\index{getINT2@{getINT2}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getINT2()}{getINT2()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::get\+INT2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_af9e1c521388e59c718a2ab4c219d8d34_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ad06cdfa399f91057cc2e8e7c872877e0}\label{class_m_a_x30102_ad06cdfa399f91057cc2e8e7c872877e0} 
+\index{MAX30102@{MAX30102}!getIR@{getIR}}
+\index{getIR@{getIR}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getIR()}{getIR()}}
+{\footnotesize\ttfamily uint32\+\_\+t MAX30102\+::get\+IR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Report the most recent IR value. change to only return without calling checks \Hypertarget{class_m_a_x30102_a99dd07d94cdca56a0116bd3bc40eeb66}\label{class_m_a_x30102_a99dd07d94cdca56a0116bd3bc40eeb66} 
+\index{MAX30102@{MAX30102}!getReadPointer@{getReadPointer}}
+\index{getReadPointer@{getReadPointer}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getReadPointer()}{getReadPointer()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::get\+Read\+Pointer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Read the FIFO Read Pointer. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a99dd07d94cdca56a0116bd3bc40eeb66_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a824883df0943c7accc013f05792e557d}\label{class_m_a_x30102_a824883df0943c7accc013f05792e557d} 
+\index{MAX30102@{MAX30102}!getRed@{getRed}}
+\index{getRed@{getRed}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getRed()}{getRed()}}
+{\footnotesize\ttfamily uint32\+\_\+t MAX30102\+::get\+Red (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Report the most recent Red value. change to only return without calling checks \Hypertarget{class_m_a_x30102_a9864b29afe6f70f866e21f2c0b2a1df3}\label{class_m_a_x30102_a9864b29afe6f70f866e21f2c0b2a1df3} 
+\index{MAX30102@{MAX30102}!getRevisionID@{getRevisionID}}
+\index{getRevisionID@{getRevisionID}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getRevisionID()}{getRevisionID()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::get\+Revision\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_m_a_x30102_aeaf1c7ea1764c7d0553386cabfb783e6}\label{class_m_a_x30102_aeaf1c7ea1764c7d0553386cabfb783e6} 
+\index{MAX30102@{MAX30102}!getWritePointer@{getWritePointer}}
+\index{getWritePointer@{getWritePointer}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{getWritePointer()}{getWritePointer()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::get\+Write\+Pointer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Read the FIFO Write Pointer. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_aeaf1c7ea1764c7d0553386cabfb783e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a622d1671f30bbc3217423eda54e2ee96}\label{class_m_a_x30102_a622d1671f30bbc3217423eda54e2ee96} 
+\index{MAX30102@{MAX30102}!gpioISR@{gpioISR}}
+\index{gpioISR@{gpioISR}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{gpioISR()}{gpioISR()}}
+{\footnotesize\ttfamily static void MAX30102\+::gpio\+ISR (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{,  }\item[{uint32\+\_\+t}]{,  }\item[{void \texorpdfstring{$\ast$}{*}}]{userdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_m_a_x30102_aab729787b966462162f4e007b60c8075}\label{class_m_a_x30102_aab729787b966462162f4e007b60c8075} 
+\index{MAX30102@{MAX30102}!hasSample@{hasSample}}
+\index{hasSample@{hasSample}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{hasSample()}{hasSample()}}
+{\footnotesize\ttfamily void MAX30102\+::has\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_aab729787b966462162f4e007b60c8075_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a2c3f09f90f952e44aa2d1d6456c0ea0e}\label{class_m_a_x30102_a2c3f09f90f952e44aa2d1d6456c0ea0e} 
+\index{MAX30102@{MAX30102}!nextSample@{nextSample}}
+\index{nextSample@{nextSample}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{nextSample()}{nextSample()}}
+{\footnotesize\ttfamily void MAX30102\+::next\+Sample (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Advance the tail. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a2c3f09f90f952e44aa2d1d6456c0ea0e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_af0ad00b5666d727c58998ae2065b216e}\label{class_m_a_x30102_af0ad00b5666d727c58998ae2065b216e} 
+\index{MAX30102@{MAX30102}!readMany@{readMany}}
+\index{readMany@{readMany}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{readMany()}{readMany()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ MAX30102\+::read\+Many (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint8\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Read multiple bytes from register. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_af0ad00b5666d727c58998ae2065b216e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ac17326fd1347d61dfbfd5ab76d039fb2}\label{class_m_a_x30102_ac17326fd1347d61dfbfd5ab76d039fb2} 
+\index{MAX30102@{MAX30102}!readPartID@{readPartID}}
+\index{readPartID@{readPartID}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{readPartID()}{readPartID()}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::read\+Part\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ac17326fd1347d61dfbfd5ab76d039fb2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a2f5ae5ddfaaaf856424f2b3e0b3a991a}\label{class_m_a_x30102_a2f5ae5ddfaaaf856424f2b3e0b3a991a} 
+\index{MAX30102@{MAX30102}!readRevisionID@{readRevisionID}}
+\index{readRevisionID@{readRevisionID}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{readRevisionID()}{readRevisionID()}}
+{\footnotesize\ttfamily void MAX30102\+::read\+Revision\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a2f5ae5ddfaaaf856424f2b3e0b3a991a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a7b9501442c658fdd5f88ceb0b883ccc5}\label{class_m_a_x30102_a7b9501442c658fdd5f88ceb0b883ccc5} 
+\index{MAX30102@{MAX30102}!readTemperature@{readTemperature}}
+\index{readTemperature@{readTemperature}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{readTemperature()}{readTemperature()}}
+{\footnotesize\ttfamily float MAX30102\+::read\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Die Temperature. Returns temperature in C. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a7b9501442c658fdd5f88ceb0b883ccc5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ac6087868468137544adb009e79ca8485}\label{class_m_a_x30102_ac6087868468137544adb009e79ca8485} 
+\index{MAX30102@{MAX30102}!readTemperatureF@{readTemperatureF}}
+\index{readTemperatureF@{readTemperatureF}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{readTemperatureF()}{readTemperatureF()}}
+{\footnotesize\ttfamily float MAX30102\+::read\+TemperatureF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns die temperature in F. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ac6087868468137544adb009e79ca8485_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a82a6fa3dc9fb7dd83e57582ccd0a0c06}\label{class_m_a_x30102_a82a6fa3dc9fb7dd83e57582ccd0a0c06} 
+\index{MAX30102@{MAX30102}!safeCheck@{safeCheck}}
+\index{safeCheck@{safeCheck}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{safeCheck()}{safeCheck()}}
+{\footnotesize\ttfamily bool MAX30102\+::safe\+Check (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{max\+Time\+To\+Check }\end{DoxyParamCaption})}
+
+Check for new data but give up after a certain amount of time. Returns true if new data was found. Returns false if new data was not found. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a82a6fa3dc9fb7dd83e57582ccd0a0c06_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ab936f8072cde5aaf5b0bd8b9ec9c0e2f}\label{class_m_a_x30102_ab936f8072cde5aaf5b0bd8b9ec9c0e2f} 
+\index{MAX30102@{MAX30102}!setADCRange@{setADCRange}}
+\index{setADCRange@{setADCRange}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setADCRange()}{setADCRange()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+ADCRange (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{adc\+Range }\end{DoxyParamCaption})}
+
+Sets ADC Range. Available ADC Range\+: 2048, 4096, 8192, 16384 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ab936f8072cde5aaf5b0bd8b9ec9c0e2f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_abd8bade4eb3dbb809c364378f9017d25}\label{class_m_a_x30102_abd8bade4eb3dbb809c364378f9017d25} 
+\index{MAX30102@{MAX30102}!setFIFOAlmostFull@{setFIFOAlmostFull}}
+\index{setFIFOAlmostFull@{setFIFOAlmostFull}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setFIFOAlmostFull()}{setFIFOAlmostFull()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+FIFOAlmost\+Full (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{number\+Of\+Samples }\end{DoxyParamCaption})}
+
+Sets number of samples to trigger the almost full interrupt. Power on deafult is 32 samples. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_abd8bade4eb3dbb809c364378f9017d25_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ae11f7b66a205c5e465668fa401427737}\label{class_m_a_x30102_ae11f7b66a205c5e465668fa401427737} 
+\index{MAX30102@{MAX30102}!setFIFOAverage@{setFIFOAverage}}
+\index{setFIFOAverage@{setFIFOAverage}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setFIFOAverage()}{setFIFOAverage()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+FIFOAverage (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{number\+Of\+Samples }\end{DoxyParamCaption})}
+
+Sets sample average. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ae11f7b66a205c5e465668fa401427737_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a19cae8ee364f876cb34da812d5a657f2}\label{class_m_a_x30102_a19cae8ee364f876cb34da812d5a657f2} 
+\index{MAX30102@{MAX30102}!setLEDMode@{setLEDMode}}
+\index{setLEDMode@{setLEDMode}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setLEDMode()}{setLEDMode()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+LEDMode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+Sets which LEDs are used for sampling.
+\begin{DoxyItemize}
+\item Red only
+\item Red+\+IR only
+\item Custom 
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a19cae8ee364f876cb34da812d5a657f2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a5fd727b3f253f1007750534d5f40b562}\label{class_m_a_x30102_a5fd727b3f253f1007750534d5f40b562} 
+\index{MAX30102@{MAX30102}!setProximityThreshold@{setProximityThreshold}}
+\index{setProximityThreshold@{setProximityThreshold}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setProximityThreshold()}{setProximityThreshold()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+Proximity\+Threshold (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{thresh\+MSB }\end{DoxyParamCaption})}
+
+Set the IR ADC count that will trigger the beginning of particle-\/sensing mode. The thresh\+MSB signifies only the 8 most significant-\/bits of the ADC count. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a5fd727b3f253f1007750534d5f40b562_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_aa770f6f38d4169d4e844de2db3443a95}\label{class_m_a_x30102_aa770f6f38d4169d4e844de2db3443a95} 
+\index{MAX30102@{MAX30102}!setPROXINTTHRESH@{setPROXINTTHRESH}}
+\index{setPROXINTTHRESH@{setPROXINTTHRESH}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setPROXINTTHRESH()}{setPROXINTTHRESH()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+PROXINTTHRESH (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+Sets the PROX\+\_\+\+INT\+\_\+\+THRESHold. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_aa770f6f38d4169d4e844de2db3443a95_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a80aad8301d5ca50a72e72c02f9c824c9}\label{class_m_a_x30102_a80aad8301d5ca50a72e72c02f9c824c9} 
+\index{MAX30102@{MAX30102}!setPulseAmplitudeIR@{setPulseAmplitudeIR}}
+\index{setPulseAmplitudeIR@{setPulseAmplitudeIR}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setPulseAmplitudeIR()}{setPulseAmplitudeIR()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+Pulse\+Amplitude\+IR (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{amplitude }\end{DoxyParamCaption})}
+
+Sets IR LED Pulse Amplitude. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a80aad8301d5ca50a72e72c02f9c824c9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a2c3d0e2fb0ba82d0a2cbb4e5a5c2edd8}\label{class_m_a_x30102_a2c3d0e2fb0ba82d0a2cbb4e5a5c2edd8} 
+\index{MAX30102@{MAX30102}!setPulseAmplitudeProximity@{setPulseAmplitudeProximity}}
+\index{setPulseAmplitudeProximity@{setPulseAmplitudeProximity}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setPulseAmplitudeProximity()}{setPulseAmplitudeProximity()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+Pulse\+Amplitude\+Proximity (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a2c3d0e2fb0ba82d0a2cbb4e5a5c2edd8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a92936c050f8a49ba8da5bda2069dd1f6}\label{class_m_a_x30102_a92936c050f8a49ba8da5bda2069dd1f6} 
+\index{MAX30102@{MAX30102}!setPulseAmplitudeRed@{setPulseAmplitudeRed}}
+\index{setPulseAmplitudeRed@{setPulseAmplitudeRed}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setPulseAmplitudeRed()}{setPulseAmplitudeRed()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+Pulse\+Amplitude\+Red (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{amplitude }\end{DoxyParamCaption})}
+
+Sets Red LED Pulse Amplitude. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a92936c050f8a49ba8da5bda2069dd1f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_aab527d480ff83e3059157bb793244644}\label{class_m_a_x30102_aab527d480ff83e3059157bb793244644} 
+\index{MAX30102@{MAX30102}!setPulseWidth@{setPulseWidth}}
+\index{setPulseWidth@{setPulseWidth}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setPulseWidth()}{setPulseWidth()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+Pulse\+Width (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pulse\+Width }\end{DoxyParamCaption})}
+
+Sets Pulse Width. Available Pulse Width\+: 69, 188, 215, 411 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_aab527d480ff83e3059157bb793244644_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_a78604b395ccf72fbd6366684aa99e646}\label{class_m_a_x30102_a78604b395ccf72fbd6366684aa99e646} 
+\index{MAX30102@{MAX30102}!setSampleRate@{setSampleRate}}
+\index{setSampleRate@{setSampleRate}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setSampleRate()}{setSampleRate()}}
+{\footnotesize\ttfamily void MAX30102\+::set\+Sample\+Rate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sample\+Rate }\end{DoxyParamCaption})}
+
+Sets Sample Rate. Available Sample Rates\+: 50, 100, 200, 400, 800, 1000, 1600, 3200 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_a78604b395ccf72fbd6366684aa99e646_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ac20a8b68fcf978b71f3fde1bb516dde8}\label{class_m_a_x30102_ac20a8b68fcf978b71f3fde1bb516dde8} 
+\index{MAX30102@{MAX30102}!setup@{setup}}
+\index{setup@{setup}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void MAX30102\+::setup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{power\+Level = {\ttfamily 0x1F},  }\item[{uint8\+\_\+t}]{sample\+Average = {\ttfamily 4},  }\item[{uint8\+\_\+t}]{led\+Mode = {\ttfamily 2},  }\item[{int}]{sample\+Rate = {\ttfamily 400},  }\item[{int}]{pulse\+Width = {\ttfamily 411},  }\item[{int}]{adc\+Range = {\ttfamily 4096} }\end{DoxyParamCaption})}
+
+Setup the Sensor use led mode 2 where ir and red is used. Default averages 4 samples, with sameple\+Rate of 400, resulting in effective sample\+Rate of 100, giving a period of 10ms between each averaged sample. Meaning that the 32 sample FIFO will fill up in approx 320ms
+
+Defaults\+: power\+Level = 0x1F (6.\+2mA) sample\+Average = 4 led\+Mode = 2 sample\+Rate = 400 pulse\+Width = 411 adc\+Range = 4096 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ac20a8b68fcf978b71f3fde1bb516dde8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ac5c9b06bf3cf668e018bb81a17d5aa2f}\label{class_m_a_x30102_ac5c9b06bf3cf668e018bb81a17d5aa2f} 
+\index{MAX30102@{MAX30102}!shutDown@{shutDown}}
+\index{shutDown@{shutDown}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{shutDown()}{shutDown()}}
+{\footnotesize\ttfamily void MAX30102\+::shut\+Down (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Put sensor into low power mode. During this mode the sensor will continue to respond to I2C commands but will not update or take new readings, such as temperature. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ac5c9b06bf3cf668e018bb81a17d5aa2f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ad78ce89aa47f2c6e1a3cf07a6966c2c9}\label{class_m_a_x30102_ad78ce89aa47f2c6e1a3cf07a6966c2c9} 
+\index{MAX30102@{MAX30102}!softReset@{softReset}}
+\index{softReset@{softReset}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{softReset()}{softReset()}}
+{\footnotesize\ttfamily void MAX30102\+::soft\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+All configuration, threshold, and data registers are reset to their power-\/on state through a power-\/on reset. The reset bit is cleared back to zero after reset finishes. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ad78ce89aa47f2c6e1a3cf07a6966c2c9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_m_a_x30102_ab6c07c546e397bd5d87292f434a0ee8c}\label{class_m_a_x30102_ab6c07c546e397bd5d87292f434a0ee8c} 
+\index{MAX30102@{MAX30102}!wakeUp@{wakeUp}}
+\index{wakeUp@{wakeUp}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{wakeUp()}{wakeUp()}}
+{\footnotesize\ttfamily void MAX30102\+::wake\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Pull sensor out of low power mode. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d0d/class_m_a_x30102_ab6c07c546e397bd5d87292f434a0ee8c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_m_a_x30102_a9c3f044d300f7f1e0ceb013f94fb5473}\label{class_m_a_x30102_a9c3f044d300f7f1e0ceb013f94fb5473} 
+\index{MAX30102@{MAX30102}!\_i2c@{\_i2c}}
+\index{\_i2c@{\_i2c}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{\_i2c}{\_i2c}}
+{\footnotesize\ttfamily int MAX30102\+::\+\_\+i2c\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_m_a_x30102_ab4f2278d503855fd5304b21d3654bc52}\label{class_m_a_x30102_ab4f2278d503855fd5304b21d3654bc52} 
+\index{MAX30102@{MAX30102}!\_i2caddr@{\_i2caddr}}
+\index{\_i2caddr@{\_i2caddr}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{\_i2caddr}{\_i2caddr}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::\+\_\+i2caddr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_m_a_x30102_a63b9f6f2d5903ad915a61c7ff040a426}\label{class_m_a_x30102_a63b9f6f2d5903ad915a61c7ff040a426} 
+\index{MAX30102@{MAX30102}!activeLEDs@{activeLEDs}}
+\index{activeLEDs@{activeLEDs}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{activeLEDs}{activeLEDs}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::active\+LEDs\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_m_a_x30102_a263ab7d92815b15faef6bf647c1e5096}\label{class_m_a_x30102_a263ab7d92815b15faef6bf647c1e5096} 
+\index{MAX30102@{MAX30102}!revisionID@{revisionID}}
+\index{revisionID@{revisionID}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{revisionID}{revisionID}}
+{\footnotesize\ttfamily uint8\+\_\+t MAX30102\+::revision\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_m_a_x30102_a913fc3dc70103ea8e9ecae046125ed63}\label{class_m_a_x30102_a913fc3dc70103ea8e9ecae046125ed63} 
+\index{MAX30102@{MAX30102}!sense@{sense}}
+\index{sense@{sense}!MAX30102@{MAX30102}}
+\doxysubsubsection{\texorpdfstring{sense}{sense}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4}{sense\+\_\+struct}} MAX30102\+::sense\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_m_a_x30102_8h}{MAX30102.\+h}}\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_m_a_x30102_8cpp}{MAX30102.\+cpp}}\end{DoxyCompactItemize}

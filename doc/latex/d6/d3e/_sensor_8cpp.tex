@@ -1,0 +1,88 @@
+\doxysection{/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\+Sensor.cpp File Reference}
+\hypertarget{_sensor_8cpp}{}\label{_sensor_8cpp}\index{/home/sitcomlab/Projects/VigiSense/src/Sensor.cpp@{/home/sitcomlab/Projects/VigiSense/src/Sensor.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}MAX30102.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor.\+h"{}}\newline
+{\ttfamily \#include "{}Digital\+Filters.\+h"{}}\newline
+Include dependency graph for Sensor.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d8e/_sensor_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_pass_filter}{Low\+Pass\+Filter}} \mbox{\hyperlink{_sensor_8cpp_aaf52e25facdc0730fe4f48ab1fadeb81}{lpf}} (0.\+08, M\+\_\+\+PI)
+\item 
+\mbox{\hyperlink{class_high_pass_filter}{High\+Pass\+Filter}} \mbox{\hyperlink{_sensor_8cpp_a6f35e3e346a56f25425b116e780c877e}{hpf}} (0.\+08, M\+\_\+\+PI)
+\item 
+float \mbox{\hyperlink{_sensor_8cpp_a4c4b08e61e92b3da1ed512f4e006f34a}{R}}
+\item 
+float \mbox{\hyperlink{_sensor_8cpp_a14d5016009ec6625df70a04f204cbb4e}{Sp\+O2}}
+\item 
+bool \mbox{\hyperlink{_sensor_8cpp_aedd7e8992dc1c6c7e5203347bbe99520}{crest}} = false
+\item 
+bool \mbox{\hyperlink{_sensor_8cpp_a45913989bc068224839a5c45266d5178}{trough}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_sensor_8cpp_a08e60d812638cd2ce20ebb3247e7536b}{data\+Been\+Increasing}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_sensor_8cpp_a26fc8eb07a21036fdd52a2b929510286}{next\+Past\+Peaks\+Index}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_sensor_8cpp_aedd7e8992dc1c6c7e5203347bbe99520}\label{_sensor_8cpp_aedd7e8992dc1c6c7e5203347bbe99520} 
+\index{Sensor.cpp@{Sensor.cpp}!crest@{crest}}
+\index{crest@{crest}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{crest}{crest}}
+{\footnotesize\ttfamily bool crest = false}
+
+\Hypertarget{_sensor_8cpp_a08e60d812638cd2ce20ebb3247e7536b}\label{_sensor_8cpp_a08e60d812638cd2ce20ebb3247e7536b} 
+\index{Sensor.cpp@{Sensor.cpp}!dataBeenIncreasing@{dataBeenIncreasing}}
+\index{dataBeenIncreasing@{dataBeenIncreasing}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{dataBeenIncreasing}{dataBeenIncreasing}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+Been\+Increasing = 0}
+
+\Hypertarget{_sensor_8cpp_a6f35e3e346a56f25425b116e780c877e}\label{_sensor_8cpp_a6f35e3e346a56f25425b116e780c877e} 
+\index{Sensor.cpp@{Sensor.cpp}!hpf@{hpf}}
+\index{hpf@{hpf}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{hpf}{hpf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_high_pass_filter}{High\+Pass\+Filter}} hpf(0.\+08, M\+\_\+\+PI) (\begin{DoxyParamCaption}\item[{0.}]{08,  }\item[{M\+\_\+\+PI}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_sensor_8cpp_aaf52e25facdc0730fe4f48ab1fadeb81}\label{_sensor_8cpp_aaf52e25facdc0730fe4f48ab1fadeb81} 
+\index{Sensor.cpp@{Sensor.cpp}!lpf@{lpf}}
+\index{lpf@{lpf}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{lpf}{lpf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_low_pass_filter}{Low\+Pass\+Filter}} lpf(0.\+08, M\+\_\+\+PI) (\begin{DoxyParamCaption}\item[{0.}]{08,  }\item[{M\+\_\+\+PI}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{_sensor_8cpp_a26fc8eb07a21036fdd52a2b929510286}\label{_sensor_8cpp_a26fc8eb07a21036fdd52a2b929510286} 
+\index{Sensor.cpp@{Sensor.cpp}!nextPastPeaksIndex@{nextPastPeaksIndex}}
+\index{nextPastPeaksIndex@{nextPastPeaksIndex}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{nextPastPeaksIndex}{nextPastPeaksIndex}}
+{\footnotesize\ttfamily uint8\+\_\+t next\+Past\+Peaks\+Index = 0}
+
+\Hypertarget{_sensor_8cpp_a4c4b08e61e92b3da1ed512f4e006f34a}\label{_sensor_8cpp_a4c4b08e61e92b3da1ed512f4e006f34a} 
+\index{Sensor.cpp@{Sensor.cpp}!R@{R}}
+\index{R@{R}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily float R}
+
+\Hypertarget{_sensor_8cpp_a14d5016009ec6625df70a04f204cbb4e}\label{_sensor_8cpp_a14d5016009ec6625df70a04f204cbb4e} 
+\index{Sensor.cpp@{Sensor.cpp}!SpO2@{SpO2}}
+\index{SpO2@{SpO2}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{SpO2}{SpO2}}
+{\footnotesize\ttfamily float Sp\+O2}
+
+\Hypertarget{_sensor_8cpp_a45913989bc068224839a5c45266d5178}\label{_sensor_8cpp_a45913989bc068224839a5c45266d5178} 
+\index{Sensor.cpp@{Sensor.cpp}!trough@{trough}}
+\index{trough@{trough}!Sensor.cpp@{Sensor.cpp}}
+\doxysubsubsection{\texorpdfstring{trough}{trough}}
+{\footnotesize\ttfamily bool trough = false}
+

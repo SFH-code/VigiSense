@@ -1,0 +1,221 @@
+\doxysection{HRTracker Class Reference}
+\hypertarget{class_h_r_tracker}{}\label{class_h_r_tracker}\index{HRTracker@{HRTracker}}
+
+
+{\ttfamily \#include $<$HRTracker.\+h$>$}
+
+
+
+Inheritance diagram for HRTracker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{dd/d2a/class_h_r_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for HRTracker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{d8/da1/class_h_r_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_h_r_tracker_a06eff38513450420dd37fcafacf05e80}{HRTracker}} (\mbox{\hyperlink{classsensor}{sensor}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{class_h_r_tracker_ac871566145a83b2f34b9949e55c10ee3}{\texorpdfstring{$\sim$}{\string~}\+HRTracker}} ()
+\item 
+void \mbox{\hyperlink{class_h_r_tracker_aae9a56f501132e089595e6e830df8dfe}{start}} ()
+\item 
+void \mbox{\hyperlink{class_h_r_tracker_ac2a3b92fe6643eafab95cc6088ca67df}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_h_r_tracker_aeaa868d55b375843aa8219a340dd6252}{ping}} ()
+\item 
+int \mbox{\hyperlink{class_h_r_tracker_a3c6872477debf2dc825bdae95af99bc8}{get\+Val}} ()
+\item 
+void \mbox{\hyperlink{class_h_r_tracker_a333cf7f5fa7affafd6935cfc024bc863}{tracker}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_h_r_tracker_a6d4f6ccfccc65a242bfafb0fdb77680d}{ping\+Thread}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsensor}{sensor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_h_r_tracker_a39e3c1e268c378b1d7789bb7a2777f6b}{\+\_\+s}}
+\item 
+bool \mbox{\hyperlink{class_h_r_tracker_aa596c6a4ae11189bcbd591ac6f606fa8}{thread\+Running}} = false
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{class_h_r_tracker_aa2530509b265edd1af21c7d8a9a788e3}{symptom\+Ranges}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classdiagnosis_interface}{diagnosis\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptom\+Ranges}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classdiagnosis_interface}{diagnosis\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classdiagnosis_interface_ac23cf5e69c20f19de5fda5b55e49f437}{determine\+Symptom}} (std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptom\+Ranges}}, int val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_h_r_tracker_a06eff38513450420dd37fcafacf05e80}\label{class_h_r_tracker_a06eff38513450420dd37fcafacf05e80} 
+\index{HRTracker@{HRTracker}!HRTracker@{HRTracker}}
+\index{HRTracker@{HRTracker}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{HRTracker()}{HRTracker()}}
+{\footnotesize\ttfamily HRTracker\+::\+HRTracker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsensor}{sensor}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+\Hypertarget{class_h_r_tracker_ac871566145a83b2f34b9949e55c10ee3}\label{class_h_r_tracker_ac871566145a83b2f34b9949e55c10ee3} 
+\index{HRTracker@{HRTracker}!````~HRTracker@{\texorpdfstring{$\sim$}{\string~}HRTracker}}
+\index{````~HRTracker@{\texorpdfstring{$\sim$}{\string~}HRTracker}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HRTracker()}{\string~HRTracker()}}
+{\footnotesize\ttfamily HRTracker\+::\texorpdfstring{$\sim$}{\string~}\+HRTracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{df/dc0/class_h_r_tracker_ac871566145a83b2f34b9949e55c10ee3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_h_r_tracker_a3c6872477debf2dc825bdae95af99bc8}\label{class_h_r_tracker_a3c6872477debf2dc825bdae95af99bc8} 
+\index{HRTracker@{HRTracker}!getVal@{getVal}}
+\index{getVal@{getVal}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{getVal()}{getVal()}}
+{\footnotesize\ttfamily int HRTracker\+::get\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_ad6391b6e9fb21261d4353a5d850f6724}{diagnosis\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{df/dc0/class_h_r_tracker_a3c6872477debf2dc825bdae95af99bc8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_h_r_tracker_aeaa868d55b375843aa8219a340dd6252}\label{class_h_r_tracker_aeaa868d55b375843aa8219a340dd6252} 
+\index{HRTracker@{HRTracker}!ping@{ping}}
+\index{ping@{ping}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily void HRTracker\+::ping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_a9a8c6781d6813c939dfcdbc4ab54f573}{diagnosis\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/class_h_r_tracker_aeaa868d55b375843aa8219a340dd6252_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_h_r_tracker_a6d4f6ccfccc65a242bfafb0fdb77680d}\label{class_h_r_tracker_a6d4f6ccfccc65a242bfafb0fdb77680d} 
+\index{HRTracker@{HRTracker}!pingThread@{pingThread}}
+\index{pingThread@{pingThread}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{pingThread()}{pingThread()}}
+{\footnotesize\ttfamily void HRTracker\+::ping\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/class_h_r_tracker_a6d4f6ccfccc65a242bfafb0fdb77680d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_h_r_tracker_aae9a56f501132e089595e6e830df8dfe}\label{class_h_r_tracker_aae9a56f501132e089595e6e830df8dfe} 
+\index{HRTracker@{HRTracker}!start@{start}}
+\index{start@{start}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void HRTracker\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_a4aef943bb4435304bd736bfa5c381d5c}{diagnosis\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/class_h_r_tracker_aae9a56f501132e089595e6e830df8dfe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_h_r_tracker_ac2a3b92fe6643eafab95cc6088ca67df}\label{class_h_r_tracker_ac2a3b92fe6643eafab95cc6088ca67df} 
+\index{HRTracker@{HRTracker}!stop@{stop}}
+\index{stop@{stop}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void HRTracker\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_a40312067315d0cae8caad4817fec17b8}{diagnosis\+Interface}}.
+
+\Hypertarget{class_h_r_tracker_a333cf7f5fa7affafd6935cfc024bc863}\label{class_h_r_tracker_a333cf7f5fa7affafd6935cfc024bc863} 
+\index{HRTracker@{HRTracker}!tracker@{tracker}}
+\index{tracker@{tracker}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{tracker()}{tracker()}}
+{\footnotesize\ttfamily void HRTracker\+::tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc0/class_h_r_tracker_a333cf7f5fa7affafd6935cfc024bc863_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_h_r_tracker_a39e3c1e268c378b1d7789bb7a2777f6b}\label{class_h_r_tracker_a39e3c1e268c378b1d7789bb7a2777f6b} 
+\index{HRTracker@{HRTracker}!\_s@{\_s}}
+\index{\_s@{\_s}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{\_s}{\_s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsensor}{sensor}}\texorpdfstring{$\ast$}{*} HRTracker\+::\+\_\+s\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_h_r_tracker_aa2530509b265edd1af21c7d8a9a788e3}\label{class_h_r_tracker_aa2530509b265edd1af21c7d8a9a788e3} 
+\index{HRTracker@{HRTracker}!symptomRanges@{symptomRanges}}
+\index{symptomRanges@{symptomRanges}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{symptomRanges}{symptomRanges}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsymptom_range}{symptom\+Range}}$>$ HRTracker\+::symptom\+Ranges\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{0,60,\textcolor{stringliteral}{"{}Bradycardia"{}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{60,100,\textcolor{stringliteral}{"{}Normal\ resting\ heart\ rate"{}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{100,200,\textcolor{stringliteral}{"{}Tachyacardia"{}}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{class_h_r_tracker_aa596c6a4ae11189bcbd591ac6f606fa8}\label{class_h_r_tracker_aa596c6a4ae11189bcbd591ac6f606fa8} 
+\index{HRTracker@{HRTracker}!threadRunning@{threadRunning}}
+\index{threadRunning@{threadRunning}!HRTracker@{HRTracker}}
+\doxysubsubsection{\texorpdfstring{threadRunning}{threadRunning}}
+{\footnotesize\ttfamily bool HRTracker\+::thread\+Running = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_h_r_tracker_8h}{HRTracker.\+h}}\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_h_r_tracker_8cpp}{HRTracker.\+cpp}}\end{DoxyCompactItemize}

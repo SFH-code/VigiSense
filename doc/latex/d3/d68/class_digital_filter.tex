@@ -1,0 +1,64 @@
+\doxysection{Digital\+Filter\texorpdfstring{$<$}{<} Type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_digital_filter}{}\label{class_digital_filter}\index{DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}}
+
+
+Abstract base class for digital moving filters.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Type \mbox{\hyperlink{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}{update}} (Type new\+Value)=0
+\item 
+virtual Type \mbox{\hyperlink{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}{get\+Output}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+class Digital\+Filter$<$ Type $>$}
+Abstract base class for digital moving filters. 
+
+\begin{DoxyVerb}        Moving filter are real time filter used for applications where
+        continuous filtering is necessary as it can be part of an control
+        system.
+\end{DoxyVerb}
+ 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & Floating point type used. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}\label{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd} 
+\index{DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+virtual Type \mbox{\hyperlink{class_digital_filter}{Digital\+Filter}}$<$ Type $>$\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_differentiator_a108758b2c7607d9eb8ba4c3c7d1147bf}{Differentiator$<$ T $>$}}, \mbox{\hyperlink{class_low_pass_filter_a1657e76482842a49332e8f2c781c4da8}{Low\+Pass\+Filter}}, \mbox{\hyperlink{class_low_pass_filter2_aa65e10057d975ce9569503f71df2c8e1}{Low\+Pass\+Filter2}}, \mbox{\hyperlink{class_high_pass_filter_a2b9ae3490c32b86ff3404471f4e118f7}{High\+Pass\+Filter}}, \mbox{\hyperlink{class_high_pass_filter3_a85cf9d166660457475a0ee8d44b4ae30}{High\+Pass\+Filter3}}, \mbox{\hyperlink{class_low_pass_filter3_aa6dbecfcb05e369a7b51f1077eb29b7a}{Low\+Pass\+Filter3}}, \mbox{\hyperlink{class_low_pass_filter3_matched_z_a5190f065f0fecb5746117ea4e075762e}{Low\+Pass\+Filter3\+MatchedZ}}, and \mbox{\hyperlink{class_low_pass_filter3_diff_approx_a275b2f916d81c352bbea4785baeb6f46}{Low\+Pass\+Filter3\+Diff\+Approx}}.
+
+\Hypertarget{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}\label{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac} 
+\index{DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}!update@{update}}
+\index{update@{update}!DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+virtual Type \mbox{\hyperlink{class_digital_filter}{Digital\+Filter}}$<$ Type $>$\+::update (\begin{DoxyParamCaption}\item[{Type}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_low_pass_filter_a2c228363bfb581898a16dac854682160}{Low\+Pass\+Filter}}, \mbox{\hyperlink{class_low_pass_filter2_a053fed2b2d040e6dbfed5f1b6ddab3e6}{Low\+Pass\+Filter2}}, \mbox{\hyperlink{class_high_pass_filter_a4a409f17d0baf751719d99d29e2b1c93}{High\+Pass\+Filter}}, \mbox{\hyperlink{class_high_pass_filter3_a976f9cce2a86d7e8c674c0de9eded001}{High\+Pass\+Filter3}}, \mbox{\hyperlink{class_low_pass_filter3_aca178ba1b27181ab00c02b7bddd67d65}{Low\+Pass\+Filter3}}, \mbox{\hyperlink{class_low_pass_filter3_matched_z_a33b66cdaf560982a4be50bba27d90b5c}{Low\+Pass\+Filter3\+MatchedZ}}, \mbox{\hyperlink{class_low_pass_filter3_diff_approx_a0d15deda1d403508a3ffe0619cee00de}{Low\+Pass\+Filter3\+Diff\+Approx}}, and \mbox{\hyperlink{class_differentiator_aaad3555ad3d244d5c166a6b72dabc855}{Differentiator$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

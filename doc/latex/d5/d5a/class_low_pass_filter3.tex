@@ -1,0 +1,134 @@
+\doxysection{Low\+Pass\+Filter3 Class Reference}
+\hypertarget{class_low_pass_filter3}{}\label{class_low_pass_filter3}\index{LowPassFilter3@{LowPassFilter3}}
+
+
+Class for third order high pass filter. This is designed using the bilinear transform.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+
+
+Inheritance diagram for Low\+Pass\+Filter3\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{de/dc5/class_low_pass_filter3__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Low\+Pass\+Filter3\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d4f/class_low_pass_filter3__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_pass_filter3_a2aee3a775bf81a4e2c8ba565a45e2790}{Low\+Pass\+Filter3}} (long double sample\+Time, long double omega\+\_\+c, long double ioutput=0)
+\item 
+double \mbox{\hyperlink{class_low_pass_filter3_aca178ba1b27181ab00c02b7bddd67d65}{update}} (double new\+Value) final
+\item 
+double \mbox{\hyperlink{class_low_pass_filter3_aa6dbecfcb05e369a7b51f1077eb29b7a}{get\+Output}} () final
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{class_low_pass_filter3_ae2c8a18255fb396759f2bda8a6e96161}{yc}} \mbox{[}4\mbox{]}
+\item 
+const double \mbox{\hyperlink{class_low_pass_filter3_a88557832c8316450937d185ebc6a8f1c}{xc}} \mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ double, 3 $>$ \mbox{\hyperlink{class_low_pass_filter3_a23e36b493256fb664e72e2fd656d2809}{y}}
+\item 
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ double, 4 $>$ \mbox{\hyperlink{class_low_pass_filter3_af6917c9fa14669d50fdf1b43f5cd6f90}{x}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for third order high pass filter. This is designed using the bilinear transform. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_low_pass_filter3_a2aee3a775bf81a4e2c8ba565a45e2790}\label{class_low_pass_filter3_a2aee3a775bf81a4e2c8ba565a45e2790} 
+\index{LowPassFilter3@{LowPassFilter3}!LowPassFilter3@{LowPassFilter3}}
+\index{LowPassFilter3@{LowPassFilter3}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{LowPassFilter3()}{LowPassFilter3()}}
+{\footnotesize\ttfamily Low\+Pass\+Filter3\+::\+Low\+Pass\+Filter3 (\begin{DoxyParamCaption}\item[{long double}]{sample\+Time,  }\item[{long double}]{omega\+\_\+c,  }\item[{long double}]{ioutput = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_low_pass_filter3_aa6dbecfcb05e369a7b51f1077eb29b7a}\label{class_low_pass_filter3_aa6dbecfcb05e369a7b51f1077eb29b7a} 
+\index{LowPassFilter3@{LowPassFilter3}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily double Low\+Pass\+Filter3\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}{Digital\+Filter$<$ double $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d5a/class_low_pass_filter3_aa6dbecfcb05e369a7b51f1077eb29b7a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_low_pass_filter3_aca178ba1b27181ab00c02b7bddd67d65}\label{class_low_pass_filter3_aca178ba1b27181ab00c02b7bddd67d65} 
+\index{LowPassFilter3@{LowPassFilter3}!update@{update}}
+\index{update@{update}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily double Low\+Pass\+Filter3\+::update (\begin{DoxyParamCaption}\item[{double}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}{Digital\+Filter$<$ double $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d5a/class_low_pass_filter3_aca178ba1b27181ab00c02b7bddd67d65_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_low_pass_filter3_af6917c9fa14669d50fdf1b43f5cd6f90}\label{class_low_pass_filter3_af6917c9fa14669d50fdf1b43f5cd6f90} 
+\index{LowPassFilter3@{LowPassFilter3}!x@{x}}
+\index{x@{x}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$double, 4$>$ Low\+Pass\+Filter3\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_a88557832c8316450937d185ebc6a8f1c}\label{class_low_pass_filter3_a88557832c8316450937d185ebc6a8f1c} 
+\index{LowPassFilter3@{LowPassFilter3}!xc@{xc}}
+\index{xc@{xc}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{xc}{xc}}
+{\footnotesize\ttfamily const double Low\+Pass\+Filter3\+::xc\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_a23e36b493256fb664e72e2fd656d2809}\label{class_low_pass_filter3_a23e36b493256fb664e72e2fd656d2809} 
+\index{LowPassFilter3@{LowPassFilter3}!y@{y}}
+\index{y@{y}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$double, 3$>$ Low\+Pass\+Filter3\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_ae2c8a18255fb396759f2bda8a6e96161}\label{class_low_pass_filter3_ae2c8a18255fb396759f2bda8a6e96161} 
+\index{LowPassFilter3@{LowPassFilter3}!yc@{yc}}
+\index{yc@{yc}!LowPassFilter3@{LowPassFilter3}}
+\doxysubsubsection{\texorpdfstring{yc}{yc}}
+{\footnotesize\ttfamily const double Low\+Pass\+Filter3\+::yc\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

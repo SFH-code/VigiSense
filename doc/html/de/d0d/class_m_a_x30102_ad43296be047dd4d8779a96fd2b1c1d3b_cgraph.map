@@ -1,0 +1,24 @@
+<map id="MAX30102::dataReady" name="MAX30102::dataReady">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,129,176,155"/>
+<area shape="rect" id="Node000002" href="$de/d0d/class_m_a_x30102.html#a023a175af4f01d54f24f632296f71775" title=" " alt="" coords="241,80,379,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,127,239,106,240,111,148,132"/>
+<area shape="rect" id="Node000009" href="$de/d0d/class_m_a_x30102.html#aab729787b966462162f4e007b60c8075" title=" " alt="" coords="224,153,396,179"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="177,149,211,152,210,158,176,154"/>
+<area shape="rect" id="Node000003" href="$de/d0d/class_m_a_x30102.html#a99dd07d94cdca56a0116bd3bc40eeb66" title=" " alt="" coords="445,5,645,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,77,443,39,472,31,473,37,445,45,342,82"/>
+<area shape="rect" id="Node000005" href="$de/d0d/class_m_a_x30102.html#aeaf1c7ea1764c7d0553386cabfb783e6" title=" " alt="" coords="444,55,647,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="380,83,430,77,430,82,380,88"/>
+<area shape="rect" id="Node000006" href="$de/d0d/class_m_a_x30102.html#af0ad00b5666d727c58998ae2065b216e" title=" " alt="" coords="463,104,628,129"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="380,97,449,104,449,110,380,102"/>
+<area shape="rect" id="Node000004" href="$df/dbf/i2c-dev_8h.html#aea6f5d01ddd9b73cba89994e500e0f57" title=" " alt="" coords="695,27,893,52"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="646,24,681,27,680,32,645,29"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="646,53,681,49,681,55,647,59"/>
+<area shape="rect" id="Node000007" href="$df/dbf/i2c-dev_8h.html#ad1d9f5dc78129ff0052c1490a7b5544e" title=" " alt="" coords="717,97,871,137"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="628,114,704,114,704,119,628,119"/>
+<area shape="rect" id="Node000008" href="$df/dbf/i2c-dev_8h.html#a692ece12f1304be77218167ca15bc3a0" title=" " alt="" coords="941,104,1084,129"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="871,114,928,114,928,119,871,119"/>
+<area shape="rect" id="Node000010" href="$de/d0d/class_m_a_x30102.html#ad06cdfa399f91057cc2e8e7c872877e0" title=" " alt="" coords="478,153,613,179"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="397,163,464,163,464,169,397,169"/>
+<area shape="rect" id="Node000011" href="$de/d0d/class_m_a_x30102.html#a824883df0943c7accc013f05792e557d" title=" " alt="" coords="472,203,619,228"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="372,176,471,197,470,202,371,181"/>
+</map>

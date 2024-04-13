@@ -1,0 +1,7 @@
+<map id="SPO2Tracker::pingThread" name="SPO2Tracker::pingThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,188,56"/>
+<area shape="rect" id="Node000002" href="$d2/d45/class_device_publisher.html#af499e17f8c19e19987fbed90b6cec470" title="Initialize the publisher." alt="" coords="249,5,405,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,31,235,25,236,31,188,36"/>
+<area shape="rect" id="Node000003" href="$d2/d45/class_device_publisher.html#abe1b6c067398e780a020c9556ffeaeff" title="Send a publication." alt="" coords="236,55,419,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,50,223,54,222,59,188,55"/>
+</map>

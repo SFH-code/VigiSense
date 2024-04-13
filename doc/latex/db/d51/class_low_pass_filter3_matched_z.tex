@@ -1,0 +1,126 @@
+\doxysection{Low\+Pass\+Filter3\+MatchedZ Class Reference}
+\hypertarget{class_low_pass_filter3_matched_z}{}\label{class_low_pass_filter3_matched_z}\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+
+
+Class for third order high pass filter. This is designed using the matched Z transform.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+
+
+Inheritance diagram for Low\+Pass\+Filter3\+MatchedZ\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{d0/d81/class_low_pass_filter3_matched_z__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Low\+Pass\+Filter3\+MatchedZ\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/df6/class_low_pass_filter3_matched_z__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_pass_filter3_matched_z_a2987ee0dd4328d4abab2efb5498a3cea}{Low\+Pass\+Filter3\+MatchedZ}} (long double sample\+Time, long double omega\+\_\+c)
+\item 
+double \mbox{\hyperlink{class_low_pass_filter3_matched_z_a33b66cdaf560982a4be50bba27d90b5c}{update}} (double new\+Value) final
+\item 
+double \mbox{\hyperlink{class_low_pass_filter3_matched_z_a5190f065f0fecb5746117ea4e075762e}{get\+Output}} () final
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{class_low_pass_filter3_matched_z_aa16d74d15d2b2ed64241b324e3bb815d}{ampl\+Fac}}
+\item 
+const double \mbox{\hyperlink{class_low_pass_filter3_matched_z_a90fe8654d4083ba4f608a209329b8683}{yc}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ double, 3 $>$ \mbox{\hyperlink{class_low_pass_filter3_matched_z_a73a2a7518a42df985fcef41c3288a76b}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for third order high pass filter. This is designed using the matched Z transform. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_low_pass_filter3_matched_z_a2987ee0dd4328d4abab2efb5498a3cea}\label{class_low_pass_filter3_matched_z_a2987ee0dd4328d4abab2efb5498a3cea} 
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\doxysubsubsection{\texorpdfstring{LowPassFilter3MatchedZ()}{LowPassFilter3MatchedZ()}}
+{\footnotesize\ttfamily Low\+Pass\+Filter3\+Matched\+Z\+::\+Low\+Pass\+Filter3\+MatchedZ (\begin{DoxyParamCaption}\item[{long double}]{sample\+Time,  }\item[{long double}]{omega\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_low_pass_filter3_matched_z_a5190f065f0fecb5746117ea4e075762e}\label{class_low_pass_filter3_matched_z_a5190f065f0fecb5746117ea4e075762e} 
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily double Low\+Pass\+Filter3\+Matched\+Z\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}{Digital\+Filter$<$ double $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d51/class_low_pass_filter3_matched_z_a5190f065f0fecb5746117ea4e075762e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_low_pass_filter3_matched_z_a33b66cdaf560982a4be50bba27d90b5c}\label{class_low_pass_filter3_matched_z_a33b66cdaf560982a4be50bba27d90b5c} 
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!update@{update}}
+\index{update@{update}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily double Low\+Pass\+Filter3\+Matched\+Z\+::update (\begin{DoxyParamCaption}\item[{double}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}{Digital\+Filter$<$ double $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d51/class_low_pass_filter3_matched_z_a33b66cdaf560982a4be50bba27d90b5c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_low_pass_filter3_matched_z_aa16d74d15d2b2ed64241b324e3bb815d}\label{class_low_pass_filter3_matched_z_aa16d74d15d2b2ed64241b324e3bb815d} 
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!amplFac@{amplFac}}
+\index{amplFac@{amplFac}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\doxysubsubsection{\texorpdfstring{amplFac}{amplFac}}
+{\footnotesize\ttfamily const double Low\+Pass\+Filter3\+Matched\+Z\+::ampl\+Fac\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_matched_z_a73a2a7518a42df985fcef41c3288a76b}\label{class_low_pass_filter3_matched_z_a73a2a7518a42df985fcef41c3288a76b} 
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!y@{y}}
+\index{y@{y}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$double, 3$>$ Low\+Pass\+Filter3\+Matched\+Z\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_matched_z_a90fe8654d4083ba4f608a209329b8683}\label{class_low_pass_filter3_matched_z_a90fe8654d4083ba4f608a209329b8683} 
+\index{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!yc@{yc}}
+\index{yc@{yc}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}}
+\doxysubsubsection{\texorpdfstring{yc}{yc}}
+{\footnotesize\ttfamily const double Low\+Pass\+Filter3\+Matched\+Z\+::yc\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

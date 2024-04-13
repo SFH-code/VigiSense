@@ -1,0 +1,31 @@
+\doxysection{HRTracker.\+h}
+\hypertarget{_h_r_tracker_8h_source}{}\label{_h_r_tracker_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/HRTracker.h@{/home/sitcomlab/Projects/VigiSense/src/HRTracker.h}}
+\mbox{\hyperlink{_h_r_tracker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_diagnosis_interface_8h}{DiagnosisInterface.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sensor_8h}{Sensor.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_h_r_tracker}{HRTracker}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{classdiagnosis_interface}{diagnosisInterface}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_h_r_tracker_a06eff38513450420dd37fcafacf05e80}{HRTracker}}(\mbox{\hyperlink{classsensor}{sensor}}\ *s);}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_h_r_tracker_ac871566145a83b2f34b9949e55c10ee3}{\string~HRTracker}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_r_tracker_aae9a56f501132e089595e6e830df8dfe}{start}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_r_tracker_ac2a3b92fe6643eafab95cc6088ca67df}{stop}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_r_tracker_aeaa868d55b375843aa8219a340dd6252}{ping}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_h_r_tracker_a3c6872477debf2dc825bdae95af99bc8}{getVal}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_r_tracker_a333cf7f5fa7affafd6935cfc024bc863}{tracker}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsensor}{sensor}}*\ \mbox{\hyperlink{class_h_r_tracker_a39e3c1e268c378b1d7789bb7a2777f6b}{\_s}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_h_r_tracker_aa596c6a4ae11189bcbd591ac6f606fa8}{threadRunning}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_r_tracker_a6d4f6ccfccc65a242bfafb0fdb77680d}{pingThread}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ define\ symptom\ table\ here}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<symptomRange>\ \mbox{\hyperlink{class_h_r_tracker_aa2530509b265edd1af21c7d8a9a788e3}{symptomRanges}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{0,60,\textcolor{stringliteral}{"{}Bradycardia"{}}\},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{60,100,\textcolor{stringliteral}{"{}Normal\ resting\ heart\ rate"{}}\},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{100,200,\textcolor{stringliteral}{"{}Tachyacardia"{}}\}\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

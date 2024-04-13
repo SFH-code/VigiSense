@@ -1,0 +1,159 @@
+\doxysection{diagnosis Class Reference}
+\hypertarget{classdiagnosis}{}\label{classdiagnosis}\index{diagnosis@{diagnosis}}
+
+
+{\ttfamily \#include $<$Diagnosis.\+h$>$}
+
+
+
+Collaboration diagram for diagnosis\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dfe/classdiagnosis__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdiagnosis_1_1_diagnoses_table}{Diagnoses\+Table}}
+\item 
+struct \mbox{\hyperlink{structdiagnosis_1_1_diagnosis_range}{Diagnosis\+Range}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdiagnosis_1_1_diagnosis_range}{diagnosis\+::\+Diagnosis\+Range}} \mbox{\hyperlink{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}{Diagnosis\+\_\+\+Range}}
+\item 
+typedef struct \mbox{\hyperlink{structdiagnosis_1_1_diagnoses_table}{diagnosis\+::\+Diagnoses\+Table}} \mbox{\hyperlink{classdiagnosis_a562c071012a7101594922764eee98e33}{\+\_\+\+Diagnoses}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdiagnosis_acf25abd2e985b6bd9d550a54c44702da}{Setdiagnosis\+Ranges}} (float minimum, float maximum, std\+::string \mbox{\hyperlink{classdiagnosis}{diagnosis}})
+\item 
+std\+::string \mbox{\hyperlink{classdiagnosis_a4d530d71e8ad54bcb0dd439691cb4571}{determine\+Diagnosis}} ()
+\item 
+void \mbox{\hyperlink{classdiagnosis_a9be29a3e4632a48c9e300a83db23a0b1}{crit\+Check}} ()
+\item 
+void \mbox{\hyperlink{classdiagnosis_a9473b59f1283ca9ea5d3e90ad1a6e6f6}{find\+Min\+Max}} ()
+\item 
+virtual void \mbox{\hyperlink{classdiagnosis_a6cef4053affd5df1fbf274589aa2f96f}{display\+Diagnosis}} ()
+\item 
+virtual void \mbox{\hyperlink{classdiagnosis_afd19b8db767dbd193133aba8872d805b}{crit\+Range\+Alert}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}{Diagnosis\+\_\+\+Range}} \mbox{\hyperlink{classdiagnosis_afad29fe9cdd08a46743d25813467f150}{std\+Diagnosis}}
+\item 
+\mbox{\hyperlink{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}{Diagnosis\+\_\+\+Range}} \mbox{\hyperlink{classdiagnosis_ac1b1a81c810a9fdbbb941bbc26efcf54}{Custom\+Diagnosis}}
+\item 
+\mbox{\hyperlink{classdiagnosis_a562c071012a7101594922764eee98e33}{\+\_\+\+Diagnoses}} \mbox{\hyperlink{classdiagnosis_a4b842e813094d61b71cda1176afc905a}{std\+Diagnoses}}
+\item 
+\mbox{\hyperlink{classdiagnosis_a562c071012a7101594922764eee98e33}{\+\_\+\+Diagnoses}} \mbox{\hyperlink{classdiagnosis_a319bf2d98df3a9de07903219fe4b9f79}{Custom\+Diagnoses}}
+\item 
+float \mbox{\hyperlink{classdiagnosis_a411566a88000b4b397019741e0e1376e}{Critical\+Low}}
+\item 
+float \mbox{\hyperlink{classdiagnosis_a3844772c426f997b89248f67d490bbf1}{Critical\+High}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classdiagnosis_a562c071012a7101594922764eee98e33}\label{classdiagnosis_a562c071012a7101594922764eee98e33} 
+\index{diagnosis@{diagnosis}!\_Diagnoses@{\_Diagnoses}}
+\index{\_Diagnoses@{\_Diagnoses}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{\_Diagnoses}{\_Diagnoses}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdiagnosis_1_1_diagnoses_table}{diagnosis\+::\+Diagnoses\+Table}} \mbox{\hyperlink{classdiagnosis_a562c071012a7101594922764eee98e33}{diagnosis\+::\+\_\+\+Diagnoses}}}
+
+\Hypertarget{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}\label{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157} 
+\index{diagnosis@{diagnosis}!Diagnosis\_Range@{Diagnosis\_Range}}
+\index{Diagnosis\_Range@{Diagnosis\_Range}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{Diagnosis\_Range}{Diagnosis\_Range}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdiagnosis_1_1_diagnosis_range}{diagnosis\+::\+Diagnosis\+Range}} \mbox{\hyperlink{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}{diagnosis\+::\+Diagnosis\+\_\+\+Range}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdiagnosis_a9be29a3e4632a48c9e300a83db23a0b1}\label{classdiagnosis_a9be29a3e4632a48c9e300a83db23a0b1} 
+\index{diagnosis@{diagnosis}!critCheck@{critCheck}}
+\index{critCheck@{critCheck}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{critCheck()}{critCheck()}}
+{\footnotesize\ttfamily void diagnosis\+::crit\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classdiagnosis_afd19b8db767dbd193133aba8872d805b}\label{classdiagnosis_afd19b8db767dbd193133aba8872d805b} 
+\index{diagnosis@{diagnosis}!critRangeAlert@{critRangeAlert}}
+\index{critRangeAlert@{critRangeAlert}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{critRangeAlert()}{critRangeAlert()}}
+{\footnotesize\ttfamily virtual void diagnosis\+::crit\+Range\+Alert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{classdiagnosis_a4d530d71e8ad54bcb0dd439691cb4571}\label{classdiagnosis_a4d530d71e8ad54bcb0dd439691cb4571} 
+\index{diagnosis@{diagnosis}!determineDiagnosis@{determineDiagnosis}}
+\index{determineDiagnosis@{determineDiagnosis}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{determineDiagnosis()}{determineDiagnosis()}}
+{\footnotesize\ttfamily std\+::string diagnosis\+::determine\+Diagnosis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classdiagnosis_a6cef4053affd5df1fbf274589aa2f96f}\label{classdiagnosis_a6cef4053affd5df1fbf274589aa2f96f} 
+\index{diagnosis@{diagnosis}!displayDiagnosis@{displayDiagnosis}}
+\index{displayDiagnosis@{displayDiagnosis}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{displayDiagnosis()}{displayDiagnosis()}}
+{\footnotesize\ttfamily virtual void diagnosis\+::display\+Diagnosis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{classdiagnosis_a9473b59f1283ca9ea5d3e90ad1a6e6f6}\label{classdiagnosis_a9473b59f1283ca9ea5d3e90ad1a6e6f6} 
+\index{diagnosis@{diagnosis}!findMinMax@{findMinMax}}
+\index{findMinMax@{findMinMax}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{findMinMax()}{findMinMax()}}
+{\footnotesize\ttfamily void diagnosis\+::find\+Min\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classdiagnosis_acf25abd2e985b6bd9d550a54c44702da}\label{classdiagnosis_acf25abd2e985b6bd9d550a54c44702da} 
+\index{diagnosis@{diagnosis}!SetdiagnosisRanges@{SetdiagnosisRanges}}
+\index{SetdiagnosisRanges@{SetdiagnosisRanges}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{SetdiagnosisRanges()}{SetdiagnosisRanges()}}
+{\footnotesize\ttfamily void diagnosis\+::\+Setdiagnosis\+Ranges (\begin{DoxyParamCaption}\item[{float}]{minimum,  }\item[{float}]{maximum,  }\item[{std\+::string}]{diagnosis }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdiagnosis_a3844772c426f997b89248f67d490bbf1}\label{classdiagnosis_a3844772c426f997b89248f67d490bbf1} 
+\index{diagnosis@{diagnosis}!CriticalHigh@{CriticalHigh}}
+\index{CriticalHigh@{CriticalHigh}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{CriticalHigh}{CriticalHigh}}
+{\footnotesize\ttfamily float diagnosis\+::\+Critical\+High}
+
+\Hypertarget{classdiagnosis_a411566a88000b4b397019741e0e1376e}\label{classdiagnosis_a411566a88000b4b397019741e0e1376e} 
+\index{diagnosis@{diagnosis}!CriticalLow@{CriticalLow}}
+\index{CriticalLow@{CriticalLow}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{CriticalLow}{CriticalLow}}
+{\footnotesize\ttfamily float diagnosis\+::\+Critical\+Low}
+
+\Hypertarget{classdiagnosis_a319bf2d98df3a9de07903219fe4b9f79}\label{classdiagnosis_a319bf2d98df3a9de07903219fe4b9f79} 
+\index{diagnosis@{diagnosis}!CustomDiagnoses@{CustomDiagnoses}}
+\index{CustomDiagnoses@{CustomDiagnoses}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{CustomDiagnoses}{CustomDiagnoses}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdiagnosis_a562c071012a7101594922764eee98e33}{\+\_\+\+Diagnoses}} diagnosis\+::\+Custom\+Diagnoses}
+
+\Hypertarget{classdiagnosis_ac1b1a81c810a9fdbbb941bbc26efcf54}\label{classdiagnosis_ac1b1a81c810a9fdbbb941bbc26efcf54} 
+\index{diagnosis@{diagnosis}!CustomDiagnosis@{CustomDiagnosis}}
+\index{CustomDiagnosis@{CustomDiagnosis}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{CustomDiagnosis}{CustomDiagnosis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}{Diagnosis\+\_\+\+Range}} diagnosis\+::\+Custom\+Diagnosis}
+
+\Hypertarget{classdiagnosis_a4b842e813094d61b71cda1176afc905a}\label{classdiagnosis_a4b842e813094d61b71cda1176afc905a} 
+\index{diagnosis@{diagnosis}!stdDiagnoses@{stdDiagnoses}}
+\index{stdDiagnoses@{stdDiagnoses}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{stdDiagnoses}{stdDiagnoses}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdiagnosis_a562c071012a7101594922764eee98e33}{\+\_\+\+Diagnoses}} diagnosis\+::std\+Diagnoses}
+
+\Hypertarget{classdiagnosis_afad29fe9cdd08a46743d25813467f150}\label{classdiagnosis_afad29fe9cdd08a46743d25813467f150} 
+\index{diagnosis@{diagnosis}!stdDiagnosis@{stdDiagnosis}}
+\index{stdDiagnosis@{stdDiagnosis}!diagnosis@{diagnosis}}
+\doxysubsubsection{\texorpdfstring{stdDiagnosis}{stdDiagnosis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdiagnosis_ab72c1b56faa78f7f3cb3695c7c2a6157}{Diagnosis\+\_\+\+Range}} diagnosis\+::std\+Diagnosis}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_diagnosis_8h}{Diagnosis.\+h}}\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_diagnosis_8cpp}{Diagnosis.\+cpp}}\end{DoxyCompactItemize}

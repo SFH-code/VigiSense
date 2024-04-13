@@ -1,0 +1,26 @@
+<map id="/home/sitcomlab/Projects/VigiSense/src/Sensor.h" name="/home/sitcomlab/Projects/VigiSense/src/Sensor.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="463,5,649,45"/>
+<area shape="rect" id="Node000002" href="$df/ddc/_diagnosis_8cpp.html" title=" " alt="" coords="5,181,213,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="456,51,386,71,316,96,279,114,244,136,149,184,147,179,241,131,277,110,314,91,385,66,455,46"/>
+<area shape="rect" id="Node000003" href="$d7/d94/_diagnosis_8h.html" title=" " alt="" coords="38,93,231,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="451,51,227,96,226,91,450,46"/>
+<area shape="rect" id="Node000004" href="$d5/d36/_h_r_tracker_8h.html" title=" " alt="" coords="327,93,519,133"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="516,55,454,95,451,91,514,51"/>
+<area shape="rect" id="Node000006" href="$df/dac/test_8cpp.html" title=" " alt="" coords="469,181,656,221"/>
+<area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="560,59,565,181,559,181,555,59"/>
+<area shape="rect" id="Node000007" href="$d3/d1a/test_sp_o2_8cpp.html" title=" " alt="" coords="680,181,883,221"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="664,38,755,60,792,74,815,92,824,115,821,139,811,163,799,183,794,180,806,160,816,138,819,115,811,95,789,79,754,65,663,44"/>
+<area shape="rect" id="Node000008" href="$d9/dc2/_s_p_o2_tracker_8h.html" title=" " alt="" coords="593,93,801,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="600,50,668,91,665,96,597,55"/>
+<area shape="rect" id="Node000010" href="$d6/d3e/_sensor_8cpp.html" title=" " alt="" coords="876,93,1063,133"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="660,46,879,91,878,96,659,51"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="128,147,117,182,112,180,123,146"/>
+<area shape="rect" id="Node000005" href="$d5/d43/_h_r_tracker_8cpp.html" title=" " alt="" coords="238,181,445,221"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="397,145,361,183,357,179,393,142"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="466,138,533,179,531,184,464,143"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="515,134,703,179,702,184,514,139"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="657,143,594,183,591,179,654,139"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="727,141,765,179,761,183,723,145"/>
+<area shape="rect" id="Node000009" href="$d9/d97/_s_p_o2_tracker_8cpp.html" title=" " alt="" coords="907,181,1130,221"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="781,134,949,179,948,184,780,139"/>
+</map>

@@ -1,0 +1,189 @@
+\doxysection{alert\+Pub\+Sub\+Type Class Reference}
+\hypertarget{classalert_pub_sub_type}{}\label{classalert_pub_sub_type}\index{alertPubSubType@{alertPubSubType}}
+
+
+This class represents the Topic\+Data\+Type of the type alert defined by the user in the IDL file.  
+
+
+
+
+{\ttfamily \#include $<$alert\+Pub\+Sub\+Types.\+h$>$}
+
+
+
+Inheritance diagram for alert\+Pub\+Sub\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{dc/de1/classalert_pub_sub_type__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for alert\+Pub\+Sub\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d9/d8e/classalert_pub_sub_type__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classalert}{alert}} \mbox{\hyperlink{classalert_pub_sub_type_a64e29c129a5e12ac185a278671113538}{type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} \mbox{\hyperlink{classalert_pub_sub_type_acd723e61732e3ffb689735a2bf451a60}{alert\+Pub\+Sub\+Type}} ()
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} \mbox{\hyperlink{classalert_pub_sub_type_a19662a4f241b021ba0519cde15904275}{\texorpdfstring{$\sim$}{\string~}alert\+Pub\+Sub\+Type}} () override
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} bool \mbox{\hyperlink{classalert_pub_sub_type_ab7459a69b01bc39c93d9a22fc4e04c47}{serialize}} (void \texorpdfstring{$\ast$}{*}data, eprosima\+::fastrtps\+::rtps\+::\+Serialized\+Payload\+\_\+t \texorpdfstring{$\ast$}{*}payload) override
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} bool \mbox{\hyperlink{classalert_pub_sub_type_acb5629c10dca73834b4c72b801a0bc8e}{deserialize}} (eprosima\+::fastrtps\+::rtps\+::\+Serialized\+Payload\+\_\+t \texorpdfstring{$\ast$}{*}payload, void \texorpdfstring{$\ast$}{*}data) override
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} std\+::function$<$ uint32\+\_\+t()$>$ \mbox{\hyperlink{classalert_pub_sub_type_af9352ff2e8b3f716352e6a2fd8fadfe6}{get\+Serialized\+Size\+Provider}} (void \texorpdfstring{$\ast$}{*}data) override
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} bool \mbox{\hyperlink{classalert_pub_sub_type_a2461d59d1a28ea0145f16e108e25bcc9}{get\+Key}} (void \texorpdfstring{$\ast$}{*}data, eprosima\+::fastrtps\+::rtps\+::\+Instance\+Handle\+\_\+t \texorpdfstring{$\ast$}{*}ihandle, bool force\+\_\+md5=false) override
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classalert_pub_sub_type_a2319abb06a1a5d8edd098fb217bd0bf8}{create\+Data}} () override
+\item 
+virtual \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{e\+Prosima\+\_\+user\+\_\+\+Dll\+Export}} void \mbox{\hyperlink{classalert_pub_sub_type_aa4f19d525086a5fec072d4bc63376d0c}{delete\+Data}} (void \texorpdfstring{$\ast$}{*}data) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+MD5 \mbox{\hyperlink{classalert_pub_sub_type_a0ea44fe23759c57d50bf31938fde40e1}{m\+\_\+md5}}
+\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classalert_pub_sub_type_a2508a5fb2bfaf18261cbef223370bf69}{m\+\_\+key\+Buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the Topic\+Data\+Type of the type alert defined by the user in the IDL file. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classalert_pub_sub_type_a64e29c129a5e12ac185a278671113538}\label{classalert_pub_sub_type_a64e29c129a5e12ac185a278671113538} 
+\index{alertPubSubType@{alertPubSubType}!type@{type}}
+\index{type@{type}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classalert}{alert}} \mbox{\hyperlink{classalert_pub_sub_type_a64e29c129a5e12ac185a278671113538}{alert\+Pub\+Sub\+Type\+::type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classalert_pub_sub_type_acd723e61732e3ffb689735a2bf451a60}\label{classalert_pub_sub_type_acd723e61732e3ffb689735a2bf451a60} 
+\index{alertPubSubType@{alertPubSubType}!alertPubSubType@{alertPubSubType}}
+\index{alertPubSubType@{alertPubSubType}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{alertPubSubType()}{alertPubSubType()}}
+{\footnotesize\ttfamily alert\+Pub\+Sub\+Type\+::alert\+Pub\+Sub\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d4a/classalert_pub_sub_type_acd723e61732e3ffb689735a2bf451a60_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classalert_pub_sub_type_a19662a4f241b021ba0519cde15904275}\label{classalert_pub_sub_type_a19662a4f241b021ba0519cde15904275} 
+\index{alertPubSubType@{alertPubSubType}!````~alertPubSubType@{\texorpdfstring{$\sim$}{\string~}alertPubSubType}}
+\index{````~alertPubSubType@{\texorpdfstring{$\sim$}{\string~}alertPubSubType}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}alertPubSubType()}{\string~alertPubSubType()}}
+{\footnotesize\ttfamily alert\+Pub\+Sub\+Type\+::\texorpdfstring{$\sim$}{\string~}alert\+Pub\+Sub\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classalert_pub_sub_type_a2319abb06a1a5d8edd098fb217bd0bf8}\label{classalert_pub_sub_type_a2319abb06a1a5d8edd098fb217bd0bf8} 
+\index{alertPubSubType@{alertPubSubType}!createData@{createData}}
+\index{createData@{createData}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{createData()}{createData()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} alert\+Pub\+Sub\+Type\+::create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classalert_pub_sub_type_aa4f19d525086a5fec072d4bc63376d0c}\label{classalert_pub_sub_type_aa4f19d525086a5fec072d4bc63376d0c} 
+\index{alertPubSubType@{alertPubSubType}!deleteData@{deleteData}}
+\index{deleteData@{deleteData}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{deleteData()}{deleteData()}}
+{\footnotesize\ttfamily void alert\+Pub\+Sub\+Type\+::delete\+Data (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classalert_pub_sub_type_acb5629c10dca73834b4c72b801a0bc8e}\label{classalert_pub_sub_type_acb5629c10dca73834b4c72b801a0bc8e} 
+\index{alertPubSubType@{alertPubSubType}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{deserialize()}{deserialize()}}
+{\footnotesize\ttfamily bool alert\+Pub\+Sub\+Type\+::deserialize (\begin{DoxyParamCaption}\item[{eprosima\+::fastrtps\+::rtps\+::\+Serialized\+Payload\+\_\+t \texorpdfstring{$\ast$}{*}}]{payload,  }\item[{void \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d4a/classalert_pub_sub_type_acb5629c10dca73834b4c72b801a0bc8e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classalert_pub_sub_type_a2461d59d1a28ea0145f16e108e25bcc9}\label{classalert_pub_sub_type_a2461d59d1a28ea0145f16e108e25bcc9} 
+\index{alertPubSubType@{alertPubSubType}!getKey@{getKey}}
+\index{getKey@{getKey}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily bool alert\+Pub\+Sub\+Type\+::get\+Key (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{eprosima\+::fastrtps\+::rtps\+::\+Instance\+Handle\+\_\+t \texorpdfstring{$\ast$}{*}}]{ihandle,  }\item[{bool}]{force\+\_\+md5 = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d4a/classalert_pub_sub_type_a2461d59d1a28ea0145f16e108e25bcc9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classalert_pub_sub_type_af9352ff2e8b3f716352e6a2fd8fadfe6}\label{classalert_pub_sub_type_af9352ff2e8b3f716352e6a2fd8fadfe6} 
+\index{alertPubSubType@{alertPubSubType}!getSerializedSizeProvider@{getSerializedSizeProvider}}
+\index{getSerializedSizeProvider@{getSerializedSizeProvider}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{getSerializedSizeProvider()}{getSerializedSizeProvider()}}
+{\footnotesize\ttfamily std\+::function$<$ uint32\+\_\+t()$>$ alert\+Pub\+Sub\+Type\+::get\+Serialized\+Size\+Provider (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d4a/classalert_pub_sub_type_af9352ff2e8b3f716352e6a2fd8fadfe6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classalert_pub_sub_type_ab7459a69b01bc39c93d9a22fc4e04c47}\label{classalert_pub_sub_type_ab7459a69b01bc39c93d9a22fc4e04c47} 
+\index{alertPubSubType@{alertPubSubType}!serialize@{serialize}}
+\index{serialize@{serialize}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily bool alert\+Pub\+Sub\+Type\+::serialize (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{eprosima\+::fastrtps\+::rtps\+::\+Serialized\+Payload\+\_\+t \texorpdfstring{$\ast$}{*}}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{dd/d4a/classalert_pub_sub_type_ab7459a69b01bc39c93d9a22fc4e04c47_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classalert_pub_sub_type_a2508a5fb2bfaf18261cbef223370bf69}\label{classalert_pub_sub_type_a2508a5fb2bfaf18261cbef223370bf69} 
+\index{alertPubSubType@{alertPubSubType}!m\_keyBuffer@{m\_keyBuffer}}
+\index{m\_keyBuffer@{m\_keyBuffer}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{m\_keyBuffer}{m\_keyBuffer}}
+{\footnotesize\ttfamily unsigned char\texorpdfstring{$\ast$}{*} alert\+Pub\+Sub\+Type\+::m\+\_\+key\+Buffer}
+
+\Hypertarget{classalert_pub_sub_type_a0ea44fe23759c57d50bf31938fde40e1}\label{classalert_pub_sub_type_a0ea44fe23759c57d50bf31938fde40e1} 
+\index{alertPubSubType@{alertPubSubType}!m\_md5@{m\_md5}}
+\index{m\_md5@{m\_md5}!alertPubSubType@{alertPubSubType}}
+\doxysubsubsection{\texorpdfstring{m\_md5}{m\_md5}}
+{\footnotesize\ttfamily MD5 alert\+Pub\+Sub\+Type\+::m\+\_\+md5}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{alert_pub_sub_types_8h}{alert\+Pub\+Sub\+Types.\+h}}\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{alert_pub_sub_types_8cxx}{alert\+Pub\+Sub\+Types.\+cxx}}\end{DoxyCompactItemize}

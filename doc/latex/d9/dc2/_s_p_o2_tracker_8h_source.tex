@@ -1,0 +1,31 @@
+\doxysection{SPO2\+Tracker.\+h}
+\hypertarget{_s_p_o2_tracker_8h_source}{}\label{_s_p_o2_tracker_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h@{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h}}
+\mbox{\hyperlink{_s_p_o2_tracker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_diagnosis_interface_8h}{DiagnosisInterface.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_sensor_8h}{Sensor.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_p_o2_tracker}{SPO2Tracker}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{classdiagnosis_interface}{diagnosisInterface}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_p_o2_tracker_a07d2fd774558fa2ca39d93184d06b462}{SPO2Tracker}}(\mbox{\hyperlink{classsensor}{sensor}}\ *s);}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_p_o2_tracker_a727d1be9eaa17cf1fa325935e4536c4c}{\string~SPO2Tracker}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_p_o2_tracker_a3ca3542f14805182c419b8a2b8627b8c}{start}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_p_o2_tracker_a5af4b45780d7861bf4b075ddb3a9591c}{stop}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_p_o2_tracker_ad79f6cc0f5be45254e84823f4877eec1}{ping}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_p_o2_tracker_a3c0ccec07835f9120be36775a1e2e64f}{getVal}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_p_o2_tracker_aa32cfa3b341911d5649f2acd6c9edf23}{tracker}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsensor}{sensor}}*\ \mbox{\hyperlink{class_s_p_o2_tracker_afede87d7a30ef48fb2411231638da753}{\_s}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_p_o2_tracker_a2f6f56682b454b297ebd6aed075566c9}{threadRunning}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_p_o2_tracker_a19300623a75a6dcc7e7c94654f15cb7c}{pingThread}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ define\ symptom\ table\ here}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<symptomRange>\ \mbox{\hyperlink{class_s_p_o2_tracker_ae9c1a89e4707f4ed7f3ee5cf94cccf65}{symptomRanges}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{0,88,\textcolor{stringliteral}{"{}Critically\ Low\ Oxygen\ concentration"{}}\},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{88,92,\textcolor{stringliteral}{"{}Concerningly\ Low\ Oxygen\ Concentration"{}}\},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{92,100,\textcolor{stringliteral}{"{}Healthy\ Oxygen\ Concentration"{}}\}\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

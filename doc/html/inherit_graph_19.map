@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$d3/d68/class_digital_filter.html" title=" " alt="" coords="5,153,177,179"/>
+<area shape="rect" id="Node000001" href="$d7/d39/class_high_pass_filter.html" title="Class for high pass filter using bilinear transform." alt="" coords="261,5,376,31"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="109,141,157,90,189,63,224,40,260,25,262,30,227,44,192,67,161,94,113,145"/>
+<area shape="rect" id="Node000002" href="$d1/d93/class_high_pass_filter3.html" title="Class for third order high pass filter. This is designed using the bilinear transform." alt="" coords="257,55,380,80"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="122,144,169,116,224,89,258,78,260,83,226,94,171,120,124,148"/>
+<area shape="rect" id="Node000003" href="$d7/d25/class_low_pass_filter.html" title="Class for a low pass filter." alt="" coords="263,104,374,129"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="163,148,263,126,264,131,165,153"/>
+<area shape="rect" id="Node000004" href="$d2/d43/class_low_pass_filter2.html" title="Class for a 2nd order low pass filter." alt="" coords="259,153,378,179"/>
+<area shape="poly" id="edge8_Node000000_Node000004" title=" " alt="" coords="191,163,259,163,259,169,191,169"/>
+<area shape="rect" id="Node000005" href="$d5/d5a/class_low_pass_filter3.html" title="Class for third order high pass filter. This is designed using the bilinear transform." alt="" coords="259,203,378,228"/>
+<area shape="poly" id="edge9_Node000000_Node000005" title=" " alt="" coords="164,179,260,200,259,205,163,184"/>
+<area shape="rect" id="Node000006" href="$db/d3f/class_low_pass_filter3_diff_approx.html" title="Class for third order high pass filter. This is designed using the approximated differtial approuch w..." alt="" coords="225,252,412,277"/>
+<area shape="poly" id="edge10_Node000000_Node000006" title=" " alt="" coords="125,184,172,211,226,237,263,249,262,254,224,242,169,215,122,188"/>
+<area shape="rect" id="Node000007" href="$db/d51/class_low_pass_filter3_matched_z.html" title="Class for third order high pass filter. This is designed using the matched Z transform." alt="" coords="227,301,410,327"/>
+<area shape="poly" id="edge11_Node000000_Node000007" title=" " alt="" coords="113,187,162,238,193,264,227,286,256,299,254,304,224,291,190,268,158,242,110,191"/>
+</map>

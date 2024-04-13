@@ -1,0 +1,5 @@
+<map id="HighPassFilter3" name="HighPassFilter3">
+<area shape="rect" id="Node000001" title="Class for third order high pass filter. This is designed using the bilinear transform." alt="" coords="30,79,153,104"/>
+<area shape="rect" id="Node000002" href="$d3/d68/class_digital_filter.html" title=" " alt="" coords="5,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,44,94,79,89,79,89,44"/>
+</map>

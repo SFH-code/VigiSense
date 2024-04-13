@@ -1,0 +1,118 @@
+\doxysection{Differentiator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_differentiator}{}\label{class_differentiator}\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+
+
+Class for differentiator.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+
+
+Inheritance diagram for Differentiator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d6/d1c/class_differentiator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Differentiator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d0/d72/class_differentiator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_differentiator_a9a53cfb8f86f79a696261da27be87a50}{Differentiator}} (T \mbox{\hyperlink{class_differentiator_a969b4cc224a83325413415625808ed8e}{sample\+Time}})
+\item 
+T \mbox{\hyperlink{class_differentiator_aaad3555ad3d244d5c166a6b72dabc855}{update}} (T input)
+\item 
+T \mbox{\hyperlink{class_differentiator_a108758b2c7607d9eb8ba4c3c7d1147bf}{get\+Output}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const T \mbox{\hyperlink{class_differentiator_a969b4cc224a83325413415625808ed8e}{sample\+Time}}
+\item 
+T \mbox{\hyperlink{class_differentiator_a14afa104ad01daf997ca438cc9b44ddf}{y}} = 0
+\item 
+T \mbox{\hyperlink{class_differentiator_a025b4151b97b20b3d67c41226e0bd620}{x1}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Differentiator$<$ T $>$}
+Class for differentiator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_differentiator_a9a53cfb8f86f79a696261da27be87a50}\label{class_differentiator_a9a53cfb8f86f79a696261da27be87a50} 
+\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!Differentiator@{Differentiator}}
+\index{Differentiator@{Differentiator}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Differentiator()}{Differentiator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_differentiator}{Differentiator}}$<$ T $>$\mbox{\hyperlink{class_differentiator}{\+::\+Differentiator}} (\begin{DoxyParamCaption}\item[{T}]{sample\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_differentiator_a108758b2c7607d9eb8ba4c3c7d1147bf}\label{class_differentiator_a108758b2c7607d9eb8ba4c3c7d1147bf} 
+\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_differentiator}{Differentiator}}$<$ T $>$\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}{Digital\+Filter$<$ T $>$}}.
+
+\Hypertarget{class_differentiator_aaad3555ad3d244d5c166a6b72dabc855}\label{class_differentiator_aaad3555ad3d244d5c166a6b72dabc855} 
+\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!update@{update}}
+\index{update@{update}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_differentiator}{Differentiator}}$<$ T $>$\+::update (\begin{DoxyParamCaption}\item[{T}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}{Digital\+Filter$<$ T $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_differentiator_a969b4cc224a83325413415625808ed8e}\label{class_differentiator_a969b4cc224a83325413415625808ed8e} 
+\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!sampleTime@{sampleTime}}
+\index{sampleTime@{sampleTime}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sampleTime}{sampleTime}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \mbox{\hyperlink{class_differentiator}{Differentiator}}$<$ T $>$\+::sample\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_differentiator_a025b4151b97b20b3d67c41226e0bd620}\label{class_differentiator_a025b4151b97b20b3d67c41226e0bd620} 
+\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!x1@{x1}}
+\index{x1@{x1}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_differentiator}{Differentiator}}$<$ T $>$\+::x1 = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_differentiator_a14afa104ad01daf997ca438cc9b44ddf}\label{class_differentiator_a14afa104ad01daf997ca438cc9b44ddf} 
+\index{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!y@{y}}
+\index{y@{y}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_differentiator}{Differentiator}}$<$ T $>$\+::y = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

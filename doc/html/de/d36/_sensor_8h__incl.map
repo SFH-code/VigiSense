@@ -1,0 +1,16 @@
+<map id="/home/sitcomlab/Projects/VigiSense/src/Sensor.h" name="/home/sitcomlab/Projects/VigiSense/src/Sensor.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,5,201,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,167,72,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,47,65,95,54,125,46,154,41,153,49,123,60,92,91,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="75,93,141,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,46,111,79,105,79,105,46"/>
+<area shape="rect" id="Node000004" href="$da/d9f/_m_a_x30102_8h.html" title=" " alt="" coords="165,93,269,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="136,43,192,83,189,87,133,48"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="190,121,81,164,79,159,188,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="97,167,159,192"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="205,121,155,160,152,156,201,117"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="184,167,251,192"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="220,119,220,153,215,153,215,119"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="275,167,362,192"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="235,116,292,156,289,161,232,121"/>
+</map>

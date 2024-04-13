@@ -1,0 +1,11 @@
+<map id="HRTracker::start" name="HRTracker::start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,129,67"/>
+<area shape="rect" id="Node000002" href="$df/dc0/class_h_r_tracker.html#a333cf7f5fa7affafd6935cfc024bc863" title=" " alt="" coords="177,42,316,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,52,164,52,164,57,129,57"/>
+<area shape="rect" id="Node000003" href="$d4/d7c/classdiagnosis_interface.html#ac23cf5e69c20f19de5fda5b55e49f437" title=" " alt="" coords="364,5,524,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,42,350,37,351,42,316,47"/>
+<area shape="rect" id="Node000004" href="$df/dc0/class_h_r_tracker.html#a3c6872477debf2dc825bdae95af99bc8" title=" " alt="" coords="377,70,511,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="316,62,363,69,362,74,316,67"/>
+<area shape="rect" id="Node000005" href="$dc/d01/classsensor.html#afbc8d2a94866f703003e36941218a9d1" title=" " alt="" coords="572,70,685,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="512,80,558,80,558,85,512,85"/>
+</map>

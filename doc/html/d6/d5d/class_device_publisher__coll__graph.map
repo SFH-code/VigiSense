@@ -1,0 +1,7 @@
+<map id="DevicePublisher" name="DevicePublisher">
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,168,174,193"/>
+<area shape="rect" id="Node000002" href="$d9/d10/class_device_publisher_1_1_pub_listener.html" title=" " alt="" coords="5,80,216,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,119,113,167,108,167,108,119"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="38,5,183,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,45,113,80,108,80,108,45"/>
+</map>

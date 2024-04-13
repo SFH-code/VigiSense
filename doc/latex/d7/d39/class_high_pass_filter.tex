@@ -1,0 +1,185 @@
+\doxysection{High\+Pass\+Filter Class Reference}
+\hypertarget{class_high_pass_filter}{}\label{class_high_pass_filter}\index{HighPassFilter@{HighPassFilter}}
+
+
+Class for high pass filter using bilinear transform.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+
+
+Inheritance diagram for High\+Pass\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{dc/d7c/class_high_pass_filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for High\+Pass\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{df/d3b/class_high_pass_filter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_high_pass_filter_aca0a5f910709607950b2a87ea32f2400}{High\+Pass\+Filter}} (double idt, double omega\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Constructor to set sample time and the tau constant. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_high_pass_filter_a4a409f17d0baf751719d99d29e2b1c93}{update}} (double new\+Value) final
+\begin{DoxyCompactList}\small\item\em Update function to push new value into the low pass filter. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_high_pass_filter_a2b9ae3490c32b86ff3404471f4e118f7}{get\+Output}} () final
+\begin{DoxyCompactList}\small\item\em Gets the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_high_pass_filter_af31f5fd39db94ec7c26f675c14ba11d9}{config\+Output}} (double new\+Output)
+\begin{DoxyCompactList}\small\item\em Force the output to a desired value. \end{DoxyCompactList}\item 
+const double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_high_pass_filter_af9adb5b9cf89c502a3760ad00c5e2a67}{output\+Pointer}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{class_high_pass_filter_aec2e121c885bd51602582d5941afc17c}{ampl\+Fac}}
+\item 
+const double \mbox{\hyperlink{class_high_pass_filter_aca741f4ee874be9ddbf3bf9a462c9e3c}{y1c}}
+\item 
+const double \mbox{\hyperlink{class_high_pass_filter_a409154702bd628d735e04b2e689a28cb}{dt}}
+\item 
+double \mbox{\hyperlink{class_high_pass_filter_a4737ae6bdeeeaafb112554ea3c606941}{x1}} = 0
+\item 
+double \mbox{\hyperlink{class_high_pass_filter_ab30603c8c00ac92c541aa633f218728c}{output}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for high pass filter using bilinear transform. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_high_pass_filter_aca0a5f910709607950b2a87ea32f2400}\label{class_high_pass_filter_aca0a5f910709607950b2a87ea32f2400} 
+\index{HighPassFilter@{HighPassFilter}!HighPassFilter@{HighPassFilter}}
+\index{HighPassFilter@{HighPassFilter}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{HighPassFilter()}{HighPassFilter()}}
+{\footnotesize\ttfamily High\+Pass\+Filter\+::\+High\+Pass\+Filter (\begin{DoxyParamCaption}\item[{double}]{idt,  }\item[{double}]{omega\+\_\+c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to set sample time and the tau constant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em idt} & Sample time for the low pass filter \\
+\hline
+\mbox{\texttt{ in}}  & {\em itua\+\_\+c} & Or  $ \tau_c
+            $ The time constant for the filter. Note that $ \tau_c = \frac{1}{2 pi f_c}$ where $ f_c $ is the cutoff frequency \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_high_pass_filter_af31f5fd39db94ec7c26f675c14ba11d9}\label{class_high_pass_filter_af31f5fd39db94ec7c26f675c14ba11d9} 
+\index{HighPassFilter@{HighPassFilter}!configOutput@{configOutput}}
+\index{configOutput@{configOutput}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{configOutput()}{configOutput()}}
+{\footnotesize\ttfamily void High\+Pass\+Filter\+::config\+Output (\begin{DoxyParamCaption}\item[{double}]{new\+Output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Force the output to a desired value. 
+
+X \begin{DoxyVerb}        This can be useful when the output needs to be forced in case
+        of extreme inputs or such
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Output} & The new output \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_high_pass_filter_a2b9ae3490c32b86ff3404471f4e118f7}\label{class_high_pass_filter_a2b9ae3490c32b86ff3404471f4e118f7} 
+\index{HighPassFilter@{HighPassFilter}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily double High\+Pass\+Filter\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Gets the output. 
+
+\begin{DoxyReturn}{Returns}
+The output. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}{Digital\+Filter$<$ double $>$}}.
+
+\Hypertarget{class_high_pass_filter_af9adb5b9cf89c502a3760ad00c5e2a67}\label{class_high_pass_filter_af9adb5b9cf89c502a3760ad00c5e2a67} 
+\index{HighPassFilter@{HighPassFilter}!outputPointer@{outputPointer}}
+\index{outputPointer@{outputPointer}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{outputPointer()}{outputPointer()}}
+{\footnotesize\ttfamily const double \texorpdfstring{$\ast$}{*} High\+Pass\+Filter\+::output\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_high_pass_filter_a4a409f17d0baf751719d99d29e2b1c93}\label{class_high_pass_filter_a4a409f17d0baf751719d99d29e2b1c93} 
+\index{HighPassFilter@{HighPassFilter}!update@{update}}
+\index{update@{update}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily double High\+Pass\+Filter\+::update (\begin{DoxyParamCaption}\item[{double}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Update function to push new value into the low pass filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em new\+Value} & The new value after dt time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new output value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}{Digital\+Filter$<$ double $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_high_pass_filter_aec2e121c885bd51602582d5941afc17c}\label{class_high_pass_filter_aec2e121c885bd51602582d5941afc17c} 
+\index{HighPassFilter@{HighPassFilter}!amplFac@{amplFac}}
+\index{amplFac@{amplFac}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{amplFac}{amplFac}}
+{\footnotesize\ttfamily const double High\+Pass\+Filter\+::ampl\+Fac\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_high_pass_filter_a409154702bd628d735e04b2e689a28cb}\label{class_high_pass_filter_a409154702bd628d735e04b2e689a28cb} 
+\index{HighPassFilter@{HighPassFilter}!dt@{dt}}
+\index{dt@{dt}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily const double High\+Pass\+Filter\+::dt\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_high_pass_filter_ab30603c8c00ac92c541aa633f218728c}\label{class_high_pass_filter_ab30603c8c00ac92c541aa633f218728c} 
+\index{HighPassFilter@{HighPassFilter}!output@{output}}
+\index{output@{output}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily double High\+Pass\+Filter\+::output = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_high_pass_filter_a4737ae6bdeeeaafb112554ea3c606941}\label{class_high_pass_filter_a4737ae6bdeeeaafb112554ea3c606941} 
+\index{HighPassFilter@{HighPassFilter}!x1@{x1}}
+\index{x1@{x1}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily double High\+Pass\+Filter\+::x1 = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_high_pass_filter_aca741f4ee874be9ddbf3bf9a462c9e3c}\label{class_high_pass_filter_aca741f4ee874be9ddbf3bf9a462c9e3c} 
+\index{HighPassFilter@{HighPassFilter}!y1c@{y1c}}
+\index{y1c@{y1c}!HighPassFilter@{HighPassFilter}}
+\doxysubsubsection{\texorpdfstring{y1c}{y1c}}
+{\footnotesize\ttfamily const double High\+Pass\+Filter\+::y1c\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

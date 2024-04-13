@@ -1,0 +1,219 @@
+\doxysection{Circular\+Delay\texorpdfstring{$<$}{<} type, size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_circular_delay}{}\label{class_circular_delay}\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+
+
+A class that functions as a sample buffer.  
+
+
+
+
+{\ttfamily \#include $<$Circular\+Delay.\+hpp$>$}
+
+
+
+Collaboration diagram for Circular\+Delay\texorpdfstring{$<$}{<} type, size \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d5/d1c/class_circular_delay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_circular_delay_1_1const__iterator}{const\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{class_circular_delay_1_1const__reverse__iterator}{const\+\_\+reverse\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}}
+\item 
+class \mbox{\hyperlink{class_circular_delay_1_1reverse__iterator}{reverse\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circular_delay_adbff4303da3145a6ac1dc297b2ab5b96}{Circular\+Delay}} ()
+\begin{DoxyCompactList}\small\item\em Constructor that initializes that buffer and its set index. \end{DoxyCompactList}\item 
+type \mbox{\hyperlink{class_circular_delay_a0741f8e9b436b89620c56870457f22fa}{push}} (type input)
+\begin{DoxyCompactList}\small\item\em With this function you can insert a new sample into the buffer. \end{DoxyCompactList}\item 
+type \mbox{\hyperlink{class_circular_delay_a18051b383e209f0f52779626f5c9d49e}{get}} (size\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em With this function you can retrieve a sample from the past. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}} \mbox{\hyperlink{class_circular_delay_aa40f6c12296cd5a557b573d7decde8eb}{end}} ()
+\item 
+\mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}} \mbox{\hyperlink{class_circular_delay_ae8fedbd231b8e1b99b5a7bb321e4421c}{begin}} ()
+\item 
+\mbox{\hyperlink{class_circular_delay_1_1reverse__iterator}{reverse\+\_\+iterator}} \mbox{\hyperlink{class_circular_delay_ab337ed5b15ecdfdfb26a2b45dc495695}{rend}} ()
+\item 
+\mbox{\hyperlink{class_circular_delay_1_1reverse__iterator}{reverse\+\_\+iterator}} \mbox{\hyperlink{class_circular_delay_a45b712d677523479439f9ece87e11054}{rbegin}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+type \mbox{\hyperlink{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8}{data}} \mbox{[}size+1\mbox{]}
+\item 
+\mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}} \mbox{\hyperlink{class_circular_delay_a0858003f38fa5b13a92b516d025f4b27}{set\+Iterator}} = \mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}}(\mbox{\hyperlink{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8}{data}}, \mbox{\hyperlink{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8}{data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename type, size\+\_\+t size$>$\newline
+class Circular\+Delay$<$ type, size $>$}
+A class that functions as a sample buffer. 
+
+\begin{DoxyCopyright}{Copyright}
+GPL V3
+\end{DoxyCopyright}
+Circular delay software library. Here data can be stored and retrieved is a Li\+Fo manner. Copyright (C) 2018 Jimmy van den Berg
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\texttt{ http\+://www.\+gnu.\+org/licenses/}}.
+
+You can use this to insert samples and use the get function to get a sample from the past.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em type} & Type of sample that needs to be stored. \\
+\hline
+{\em size} & Size of how big the history buffer is. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circular_delay_adbff4303da3145a6ac1dc297b2ab5b96}\label{class_circular_delay_adbff4303da3145a6ac1dc297b2ab5b96} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!CircularDelay@{CircularDelay}}
+\index{CircularDelay@{CircularDelay}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{CircularDelay()}{CircularDelay()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\mbox{\hyperlink{class_circular_delay}{\+::\+Circular\+Delay}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes that buffer and its set index. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em type} & Type of sample that needs to be stored. \\
+\hline
+{\em size} & Size of how big the history buffer is. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circular_delay_ae8fedbd231b8e1b99b5a7bb321e4421c}\label{class_circular_delay_ae8fedbd231b8e1b99b5a7bb321e4421c} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!begin@{begin}}
+\index{begin@{begin}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}} \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_circular_delay_aa40f6c12296cd5a557b573d7decde8eb}\label{class_circular_delay_aa40f6c12296cd5a557b573d7decde8eb} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!end@{end}}
+\index{end@{end}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}} \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_circular_delay_a18051b383e209f0f52779626f5c9d49e}\label{class_circular_delay_a18051b383e209f0f52779626f5c9d49e} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!get@{get}}
+\index{get@{get}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+type \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+With this function you can retrieve a sample from the past. 
+
+Maximum delay is the size of the \doxylink{class_circular_delay}{Circular\+Delay} -\/ 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & How many samples you ago you want to get.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em type} & Type of sample that needs to be stored. \\
+\hline
+{\em size} & Size of how big the history buffer is.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The sample of delay ago. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{db/dba/class_circular_delay_a18051b383e209f0f52779626f5c9d49e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_circular_delay_a0741f8e9b436b89620c56870457f22fa}\label{class_circular_delay_a0741f8e9b436b89620c56870457f22fa} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!push@{push}}
+\index{push@{push}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+type \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::push (\begin{DoxyParamCaption}\item[{type}]{input }\end{DoxyParamCaption})}
+
+
+
+With this function you can insert a new sample into the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Sample to push into.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em type} & Type of sample that needs to be stored. \\
+\hline
+{\em size} & Size of how big the history buffer is.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Value that has been pushed. 
+\end{DoxyReturn}
+\Hypertarget{class_circular_delay_a45b712d677523479439f9ece87e11054}\label{class_circular_delay_a45b712d677523479439f9ece87e11054} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay_1_1reverse__iterator}{reverse\+\_\+iterator}} \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_circular_delay_ab337ed5b15ecdfdfb26a2b45dc495695}\label{class_circular_delay_ab337ed5b15ecdfdfb26a2b45dc495695} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!rend@{rend}}
+\index{rend@{rend}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay_1_1reverse__iterator}{reverse\+\_\+iterator}} \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8}\label{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!data@{data}}
+\index{data@{data}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+type \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::data\mbox{[}size+1\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_circular_delay_a0858003f38fa5b13a92b516d025f4b27}\label{class_circular_delay_a0858003f38fa5b13a92b516d025f4b27} 
+\index{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!setIterator@{setIterator}}
+\index{setIterator@{setIterator}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}}
+\doxysubsubsection{\texorpdfstring{setIterator}{setIterator}}
+{\footnotesize\ttfamily template$<$typename type , size\+\_\+t size$>$ \\
+\mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}} \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ type, size $>$\+::set\+Iterator = \mbox{\hyperlink{class_circular_delay_1_1iterator}{iterator}}(\mbox{\hyperlink{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8}{data}}, \mbox{\hyperlink{class_circular_delay_a409f43900b46f9faf9b35f9b2b23d1f8}{data}})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_circular_delay_8hpp}{Circular\+Delay.\+hpp}}\end{DoxyCompactItemize}

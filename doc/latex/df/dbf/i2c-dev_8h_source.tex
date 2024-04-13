@@ -1,0 +1,336 @@
+\doxysection{i2c-\/dev.h}
+\hypertarget{i2c-dev_8h_source}{}\label{i2c-dev_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h@{/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h}}
+\mbox{\hyperlink{i2c-dev_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ i2c-\/dev.h\ -\/\ i2c-\/bus\ driver,\ char\ device\ interface}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Copyright\ (C)\ 1995-\/97\ Simon\ G.\ Vogl}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Copyright\ (C)\ 1998-\/99\ Frodo\ Looijaard\ <frodol@dds.nl>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ This\ program\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ the\ Free\ Software\ Foundation;\ either\ version\ 2\ of\ the\ License,\ or}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ along\ with\ this\ program;\ if\ not,\ write\ to\ the\ Free\ Software}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ Foundation,\ Inc.,\ 51\ Franklin\ Street,\ Fifth\ Floor,\ Boston,}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ MA\ 02110-\/1301\ USA.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifndef\ \_LINUX\_I2C\_DEV\_H}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ \_LINUX\_I2C\_DEV\_H}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <linux/types.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <sys/ioctl.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*\ -\/-\/\ i2c.h\ -\/-\/\ */}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ I2C\ Message\ -\/\ used\ for\ pure\ i2c\ transaction,\ also\ from\ /dev\ interface}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structi2c__msg}{i2c\_msg}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \_\_u16\ \mbox{\hyperlink{structi2c__msg_a9be257e05859e69552791192b68a8654}{addr}};\ \ \ \ \ \textcolor{comment}{/*\ slave\ address\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structi2c__msg_a4b3bc1a36147fedfbdf9a15cc6ae88d9}{flags}};}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ I2C\_M\_TEN\ \ \ \ \ \ \ 0x10\ \ \ \ }\textcolor{comment}{/*\ we\ have\ a\ ten\ bit\ chip\ address\ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ I2C\_M\_RD\ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ I2C\_M\_NOSTART\ \ \ 0x4000}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ I2C\_M\_REV\_DIR\_ADDR\ \ \ \ \ \ 0x2000}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ I2C\_M\_IGNORE\_NAK\ \ \ \ \ \ \ \ 0x1000}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ I2C\_M\_NO\_RD\_ACK\ \ \ \ \ \ \ \ \ 0x0800}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structi2c__msg_a10d1943df9a527109bf60733baf7b0a4}{len}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ msg\ length\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structi2c__msg_a18a0ec0f4f45577ea2b751b984b00762}{buf}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ pointer\ to\ msg\ data\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{/*\ To\ determine\ what\ functionality\ is\ present\ */}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_I2C\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_10BIT\_ADDR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_PROTOCOL\_MANGLING\ \ \ \ \ \ 0x00000004\ }\textcolor{comment}{/*\ I2C\_M\_\{REV\_DIR\_ADDR,NOSTART,..\}\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_PEC\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL\ \ 0x00008000\ }\textcolor{comment}{/*\ SMBus\ 2.0\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_QUICK\ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_READ\_BYTE\ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_WRITE\_BYTE\ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA\ \ \ 0x00080000}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA\ \ 0x00100000}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA\ \ \ 0x00200000}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA\ \ 0x00400000}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_PROC\_CALL\ \ \ \ \ \ \ \ 0x00800000}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA\ \ 0x01000000}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA\ 0x02000000}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK\ \ \ 0x04000000\ }\textcolor{comment}{/*\ I2C-\/like\ block\ xfer\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK\ \ 0x08000000\ }\textcolor{comment}{/*\ w/\ 1-\/byte\ reg.\ addr.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_BYTE\ (I2C\_FUNC\_SMBUS\_READ\_BYTE\ |\ \(\backslash\)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_FUNC\_SMBUS\_WRITE\_BYTE)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_BYTE\_DATA\ (I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA\ |\ \(\backslash\)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_WORD\_DATA\ (I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA\ |\ \(\backslash\)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA)}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_BLOCK\_DATA\ (I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA\ |\ \(\backslash\)}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_I2C\_BLOCK\ (I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK\ |\ \(\backslash\)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK)}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{comment}{/*\ Old\ name,\ for\ compatibility\ */}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ I2C\_FUNC\_SMBUS\_HWPEC\_CALC\ \ \ \ \ \ \ I2C\_FUNC\_SMBUS\_PEC}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ *\ Data\ for\ SMBus\ Messages}}
+\DoxyCodeLine{00086\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_BLOCK\_MAX\ \ \ \ \ 32\ \ \ \ \ \ }\textcolor{comment}{/*\ As\ specified\ in\ SMBus\ standard\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_I2C\_BLOCK\_MAX\ 32\ \ \ \ \ \ }\textcolor{comment}{/*\ Not\ specified\ but\ we\ use\ same\ structure\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00089\ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \_\_u8\ \mbox{\hyperlink{unioni2c__smbus__data_aa0e2604ac3df1abcfe68c95c8d1d8f5b}{byte}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \_\_u16\ \mbox{\hyperlink{unioni2c__smbus__data_adcbf2a0d0c112b6a77b35b3125f15e77}{word}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \_\_u8\ \mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[\mbox{\hyperlink{i2c-dev_8h_ac2dd8b77e329bba4a3ca9cd275f9bf50}{I2C\_SMBUS\_BLOCK\_MAX}}\ +\ 2];\ \textcolor{comment}{/*\ block[0]\ is\ used\ for\ length\ */}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ and\ one\ more\ for\ PEC\ */}}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{comment}{/*\ smbus\_access\ read\ or\ write\ markers\ */}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_READ\ \ 1}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_WRITE\ 0}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{/*\ SMBus\ transaction\ types\ (size\ parameter\ in\ the\ above\ functions)}}
+\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ Note:\ these\ no\ longer\ correspond\ to\ the\ (arbitrary)\ PIIX4\ internal\ codes!\ */}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_QUICK\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_BYTE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_BYTE\_DATA\ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_WORD\_DATA\ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_PROC\_CALL\ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_BLOCK\_DATA\ \ \ \ \ \ \ \ 5}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_I2C\_BLOCK\_BROKEN\ \ 6}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_BLOCK\_PROC\_CALL\ \ \ 7\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ SMBus\ 2.0\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\_I2C\_BLOCK\_DATA\ \ \ \ 8}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{/*\ /dev/i2c-\/X\ ioctl\ commands.\ \ The\ ioctl's\ parameter\ is\ always\ an}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ *\ unsigned\ long,\ except\ for:}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ *\ \ \ \ \ \ -\/\ I2C\_FUNCS,\ takes\ pointer\ to\ an\ unsigned\ long}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ *\ \ \ \ \ \ -\/\ I2C\_RDWR,\ takes\ pointer\ to\ struct\ i2c\_rdwr\_ioctl\_data}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ *\ \ \ \ \ \ -\/\ I2C\_SMBUS,\ takes\ pointer\ to\ struct\ i2c\_smbus\_ioctl\_data}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ I2C\_RETRIES\ \ \ \ \ 0x0701\ \ }\textcolor{comment}{/*\ number\ of\ times\ a\ device\ address\ should}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ be\ polled\ when\ not\ acknowledging\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ I2C\_TIMEOUT\ \ \ \ \ 0x0702\ \ }\textcolor{comment}{/*\ set\ timeout\ in\ units\ of\ 10\ ms\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{/*\ NOTE:\ Slave\ address\ is\ 7\ or\ 10\ bits,\ but\ 10-\/bit\ addresses}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ *\ are\ NOT\ supported!\ (due\ to\ code\ brokenness)}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\ \ \ \ \ \ \ 0x0703\ \ }\textcolor{comment}{/*\ Use\ this\ slave\ address\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_FORCE\ 0x0706\ \ }\textcolor{comment}{/*\ Use\ this\ slave\ address,\ even\ if\ it}}
+\DoxyCodeLine{00128\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\ already\ in\ use\ by\ a\ driver!\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ I2C\_TENBIT\ \ \ \ \ \ 0x0704\ \ }\textcolor{comment}{/*\ 0\ for\ 7\ bit\ addrs,\ !=\ 0\ for\ 10\ bit\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ I2C\_FUNCS\ \ \ \ \ \ \ 0x0705\ \ }\textcolor{comment}{/*\ Get\ the\ adapter\ functionality\ mask\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ I2C\_RDWR\ \ \ \ \ \ \ \ 0x0707\ \ }\textcolor{comment}{/*\ Combined\ R/W\ transfer\ (one\ STOP\ only)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ I2C\_PEC\ \ \ \ \ \ \ \ \ 0x0708\ \ }\textcolor{comment}{/*\ !=\ 0\ to\ use\ PEC\ with\ SMBus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ I2C\_SMBUS\ \ \ \ \ \ \ 0x0720\ \ }\textcolor{comment}{/*\ SMBus\ transfer\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{comment}{/*\ This\ is\ the\ structure\ as\ used\ in\ the\ I2C\_SMBUS\ ioctl\ call\ */}}
+\DoxyCodeLine{00140\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structi2c__smbus__ioctl__data}{i2c\_smbus\_ioctl\_data}}\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \_\_u8\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_a545643b68fb6ee6806aadc62f5c9a9b0}{read\_write}};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \_\_u8\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_a5c97619b99fbc3231d877acfe428826b}{command}};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \_\_u32\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_a8656ac3dfa404899f6549baea41cf342}{size}};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ *\mbox{\hyperlink{structi2c__smbus__ioctl__data_af5a53e4ed38f278bd5fb62a65b67432d}{data}};}
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{/*\ This\ is\ the\ structure\ as\ used\ in\ the\ I2C\_RDWR\ ioctl\ call\ */}}
+\DoxyCodeLine{00148\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structi2c__rdwr__ioctl__data}{i2c\_rdwr\_ioctl\_data}}\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structi2c__msg}{i2c\_msg}}\ *\mbox{\hyperlink{structi2c__rdwr__ioctl__data_a436bb0f35544ff79b2c0ac3570f5b7f0}{msgs}};\ \ \ \textcolor{comment}{/*\ pointers\ to\ i2c\_msgs\ */}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \_\_u32\ \mbox{\hyperlink{structi2c__rdwr__ioctl__data_aab635d05b219aba0508889f7f23170e3}{nmsgs}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ number\ of\ i2c\_msgs\ */}}
+\DoxyCodeLine{00151\ \};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ \ I2C\_RDRW\_IOCTL\_MAX\_MSGS\ \ \ \ \ \ \ \ 42}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(\textcolor{keywordtype}{int}\ file,\ \textcolor{keywordtype}{char}\ read\_write,\ \_\_u8\ command,}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size,\ \textcolor{keyword}{union}\ \mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ *data)}
+\DoxyCodeLine{00158\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structi2c__smbus__ioctl__data}{i2c\_smbus\_ioctl\_data}}\ args;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ args.\mbox{\hyperlink{structi2c__smbus__ioctl__data_a545643b68fb6ee6806aadc62f5c9a9b0}{read\_write}}\ =\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_a545643b68fb6ee6806aadc62f5c9a9b0}{read\_write}};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ args.\mbox{\hyperlink{structi2c__smbus__ioctl__data_a5c97619b99fbc3231d877acfe428826b}{command}}\ =\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_a5c97619b99fbc3231d877acfe428826b}{command}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ args.\mbox{\hyperlink{structi2c__smbus__ioctl__data_a8656ac3dfa404899f6549baea41cf342}{size}}\ =\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_a8656ac3dfa404899f6549baea41cf342}{size}};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ args.\mbox{\hyperlink{structi2c__smbus__ioctl__data_af5a53e4ed38f278bd5fb62a65b67432d}{data}}\ =\ \mbox{\hyperlink{structi2c__smbus__ioctl__data_af5a53e4ed38f278bd5fb62a65b67432d}{data}};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ioctl(file,\mbox{\hyperlink{i2c-dev_8h_a4e9d483fb9eb1074646726ce518b1d4d}{I2C\_SMBUS}},\&args);}
+\DoxyCodeLine{00166\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_abd274f9e86bb3c7ce4de64791d243619}{i2c\_smbus\_write\_quick}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ value)}
+\DoxyCodeLine{00170\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,value,0,\mbox{\hyperlink{i2c-dev_8h_a94760c9e3bb58f5535578eb52a0ffc0c}{I2C\_SMBUS\_QUICK}},NULL);}
+\DoxyCodeLine{00172\ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_ae2dabf178f400a58b5ed3d2fbc97d08c}{i2c\_smbus\_read\_byte}}(\textcolor{keywordtype}{int}\ file)}
+\DoxyCodeLine{00175\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_a8f5482668eb7741ef21dd9c211d876c9}{I2C\_SMBUS\_READ}},0,\mbox{\hyperlink{i2c-dev_8h_a8006fa66a9d9224959fb8337a365a12a}{I2C\_SMBUS\_BYTE}},\&data))}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0x0FF\ \&\ data.\mbox{\hyperlink{unioni2c__smbus__data_aa0e2604ac3df1abcfe68c95c8d1d8f5b}{byte}};}
+\DoxyCodeLine{00181\ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_aeaefdbc87e1f8c3e38174f9287421e1a}{i2c\_smbus\_write\_byte}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ value)}
+\DoxyCodeLine{00184\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},value,}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a8006fa66a9d9224959fb8337a365a12a}{I2C\_SMBUS\_BYTE}},NULL);}
+\DoxyCodeLine{00187\ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_aea6f5d01ddd9b73cba89994e500e0f57}{i2c\_smbus\_read\_byte\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command)}
+\DoxyCodeLine{00190\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_a8f5482668eb7741ef21dd9c211d876c9}{I2C\_SMBUS\_READ}},command,}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a3d7320d4d3f8b109344ee08feab0e533}{I2C\_SMBUS\_BYTE\_DATA}},\&data))}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0x0FF\ \&\ data.\mbox{\hyperlink{unioni2c__smbus__data_aa0e2604ac3df1abcfe68c95c8d1d8f5b}{byte}};}
+\DoxyCodeLine{00197\ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a77fd74b2c8d519ec584b44f182365f98}{i2c\_smbus\_write\_byte\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u8\ value)}
+\DoxyCodeLine{00201\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_aa0e2604ac3df1abcfe68c95c8d1d8f5b}{byte}}\ =\ value;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},command,}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a3d7320d4d3f8b109344ee08feab0e533}{I2C\_SMBUS\_BYTE\_DATA}},\ \&data);}
+\DoxyCodeLine{00206\ \}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a2fc8b808e6b5d3a2c0c00e2a61c13d2a}{i2c\_smbus\_read\_word\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command)}
+\DoxyCodeLine{00209\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_a8f5482668eb7741ef21dd9c211d876c9}{I2C\_SMBUS\_READ}},command,}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_abd0ad56a944b1a95435d51cc54db36c4}{I2C\_SMBUS\_WORD\_DATA}},\&data))}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0x0FFFF\ \&\ data.\mbox{\hyperlink{unioni2c__smbus__data_adcbf2a0d0c112b6a77b35b3125f15e77}{word}};}
+\DoxyCodeLine{00216\ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a1b821c9a9a73bd719816e62ebb1da007}{i2c\_smbus\_write\_word\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u16\ value)}
+\DoxyCodeLine{00220\ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_adcbf2a0d0c112b6a77b35b3125f15e77}{word}}\ =\ value;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},command,}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_abd0ad56a944b1a95435d51cc54db36c4}{I2C\_SMBUS\_WORD\_DATA}},\ \&data);}
+\DoxyCodeLine{00225\ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_aee4071fc6eed5b43b6b4a6f149295f56}{i2c\_smbus\_process\_call}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,\ \_\_u16\ value)}
+\DoxyCodeLine{00228\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_adcbf2a0d0c112b6a77b35b3125f15e77}{word}}\ =\ value;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},command,}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a140bc92b58f10de5eb796ad71e8f0da2}{I2C\_SMBUS\_PROC\_CALL}},\&data))}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0x0FFFF\ \&\ data.\mbox{\hyperlink{unioni2c__smbus__data_adcbf2a0d0c112b6a77b35b3125f15e77}{word}};}
+\DoxyCodeLine{00236\ \}}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{comment}{/*\ Returns\ the\ number\ of\ read\ bytes\ */}}
+\DoxyCodeLine{00240\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a112cdfa9a40942588462e8d52afc9d17}{i2c\_smbus\_read\_block\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u8\ *values)}
+\DoxyCodeLine{00242\ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_a8f5482668eb7741ef21dd9c211d876c9}{I2C\_SMBUS\_READ}},command,}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a0253f81d1f2732492c1a05dc41094d12}{I2C\_SMBUS\_BLOCK\_DATA}},\&data))}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0];\ i++)}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[i-\/1]\ =\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[i];}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0];}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a104df0122c46f518e1877b2b2ae8f3e0}{i2c\_smbus\_write\_block\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u8\ length,\ \textcolor{keyword}{const}\ \_\_u8\ *values)}
+\DoxyCodeLine{00257\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ 32)}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ length\ =\ 32;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ length;\ i++)}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[i]\ =\ values[i-\/1];}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0]\ =\ length;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},command,}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a0253f81d1f2732492c1a05dc41094d12}{I2C\_SMBUS\_BLOCK\_DATA}},\ \&data);}
+\DoxyCodeLine{00267\ \}}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \textcolor{comment}{/*\ Returns\ the\ number\ of\ read\ bytes\ */}}
+\DoxyCodeLine{00270\ \textcolor{comment}{/*\ Until\ kernel\ 2.6.22,\ the\ length\ is\ hardcoded\ to\ 32\ bytes.\ If\ you}}
+\DoxyCodeLine{00271\ \textcolor{comment}{\ \ \ ask\ for\ less\ than\ 32\ bytes,\ your\ code\ will\ only\ work\ with\ kernels}}
+\DoxyCodeLine{00272\ \textcolor{comment}{\ \ \ 2.6.23\ and\ later.\ */}}
+\DoxyCodeLine{00273\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_ad1d9f5dc78129ff0052c1490a7b5544e}{i2c\_smbus\_read\_i2c\_block\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u8\ length,\ \_\_u8\ *values)}
+\DoxyCodeLine{00275\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ 32)}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ length\ =\ 32;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0]\ =\ length;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_a8f5482668eb7741ef21dd9c211d876c9}{I2C\_SMBUS\_READ}},command,}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ length\ ==\ 32\ ?\ \mbox{\hyperlink{i2c-dev_8h_a36bcbcb9294695fddb8606a32cbedc9b}{I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}}\ :}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_aa5ecbb0ceaddcb905d68d366edfb026c}{I2C\_SMBUS\_I2C\_BLOCK\_DATA}},\&data))}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0];\ i++)}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[i-\/1]\ =\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[i];}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0];}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_aafd4f187472bd456fc225310bc6bc045}{i2c\_smbus\_write\_i2c\_block\_data}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u8\ length,}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \_\_u8\ *values)}
+\DoxyCodeLine{00296\ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ 32)}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ length\ =\ 32;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ length;\ i++)}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[i]\ =\ values[i-\/1];}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0]\ =\ length;}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},command,}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a36bcbcb9294695fddb8606a32cbedc9b}{I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}},\ \&data);}
+\DoxyCodeLine{00306\ \}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \textcolor{comment}{/*\ Returns\ the\ number\ of\ read\ bytes\ */}}
+\DoxyCodeLine{00309\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \_\_s32\ \mbox{\hyperlink{i2c-dev_8h_a228bf66622e415ff283814eb2a0c0bd4}{i2c\_smbus\_block\_process\_call}}(\textcolor{keywordtype}{int}\ file,\ \_\_u8\ command,}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_u8\ length,\ \_\_u8\ *values)}
+\DoxyCodeLine{00311\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keyword}{union\ }\mbox{\hyperlink{unioni2c__smbus__data}{i2c\_smbus\_data}}\ data;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (length\ >\ 32)}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ length\ =\ 32;}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ length;\ i++)}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[i]\ =\ values[i-\/1];}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0]\ =\ length;}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{i2c-dev_8h_a692ece12f1304be77218167ca15bc3a0}{i2c\_smbus\_access}}(file,\mbox{\hyperlink{i2c-dev_8h_ac4d2a9af170b85b33c640c811f240c76}{I2C\_SMBUS\_WRITE}},command,}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{i2c-dev_8h_a187e1de23e9935885cdb94ee429a2eed}{I2C\_SMBUS\_BLOCK\_PROC\_CALL}},\&data))}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0];\ i++)}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[i-\/1]\ =\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[i];}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data.\mbox{\hyperlink{unioni2c__smbus__data_af0c92c143c24c0c49902f705a1ebe65c}{block}}[0];}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00327\ \}}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_LINUX\_I2C\_DEV\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

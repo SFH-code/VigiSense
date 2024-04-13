@@ -1,0 +1,18 @@
+<map id="MAX30102::safeCheck" name="MAX30102::safeCheck">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,173,80"/>
+<area shape="rect" id="Node000002" href="$de/d0d/class_m_a_x30102.html#a023a175af4f01d54f24f632296f71775" title=" " alt="" coords="221,55,360,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,65,208,65,208,70,174,70"/>
+<area shape="rect" id="Node000003" href="$de/d0d/class_m_a_x30102.html#a99dd07d94cdca56a0116bd3bc40eeb66" title=" " alt="" coords="409,5,609,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="347,52,438,31,440,36,348,57"/>
+<area shape="rect" id="Node000005" href="$de/d0d/class_m_a_x30102.html#aeaf1c7ea1764c7d0553386cabfb783e6" title=" " alt="" coords="408,55,611,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="360,65,394,65,394,70,360,70"/>
+<area shape="rect" id="Node000006" href="$de/d0d/class_m_a_x30102.html#af0ad00b5666d727c58998ae2065b216e" title=" " alt="" coords="427,104,592,129"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="348,77,440,98,438,104,347,83"/>
+<area shape="rect" id="Node000004" href="$df/dbf/i2c-dev_8h.html#aea6f5d01ddd9b73cba89994e500e0f57" title=" " alt="" coords="659,27,857,52"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="610,24,645,27,644,32,609,29"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="610,53,645,49,645,55,611,59"/>
+<area shape="rect" id="Node000007" href="$df/dbf/i2c-dev_8h.html#ad1d9f5dc78129ff0052c1490a7b5544e" title=" " alt="" coords="681,97,835,137"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="592,114,668,114,668,119,592,119"/>
+<area shape="rect" id="Node000008" href="$df/dbf/i2c-dev_8h.html#a692ece12f1304be77218167ca15bc3a0" title=" " alt="" coords="905,104,1048,129"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="835,114,892,114,892,119,835,119"/>
+</map>

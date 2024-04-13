@@ -1,0 +1,5 @@
+<map id="CircularDelay::get" name="CircularDelay::get">
+<area shape="rect" id="Node000001" title="With this function you can retrieve a sample from the past." alt="" coords="5,5,144,31"/>
+<area shape="rect" id="Node000002" href="$db/dba/class_circular_delay.html#a45b712d677523479439f9ece87e11054" title=" " alt="" coords="192,5,351,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,15,179,15,179,21,144,21"/>
+</map>

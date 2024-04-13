@@ -1,0 +1,19 @@
+<map id="sensor::loopThread" name="sensor::loopThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,152,132"/>
+<area shape="rect" id="Node000002" href="$dc/d01/classsensor.html#ac87df1aaef5f2c64ac6696e5c8cafed2" title=" " alt="" coords="200,107,417,132"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,117,186,117,186,122,153,122"/>
+<area shape="rect" id="Node000003" href="$de/d0d/class_m_a_x30102.html#ad06cdfa399f91057cc2e8e7c872877e0" title=" " alt="" coords="491,5,626,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,104,464,48,504,33,506,38,466,52,338,109"/>
+<area shape="rect" id="Node000004" href="$dc/d01/classsensor.html#a3b6c046c1bf0e42dedbdbdaa8b65dbbb" title=" " alt="" coords="485,107,633,132"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="417,117,471,117,471,122,417,122"/>
+<area shape="rect" id="Node000006" href="$d7/d25/class_low_pass_filter.html#a2c228363bfb581898a16dac854682160" title="Update function to push new value into the low pass filter." alt="" coords="702,57,865,83"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="385,104,465,93,688,73,689,78,466,98,385,109"/>
+<area shape="rect" id="Node000007" href="$d7/d39/class_high_pass_filter.html#a4a409f17d0baf751719d99d29e2b1c93" title="Update function to push new value into the low pass filter." alt="" coords="700,156,867,181"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="380,129,466,142,687,161,686,166,465,147,379,135"/>
+<area shape="rect" id="Node000008" href="$dc/d01/classsensor.html#aed35fe2e0142b5fc538fbbbd02c33c15" title=" " alt="" coords="465,208,652,233"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="338,130,466,186,506,201,504,206,464,191,336,134"/>
+<area shape="rect" id="Node000005" href="$de/d0d/class_m_a_x30102.html#a824883df0943c7accc013f05792e557d" title=" " alt="" coords="710,107,857,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="633,117,696,117,696,122,633,122"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="617,104,711,83,712,88,618,109"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="618,129,712,150,711,156,617,135"/>
+</map>

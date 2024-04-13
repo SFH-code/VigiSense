@@ -1,0 +1,7 @@
+<map id="HRTracker::pingThread" name="HRTracker::pingThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,172,56"/>
+<area shape="rect" id="Node000002" href="$d2/d45/class_device_publisher.html#af499e17f8c19e19987fbed90b6cec470" title="Initialize the publisher." alt="" coords="233,5,389,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,219,26,220,31,173,36"/>
+<area shape="rect" id="Node000003" href="$d2/d45/class_device_publisher.html#abe1b6c067398e780a020c9556ffeaeff" title="Send a publication." alt="" coords="220,55,403,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,50,207,53,206,59,172,55"/>
+</map>

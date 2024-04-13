@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['safecheck_0',['safeCheck',['../de/d0d/class_m_a_x30102.html#a82a6fa3dc9fb7dd83e57582ccd0a0c06',1,'MAX30102']]],
+  ['sensor_1',['sensor',['../dc/d01/classsensor.html#a77233ada6e575ab61663473ef72ca65a',1,'sensor']]],
+  ['serialize_2',['serialize',['../d5/d9e/classalert.html#a2516aa15018f5703a035a0b4639ab078',1,'alert::serialize()'],['../dd/d4a/classalert_pub_sub_type.html#ab7459a69b01bc39c93d9a22fc4e04c47',1,'alertPubSubType::serialize()']]],
+  ['serializekey_3',['serializeKey',['../d5/d9e/classalert.html#aee52a7c2b839e0e10f0df65e0b231c0a',1,'alert']]],
+  ['setadcrange_4',['setADCRange',['../de/d0d/class_m_a_x30102.html#ab936f8072cde5aaf5b0bd8b9ec9c0e2f',1,'MAX30102']]],
+  ['setdiagnosisranges_5',['SetdiagnosisRanges',['../d5/ded/classdiagnosis.html#acf25abd2e985b6bd9d550a54c44702da',1,'diagnosis']]],
+  ['setfifoalmostfull_6',['setFIFOAlmostFull',['../de/d0d/class_m_a_x30102.html#abd8bade4eb3dbb809c364378f9017d25',1,'MAX30102']]],
+  ['setfifoaverage_7',['setFIFOAverage',['../de/d0d/class_m_a_x30102.html#ae11f7b66a205c5e465668fa401427737',1,'MAX30102']]],
+  ['setledmode_8',['setLEDMode',['../de/d0d/class_m_a_x30102.html#a19cae8ee364f876cb34da812d5a657f2',1,'MAX30102']]],
+  ['setproximitythreshold_9',['setProximityThreshold',['../de/d0d/class_m_a_x30102.html#a5fd727b3f253f1007750534d5f40b562',1,'MAX30102']]],
+  ['setproxintthresh_10',['setPROXINTTHRESH',['../de/d0d/class_m_a_x30102.html#aa770f6f38d4169d4e844de2db3443a95',1,'MAX30102']]],
+  ['setpulseamplitudeir_11',['setPulseAmplitudeIR',['../de/d0d/class_m_a_x30102.html#a80aad8301d5ca50a72e72c02f9c824c9',1,'MAX30102']]],
+  ['setpulseamplitudeproximity_12',['setPulseAmplitudeProximity',['../de/d0d/class_m_a_x30102.html#a2c3d0e2fb0ba82d0a2cbb4e5a5c2edd8',1,'MAX30102']]],
+  ['setpulseamplitudered_13',['setPulseAmplitudeRed',['../de/d0d/class_m_a_x30102.html#a92936c050f8a49ba8da5bda2069dd1f6',1,'MAX30102']]],
+  ['setpulsewidth_14',['setPulseWidth',['../de/d0d/class_m_a_x30102.html#aab527d480ff83e3059157bb793244644',1,'MAX30102']]],
+  ['setsamplerate_15',['setSampleRate',['../de/d0d/class_m_a_x30102.html#a78604b395ccf72fbd6366684aa99e646',1,'MAX30102']]],
+  ['setup_16',['setup',['../de/d0d/class_m_a_x30102.html#ac20a8b68fcf978b71f3fde1bb516dde8',1,'MAX30102']]],
+  ['shutdown_17',['shutDown',['../de/d0d/class_m_a_x30102.html#ac5c9b06bf3cf668e018bb81a17d5aa2f',1,'MAX30102']]],
+  ['softreset_18',['softReset',['../de/d0d/class_m_a_x30102.html#ad78ce89aa47f2c6e1a3cf07a6966c2c9',1,'MAX30102']]],
+  ['spo2tracker_19',['SPO2Tracker',['../dd/d3d/class_s_p_o2_tracker.html#a07d2fd774558fa2ca39d93184d06b462',1,'SPO2Tracker']]],
+  ['squareof_20',['squareOf',['../d1/d4b/_digital_filters_8h.html#a2186e3c748b2f275583dcae30f1e21d1',1,'DigitalFilters.h']]],
+  ['start_21',['start',['../d4/d7c/classdiagnosis_interface.html#a4aef943bb4435304bd736bfa5c381d5c',1,'diagnosisInterface::start()'],['../df/dc0/class_h_r_tracker.html#aae9a56f501132e089595e6e830df8dfe',1,'HRTracker::start()'],['../dd/d3d/class_s_p_o2_tracker.html#a3ca3542f14805182c419b8a2b8627b8c',1,'SPO2Tracker::start()']]],
+  ['stop_22',['stop',['../d4/d7c/classdiagnosis_interface.html#a40312067315d0cae8caad4817fec17b8',1,'diagnosisInterface::stop()'],['../df/dc0/class_h_r_tracker.html#ac2a3b92fe6643eafab95cc6088ca67df',1,'HRTracker::stop()'],['../dc/d01/classsensor.html#a6d55d717f8f15c0b4d7ca995a2816cc8',1,'sensor::stop()'],['../dd/d3d/class_s_p_o2_tracker.html#a5af4b45780d7861bf4b075ddb3a9591c',1,'SPO2Tracker::stop()']]],
+  ['stophrcalc_23',['stopHRcalc',['../dc/d01/classsensor.html#ae2e8fd099e2f700b6cfcbe0fbbf11074',1,'sensor']]],
+  ['sublistener_24',['SubListener',['../de/d04/class_device_subscriber_1_1_sub_listener.html#a59958c75ae441e4794340ae72695e597',1,'DeviceSubscriber::SubListener']]]
+];

@@ -1,0 +1,9 @@
+<map id="MAX30102::enableDIETEMPRDY" name="MAX30102::enableDIETEMPRDY">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,235,56"/>
+<area shape="rect" id="Node000002" href="$de/d0d/class_m_a_x30102.html#a741f63f91f2b64df29c07311a8deb0ea" title=" " alt="" coords="283,31,435,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,41,268,41,268,46,235,46"/>
+<area shape="rect" id="Node000003" href="$df/dbf/i2c-dev_8h.html#aea6f5d01ddd9b73cba89994e500e0f57" title=" " alt="" coords="485,5,683,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,32,471,28,471,33,435,37"/>
+<area shape="rect" id="Node000004" href="$df/dbf/i2c-dev_8h.html#a77fd74b2c8d519ec584b44f182365f98" title=" " alt="" coords="483,55,685,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="435,49,469,52,469,58,434,54"/>
+</map>

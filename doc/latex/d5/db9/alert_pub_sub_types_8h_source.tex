@@ -1,0 +1,95 @@
+\doxysection{alert\+Pub\+Sub\+Types.\+h}
+\hypertarget{alert_pub_sub_types_8h_source}{}\label{alert_pub_sub_types_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h@{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h}}
+\mbox{\hyperlink{alert_pub_sub_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ 2016\ Proyectos\ y\ Sistemas\ de\ Mantenimiento\ SL\ (eProsima).}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifndef\ \_FAST\_DDS\_GENERATED\_ALERT\_PUBSUBTYPES\_H\_}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ \_FAST\_DDS\_GENERATED\_ALERT\_PUBSUBTYPES\_H\_}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <fastdds/dds/topic/TopicDataType.hpp>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <fastrtps/utils/md5.h>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{alert_8h}{alert.h}}"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#if\ !defined(GEN\_API\_VER)\ ||\ (GEN\_API\_VER\ !=\ 1)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#error\ \(\backslash\)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \ \ Generated\ alert\ is\ not\ compatible\ with\ current\ installed\ Fast\ DDS.\ Please,\ regenerate\ it\ with\ fastddsgen.}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ GEN\_API\_VER}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classalert_pub_sub_type}{alertPubSubType}}\ :\ \textcolor{keyword}{public}\ eprosima::fastdds::dds::TopicDataType}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classalert}{alert}}\ \mbox{\hyperlink{classalert_pub_sub_type_a64e29c129a5e12ac185a278671113538}{type}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \mbox{\hyperlink{classalert_pub_sub_type_acd723e61732e3ffb689735a2bf451a60}{alertPubSubType}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classalert_pub_sub_type_a19662a4f241b021ba0519cde15904275}{\string~alertPubSubType}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classalert_pub_sub_type_ab7459a69b01bc39c93d9a22fc4e04c47}{serialize}}(}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ data,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ eprosima::fastrtps::rtps::SerializedPayload\_t*\ payload)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classalert_pub_sub_type_acb5629c10dca73834b4c72b801a0bc8e}{deserialize}}(}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ eprosima::fastrtps::rtps::SerializedPayload\_t*\ payload,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ std::function<uint32\_t()>\ \mbox{\hyperlink{classalert_pub_sub_type_af9352ff2e8b3f716352e6a2fd8fadfe6}{getSerializedSizeProvider}}(}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classalert_pub_sub_type_a2461d59d1a28ea0145f16e108e25bcc9}{getKey}}(}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ data,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ eprosima::fastrtps::rtps::InstanceHandle\_t*\ ihandle,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ force\_md5\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{classalert_pub_sub_type_a2319abb06a1a5d8edd098fb217bd0bf8}{createData}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classalert_pub_sub_type_aa4f19d525086a5fec072d4bc63376d0c}{deleteData}}(}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#ifdef\ TOPIC\_DATA\_TYPE\_API\_HAS\_IS\_BOUNDED}}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ is\_bounded()\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TOPIC\_DATA\_TYPE\_API\_HAS\_IS\_BOUNDED}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#ifdef\ TOPIC\_DATA\_TYPE\_API\_HAS\_IS\_PLAIN}}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ is\_plain()\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00081\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TOPIC\_DATA\_TYPE\_API\_HAS\_IS\_PLAIN}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#ifdef\ TOPIC\_DATA\_TYPE\_API\_HAS\_CONSTRUCT\_SAMPLE}}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{alert_8h_abd19d82e50737e50241fe1723b1c6066}{eProsima\_user\_DllExport}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ construct\_sample(}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ memory)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00090\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ (void)memory;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ TOPIC\_DATA\_TYPE\_API\_HAS\_CONSTRUCT\_SAMPLE}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ MD5\ \mbox{\hyperlink{classalert_pub_sub_type_a0ea44fe23759c57d50bf31938fde40e1}{m\_md5}};}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classalert_pub_sub_type_a2508a5fb2bfaf18261cbef223370bf69}{m\_keyBuffer}};}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_FAST\_DDS\_GENERATED\_ALERT\_PUBSUBTYPES\_H\_}}
+
+\end{DoxyCode}

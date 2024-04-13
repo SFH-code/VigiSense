@@ -1,0 +1,9 @@
+<map id="sensor::peakDetect" name="sensor::peakDetect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,153,80"/>
+<area shape="rect" id="Node000002" href="$de/d0d/class_m_a_x30102.html#a824883df0943c7accc013f05792e557d" title=" " alt="" coords="211,5,358,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,52,217,31,218,37,133,57"/>
+<area shape="rect" id="Node000003" href="$d7/d25/class_low_pass_filter.html#a2c228363bfb581898a16dac854682160" title="Update function to push new value into the low pass filter." alt="" coords="203,55,366,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,65,190,65,190,70,154,70"/>
+<area shape="rect" id="Node000004" href="$d7/d39/class_high_pass_filter.html#a4a409f17d0baf751719d99d29e2b1c93" title="Update function to push new value into the low pass filter." alt="" coords="201,104,368,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,77,218,98,217,103,132,83"/>
+</map>

@@ -1,0 +1,221 @@
+\doxysection{SPO2\+Tracker Class Reference}
+\hypertarget{class_s_p_o2_tracker}{}\label{class_s_p_o2_tracker}\index{SPO2Tracker@{SPO2Tracker}}
+
+
+{\ttfamily \#include $<$SPO2\+Tracker.\+h$>$}
+
+
+
+Inheritance diagram for SPO2\+Tracker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{d2/dd3/class_s_p_o2_tracker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for SPO2\+Tracker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{d8/dfe/class_s_p_o2_tracker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_p_o2_tracker_a07d2fd774558fa2ca39d93184d06b462}{SPO2\+Tracker}} (\mbox{\hyperlink{classsensor}{sensor}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{class_s_p_o2_tracker_a727d1be9eaa17cf1fa325935e4536c4c}{\texorpdfstring{$\sim$}{\string~}\+SPO2\+Tracker}} ()
+\item 
+void \mbox{\hyperlink{class_s_p_o2_tracker_a3ca3542f14805182c419b8a2b8627b8c}{start}} ()
+\item 
+void \mbox{\hyperlink{class_s_p_o2_tracker_a5af4b45780d7861bf4b075ddb3a9591c}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_s_p_o2_tracker_ad79f6cc0f5be45254e84823f4877eec1}{ping}} ()
+\item 
+int \mbox{\hyperlink{class_s_p_o2_tracker_a3c0ccec07835f9120be36775a1e2e64f}{get\+Val}} ()
+\item 
+void \mbox{\hyperlink{class_s_p_o2_tracker_aa32cfa3b341911d5649f2acd6c9edf23}{tracker}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_p_o2_tracker_a19300623a75a6dcc7e7c94654f15cb7c}{ping\+Thread}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsensor}{sensor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_p_o2_tracker_afede87d7a30ef48fb2411231638da753}{\+\_\+s}}
+\item 
+bool \mbox{\hyperlink{class_s_p_o2_tracker_a2f6f56682b454b297ebd6aed075566c9}{thread\+Running}} = false
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{class_s_p_o2_tracker_ae9c1a89e4707f4ed7f3ee5cf94cccf65}{symptom\+Ranges}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classdiagnosis_interface}{diagnosis\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptom\+Ranges}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classdiagnosis_interface}{diagnosis\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classdiagnosis_interface_ac23cf5e69c20f19de5fda5b55e49f437}{determine\+Symptom}} (std\+::vector$<$ \mbox{\hyperlink{structsymptom_range}{symptom\+Range}} $>$ \mbox{\hyperlink{classdiagnosis_interface_a7a399d5e9a73caa08db26e7346598998}{symptom\+Ranges}}, int val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_p_o2_tracker_a07d2fd774558fa2ca39d93184d06b462}\label{class_s_p_o2_tracker_a07d2fd774558fa2ca39d93184d06b462} 
+\index{SPO2Tracker@{SPO2Tracker}!SPO2Tracker@{SPO2Tracker}}
+\index{SPO2Tracker@{SPO2Tracker}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{SPO2Tracker()}{SPO2Tracker()}}
+{\footnotesize\ttfamily SPO2\+Tracker\+::\+SPO2\+Tracker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsensor}{sensor}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+\Hypertarget{class_s_p_o2_tracker_a727d1be9eaa17cf1fa325935e4536c4c}\label{class_s_p_o2_tracker_a727d1be9eaa17cf1fa325935e4536c4c} 
+\index{SPO2Tracker@{SPO2Tracker}!````~SPO2Tracker@{\texorpdfstring{$\sim$}{\string~}SPO2Tracker}}
+\index{````~SPO2Tracker@{\texorpdfstring{$\sim$}{\string~}SPO2Tracker}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SPO2Tracker()}{\string~SPO2Tracker()}}
+{\footnotesize\ttfamily SPO2\+Tracker\+::\texorpdfstring{$\sim$}{\string~}\+SPO2\+Tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d3d/class_s_p_o2_tracker_a727d1be9eaa17cf1fa325935e4536c4c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_p_o2_tracker_a3c0ccec07835f9120be36775a1e2e64f}\label{class_s_p_o2_tracker_a3c0ccec07835f9120be36775a1e2e64f} 
+\index{SPO2Tracker@{SPO2Tracker}!getVal@{getVal}}
+\index{getVal@{getVal}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{getVal()}{getVal()}}
+{\footnotesize\ttfamily int SPO2\+Tracker\+::get\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_ad6391b6e9fb21261d4353a5d850f6724}{diagnosis\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{dd/d3d/class_s_p_o2_tracker_a3c0ccec07835f9120be36775a1e2e64f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_s_p_o2_tracker_ad79f6cc0f5be45254e84823f4877eec1}\label{class_s_p_o2_tracker_ad79f6cc0f5be45254e84823f4877eec1} 
+\index{SPO2Tracker@{SPO2Tracker}!ping@{ping}}
+\index{ping@{ping}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily void SPO2\+Tracker\+::ping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_a9a8c6781d6813c939dfcdbc4ab54f573}{diagnosis\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d3d/class_s_p_o2_tracker_ad79f6cc0f5be45254e84823f4877eec1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_s_p_o2_tracker_a19300623a75a6dcc7e7c94654f15cb7c}\label{class_s_p_o2_tracker_a19300623a75a6dcc7e7c94654f15cb7c} 
+\index{SPO2Tracker@{SPO2Tracker}!pingThread@{pingThread}}
+\index{pingThread@{pingThread}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{pingThread()}{pingThread()}}
+{\footnotesize\ttfamily void SPO2\+Tracker\+::ping\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d3d/class_s_p_o2_tracker_a19300623a75a6dcc7e7c94654f15cb7c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_s_p_o2_tracker_a3ca3542f14805182c419b8a2b8627b8c}\label{class_s_p_o2_tracker_a3ca3542f14805182c419b8a2b8627b8c} 
+\index{SPO2Tracker@{SPO2Tracker}!start@{start}}
+\index{start@{start}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void SPO2\+Tracker\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_a4aef943bb4435304bd736bfa5c381d5c}{diagnosis\+Interface}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d3d/class_s_p_o2_tracker_a3ca3542f14805182c419b8a2b8627b8c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_s_p_o2_tracker_a5af4b45780d7861bf4b075ddb3a9591c}\label{class_s_p_o2_tracker_a5af4b45780d7861bf4b075ddb3a9591c} 
+\index{SPO2Tracker@{SPO2Tracker}!stop@{stop}}
+\index{stop@{stop}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void SPO2\+Tracker\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classdiagnosis_interface_a40312067315d0cae8caad4817fec17b8}{diagnosis\+Interface}}.
+
+\Hypertarget{class_s_p_o2_tracker_aa32cfa3b341911d5649f2acd6c9edf23}\label{class_s_p_o2_tracker_aa32cfa3b341911d5649f2acd6c9edf23} 
+\index{SPO2Tracker@{SPO2Tracker}!tracker@{tracker}}
+\index{tracker@{tracker}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{tracker()}{tracker()}}
+{\footnotesize\ttfamily void SPO2\+Tracker\+::tracker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d3d/class_s_p_o2_tracker_aa32cfa3b341911d5649f2acd6c9edf23_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_s_p_o2_tracker_afede87d7a30ef48fb2411231638da753}\label{class_s_p_o2_tracker_afede87d7a30ef48fb2411231638da753} 
+\index{SPO2Tracker@{SPO2Tracker}!\_s@{\_s}}
+\index{\_s@{\_s}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{\_s}{\_s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsensor}{sensor}}\texorpdfstring{$\ast$}{*} SPO2\+Tracker\+::\+\_\+s\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_s_p_o2_tracker_ae9c1a89e4707f4ed7f3ee5cf94cccf65}\label{class_s_p_o2_tracker_ae9c1a89e4707f4ed7f3ee5cf94cccf65} 
+\index{SPO2Tracker@{SPO2Tracker}!symptomRanges@{symptomRanges}}
+\index{symptomRanges@{symptomRanges}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{symptomRanges}{symptomRanges}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structsymptom_range}{symptom\+Range}}$>$ SPO2\+Tracker\+::symptom\+Ranges\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{0,88,\textcolor{stringliteral}{"{}Critically\ Low\ Oxygen\ concentration"{}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{88,92,\textcolor{stringliteral}{"{}Concerningly\ Low\ Oxygen\ Concentration"{}}\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{92,100,\textcolor{stringliteral}{"{}Healthy\ Oxygen\ Concentration"{}}\}\}}
+
+\end{DoxyCode}
+\Hypertarget{class_s_p_o2_tracker_a2f6f56682b454b297ebd6aed075566c9}\label{class_s_p_o2_tracker_a2f6f56682b454b297ebd6aed075566c9} 
+\index{SPO2Tracker@{SPO2Tracker}!threadRunning@{threadRunning}}
+\index{threadRunning@{threadRunning}!SPO2Tracker@{SPO2Tracker}}
+\doxysubsubsection{\texorpdfstring{threadRunning}{threadRunning}}
+{\footnotesize\ttfamily bool SPO2\+Tracker\+::thread\+Running = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_s_p_o2_tracker_8h}{SPO2\+Tracker.\+h}}\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_s_p_o2_tracker_8cpp}{SPO2\+Tracker.\+cpp}}\end{DoxyCompactItemize}

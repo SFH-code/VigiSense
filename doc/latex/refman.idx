@@ -1,0 +1,1201 @@
+\indexentry{eprosima@{eprosima}|hyperpage}{9}
+\indexentry{eprosima::fastcdr@{eprosima::fastcdr}|hyperpage}{9}
+\indexentry{tps@{tps}|hyperpage}{9}
+\indexentry{tps@{tps}!pow@{pow}|hyperpage}{9}
+\indexentry{pow@{pow}!tps@{tps}|hyperpage}{9}
+\indexentry{alert@{alert}|hyperpage}{11}
+\indexentry{alert@{alert}!alert@{alert}|hyperpage}{12}
+\indexentry{alert@{alert}!alert@{alert}|hyperpage}{12}
+\indexentry{alert@{alert}!````~alert@{\texorpdfstring{$\sim$}{\string~}alert}|hyperpage}{12}
+\indexentry{````~alert@{\texorpdfstring{$\sim$}{\string~}alert}!alert@{alert}|hyperpage}{12}
+\indexentry{alert@{alert}!alert@{alert}|hyperpage}{13}
+\indexentry{alert@{alert}!alert@{alert}|hyperpage}{13}
+\indexentry{alert@{alert}!alert@{alert}|hyperpage}{13}
+\indexentry{alert@{alert}!alert@{alert}|hyperpage}{13}
+\indexentry{alert@{alert}!deserialize@{deserialize}|hyperpage}{13}
+\indexentry{deserialize@{deserialize}!alert@{alert}|hyperpage}{13}
+\indexentry{alert@{alert}!getCdrSerializedSize@{getCdrSerializedSize}|hyperpage}{13}
+\indexentry{getCdrSerializedSize@{getCdrSerializedSize}!alert@{alert}|hyperpage}{13}
+\indexentry{alert@{alert}!getKeyMaxCdrSerializedSize@{getKeyMaxCdrSerializedSize}|hyperpage}{14}
+\indexentry{getKeyMaxCdrSerializedSize@{getKeyMaxCdrSerializedSize}!alert@{alert}|hyperpage}{14}
+\indexentry{alert@{alert}!getMaxCdrSerializedSize@{getMaxCdrSerializedSize}|hyperpage}{14}
+\indexentry{getMaxCdrSerializedSize@{getMaxCdrSerializedSize}!alert@{alert}|hyperpage}{14}
+\indexentry{alert@{alert}!index@{index}|hyperpage}{14}
+\indexentry{index@{index}!alert@{alert}|hyperpage}{14}
+\indexentry{alert@{alert}!index@{index}|hyperpage}{15}
+\indexentry{index@{index}!alert@{alert}|hyperpage}{15}
+\indexentry{alert@{alert}!index@{index}|hyperpage}{15}
+\indexentry{index@{index}!alert@{alert}|hyperpage}{15}
+\indexentry{alert@{alert}!isKeyDefined@{isKeyDefined}|hyperpage}{15}
+\indexentry{isKeyDefined@{isKeyDefined}!alert@{alert}|hyperpage}{15}
+\indexentry{alert@{alert}!message@{message}|hyperpage}{15}
+\indexentry{message@{message}!alert@{alert}|hyperpage}{15}
+\indexentry{alert@{alert}!message@{message}|hyperpage}{15}
+\indexentry{message@{message}!alert@{alert}|hyperpage}{15}
+\indexentry{alert@{alert}!message@{message}|hyperpage}{15}
+\indexentry{message@{message}!alert@{alert}|hyperpage}{15}
+\indexentry{alert@{alert}!message@{message}|hyperpage}{16}
+\indexentry{message@{message}!alert@{alert}|hyperpage}{16}
+\indexentry{alert@{alert}!operator"!=@{operator"!=}|hyperpage}{16}
+\indexentry{operator"!=@{operator"!=}!alert@{alert}|hyperpage}{16}
+\indexentry{alert@{alert}!operator=@{operator=}|hyperpage}{16}
+\indexentry{operator=@{operator=}!alert@{alert}|hyperpage}{16}
+\indexentry{alert@{alert}!operator=@{operator=}|hyperpage}{16}
+\indexentry{operator=@{operator=}!alert@{alert}|hyperpage}{16}
+\indexentry{alert@{alert}!operator==@{operator==}|hyperpage}{17}
+\indexentry{operator==@{operator==}!alert@{alert}|hyperpage}{17}
+\indexentry{alert@{alert}!serialize@{serialize}|hyperpage}{17}
+\indexentry{serialize@{serialize}!alert@{alert}|hyperpage}{17}
+\indexentry{alert@{alert}!serializeKey@{serializeKey}|hyperpage}{17}
+\indexentry{serializeKey@{serializeKey}!alert@{alert}|hyperpage}{17}
+\indexentry{alert@{alert}!index@{index}|hyperpage}{18}
+\indexentry{index@{index}!alert@{alert}|hyperpage}{18}
+\indexentry{alert@{alert}!m\_index@{m\_index}|hyperpage}{18}
+\indexentry{m\_index@{m\_index}!alert@{alert}|hyperpage}{18}
+\indexentry{alert@{alert}!m\_message@{m\_message}|hyperpage}{18}
+\indexentry{m\_message@{m\_message}!alert@{alert}|hyperpage}{18}
+\indexentry{alert@{alert}!message@{message}|hyperpage}{18}
+\indexentry{message@{message}!alert@{alert}|hyperpage}{18}
+\indexentry{alertPubSubType@{alertPubSubType}|hyperpage}{19}
+\indexentry{alertPubSubType@{alertPubSubType}!type@{type}|hyperpage}{20}
+\indexentry{type@{type}!alertPubSubType@{alertPubSubType}|hyperpage}{20}
+\indexentry{alertPubSubType@{alertPubSubType}!alertPubSubType@{alertPubSubType}|hyperpage}{20}
+\indexentry{alertPubSubType@{alertPubSubType}!alertPubSubType@{alertPubSubType}|hyperpage}{20}
+\indexentry{alertPubSubType@{alertPubSubType}!````~alertPubSubType@{\texorpdfstring{$\sim$}{\string~}alertPubSubType}|hyperpage}{20}
+\indexentry{````~alertPubSubType@{\texorpdfstring{$\sim$}{\string~}alertPubSubType}!alertPubSubType@{alertPubSubType}|hyperpage}{20}
+\indexentry{alertPubSubType@{alertPubSubType}!createData@{createData}|hyperpage}{21}
+\indexentry{createData@{createData}!alertPubSubType@{alertPubSubType}|hyperpage}{21}
+\indexentry{alertPubSubType@{alertPubSubType}!deleteData@{deleteData}|hyperpage}{21}
+\indexentry{deleteData@{deleteData}!alertPubSubType@{alertPubSubType}|hyperpage}{21}
+\indexentry{alertPubSubType@{alertPubSubType}!deserialize@{deserialize}|hyperpage}{21}
+\indexentry{deserialize@{deserialize}!alertPubSubType@{alertPubSubType}|hyperpage}{21}
+\indexentry{alertPubSubType@{alertPubSubType}!getKey@{getKey}|hyperpage}{21}
+\indexentry{getKey@{getKey}!alertPubSubType@{alertPubSubType}|hyperpage}{21}
+\indexentry{alertPubSubType@{alertPubSubType}!getSerializedSizeProvider@{getSerializedSizeProvider}|hyperpage}{21}
+\indexentry{getSerializedSizeProvider@{getSerializedSizeProvider}!alertPubSubType@{alertPubSubType}|hyperpage}{21}
+\indexentry{alertPubSubType@{alertPubSubType}!serialize@{serialize}|hyperpage}{22}
+\indexentry{serialize@{serialize}!alertPubSubType@{alertPubSubType}|hyperpage}{22}
+\indexentry{alertPubSubType@{alertPubSubType}!m\_keyBuffer@{m\_keyBuffer}|hyperpage}{22}
+\indexentry{m\_keyBuffer@{m\_keyBuffer}!alertPubSubType@{alertPubSubType}|hyperpage}{22}
+\indexentry{alertPubSubType@{alertPubSubType}!m\_md5@{m\_md5}|hyperpage}{22}
+\indexentry{m\_md5@{m\_md5}!alertPubSubType@{alertPubSubType}|hyperpage}{22}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{23}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!CircularDelay@{CircularDelay}|hyperpage}{24}
+\indexentry{CircularDelay@{CircularDelay}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{24}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!begin@{begin}|hyperpage}{25}
+\indexentry{begin@{begin}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{25}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!end@{end}|hyperpage}{25}
+\indexentry{end@{end}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{25}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!get@{get}|hyperpage}{25}
+\indexentry{get@{get}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{25}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!push@{push}|hyperpage}{25}
+\indexentry{push@{push}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{25}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!rbegin@{rbegin}|hyperpage}{26}
+\indexentry{rbegin@{rbegin}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{26}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!rend@{rend}|hyperpage}{26}
+\indexentry{rend@{rend}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{26}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!data@{data}|hyperpage}{26}
+\indexentry{data@{data}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{26}
+\indexentry{CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}!setIterator@{setIterator}|hyperpage}{26}
+\indexentry{setIterator@{setIterator}!CircularDelay$<$ type, size $>$@{CircularDelay$<$ type, size $>$}|hyperpage}{26}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{27}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!difference\_type@{difference\_type}|hyperpage}{27}
+\indexentry{difference\_type@{difference\_type}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{27}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!iterator\_category@{iterator\_category}|hyperpage}{27}
+\indexentry{iterator\_category@{iterator\_category}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{27}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!self\_type@{self\_type}|hyperpage}{27}
+\indexentry{self\_type@{self\_type}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{27}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!const\_iterator@{const\_iterator}|hyperpage}{28}
+\indexentry{const\_iterator@{const\_iterator}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!const\_iterator@{const\_iterator}|hyperpage}{28}
+\indexentry{const\_iterator@{const\_iterator}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator"!=@{operator"!=}|hyperpage}{28}
+\indexentry{operator"!=@{operator"!=}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}|hyperpage}{28}
+\indexentry{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator++@{operator++}|hyperpage}{28}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator++@{operator++}|hyperpage}{28}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{28}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{28}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{29}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator-\/$>$@{operator-\/$>$}|hyperpage}{29}
+\indexentry{operator-\/$>$@{operator-\/$>$}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator==@{operator==}|hyperpage}{29}
+\indexentry{operator==@{operator==}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{29}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!CircularDelay@{CircularDelay}|hyperpage}{29}
+\indexentry{CircularDelay@{CircularDelay}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!data\_@{data\_}|hyperpage}{29}
+\indexentry{data\_@{data\_}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}!ptr\_@{ptr\_}|hyperpage}{29}
+\indexentry{ptr\_@{ptr\_}!CircularDelay$<$ type, size $>$::const\_iterator@{CircularDelay$<$ type, size $>$::const\_iterator}|hyperpage}{29}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{30}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!difference\_type@{difference\_type}|hyperpage}{31}
+\indexentry{difference\_type@{difference\_type}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!iterator\_category@{iterator\_category}|hyperpage}{31}
+\indexentry{iterator\_category@{iterator\_category}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!self\_type@{self\_type}|hyperpage}{31}
+\indexentry{self\_type@{self\_type}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!const\_reverse\_iterator@{const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{const\_reverse\_iterator@{const\_reverse\_iterator}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!const\_reverse\_iterator@{const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{const\_reverse\_iterator@{const\_reverse\_iterator}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator"!=@{operator"!=}|hyperpage}{31}
+\indexentry{operator"!=@{operator"!=}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}|hyperpage}{31}
+\indexentry{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator++@{operator++}|hyperpage}{31}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{31}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator++@{operator++}|hyperpage}{32}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{32}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{32}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator-\/$>$@{operator-\/$>$}|hyperpage}{32}
+\indexentry{operator-\/$>$@{operator-\/$>$}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator==@{operator==}|hyperpage}{32}
+\indexentry{operator==@{operator==}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{32}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!CircularDelay@{CircularDelay}|hyperpage}{32}
+\indexentry{CircularDelay@{CircularDelay}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{32}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!data\_@{data\_}|hyperpage}{33}
+\indexentry{data\_@{data\_}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{33}
+\indexentry{CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}!ptr\_@{ptr\_}|hyperpage}{33}
+\indexentry{ptr\_@{ptr\_}!CircularDelay$<$ type, size $>$::const\_reverse\_iterator@{CircularDelay$<$ type, size $>$::const\_reverse\_iterator}|hyperpage}{33}
+\indexentry{contact@{contact}|hyperpage}{33}
+\indexentry{contact@{contact}!email@{email}|hyperpage}{33}
+\indexentry{email@{email}!contact@{contact}|hyperpage}{33}
+\indexentry{contact@{contact}!name@{name}|hyperpage}{33}
+\indexentry{name@{name}!contact@{contact}|hyperpage}{33}
+\indexentry{contact@{contact}!phoneNum@{phoneNum}|hyperpage}{33}
+\indexentry{phoneNum@{phoneNum}!contact@{contact}|hyperpage}{33}
+\indexentry{DevicePublisher@{DevicePublisher}|hyperpage}{34}
+\indexentry{DevicePublisher@{DevicePublisher}!DevicePublisher@{DevicePublisher}|hyperpage}{34}
+\indexentry{DevicePublisher@{DevicePublisher}!DevicePublisher@{DevicePublisher}|hyperpage}{34}
+\indexentry{DevicePublisher@{DevicePublisher}!````~DevicePublisher@{\texorpdfstring{$\sim$}{\string~}DevicePublisher}|hyperpage}{34}
+\indexentry{````~DevicePublisher@{\texorpdfstring{$\sim$}{\string~}DevicePublisher}!DevicePublisher@{DevicePublisher}|hyperpage}{34}
+\indexentry{DevicePublisher@{DevicePublisher}!init@{init}|hyperpage}{35}
+\indexentry{init@{init}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!publish@{publish}|hyperpage}{35}
+\indexentry{publish@{publish}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!listener\_@{listener\_}|hyperpage}{35}
+\indexentry{listener\_@{listener\_}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!participant\_@{participant\_}|hyperpage}{35}
+\indexentry{participant\_@{participant\_}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!publisher\_@{publisher\_}|hyperpage}{35}
+\indexentry{publisher\_@{publisher\_}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!topic\_@{topic\_}|hyperpage}{35}
+\indexentry{topic\_@{topic\_}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!type\_@{type\_}|hyperpage}{35}
+\indexentry{type\_@{type\_}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DevicePublisher@{DevicePublisher}!writer\_@{writer\_}|hyperpage}{35}
+\indexentry{writer\_@{writer\_}!DevicePublisher@{DevicePublisher}|hyperpage}{35}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}|hyperpage}{36}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!````~DeviceSubscriber@{\texorpdfstring{$\sim$}{\string~}DeviceSubscriber}|hyperpage}{37}
+\indexentry{````~DeviceSubscriber@{\texorpdfstring{$\sim$}{\string~}DeviceSubscriber}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!init@{init}|hyperpage}{37}
+\indexentry{init@{init}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!listener\_@{listener\_}|hyperpage}{37}
+\indexentry{listener\_@{listener\_}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!participant\_@{participant\_}|hyperpage}{37}
+\indexentry{participant\_@{participant\_}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!reader\_@{reader\_}|hyperpage}{37}
+\indexentry{reader\_@{reader\_}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!subscriber\_@{subscriber\_}|hyperpage}{37}
+\indexentry{subscriber\_@{subscriber\_}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!topic\_@{topic\_}|hyperpage}{37}
+\indexentry{topic\_@{topic\_}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{DeviceSubscriber@{DeviceSubscriber}!type\_@{type\_}|hyperpage}{37}
+\indexentry{type\_@{type\_}!DeviceSubscriber@{DeviceSubscriber}|hyperpage}{37}
+\indexentry{diagnosis::DiagnosesTable@{diagnosis::DiagnosesTable}|hyperpage}{38}
+\indexentry{diagnosis::DiagnosesTable@{diagnosis::DiagnosesTable}!Diagnoses@{Diagnoses}|hyperpage}{38}
+\indexentry{Diagnoses@{Diagnoses}!diagnosis::DiagnosesTable@{diagnosis::DiagnosesTable}|hyperpage}{38}
+\indexentry{diagnosis@{diagnosis}|hyperpage}{38}
+\indexentry{diagnosis@{diagnosis}!\_Diagnoses@{\_Diagnoses}|hyperpage}{39}
+\indexentry{\_Diagnoses@{\_Diagnoses}!diagnosis@{diagnosis}|hyperpage}{39}
+\indexentry{diagnosis@{diagnosis}!Diagnosis\_Range@{Diagnosis\_Range}|hyperpage}{39}
+\indexentry{Diagnosis\_Range@{Diagnosis\_Range}!diagnosis@{diagnosis}|hyperpage}{39}
+\indexentry{diagnosis@{diagnosis}!critCheck@{critCheck}|hyperpage}{39}
+\indexentry{critCheck@{critCheck}!diagnosis@{diagnosis}|hyperpage}{39}
+\indexentry{diagnosis@{diagnosis}!critRangeAlert@{critRangeAlert}|hyperpage}{39}
+\indexentry{critRangeAlert@{critRangeAlert}!diagnosis@{diagnosis}|hyperpage}{39}
+\indexentry{diagnosis@{diagnosis}!determineDiagnosis@{determineDiagnosis}|hyperpage}{39}
+\indexentry{determineDiagnosis@{determineDiagnosis}!diagnosis@{diagnosis}|hyperpage}{39}
+\indexentry{diagnosis@{diagnosis}!displayDiagnosis@{displayDiagnosis}|hyperpage}{40}
+\indexentry{displayDiagnosis@{displayDiagnosis}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!findMinMax@{findMinMax}|hyperpage}{40}
+\indexentry{findMinMax@{findMinMax}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!SetdiagnosisRanges@{SetdiagnosisRanges}|hyperpage}{40}
+\indexentry{SetdiagnosisRanges@{SetdiagnosisRanges}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!CriticalHigh@{CriticalHigh}|hyperpage}{40}
+\indexentry{CriticalHigh@{CriticalHigh}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!CriticalLow@{CriticalLow}|hyperpage}{40}
+\indexentry{CriticalLow@{CriticalLow}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!CustomDiagnoses@{CustomDiagnoses}|hyperpage}{40}
+\indexentry{CustomDiagnoses@{CustomDiagnoses}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!CustomDiagnosis@{CustomDiagnosis}|hyperpage}{40}
+\indexentry{CustomDiagnosis@{CustomDiagnosis}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!stdDiagnoses@{stdDiagnoses}|hyperpage}{40}
+\indexentry{stdDiagnoses@{stdDiagnoses}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosis@{diagnosis}!stdDiagnosis@{stdDiagnosis}|hyperpage}{40}
+\indexentry{stdDiagnosis@{stdDiagnosis}!diagnosis@{diagnosis}|hyperpage}{40}
+\indexentry{diagnosisInterface@{diagnosisInterface}|hyperpage}{41}
+\indexentry{diagnosisInterface@{diagnosisInterface}!determineSymptom@{determineSymptom}|hyperpage}{41}
+\indexentry{determineSymptom@{determineSymptom}!diagnosisInterface@{diagnosisInterface}|hyperpage}{41}
+\indexentry{diagnosisInterface@{diagnosisInterface}!getVal@{getVal}|hyperpage}{41}
+\indexentry{getVal@{getVal}!diagnosisInterface@{diagnosisInterface}|hyperpage}{41}
+\indexentry{diagnosisInterface@{diagnosisInterface}!ping@{ping}|hyperpage}{42}
+\indexentry{ping@{ping}!diagnosisInterface@{diagnosisInterface}|hyperpage}{42}
+\indexentry{diagnosisInterface@{diagnosisInterface}!start@{start}|hyperpage}{42}
+\indexentry{start@{start}!diagnosisInterface@{diagnosisInterface}|hyperpage}{42}
+\indexentry{diagnosisInterface@{diagnosisInterface}!stop@{stop}|hyperpage}{42}
+\indexentry{stop@{stop}!diagnosisInterface@{diagnosisInterface}|hyperpage}{42}
+\indexentry{diagnosisInterface@{diagnosisInterface}!symptomRanges@{symptomRanges}|hyperpage}{42}
+\indexentry{symptomRanges@{symptomRanges}!diagnosisInterface@{diagnosisInterface}|hyperpage}{42}
+\indexentry{diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}|hyperpage}{42}
+\indexentry{diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}!diagnosis@{diagnosis}|hyperpage}{43}
+\indexentry{diagnosis@{diagnosis}!diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}|hyperpage}{43}
+\indexentry{diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}!max@{max}|hyperpage}{43}
+\indexentry{max@{max}!diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}|hyperpage}{43}
+\indexentry{diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}!min@{min}|hyperpage}{43}
+\indexentry{min@{min}!diagnosis::DiagnosisRange@{diagnosis::DiagnosisRange}|hyperpage}{43}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{43}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!Differentiator@{Differentiator}|hyperpage}{44}
+\indexentry{Differentiator@{Differentiator}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{44}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!getOutput@{getOutput}|hyperpage}{44}
+\indexentry{getOutput@{getOutput}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{44}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!update@{update}|hyperpage}{44}
+\indexentry{update@{update}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{44}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!sampleTime@{sampleTime}|hyperpage}{45}
+\indexentry{sampleTime@{sampleTime}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{45}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!x1@{x1}|hyperpage}{45}
+\indexentry{x1@{x1}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{45}
+\indexentry{Differentiator$<$ T $>$@{Differentiator$<$ T $>$}!y@{y}|hyperpage}{45}
+\indexentry{y@{y}!Differentiator$<$ T $>$@{Differentiator$<$ T $>$}|hyperpage}{45}
+\indexentry{DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}|hyperpage}{45}
+\indexentry{DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}!getOutput@{getOutput}|hyperpage}{46}
+\indexentry{getOutput@{getOutput}!DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}|hyperpage}{46}
+\indexentry{DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}!update@{update}|hyperpage}{46}
+\indexentry{update@{update}!DigitalFilter$<$ Type $>$@{DigitalFilter$<$ Type $>$}|hyperpage}{46}
+\indexentry{HighPassFilter@{HighPassFilter}|hyperpage}{46}
+\indexentry{HighPassFilter@{HighPassFilter}!HighPassFilter@{HighPassFilter}|hyperpage}{47}
+\indexentry{HighPassFilter@{HighPassFilter}!HighPassFilter@{HighPassFilter}|hyperpage}{47}
+\indexentry{HighPassFilter@{HighPassFilter}!configOutput@{configOutput}|hyperpage}{48}
+\indexentry{configOutput@{configOutput}!HighPassFilter@{HighPassFilter}|hyperpage}{48}
+\indexentry{HighPassFilter@{HighPassFilter}!getOutput@{getOutput}|hyperpage}{48}
+\indexentry{getOutput@{getOutput}!HighPassFilter@{HighPassFilter}|hyperpage}{48}
+\indexentry{HighPassFilter@{HighPassFilter}!outputPointer@{outputPointer}|hyperpage}{48}
+\indexentry{outputPointer@{outputPointer}!HighPassFilter@{HighPassFilter}|hyperpage}{48}
+\indexentry{HighPassFilter@{HighPassFilter}!update@{update}|hyperpage}{48}
+\indexentry{update@{update}!HighPassFilter@{HighPassFilter}|hyperpage}{48}
+\indexentry{HighPassFilter@{HighPassFilter}!amplFac@{amplFac}|hyperpage}{49}
+\indexentry{amplFac@{amplFac}!HighPassFilter@{HighPassFilter}|hyperpage}{49}
+\indexentry{HighPassFilter@{HighPassFilter}!dt@{dt}|hyperpage}{49}
+\indexentry{dt@{dt}!HighPassFilter@{HighPassFilter}|hyperpage}{49}
+\indexentry{HighPassFilter@{HighPassFilter}!output@{output}|hyperpage}{49}
+\indexentry{output@{output}!HighPassFilter@{HighPassFilter}|hyperpage}{49}
+\indexentry{HighPassFilter@{HighPassFilter}!x1@{x1}|hyperpage}{49}
+\indexentry{x1@{x1}!HighPassFilter@{HighPassFilter}|hyperpage}{49}
+\indexentry{HighPassFilter@{HighPassFilter}!y1c@{y1c}|hyperpage}{49}
+\indexentry{y1c@{y1c}!HighPassFilter@{HighPassFilter}|hyperpage}{49}
+\indexentry{HighPassFilter3@{HighPassFilter3}|hyperpage}{50}
+\indexentry{HighPassFilter3@{HighPassFilter3}!HighPassFilter3@{HighPassFilter3}|hyperpage}{51}
+\indexentry{HighPassFilter3@{HighPassFilter3}!HighPassFilter3@{HighPassFilter3}|hyperpage}{51}
+\indexentry{HighPassFilter3@{HighPassFilter3}!getOutput@{getOutput}|hyperpage}{51}
+\indexentry{getOutput@{getOutput}!HighPassFilter3@{HighPassFilter3}|hyperpage}{51}
+\indexentry{HighPassFilter3@{HighPassFilter3}!update@{update}|hyperpage}{51}
+\indexentry{update@{update}!HighPassFilter3@{HighPassFilter3}|hyperpage}{51}
+\indexentry{HighPassFilter3@{HighPassFilter3}!x@{x}|hyperpage}{52}
+\indexentry{x@{x}!HighPassFilter3@{HighPassFilter3}|hyperpage}{52}
+\indexentry{HighPassFilter3@{HighPassFilter3}!xc@{xc}|hyperpage}{52}
+\indexentry{xc@{xc}!HighPassFilter3@{HighPassFilter3}|hyperpage}{52}
+\indexentry{HighPassFilter3@{HighPassFilter3}!y@{y}|hyperpage}{52}
+\indexentry{y@{y}!HighPassFilter3@{HighPassFilter3}|hyperpage}{52}
+\indexentry{HighPassFilter3@{HighPassFilter3}!yc@{yc}|hyperpage}{52}
+\indexentry{yc@{yc}!HighPassFilter3@{HighPassFilter3}|hyperpage}{52}
+\indexentry{HRTracker@{HRTracker}|hyperpage}{52}
+\indexentry{HRTracker@{HRTracker}!HRTracker@{HRTracker}|hyperpage}{54}
+\indexentry{HRTracker@{HRTracker}!HRTracker@{HRTracker}|hyperpage}{54}
+\indexentry{HRTracker@{HRTracker}!````~HRTracker@{\texorpdfstring{$\sim$}{\string~}HRTracker}|hyperpage}{54}
+\indexentry{````~HRTracker@{\texorpdfstring{$\sim$}{\string~}HRTracker}!HRTracker@{HRTracker}|hyperpage}{54}
+\indexentry{HRTracker@{HRTracker}!getVal@{getVal}|hyperpage}{54}
+\indexentry{getVal@{getVal}!HRTracker@{HRTracker}|hyperpage}{54}
+\indexentry{HRTracker@{HRTracker}!ping@{ping}|hyperpage}{54}
+\indexentry{ping@{ping}!HRTracker@{HRTracker}|hyperpage}{54}
+\indexentry{HRTracker@{HRTracker}!pingThread@{pingThread}|hyperpage}{55}
+\indexentry{pingThread@{pingThread}!HRTracker@{HRTracker}|hyperpage}{55}
+\indexentry{HRTracker@{HRTracker}!start@{start}|hyperpage}{55}
+\indexentry{start@{start}!HRTracker@{HRTracker}|hyperpage}{55}
+\indexentry{HRTracker@{HRTracker}!stop@{stop}|hyperpage}{55}
+\indexentry{stop@{stop}!HRTracker@{HRTracker}|hyperpage}{55}
+\indexentry{HRTracker@{HRTracker}!tracker@{tracker}|hyperpage}{56}
+\indexentry{tracker@{tracker}!HRTracker@{HRTracker}|hyperpage}{56}
+\indexentry{HRTracker@{HRTracker}!\_s@{\_s}|hyperpage}{56}
+\indexentry{\_s@{\_s}!HRTracker@{HRTracker}|hyperpage}{56}
+\indexentry{HRTracker@{HRTracker}!symptomRanges@{symptomRanges}|hyperpage}{56}
+\indexentry{symptomRanges@{symptomRanges}!HRTracker@{HRTracker}|hyperpage}{56}
+\indexentry{HRTracker@{HRTracker}!threadRunning@{threadRunning}|hyperpage}{56}
+\indexentry{threadRunning@{threadRunning}!HRTracker@{HRTracker}|hyperpage}{56}
+\indexentry{i2c\_msg@{i2c\_msg}|hyperpage}{57}
+\indexentry{i2c\_msg@{i2c\_msg}!addr@{addr}|hyperpage}{57}
+\indexentry{addr@{addr}!i2c\_msg@{i2c\_msg}|hyperpage}{57}
+\indexentry{i2c\_msg@{i2c\_msg}!buf@{buf}|hyperpage}{57}
+\indexentry{buf@{buf}!i2c\_msg@{i2c\_msg}|hyperpage}{57}
+\indexentry{i2c\_msg@{i2c\_msg}!flags@{flags}|hyperpage}{57}
+\indexentry{flags@{flags}!i2c\_msg@{i2c\_msg}|hyperpage}{57}
+\indexentry{i2c\_msg@{i2c\_msg}!len@{len}|hyperpage}{57}
+\indexentry{len@{len}!i2c\_msg@{i2c\_msg}|hyperpage}{57}
+\indexentry{i2c\_rdwr\_ioctl\_data@{i2c\_rdwr\_ioctl\_data}|hyperpage}{57}
+\indexentry{i2c\_rdwr\_ioctl\_data@{i2c\_rdwr\_ioctl\_data}!msgs@{msgs}|hyperpage}{58}
+\indexentry{msgs@{msgs}!i2c\_rdwr\_ioctl\_data@{i2c\_rdwr\_ioctl\_data}|hyperpage}{58}
+\indexentry{i2c\_rdwr\_ioctl\_data@{i2c\_rdwr\_ioctl\_data}!nmsgs@{nmsgs}|hyperpage}{58}
+\indexentry{nmsgs@{nmsgs}!i2c\_rdwr\_ioctl\_data@{i2c\_rdwr\_ioctl\_data}|hyperpage}{58}
+\indexentry{i2c\_smbus\_data@{i2c\_smbus\_data}|hyperpage}{58}
+\indexentry{i2c\_smbus\_data@{i2c\_smbus\_data}!block@{block}|hyperpage}{58}
+\indexentry{block@{block}!i2c\_smbus\_data@{i2c\_smbus\_data}|hyperpage}{58}
+\indexentry{i2c\_smbus\_data@{i2c\_smbus\_data}!byte@{byte}|hyperpage}{58}
+\indexentry{byte@{byte}!i2c\_smbus\_data@{i2c\_smbus\_data}|hyperpage}{58}
+\indexentry{i2c\_smbus\_data@{i2c\_smbus\_data}!word@{word}|hyperpage}{58}
+\indexentry{word@{word}!i2c\_smbus\_data@{i2c\_smbus\_data}|hyperpage}{58}
+\indexentry{i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}|hyperpage}{59}
+\indexentry{i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}!command@{command}|hyperpage}{59}
+\indexentry{command@{command}!i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}|hyperpage}{59}
+\indexentry{i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}!data@{data}|hyperpage}{59}
+\indexentry{data@{data}!i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}|hyperpage}{59}
+\indexentry{i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}!read\_write@{read\_write}|hyperpage}{59}
+\indexentry{read\_write@{read\_write}!i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}|hyperpage}{59}
+\indexentry{i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}!size@{size}|hyperpage}{59}
+\indexentry{size@{size}!i2c\_smbus\_ioctl\_data@{i2c\_smbus\_ioctl\_data}|hyperpage}{59}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{60}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!difference\_type@{difference\_type}|hyperpage}{60}
+\indexentry{difference\_type@{difference\_type}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{60}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!iterator\_category@{iterator\_category}|hyperpage}{60}
+\indexentry{iterator\_category@{iterator\_category}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{60}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!self\_type@{self\_type}|hyperpage}{60}
+\indexentry{self\_type@{self\_type}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{60}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!iterator@{iterator}|hyperpage}{61}
+\indexentry{iterator@{iterator}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!iterator@{iterator}|hyperpage}{61}
+\indexentry{iterator@{iterator}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator"!=@{operator"!=}|hyperpage}{61}
+\indexentry{operator"!=@{operator"!=}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}|hyperpage}{61}
+\indexentry{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator++@{operator++}|hyperpage}{61}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator++@{operator++}|hyperpage}{61}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{61}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{61}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{62}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator-\/$>$@{operator-\/$>$}|hyperpage}{62}
+\indexentry{operator-\/$>$@{operator-\/$>$}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator==@{operator==}|hyperpage}{62}
+\indexentry{operator==@{operator==}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{62}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!CircularDelay@{CircularDelay}|hyperpage}{62}
+\indexentry{CircularDelay@{CircularDelay}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!data\_@{data\_}|hyperpage}{62}
+\indexentry{data\_@{data\_}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}!ptr\_@{ptr\_}|hyperpage}{62}
+\indexentry{ptr\_@{ptr\_}!CircularDelay$<$ type, size $>$::iterator@{CircularDelay$<$ type, size $>$::iterator}|hyperpage}{62}
+\indexentry{LowPassFilter@{LowPassFilter}|hyperpage}{63}
+\indexentry{LowPassFilter@{LowPassFilter}!LowPassFilter@{LowPassFilter}|hyperpage}{64}
+\indexentry{LowPassFilter@{LowPassFilter}!LowPassFilter@{LowPassFilter}|hyperpage}{64}
+\indexentry{LowPassFilter@{LowPassFilter}!configOutput@{configOutput}|hyperpage}{65}
+\indexentry{configOutput@{configOutput}!LowPassFilter@{LowPassFilter}|hyperpage}{65}
+\indexentry{LowPassFilter@{LowPassFilter}!getOutput@{getOutput}|hyperpage}{65}
+\indexentry{getOutput@{getOutput}!LowPassFilter@{LowPassFilter}|hyperpage}{65}
+\indexentry{LowPassFilter@{LowPassFilter}!outputPointer@{outputPointer}|hyperpage}{65}
+\indexentry{outputPointer@{outputPointer}!LowPassFilter@{LowPassFilter}|hyperpage}{65}
+\indexentry{LowPassFilter@{LowPassFilter}!update@{update}|hyperpage}{65}
+\indexentry{update@{update}!LowPassFilter@{LowPassFilter}|hyperpage}{65}
+\indexentry{LowPassFilter@{LowPassFilter}!dt@{dt}|hyperpage}{66}
+\indexentry{dt@{dt}!LowPassFilter@{LowPassFilter}|hyperpage}{66}
+\indexentry{LowPassFilter@{LowPassFilter}!epow@{epow}|hyperpage}{66}
+\indexentry{epow@{epow}!LowPassFilter@{LowPassFilter}|hyperpage}{66}
+\indexentry{LowPassFilter@{LowPassFilter}!output@{output}|hyperpage}{66}
+\indexentry{output@{output}!LowPassFilter@{LowPassFilter}|hyperpage}{66}
+\indexentry{LowPassFilter2@{LowPassFilter2}|hyperpage}{66}
+\indexentry{LowPassFilter2@{LowPassFilter2}!LowPassFilter2@{LowPassFilter2}|hyperpage}{67}
+\indexentry{LowPassFilter2@{LowPassFilter2}!LowPassFilter2@{LowPassFilter2}|hyperpage}{67}
+\indexentry{LowPassFilter2@{LowPassFilter2}!configOutput@{configOutput}|hyperpage}{68}
+\indexentry{configOutput@{configOutput}!LowPassFilter2@{LowPassFilter2}|hyperpage}{68}
+\indexentry{LowPassFilter2@{LowPassFilter2}!getOutput@{getOutput}|hyperpage}{68}
+\indexentry{getOutput@{getOutput}!LowPassFilter2@{LowPassFilter2}|hyperpage}{68}
+\indexentry{LowPassFilter2@{LowPassFilter2}!update@{update}|hyperpage}{68}
+\indexentry{update@{update}!LowPassFilter2@{LowPassFilter2}|hyperpage}{68}
+\indexentry{LowPassFilter2@{LowPassFilter2}!x@{x}|hyperpage}{69}
+\indexentry{x@{x}!LowPassFilter2@{LowPassFilter2}|hyperpage}{69}
+\indexentry{LowPassFilter2@{LowPassFilter2}!xc@{xc}|hyperpage}{69}
+\indexentry{xc@{xc}!LowPassFilter2@{LowPassFilter2}|hyperpage}{69}
+\indexentry{LowPassFilter2@{LowPassFilter2}!y@{y}|hyperpage}{69}
+\indexentry{y@{y}!LowPassFilter2@{LowPassFilter2}|hyperpage}{69}
+\indexentry{LowPassFilter2@{LowPassFilter2}!yc@{yc}|hyperpage}{69}
+\indexentry{yc@{yc}!LowPassFilter2@{LowPassFilter2}|hyperpage}{69}
+\indexentry{LowPassFilter3@{LowPassFilter3}|hyperpage}{70}
+\indexentry{LowPassFilter3@{LowPassFilter3}!LowPassFilter3@{LowPassFilter3}|hyperpage}{71}
+\indexentry{LowPassFilter3@{LowPassFilter3}!LowPassFilter3@{LowPassFilter3}|hyperpage}{71}
+\indexentry{LowPassFilter3@{LowPassFilter3}!getOutput@{getOutput}|hyperpage}{71}
+\indexentry{getOutput@{getOutput}!LowPassFilter3@{LowPassFilter3}|hyperpage}{71}
+\indexentry{LowPassFilter3@{LowPassFilter3}!update@{update}|hyperpage}{71}
+\indexentry{update@{update}!LowPassFilter3@{LowPassFilter3}|hyperpage}{71}
+\indexentry{LowPassFilter3@{LowPassFilter3}!x@{x}|hyperpage}{72}
+\indexentry{x@{x}!LowPassFilter3@{LowPassFilter3}|hyperpage}{72}
+\indexentry{LowPassFilter3@{LowPassFilter3}!xc@{xc}|hyperpage}{72}
+\indexentry{xc@{xc}!LowPassFilter3@{LowPassFilter3}|hyperpage}{72}
+\indexentry{LowPassFilter3@{LowPassFilter3}!y@{y}|hyperpage}{72}
+\indexentry{y@{y}!LowPassFilter3@{LowPassFilter3}|hyperpage}{72}
+\indexentry{LowPassFilter3@{LowPassFilter3}!yc@{yc}|hyperpage}{72}
+\indexentry{yc@{yc}!LowPassFilter3@{LowPassFilter3}|hyperpage}{72}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{72}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{73}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{73}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!getOutput@{getOutput}|hyperpage}{74}
+\indexentry{getOutput@{getOutput}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{74}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!update@{update}|hyperpage}{74}
+\indexentry{update@{update}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{74}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!x@{x}|hyperpage}{74}
+\indexentry{x@{x}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{74}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!xc@{xc}|hyperpage}{74}
+\indexentry{xc@{xc}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{74}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!y@{y}|hyperpage}{74}
+\indexentry{y@{y}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{74}
+\indexentry{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!yc@{yc}|hyperpage}{75}
+\indexentry{yc@{yc}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}|hyperpage}{75}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{75}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{76}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{76}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!getOutput@{getOutput}|hyperpage}{76}
+\indexentry{getOutput@{getOutput}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{76}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!update@{update}|hyperpage}{76}
+\indexentry{update@{update}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{76}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!amplFac@{amplFac}|hyperpage}{77}
+\indexentry{amplFac@{amplFac}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{77}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!y@{y}|hyperpage}{77}
+\indexentry{y@{y}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{77}
+\indexentry{LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}!yc@{yc}|hyperpage}{77}
+\indexentry{yc@{yc}!LowPassFilter3MatchedZ@{LowPassFilter3MatchedZ}|hyperpage}{77}
+\indexentry{MAX30102@{MAX30102}|hyperpage}{78}
+\indexentry{MAX30102@{MAX30102}!sense\_struct@{sense\_struct}|hyperpage}{80}
+\indexentry{sense\_struct@{sense\_struct}!MAX30102@{MAX30102}|hyperpage}{80}
+\indexentry{MAX30102@{MAX30102}!MAX30102@{MAX30102}|hyperpage}{80}
+\indexentry{MAX30102@{MAX30102}!MAX30102@{MAX30102}|hyperpage}{80}
+\indexentry{MAX30102@{MAX30102}!available@{available}|hyperpage}{80}
+\indexentry{available@{available}!MAX30102@{MAX30102}|hyperpage}{80}
+\indexentry{MAX30102@{MAX30102}!begin@{begin}|hyperpage}{80}
+\indexentry{begin@{begin}!MAX30102@{MAX30102}|hyperpage}{80}
+\indexentry{MAX30102@{MAX30102}!bitMask@{bitMask}|hyperpage}{80}
+\indexentry{bitMask@{bitMask}!MAX30102@{MAX30102}|hyperpage}{80}
+\indexentry{MAX30102@{MAX30102}!check@{check}|hyperpage}{81}
+\indexentry{check@{check}!MAX30102@{MAX30102}|hyperpage}{81}
+\indexentry{MAX30102@{MAX30102}!clearFIFO@{clearFIFO}|hyperpage}{81}
+\indexentry{clearFIFO@{clearFIFO}!MAX30102@{MAX30102}|hyperpage}{81}
+\indexentry{MAX30102@{MAX30102}!dataReady@{dataReady}|hyperpage}{81}
+\indexentry{dataReady@{dataReady}!MAX30102@{MAX30102}|hyperpage}{81}
+\indexentry{MAX30102@{MAX30102}!disableAFULL@{disableAFULL}|hyperpage}{82}
+\indexentry{disableAFULL@{disableAFULL}!MAX30102@{MAX30102}|hyperpage}{82}
+\indexentry{MAX30102@{MAX30102}!disableALCOVF@{disableALCOVF}|hyperpage}{82}
+\indexentry{disableALCOVF@{disableALCOVF}!MAX30102@{MAX30102}|hyperpage}{82}
+\indexentry{MAX30102@{MAX30102}!disableDATARDY@{disableDATARDY}|hyperpage}{82}
+\indexentry{disableDATARDY@{disableDATARDY}!MAX30102@{MAX30102}|hyperpage}{82}
+\indexentry{MAX30102@{MAX30102}!disableDIETEMPRDY@{disableDIETEMPRDY}|hyperpage}{83}
+\indexentry{disableDIETEMPRDY@{disableDIETEMPRDY}!MAX30102@{MAX30102}|hyperpage}{83}
+\indexentry{MAX30102@{MAX30102}!disableFIFORollover@{disableFIFORollover}|hyperpage}{83}
+\indexentry{disableFIFORollover@{disableFIFORollover}!MAX30102@{MAX30102}|hyperpage}{83}
+\indexentry{MAX30102@{MAX30102}!disablePROXINT@{disablePROXINT}|hyperpage}{83}
+\indexentry{disablePROXINT@{disablePROXINT}!MAX30102@{MAX30102}|hyperpage}{83}
+\indexentry{MAX30102@{MAX30102}!disableSlots@{disableSlots}|hyperpage}{84}
+\indexentry{disableSlots@{disableSlots}!MAX30102@{MAX30102}|hyperpage}{84}
+\indexentry{MAX30102@{MAX30102}!enableAFULL@{enableAFULL}|hyperpage}{84}
+\indexentry{enableAFULL@{enableAFULL}!MAX30102@{MAX30102}|hyperpage}{84}
+\indexentry{MAX30102@{MAX30102}!enableALCOVF@{enableALCOVF}|hyperpage}{84}
+\indexentry{enableALCOVF@{enableALCOVF}!MAX30102@{MAX30102}|hyperpage}{84}
+\indexentry{MAX30102@{MAX30102}!enableDATARDY@{enableDATARDY}|hyperpage}{85}
+\indexentry{enableDATARDY@{enableDATARDY}!MAX30102@{MAX30102}|hyperpage}{85}
+\indexentry{MAX30102@{MAX30102}!enableDIETEMPRDY@{enableDIETEMPRDY}|hyperpage}{85}
+\indexentry{enableDIETEMPRDY@{enableDIETEMPRDY}!MAX30102@{MAX30102}|hyperpage}{85}
+\indexentry{MAX30102@{MAX30102}!enableFIFORollover@{enableFIFORollover}|hyperpage}{85}
+\indexentry{enableFIFORollover@{enableFIFORollover}!MAX30102@{MAX30102}|hyperpage}{85}
+\indexentry{MAX30102@{MAX30102}!enablePROXINT@{enablePROXINT}|hyperpage}{86}
+\indexentry{enablePROXINT@{enablePROXINT}!MAX30102@{MAX30102}|hyperpage}{86}
+\indexentry{MAX30102@{MAX30102}!enableSlot@{enableSlot}|hyperpage}{86}
+\indexentry{enableSlot@{enableSlot}!MAX30102@{MAX30102}|hyperpage}{86}
+\indexentry{MAX30102@{MAX30102}!getFIFOIR@{getFIFOIR}|hyperpage}{86}
+\indexentry{getFIFOIR@{getFIFOIR}!MAX30102@{MAX30102}|hyperpage}{86}
+\indexentry{MAX30102@{MAX30102}!getFIFORed@{getFIFORed}|hyperpage}{87}
+\indexentry{getFIFORed@{getFIFORed}!MAX30102@{MAX30102}|hyperpage}{87}
+\indexentry{MAX30102@{MAX30102}!getINT1@{getINT1}|hyperpage}{87}
+\indexentry{getINT1@{getINT1}!MAX30102@{MAX30102}|hyperpage}{87}
+\indexentry{MAX30102@{MAX30102}!getINT2@{getINT2}|hyperpage}{87}
+\indexentry{getINT2@{getINT2}!MAX30102@{MAX30102}|hyperpage}{87}
+\indexentry{MAX30102@{MAX30102}!getIR@{getIR}|hyperpage}{87}
+\indexentry{getIR@{getIR}!MAX30102@{MAX30102}|hyperpage}{87}
+\indexentry{MAX30102@{MAX30102}!getReadPointer@{getReadPointer}|hyperpage}{88}
+\indexentry{getReadPointer@{getReadPointer}!MAX30102@{MAX30102}|hyperpage}{88}
+\indexentry{MAX30102@{MAX30102}!getRed@{getRed}|hyperpage}{88}
+\indexentry{getRed@{getRed}!MAX30102@{MAX30102}|hyperpage}{88}
+\indexentry{MAX30102@{MAX30102}!getRevisionID@{getRevisionID}|hyperpage}{88}
+\indexentry{getRevisionID@{getRevisionID}!MAX30102@{MAX30102}|hyperpage}{88}
+\indexentry{MAX30102@{MAX30102}!getWritePointer@{getWritePointer}|hyperpage}{88}
+\indexentry{getWritePointer@{getWritePointer}!MAX30102@{MAX30102}|hyperpage}{88}
+\indexentry{MAX30102@{MAX30102}!gpioISR@{gpioISR}|hyperpage}{88}
+\indexentry{gpioISR@{gpioISR}!MAX30102@{MAX30102}|hyperpage}{88}
+\indexentry{MAX30102@{MAX30102}!hasSample@{hasSample}|hyperpage}{89}
+\indexentry{hasSample@{hasSample}!MAX30102@{MAX30102}|hyperpage}{89}
+\indexentry{MAX30102@{MAX30102}!nextSample@{nextSample}|hyperpage}{89}
+\indexentry{nextSample@{nextSample}!MAX30102@{MAX30102}|hyperpage}{89}
+\indexentry{MAX30102@{MAX30102}!readMany@{readMany}|hyperpage}{89}
+\indexentry{readMany@{readMany}!MAX30102@{MAX30102}|hyperpage}{89}
+\indexentry{MAX30102@{MAX30102}!readPartID@{readPartID}|hyperpage}{90}
+\indexentry{readPartID@{readPartID}!MAX30102@{MAX30102}|hyperpage}{90}
+\indexentry{MAX30102@{MAX30102}!readRevisionID@{readRevisionID}|hyperpage}{90}
+\indexentry{readRevisionID@{readRevisionID}!MAX30102@{MAX30102}|hyperpage}{90}
+\indexentry{MAX30102@{MAX30102}!readTemperature@{readTemperature}|hyperpage}{90}
+\indexentry{readTemperature@{readTemperature}!MAX30102@{MAX30102}|hyperpage}{90}
+\indexentry{MAX30102@{MAX30102}!readTemperatureF@{readTemperatureF}|hyperpage}{91}
+\indexentry{readTemperatureF@{readTemperatureF}!MAX30102@{MAX30102}|hyperpage}{91}
+\indexentry{MAX30102@{MAX30102}!safeCheck@{safeCheck}|hyperpage}{91}
+\indexentry{safeCheck@{safeCheck}!MAX30102@{MAX30102}|hyperpage}{91}
+\indexentry{MAX30102@{MAX30102}!setADCRange@{setADCRange}|hyperpage}{91}
+\indexentry{setADCRange@{setADCRange}!MAX30102@{MAX30102}|hyperpage}{91}
+\indexentry{MAX30102@{MAX30102}!setFIFOAlmostFull@{setFIFOAlmostFull}|hyperpage}{92}
+\indexentry{setFIFOAlmostFull@{setFIFOAlmostFull}!MAX30102@{MAX30102}|hyperpage}{92}
+\indexentry{MAX30102@{MAX30102}!setFIFOAverage@{setFIFOAverage}|hyperpage}{92}
+\indexentry{setFIFOAverage@{setFIFOAverage}!MAX30102@{MAX30102}|hyperpage}{92}
+\indexentry{MAX30102@{MAX30102}!setLEDMode@{setLEDMode}|hyperpage}{92}
+\indexentry{setLEDMode@{setLEDMode}!MAX30102@{MAX30102}|hyperpage}{92}
+\indexentry{MAX30102@{MAX30102}!setProximityThreshold@{setProximityThreshold}|hyperpage}{93}
+\indexentry{setProximityThreshold@{setProximityThreshold}!MAX30102@{MAX30102}|hyperpage}{93}
+\indexentry{MAX30102@{MAX30102}!setPROXINTTHRESH@{setPROXINTTHRESH}|hyperpage}{93}
+\indexentry{setPROXINTTHRESH@{setPROXINTTHRESH}!MAX30102@{MAX30102}|hyperpage}{93}
+\indexentry{MAX30102@{MAX30102}!setPulseAmplitudeIR@{setPulseAmplitudeIR}|hyperpage}{93}
+\indexentry{setPulseAmplitudeIR@{setPulseAmplitudeIR}!MAX30102@{MAX30102}|hyperpage}{93}
+\indexentry{MAX30102@{MAX30102}!setPulseAmplitudeProximity@{setPulseAmplitudeProximity}|hyperpage}{94}
+\indexentry{setPulseAmplitudeProximity@{setPulseAmplitudeProximity}!MAX30102@{MAX30102}|hyperpage}{94}
+\indexentry{MAX30102@{MAX30102}!setPulseAmplitudeRed@{setPulseAmplitudeRed}|hyperpage}{94}
+\indexentry{setPulseAmplitudeRed@{setPulseAmplitudeRed}!MAX30102@{MAX30102}|hyperpage}{94}
+\indexentry{MAX30102@{MAX30102}!setPulseWidth@{setPulseWidth}|hyperpage}{94}
+\indexentry{setPulseWidth@{setPulseWidth}!MAX30102@{MAX30102}|hyperpage}{94}
+\indexentry{MAX30102@{MAX30102}!setSampleRate@{setSampleRate}|hyperpage}{95}
+\indexentry{setSampleRate@{setSampleRate}!MAX30102@{MAX30102}|hyperpage}{95}
+\indexentry{MAX30102@{MAX30102}!setup@{setup}|hyperpage}{95}
+\indexentry{setup@{setup}!MAX30102@{MAX30102}|hyperpage}{95}
+\indexentry{MAX30102@{MAX30102}!shutDown@{shutDown}|hyperpage}{96}
+\indexentry{shutDown@{shutDown}!MAX30102@{MAX30102}|hyperpage}{96}
+\indexentry{MAX30102@{MAX30102}!softReset@{softReset}|hyperpage}{96}
+\indexentry{softReset@{softReset}!MAX30102@{MAX30102}|hyperpage}{96}
+\indexentry{MAX30102@{MAX30102}!wakeUp@{wakeUp}|hyperpage}{97}
+\indexentry{wakeUp@{wakeUp}!MAX30102@{MAX30102}|hyperpage}{97}
+\indexentry{MAX30102@{MAX30102}!\_i2c@{\_i2c}|hyperpage}{97}
+\indexentry{\_i2c@{\_i2c}!MAX30102@{MAX30102}|hyperpage}{97}
+\indexentry{MAX30102@{MAX30102}!\_i2caddr@{\_i2caddr}|hyperpage}{97}
+\indexentry{\_i2caddr@{\_i2caddr}!MAX30102@{MAX30102}|hyperpage}{97}
+\indexentry{MAX30102@{MAX30102}!activeLEDs@{activeLEDs}|hyperpage}{97}
+\indexentry{activeLEDs@{activeLEDs}!MAX30102@{MAX30102}|hyperpage}{97}
+\indexentry{MAX30102@{MAX30102}!revisionID@{revisionID}|hyperpage}{97}
+\indexentry{revisionID@{revisionID}!MAX30102@{MAX30102}|hyperpage}{97}
+\indexentry{MAX30102@{MAX30102}!sense@{sense}|hyperpage}{97}
+\indexentry{sense@{sense}!MAX30102@{MAX30102}|hyperpage}{97}
+\indexentry{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}|hyperpage}{98}
+\indexentry{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}!update@{update}|hyperpage}{99}
+\indexentry{update@{update}!MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}|hyperpage}{99}
+\indexentry{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}!buffer@{buffer}|hyperpage}{99}
+\indexentry{buffer@{buffer}!MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}|hyperpage}{99}
+\indexentry{MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}!output@{output}|hyperpage}{99}
+\indexentry{output@{output}!MovingAvarageFilter$<$ size $>$@{MovingAvarageFilter$<$ size $>$}|hyperpage}{99}
+\indexentry{DevicePublisher::PubListener@{DevicePublisher::PubListener}|hyperpage}{100}
+\indexentry{DevicePublisher::PubListener@{DevicePublisher::PubListener}!PubListener@{PubListener}|hyperpage}{100}
+\indexentry{PubListener@{PubListener}!DevicePublisher::PubListener@{DevicePublisher::PubListener}|hyperpage}{100}
+\indexentry{DevicePublisher::PubListener@{DevicePublisher::PubListener}!````~PubListener@{\texorpdfstring{$\sim$}{\string~}PubListener}|hyperpage}{100}
+\indexentry{````~PubListener@{\texorpdfstring{$\sim$}{\string~}PubListener}!DevicePublisher::PubListener@{DevicePublisher::PubListener}|hyperpage}{100}
+\indexentry{DevicePublisher::PubListener@{DevicePublisher::PubListener}!on\_publication\_matched@{on\_publication\_matched}|hyperpage}{101}
+\indexentry{on\_publication\_matched@{on\_publication\_matched}!DevicePublisher::PubListener@{DevicePublisher::PubListener}|hyperpage}{101}
+\indexentry{DevicePublisher::PubListener@{DevicePublisher::PubListener}!matched\_@{matched\_}|hyperpage}{101}
+\indexentry{matched\_@{matched\_}!DevicePublisher::PubListener@{DevicePublisher::PubListener}|hyperpage}{101}
+\indexentry{MAX30102::Record@{MAX30102::Record}|hyperpage}{101}
+\indexentry{MAX30102::Record@{MAX30102::Record}!head@{head}|hyperpage}{101}
+\indexentry{head@{head}!MAX30102::Record@{MAX30102::Record}|hyperpage}{101}
+\indexentry{MAX30102::Record@{MAX30102::Record}!IR@{IR}|hyperpage}{101}
+\indexentry{IR@{IR}!MAX30102::Record@{MAX30102::Record}|hyperpage}{101}
+\indexentry{MAX30102::Record@{MAX30102::Record}!red@{red}|hyperpage}{101}
+\indexentry{red@{red}!MAX30102::Record@{MAX30102::Record}|hyperpage}{101}
+\indexentry{MAX30102::Record@{MAX30102::Record}!tail@{tail}|hyperpage}{101}
+\indexentry{tail@{tail}!MAX30102::Record@{MAX30102::Record}|hyperpage}{101}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{102}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!difference\_type@{difference\_type}|hyperpage}{103}
+\indexentry{difference\_type@{difference\_type}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!iterator\_category@{iterator\_category}|hyperpage}{103}
+\indexentry{iterator\_category@{iterator\_category}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!self\_type@{self\_type}|hyperpage}{103}
+\indexentry{self\_type@{self\_type}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!reverse\_iterator@{reverse\_iterator}|hyperpage}{103}
+\indexentry{reverse\_iterator@{reverse\_iterator}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!reverse\_iterator@{reverse\_iterator}|hyperpage}{103}
+\indexentry{reverse\_iterator@{reverse\_iterator}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator"!=@{operator"!=}|hyperpage}{103}
+\indexentry{operator"!=@{operator"!=}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}|hyperpage}{103}
+\indexentry{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator++@{operator++}|hyperpage}{103}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{103}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator++@{operator++}|hyperpage}{104}
+\indexentry{operator++@{operator++}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{104}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator-\/-\/@{operator-\/-\/}|hyperpage}{104}
+\indexentry{operator-\/-\/@{operator-\/-\/}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator-\/$>$@{operator-\/$>$}|hyperpage}{104}
+\indexentry{operator-\/$>$@{operator-\/$>$}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator==@{operator==}|hyperpage}{104}
+\indexentry{operator==@{operator==}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{104}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!CircularDelay@{CircularDelay}|hyperpage}{104}
+\indexentry{CircularDelay@{CircularDelay}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{104}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!data\_@{data\_}|hyperpage}{105}
+\indexentry{data\_@{data\_}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{105}
+\indexentry{CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}!ptr\_@{ptr\_}|hyperpage}{105}
+\indexentry{ptr\_@{ptr\_}!CircularDelay$<$ type, size $>$::reverse\_iterator@{CircularDelay$<$ type, size $>$::reverse\_iterator}|hyperpage}{105}
+\indexentry{sensor@{sensor}|hyperpage}{105}
+\indexentry{sensor@{sensor}!sensor@{sensor}|hyperpage}{107}
+\indexentry{sensor@{sensor}!sensor@{sensor}|hyperpage}{107}
+\indexentry{sensor@{sensor}!````~sensor@{\texorpdfstring{$\sim$}{\string~}sensor}|hyperpage}{107}
+\indexentry{````~sensor@{\texorpdfstring{$\sim$}{\string~}sensor}!sensor@{sensor}|hyperpage}{107}
+\indexentry{sensor@{sensor}!begin@{begin}|hyperpage}{107}
+\indexentry{begin@{begin}!sensor@{sensor}|hyperpage}{107}
+\indexentry{sensor@{sensor}!Derivative@{Derivative}|hyperpage}{107}
+\indexentry{Derivative@{Derivative}!sensor@{sensor}|hyperpage}{107}
+\indexentry{sensor@{sensor}!getHR@{getHR}|hyperpage}{108}
+\indexentry{getHR@{getHR}!sensor@{sensor}|hyperpage}{108}
+\indexentry{sensor@{sensor}!getLatestTemperatureF@{getLatestTemperatureF}|hyperpage}{108}
+\indexentry{getLatestTemperatureF@{getLatestTemperatureF}!sensor@{sensor}|hyperpage}{108}
+\indexentry{sensor@{sensor}!getPeakThreshold@{getPeakThreshold}|hyperpage}{108}
+\indexentry{getPeakThreshold@{getPeakThreshold}!sensor@{sensor}|hyperpage}{108}
+\indexentry{sensor@{sensor}!getSpO2@{getSpO2}|hyperpage}{108}
+\indexentry{getSpO2@{getSpO2}!sensor@{sensor}|hyperpage}{108}
+\indexentry{sensor@{sensor}!HRcalc@{HRcalc}|hyperpage}{108}
+\indexentry{HRcalc@{HRcalc}!sensor@{sensor}|hyperpage}{108}
+\indexentry{sensor@{sensor}!loopThread@{loopThread}|hyperpage}{108}
+\indexentry{loopThread@{loopThread}!sensor@{sensor}|hyperpage}{108}
+\indexentry{sensor@{sensor}!peakDetect@{peakDetect}|hyperpage}{109}
+\indexentry{peakDetect@{peakDetect}!sensor@{sensor}|hyperpage}{109}
+\indexentry{sensor@{sensor}!resetCalculations@{resetCalculations}|hyperpage}{109}
+\indexentry{resetCalculations@{resetCalculations}!sensor@{sensor}|hyperpage}{109}
+\indexentry{sensor@{sensor}!runHRCalculationLoop@{runHRCalculationLoop}|hyperpage}{109}
+\indexentry{runHRCalculationLoop@{runHRCalculationLoop}!sensor@{sensor}|hyperpage}{109}
+\indexentry{sensor@{sensor}!stop@{stop}|hyperpage}{110}
+\indexentry{stop@{stop}!sensor@{sensor}|hyperpage}{110}
+\indexentry{sensor@{sensor}!stopHRcalc@{stopHRcalc}|hyperpage}{110}
+\indexentry{stopHRcalc@{stopHRcalc}!sensor@{sensor}|hyperpage}{110}
+\indexentry{sensor@{sensor}!updateTemperature@{updateTemperature}|hyperpage}{110}
+\indexentry{updateTemperature@{updateTemperature}!sensor@{sensor}|hyperpage}{110}
+\indexentry{sensor@{sensor}!\_sensor@{\_sensor}|hyperpage}{111}
+\indexentry{\_sensor@{\_sensor}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!averageIRBPM@{averageIRBPM}|hyperpage}{111}
+\indexentry{averageIRBPM@{averageIRBPM}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!BPM\_BUFFER\_SIZE@{BPM\_BUFFER\_SIZE}|hyperpage}{111}
+\indexentry{BPM\_BUFFER\_SIZE@{BPM\_BUFFER\_SIZE}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!bpmBuffer@{bpmBuffer}|hyperpage}{111}
+\indexentry{bpmBuffer@{bpmBuffer}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!irLastValue@{irLastValue}|hyperpage}{111}
+\indexentry{irLastValue@{irLastValue}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!latestIRBPM@{latestIRBPM}|hyperpage}{111}
+\indexentry{latestIRBPM@{latestIRBPM}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!latestRedBPM@{latestRedBPM}|hyperpage}{111}
+\indexentry{latestRedBPM@{latestRedBPM}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!latestSpO2@{latestSpO2}|hyperpage}{111}
+\indexentry{latestSpO2@{latestSpO2}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!latestTemperature@{latestTemperature}|hyperpage}{111}
+\indexentry{latestTemperature@{latestTemperature}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!localMaximaIR@{localMaximaIR}|hyperpage}{111}
+\indexentry{localMaximaIR@{localMaximaIR}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!localMaximaRed@{localMaximaRed}|hyperpage}{111}
+\indexentry{localMaximaRed@{localMaximaRed}!sensor@{sensor}|hyperpage}{111}
+\indexentry{sensor@{sensor}!localMinimaIR@{localMinimaIR}|hyperpage}{112}
+\indexentry{localMinimaIR@{localMinimaIR}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!localMinimaRed@{localMinimaRed}|hyperpage}{112}
+\indexentry{localMinimaRed@{localMinimaRed}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!nextBPMBufferIndex@{nextBPMBufferIndex}|hyperpage}{112}
+\indexentry{nextBPMBufferIndex@{nextBPMBufferIndex}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!nextSPO2BufferIndex@{nextSPO2BufferIndex}|hyperpage}{112}
+\indexentry{nextSPO2BufferIndex@{nextSPO2BufferIndex}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!PAST\_PEAKS\_SIZE@{PAST\_PEAKS\_SIZE}|hyperpage}{112}
+\indexentry{PAST\_PEAKS\_SIZE@{PAST\_PEAKS\_SIZE}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!pastMaximasIR@{pastMaximasIR}|hyperpage}{112}
+\indexentry{pastMaximasIR@{pastMaximasIR}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!pastMaximasRed@{pastMaximasRed}|hyperpage}{112}
+\indexentry{pastMaximasRed@{pastMaximasRed}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!pastMinimasIR@{pastMinimasIR}|hyperpage}{112}
+\indexentry{pastMinimasIR@{pastMinimasIR}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!pastMinimasRed@{pastMinimasRed}|hyperpage}{112}
+\indexentry{pastMinimasRed@{pastMinimasRed}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!R@{R}|hyperpage}{112}
+\indexentry{R@{R}!sensor@{sensor}|hyperpage}{112}
+\indexentry{sensor@{sensor}!redLastValue@{redLastValue}|hyperpage}{113}
+\indexentry{redLastValue@{redLastValue}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!running@{running}|hyperpage}{113}
+\indexentry{running@{running}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!runningHR@{runningHR}|hyperpage}{113}
+\indexentry{runningHR@{runningHR}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!SPO2\_BUFFER\_SIZE@{SPO2\_BUFFER\_SIZE}|hyperpage}{113}
+\indexentry{SPO2\_BUFFER\_SIZE@{SPO2\_BUFFER\_SIZE}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!spo2Buffer@{spo2Buffer}|hyperpage}{113}
+\indexentry{spo2Buffer@{spo2Buffer}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!timeLastIRHeartBeat@{timeLastIRHeartBeat}|hyperpage}{113}
+\indexentry{timeLastIRHeartBeat@{timeLastIRHeartBeat}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!timeLastLoopRan@{timeLastLoopRan}|hyperpage}{113}
+\indexentry{timeLastLoopRan@{timeLastLoopRan}!sensor@{sensor}|hyperpage}{113}
+\indexentry{sensor@{sensor}!timeLastRedHeartBeat@{timeLastRedHeartBeat}|hyperpage}{113}
+\indexentry{timeLastRedHeartBeat@{timeLastRedHeartBeat}!sensor@{sensor}|hyperpage}{113}
+\indexentry{SPO2Tracker@{SPO2Tracker}|hyperpage}{114}
+\indexentry{SPO2Tracker@{SPO2Tracker}!SPO2Tracker@{SPO2Tracker}|hyperpage}{115}
+\indexentry{SPO2Tracker@{SPO2Tracker}!SPO2Tracker@{SPO2Tracker}|hyperpage}{115}
+\indexentry{SPO2Tracker@{SPO2Tracker}!````~SPO2Tracker@{\texorpdfstring{$\sim$}{\string~}SPO2Tracker}|hyperpage}{115}
+\indexentry{````~SPO2Tracker@{\texorpdfstring{$\sim$}{\string~}SPO2Tracker}!SPO2Tracker@{SPO2Tracker}|hyperpage}{115}
+\indexentry{SPO2Tracker@{SPO2Tracker}!getVal@{getVal}|hyperpage}{116}
+\indexentry{getVal@{getVal}!SPO2Tracker@{SPO2Tracker}|hyperpage}{116}
+\indexentry{SPO2Tracker@{SPO2Tracker}!ping@{ping}|hyperpage}{116}
+\indexentry{ping@{ping}!SPO2Tracker@{SPO2Tracker}|hyperpage}{116}
+\indexentry{SPO2Tracker@{SPO2Tracker}!pingThread@{pingThread}|hyperpage}{116}
+\indexentry{pingThread@{pingThread}!SPO2Tracker@{SPO2Tracker}|hyperpage}{116}
+\indexentry{SPO2Tracker@{SPO2Tracker}!start@{start}|hyperpage}{116}
+\indexentry{start@{start}!SPO2Tracker@{SPO2Tracker}|hyperpage}{116}
+\indexentry{SPO2Tracker@{SPO2Tracker}!stop@{stop}|hyperpage}{117}
+\indexentry{stop@{stop}!SPO2Tracker@{SPO2Tracker}|hyperpage}{117}
+\indexentry{SPO2Tracker@{SPO2Tracker}!tracker@{tracker}|hyperpage}{117}
+\indexentry{tracker@{tracker}!SPO2Tracker@{SPO2Tracker}|hyperpage}{117}
+\indexentry{SPO2Tracker@{SPO2Tracker}!\_s@{\_s}|hyperpage}{117}
+\indexentry{\_s@{\_s}!SPO2Tracker@{SPO2Tracker}|hyperpage}{117}
+\indexentry{SPO2Tracker@{SPO2Tracker}!symptomRanges@{symptomRanges}|hyperpage}{117}
+\indexentry{symptomRanges@{symptomRanges}!SPO2Tracker@{SPO2Tracker}|hyperpage}{117}
+\indexentry{SPO2Tracker@{SPO2Tracker}!threadRunning@{threadRunning}|hyperpage}{118}
+\indexentry{threadRunning@{threadRunning}!SPO2Tracker@{SPO2Tracker}|hyperpage}{118}
+\indexentry{DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}|hyperpage}{118}
+\indexentry{DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}!SubListener@{SubListener}|hyperpage}{119}
+\indexentry{SubListener@{SubListener}!DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}|hyperpage}{119}
+\indexentry{DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}!````~SubListener@{\texorpdfstring{$\sim$}{\string~}SubListener}|hyperpage}{119}
+\indexentry{````~SubListener@{\texorpdfstring{$\sim$}{\string~}SubListener}!DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}|hyperpage}{119}
+\indexentry{DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}!on\_data\_available@{on\_data\_available}|hyperpage}{119}
+\indexentry{on\_data\_available@{on\_data\_available}!DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}|hyperpage}{119}
+\indexentry{DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}!on\_subscription\_matched@{on\_subscription\_matched}|hyperpage}{119}
+\indexentry{on\_subscription\_matched@{on\_subscription\_matched}!DeviceSubscriber::SubListener@{DeviceSubscriber::SubListener}|hyperpage}{119}
+\indexentry{symptomRange@{symptomRange}|hyperpage}{119}
+\indexentry{symptomRange@{symptomRange}!max@{max}|hyperpage}{120}
+\indexentry{max@{max}!symptomRange@{symptomRange}|hyperpage}{120}
+\indexentry{symptomRange@{symptomRange}!min@{min}|hyperpage}{120}
+\indexentry{min@{min}!symptomRange@{symptomRange}|hyperpage}{120}
+\indexentry{symptomRange@{symptomRange}!symptom@{symptom}|hyperpage}{120}
+\indexentry{symptom@{symptom}!symptomRange@{symptomRange}|hyperpage}{120}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alert.cxx@{/home/sitcomlab/Projects/VigiSense/src/alert.cxx}|hyperpage}{121}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alert.h@{/home/sitcomlab/Projects/VigiSense/src/alert.h}|hyperpage}{121}
+\indexentry{alert.h@{alert.h}!alert\_DllAPI@{alert\_DllAPI}|hyperpage}{123}
+\indexentry{alert\_DllAPI@{alert\_DllAPI}!alert.h@{alert.h}|hyperpage}{123}
+\indexentry{alert.h@{alert.h}!eProsima\_user\_DllExport@{eProsima\_user\_DllExport}|hyperpage}{123}
+\indexentry{eProsima\_user\_DllExport@{eProsima\_user\_DllExport}!alert.h@{alert.h}|hyperpage}{123}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alert.h@{/home/sitcomlab/Projects/VigiSense/src/alert.h}|hyperpage}{123}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alert.idl@{/home/sitcomlab/Projects/VigiSense/src/alert.idl}|hyperpage}{124}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alert.idl@{/home/sitcomlab/Projects/VigiSense/src/alert.idl}|hyperpage}{125}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.cxx@{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.cxx}|hyperpage}{125}
+\indexentry{alertPubSubTypes.cxx@{alertPubSubTypes.cxx}!InstanceHandle\_t@{InstanceHandle\_t}|hyperpage}{125}
+\indexentry{InstanceHandle\_t@{InstanceHandle\_t}!alertPubSubTypes.cxx@{alertPubSubTypes.cxx}|hyperpage}{125}
+\indexentry{alertPubSubTypes.cxx@{alertPubSubTypes.cxx}!SerializedPayload\_t@{SerializedPayload\_t}|hyperpage}{125}
+\indexentry{SerializedPayload\_t@{SerializedPayload\_t}!alertPubSubTypes.cxx@{alertPubSubTypes.cxx}|hyperpage}{125}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h@{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h}|hyperpage}{126}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h@{/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h}|hyperpage}{127}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/CircularDelay.hpp@{/home/sitcomlab/Projects/VigiSense/src/CircularDelay.hpp}|hyperpage}{128}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/CircularDelay.hpp@{/home/sitcomlab/Projects/VigiSense/src/CircularDelay.hpp}|hyperpage}{129}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp@{/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp}|hyperpage}{131}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp@{/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp}|hyperpage}{132}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DeviceSubscriber.cpp@{/home/sitcomlab/Projects/VigiSense/src/DeviceSubscriber.cpp}|hyperpage}{134}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/Diagnosis.cpp@{/home/sitcomlab/Projects/VigiSense/src/Diagnosis.cpp}|hyperpage}{135}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/Diagnosis.h@{/home/sitcomlab/Projects/VigiSense/src/Diagnosis.h}|hyperpage}{135}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/Diagnosis.h@{/home/sitcomlab/Projects/VigiSense/src/Diagnosis.h}|hyperpage}{136}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h@{/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h}|hyperpage}{137}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h@{/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h}|hyperpage}{138}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h@{/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h}|hyperpage}{138}
+\indexentry{DigitalFilters.h@{DigitalFilters.h}!calcC\_Cr@{calcC\_Cr}|hyperpage}{140}
+\indexentry{calcC\_Cr@{calcC\_Cr}!DigitalFilters.h@{DigitalFilters.h}|hyperpage}{140}
+\indexentry{DigitalFilters.h@{DigitalFilters.h}!squareOf@{squareOf}|hyperpage}{140}
+\indexentry{squareOf@{squareOf}!DigitalFilters.h@{DigitalFilters.h}|hyperpage}{140}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h@{/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h}|hyperpage}{141}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/HRTracker.cpp@{/home/sitcomlab/Projects/VigiSense/src/HRTracker.cpp}|hyperpage}{145}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/HRTracker.h@{/home/sitcomlab/Projects/VigiSense/src/HRTracker.h}|hyperpage}{145}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/HRTracker.h@{/home/sitcomlab/Projects/VigiSense/src/HRTracker.h}|hyperpage}{146}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h@{/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h}|hyperpage}{147}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_10BIT\_ADDR@{I2C\_FUNC\_10BIT\_ADDR}|hyperpage}{149}
+\indexentry{I2C\_FUNC\_10BIT\_ADDR@{I2C\_FUNC\_10BIT\_ADDR}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{149}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_I2C@{I2C\_FUNC\_I2C}|hyperpage}{149}
+\indexentry{I2C\_FUNC\_I2C@{I2C\_FUNC\_I2C}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{149}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_PROTOCOL\_MANGLING@{I2C\_FUNC\_PROTOCOL\_MANGLING}|hyperpage}{149}
+\indexentry{I2C\_FUNC\_PROTOCOL\_MANGLING@{I2C\_FUNC\_PROTOCOL\_MANGLING}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{149}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_BLOCK\_DATA@{I2C\_FUNC\_SMBUS\_BLOCK\_DATA}|hyperpage}{149}
+\indexentry{I2C\_FUNC\_SMBUS\_BLOCK\_DATA@{I2C\_FUNC\_SMBUS\_BLOCK\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{149}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL@{I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL}|hyperpage}{149}
+\indexentry{I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL@{I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{149}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_BYTE@{I2C\_FUNC\_SMBUS\_BYTE}|hyperpage}{149}
+\indexentry{I2C\_FUNC\_SMBUS\_BYTE@{I2C\_FUNC\_SMBUS\_BYTE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{149}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_BYTE\_DATA@{I2C\_FUNC\_SMBUS\_BYTE\_DATA}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_BYTE\_DATA@{I2C\_FUNC\_SMBUS\_BYTE\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_HWPEC\_CALC@{I2C\_FUNC\_SMBUS\_HWPEC\_CALC}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_HWPEC\_CALC@{I2C\_FUNC\_SMBUS\_HWPEC\_CALC}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_I2C\_BLOCK@{I2C\_FUNC\_SMBUS\_I2C\_BLOCK}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_I2C\_BLOCK@{I2C\_FUNC\_SMBUS\_I2C\_BLOCK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_PEC@{I2C\_FUNC\_SMBUS\_PEC}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_PEC@{I2C\_FUNC\_SMBUS\_PEC}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_PROC\_CALL@{I2C\_FUNC\_SMBUS\_PROC\_CALL}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_PROC\_CALL@{I2C\_FUNC\_SMBUS\_PROC\_CALL}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_QUICK@{I2C\_FUNC\_SMBUS\_QUICK}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_QUICK@{I2C\_FUNC\_SMBUS\_QUICK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA@{I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA@{I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_READ\_BYTE@{I2C\_FUNC\_SMBUS\_READ\_BYTE}|hyperpage}{150}
+\indexentry{I2C\_FUNC\_SMBUS\_READ\_BYTE@{I2C\_FUNC\_SMBUS\_READ\_BYTE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{150}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA@{I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA@{I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK@{I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK@{I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA@{I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA@{I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_WORD\_DATA@{I2C\_FUNC\_SMBUS\_WORD\_DATA}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_WORD\_DATA@{I2C\_FUNC\_SMBUS\_WORD\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA@{I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA@{I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_WRITE\_BYTE@{I2C\_FUNC\_SMBUS\_WRITE\_BYTE}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_WRITE\_BYTE@{I2C\_FUNC\_SMBUS\_WRITE\_BYTE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA@{I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA@{I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK@{I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK@{I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA@{I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA}|hyperpage}{151}
+\indexentry{I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA@{I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_FUNCS@{I2C\_FUNCS}|hyperpage}{151}
+\indexentry{I2C\_FUNCS@{I2C\_FUNCS}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{151}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_M\_IGNORE\_NAK@{I2C\_M\_IGNORE\_NAK}|hyperpage}{152}
+\indexentry{I2C\_M\_IGNORE\_NAK@{I2C\_M\_IGNORE\_NAK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_M\_NO\_RD\_ACK@{I2C\_M\_NO\_RD\_ACK}|hyperpage}{152}
+\indexentry{I2C\_M\_NO\_RD\_ACK@{I2C\_M\_NO\_RD\_ACK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_M\_NOSTART@{I2C\_M\_NOSTART}|hyperpage}{152}
+\indexentry{I2C\_M\_NOSTART@{I2C\_M\_NOSTART}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_M\_RD@{I2C\_M\_RD}|hyperpage}{152}
+\indexentry{I2C\_M\_RD@{I2C\_M\_RD}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_M\_REV\_DIR\_ADDR@{I2C\_M\_REV\_DIR\_ADDR}|hyperpage}{152}
+\indexentry{I2C\_M\_REV\_DIR\_ADDR@{I2C\_M\_REV\_DIR\_ADDR}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_M\_TEN@{I2C\_M\_TEN}|hyperpage}{152}
+\indexentry{I2C\_M\_TEN@{I2C\_M\_TEN}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_PEC@{I2C\_PEC}|hyperpage}{152}
+\indexentry{I2C\_PEC@{I2C\_PEC}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_RDRW\_IOCTL\_MAX\_MSGS@{I2C\_RDRW\_IOCTL\_MAX\_MSGS}|hyperpage}{152}
+\indexentry{I2C\_RDRW\_IOCTL\_MAX\_MSGS@{I2C\_RDRW\_IOCTL\_MAX\_MSGS}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_RDWR@{I2C\_RDWR}|hyperpage}{152}
+\indexentry{I2C\_RDWR@{I2C\_RDWR}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_RETRIES@{I2C\_RETRIES}|hyperpage}{152}
+\indexentry{I2C\_RETRIES@{I2C\_RETRIES}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{152}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SLAVE@{I2C\_SLAVE}|hyperpage}{153}
+\indexentry{I2C\_SLAVE@{I2C\_SLAVE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SLAVE\_FORCE@{I2C\_SLAVE\_FORCE}|hyperpage}{153}
+\indexentry{I2C\_SLAVE\_FORCE@{I2C\_SLAVE\_FORCE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS@{I2C\_SMBUS}|hyperpage}{153}
+\indexentry{I2C\_SMBUS@{I2C\_SMBUS}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_BLOCK\_DATA@{I2C\_SMBUS\_BLOCK\_DATA}|hyperpage}{153}
+\indexentry{I2C\_SMBUS\_BLOCK\_DATA@{I2C\_SMBUS\_BLOCK\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_BLOCK\_MAX@{I2C\_SMBUS\_BLOCK\_MAX}|hyperpage}{153}
+\indexentry{I2C\_SMBUS\_BLOCK\_MAX@{I2C\_SMBUS\_BLOCK\_MAX}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_BLOCK\_PROC\_CALL@{I2C\_SMBUS\_BLOCK\_PROC\_CALL}|hyperpage}{153}
+\indexentry{I2C\_SMBUS\_BLOCK\_PROC\_CALL@{I2C\_SMBUS\_BLOCK\_PROC\_CALL}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_BYTE@{I2C\_SMBUS\_BYTE}|hyperpage}{153}
+\indexentry{I2C\_SMBUS\_BYTE@{I2C\_SMBUS\_BYTE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_BYTE\_DATA@{I2C\_SMBUS\_BYTE\_DATA}|hyperpage}{153}
+\indexentry{I2C\_SMBUS\_BYTE\_DATA@{I2C\_SMBUS\_BYTE\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_I2C\_BLOCK\_BROKEN@{I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}|hyperpage}{153}
+\indexentry{I2C\_SMBUS\_I2C\_BLOCK\_BROKEN@{I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{153}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_I2C\_BLOCK\_DATA@{I2C\_SMBUS\_I2C\_BLOCK\_DATA}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_I2C\_BLOCK\_DATA@{I2C\_SMBUS\_I2C\_BLOCK\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_I2C\_BLOCK\_MAX@{I2C\_SMBUS\_I2C\_BLOCK\_MAX}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_I2C\_BLOCK\_MAX@{I2C\_SMBUS\_I2C\_BLOCK\_MAX}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_PROC\_CALL@{I2C\_SMBUS\_PROC\_CALL}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_PROC\_CALL@{I2C\_SMBUS\_PROC\_CALL}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_QUICK@{I2C\_SMBUS\_QUICK}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_QUICK@{I2C\_SMBUS\_QUICK}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_READ@{I2C\_SMBUS\_READ}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_READ@{I2C\_SMBUS\_READ}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_WORD\_DATA@{I2C\_SMBUS\_WORD\_DATA}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_WORD\_DATA@{I2C\_SMBUS\_WORD\_DATA}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_SMBUS\_WRITE@{I2C\_SMBUS\_WRITE}|hyperpage}{154}
+\indexentry{I2C\_SMBUS\_WRITE@{I2C\_SMBUS\_WRITE}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_TENBIT@{I2C\_TENBIT}|hyperpage}{154}
+\indexentry{I2C\_TENBIT@{I2C\_TENBIT}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!I2C\_TIMEOUT@{I2C\_TIMEOUT}|hyperpage}{154}
+\indexentry{I2C\_TIMEOUT@{I2C\_TIMEOUT}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{154}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_access@{i2c\_smbus\_access}|hyperpage}{155}
+\indexentry{i2c\_smbus\_access@{i2c\_smbus\_access}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{155}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_block\_process\_call@{i2c\_smbus\_block\_process\_call}|hyperpage}{155}
+\indexentry{i2c\_smbus\_block\_process\_call@{i2c\_smbus\_block\_process\_call}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{155}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_process\_call@{i2c\_smbus\_process\_call}|hyperpage}{155}
+\indexentry{i2c\_smbus\_process\_call@{i2c\_smbus\_process\_call}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{155}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_read\_block\_data@{i2c\_smbus\_read\_block\_data}|hyperpage}{155}
+\indexentry{i2c\_smbus\_read\_block\_data@{i2c\_smbus\_read\_block\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{155}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_read\_byte@{i2c\_smbus\_read\_byte}|hyperpage}{155}
+\indexentry{i2c\_smbus\_read\_byte@{i2c\_smbus\_read\_byte}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{155}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_read\_byte\_data@{i2c\_smbus\_read\_byte\_data}|hyperpage}{156}
+\indexentry{i2c\_smbus\_read\_byte\_data@{i2c\_smbus\_read\_byte\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{156}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_read\_i2c\_block\_data@{i2c\_smbus\_read\_i2c\_block\_data}|hyperpage}{156}
+\indexentry{i2c\_smbus\_read\_i2c\_block\_data@{i2c\_smbus\_read\_i2c\_block\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{156}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_read\_word\_data@{i2c\_smbus\_read\_word\_data}|hyperpage}{156}
+\indexentry{i2c\_smbus\_read\_word\_data@{i2c\_smbus\_read\_word\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{156}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_write\_block\_data@{i2c\_smbus\_write\_block\_data}|hyperpage}{156}
+\indexentry{i2c\_smbus\_write\_block\_data@{i2c\_smbus\_write\_block\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{156}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_write\_byte@{i2c\_smbus\_write\_byte}|hyperpage}{156}
+\indexentry{i2c\_smbus\_write\_byte@{i2c\_smbus\_write\_byte}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{156}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_write\_byte\_data@{i2c\_smbus\_write\_byte\_data}|hyperpage}{157}
+\indexentry{i2c\_smbus\_write\_byte\_data@{i2c\_smbus\_write\_byte\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{157}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_write\_i2c\_block\_data@{i2c\_smbus\_write\_i2c\_block\_data}|hyperpage}{157}
+\indexentry{i2c\_smbus\_write\_i2c\_block\_data@{i2c\_smbus\_write\_i2c\_block\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{157}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_write\_quick@{i2c\_smbus\_write\_quick}|hyperpage}{157}
+\indexentry{i2c\_smbus\_write\_quick@{i2c\_smbus\_write\_quick}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{157}
+\indexentry{i2c-\/dev.h@{i2c-\/dev.h}!i2c\_smbus\_write\_word\_data@{i2c\_smbus\_write\_word\_data}|hyperpage}{157}
+\indexentry{i2c\_smbus\_write\_word\_data@{i2c\_smbus\_write\_word\_data}!i2c-\/dev.h@{i2c-\/dev.h}|hyperpage}{157}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h@{/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h}|hyperpage}{158}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/MAX30102.cpp@{/home/sitcomlab/Projects/VigiSense/src/MAX30102.cpp}|hyperpage}{161}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_16384@{ADCRANGE\_16384}|hyperpage}{164}
+\indexentry{ADCRANGE\_16384@{ADCRANGE\_16384}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_2048@{ADCRANGE\_2048}|hyperpage}{164}
+\indexentry{ADCRANGE\_2048@{ADCRANGE\_2048}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_4096@{ADCRANGE\_4096}|hyperpage}{164}
+\indexentry{ADCRANGE\_4096@{ADCRANGE\_4096}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!ADCRANGE\_8192@{ADCRANGE\_8192}|hyperpage}{164}
+\indexentry{ADCRANGE\_8192@{ADCRANGE\_8192}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_A\_FULL\_DISABLE@{INT\_A\_FULL\_DISABLE}|hyperpage}{164}
+\indexentry{INT\_A\_FULL\_DISABLE@{INT\_A\_FULL\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_A\_FULL\_ENABLE@{INT\_A\_FULL\_ENABLE}|hyperpage}{164}
+\indexentry{INT\_A\_FULL\_ENABLE@{INT\_A\_FULL\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_ALC\_OVF\_DISABLE@{INT\_ALC\_OVF\_DISABLE}|hyperpage}{164}
+\indexentry{INT\_ALC\_OVF\_DISABLE@{INT\_ALC\_OVF\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_ALC\_OVF\_ENABLE@{INT\_ALC\_OVF\_ENABLE}|hyperpage}{164}
+\indexentry{INT\_ALC\_OVF\_ENABLE@{INT\_ALC\_OVF\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_DATA\_RDY\_DISABLE@{INT\_DATA\_RDY\_DISABLE}|hyperpage}{164}
+\indexentry{INT\_DATA\_RDY\_DISABLE@{INT\_DATA\_RDY\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_DATA\_RDY\_ENABLE@{INT\_DATA\_RDY\_ENABLE}|hyperpage}{164}
+\indexentry{INT\_DATA\_RDY\_ENABLE@{INT\_DATA\_RDY\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_DIE\_TEMP\_RDY\_DISABLE@{INT\_DIE\_TEMP\_RDY\_DISABLE}|hyperpage}{164}
+\indexentry{INT\_DIE\_TEMP\_RDY\_DISABLE@{INT\_DIE\_TEMP\_RDY\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{164}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_DIE\_TEMP\_RDY\_ENABLE@{INT\_DIE\_TEMP\_RDY\_ENABLE}|hyperpage}{165}
+\indexentry{INT\_DIE\_TEMP\_RDY\_ENABLE@{INT\_DIE\_TEMP\_RDY\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_PROX\_INT\_DISABLE@{INT\_PROX\_INT\_DISABLE}|hyperpage}{165}
+\indexentry{INT\_PROX\_INT\_DISABLE@{INT\_PROX\_INT\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!INT\_PROX\_INT\_ENABLE@{INT\_PROX\_INT\_ENABLE}|hyperpage}{165}
+\indexentry{INT\_PROX\_INT\_ENABLE@{INT\_PROX\_INT\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!LEDMODE\_MULTILED@{LEDMODE\_MULTILED}|hyperpage}{165}
+\indexentry{LEDMODE\_MULTILED@{LEDMODE\_MULTILED}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!LEDMODE\_REDIRONLY@{LEDMODE\_REDIRONLY}|hyperpage}{165}
+\indexentry{LEDMODE\_REDIRONLY@{LEDMODE\_REDIRONLY}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!LEDMODE\_REDONLY@{LEDMODE\_REDONLY}|hyperpage}{165}
+\indexentry{LEDMODE\_REDONLY@{LEDMODE\_REDONLY}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_A\_FULL@{MASK\_A\_FULL}|hyperpage}{165}
+\indexentry{MASK\_A\_FULL@{MASK\_A\_FULL}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_ADCRANGE@{MASK\_ADCRANGE}|hyperpage}{165}
+\indexentry{MASK\_ADCRANGE@{MASK\_ADCRANGE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_A\_FULL@{MASK\_INT\_A\_FULL}|hyperpage}{165}
+\indexentry{MASK\_INT\_A\_FULL@{MASK\_INT\_A\_FULL}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_ALC\_OVF@{MASK\_INT\_ALC\_OVF}|hyperpage}{165}
+\indexentry{MASK\_INT\_ALC\_OVF@{MASK\_INT\_ALC\_OVF}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{165}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_DATA\_RDY@{MASK\_INT\_DATA\_RDY}|hyperpage}{166}
+\indexentry{MASK\_INT\_DATA\_RDY@{MASK\_INT\_DATA\_RDY}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_DIE\_TEMP\_RDY@{MASK\_INT\_DIE\_TEMP\_RDY}|hyperpage}{166}
+\indexentry{MASK\_INT\_DIE\_TEMP\_RDY@{MASK\_INT\_DIE\_TEMP\_RDY}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_INT\_PROX\_INT@{MASK\_INT\_PROX\_INT}|hyperpage}{166}
+\indexentry{MASK\_INT\_PROX\_INT@{MASK\_INT\_PROX\_INT}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_LEDMODE@{MASK\_LEDMODE}|hyperpage}{166}
+\indexentry{MASK\_LEDMODE@{MASK\_LEDMODE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_PULSEWIDTH@{MASK\_PULSEWIDTH}|hyperpage}{166}
+\indexentry{MASK\_PULSEWIDTH@{MASK\_PULSEWIDTH}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_RESET@{MASK\_RESET}|hyperpage}{166}
+\indexentry{MASK\_RESET@{MASK\_RESET}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_ROLLOVER@{MASK\_ROLLOVER}|hyperpage}{166}
+\indexentry{MASK\_ROLLOVER@{MASK\_ROLLOVER}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SAMPLEAVG@{MASK\_SAMPLEAVG}|hyperpage}{166}
+\indexentry{MASK\_SAMPLEAVG@{MASK\_SAMPLEAVG}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SAMPLERATE@{MASK\_SAMPLERATE}|hyperpage}{166}
+\indexentry{MASK\_SAMPLERATE@{MASK\_SAMPLERATE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SHUTDOWN@{MASK\_SHUTDOWN}|hyperpage}{166}
+\indexentry{MASK\_SHUTDOWN@{MASK\_SHUTDOWN}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{166}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT1@{MASK\_SLOT1}|hyperpage}{167}
+\indexentry{MASK\_SLOT1@{MASK\_SLOT1}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT2@{MASK\_SLOT2}|hyperpage}{167}
+\indexentry{MASK\_SLOT2@{MASK\_SLOT2}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT3@{MASK\_SLOT3}|hyperpage}{167}
+\indexentry{MASK\_SLOT3@{MASK\_SLOT3}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MASK\_SLOT4@{MASK\_SLOT4}|hyperpage}{167}
+\indexentry{MASK\_SLOT4@{MASK\_SLOT4}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!MAX30102\_EXPECTEDPARTID@{MAX30102\_EXPECTEDPARTID}|hyperpage}{167}
+\indexentry{MAX30102\_EXPECTEDPARTID@{MAX30102\_EXPECTEDPARTID}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_118@{PULSEWIDTH\_118}|hyperpage}{167}
+\indexentry{PULSEWIDTH\_118@{PULSEWIDTH\_118}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_215@{PULSEWIDTH\_215}|hyperpage}{167}
+\indexentry{PULSEWIDTH\_215@{PULSEWIDTH\_215}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_411@{PULSEWIDTH\_411}|hyperpage}{167}
+\indexentry{PULSEWIDTH\_411@{PULSEWIDTH\_411}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!PULSEWIDTH\_69@{PULSEWIDTH\_69}|hyperpage}{167}
+\indexentry{PULSEWIDTH\_69@{PULSEWIDTH\_69}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_DIETEMPCONFIG@{REG\_DIETEMPCONFIG}|hyperpage}{167}
+\indexentry{REG\_DIETEMPCONFIG@{REG\_DIETEMPCONFIG}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{167}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_DIETEMPFRAC@{REG\_DIETEMPFRAC}|hyperpage}{168}
+\indexentry{REG\_DIETEMPFRAC@{REG\_DIETEMPFRAC}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_DIETEMPINT@{REG\_DIETEMPINT}|hyperpage}{168}
+\indexentry{REG\_DIETEMPINT@{REG\_DIETEMPINT}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOCONFIG@{REG\_FIFOCONFIG}|hyperpage}{168}
+\indexentry{REG\_FIFOCONFIG@{REG\_FIFOCONFIG}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFODATA@{REG\_FIFODATA}|hyperpage}{168}
+\indexentry{REG\_FIFODATA@{REG\_FIFODATA}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOOVERFLOW@{REG\_FIFOOVERFLOW}|hyperpage}{168}
+\indexentry{REG\_FIFOOVERFLOW@{REG\_FIFOOVERFLOW}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOREADPTR@{REG\_FIFOREADPTR}|hyperpage}{168}
+\indexentry{REG\_FIFOREADPTR@{REG\_FIFOREADPTR}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_FIFOWRITEPTR@{REG\_FIFOWRITEPTR}|hyperpage}{168}
+\indexentry{REG\_FIFOWRITEPTR@{REG\_FIFOWRITEPTR}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_INTENABLE1@{REG\_INTENABLE1}|hyperpage}{168}
+\indexentry{REG\_INTENABLE1@{REG\_INTENABLE1}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_INTENABLE2@{REG\_INTENABLE2}|hyperpage}{168}
+\indexentry{REG\_INTENABLE2@{REG\_INTENABLE2}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_INTSTAT1@{REG\_INTSTAT1}|hyperpage}{168}
+\indexentry{REG\_INTSTAT1@{REG\_INTSTAT1}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{168}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_INTSTAT2@{REG\_INTSTAT2}|hyperpage}{169}
+\indexentry{REG\_INTSTAT2@{REG\_INTSTAT2}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_LED1\_PULSEAMP@{REG\_LED1\_PULSEAMP}|hyperpage}{169}
+\indexentry{REG\_LED1\_PULSEAMP@{REG\_LED1\_PULSEAMP}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_LED2\_PULSEAMP@{REG\_LED2\_PULSEAMP}|hyperpage}{169}
+\indexentry{REG\_LED2\_PULSEAMP@{REG\_LED2\_PULSEAMP}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_LED\_PROX\_AMP@{REG\_LED\_PROX\_AMP}|hyperpage}{169}
+\indexentry{REG\_LED\_PROX\_AMP@{REG\_LED\_PROX\_AMP}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_MODECONFIG@{REG\_MODECONFIG}|hyperpage}{169}
+\indexentry{REG\_MODECONFIG@{REG\_MODECONFIG}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_MULTILEDCONFIG1@{REG\_MULTILEDCONFIG1}|hyperpage}{169}
+\indexentry{REG\_MULTILEDCONFIG1@{REG\_MULTILEDCONFIG1}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_MULTILEDCONFIG2@{REG\_MULTILEDCONFIG2}|hyperpage}{169}
+\indexentry{REG\_MULTILEDCONFIG2@{REG\_MULTILEDCONFIG2}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_PARTICLECONFIG@{REG\_PARTICLECONFIG}|hyperpage}{169}
+\indexentry{REG\_PARTICLECONFIG@{REG\_PARTICLECONFIG}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_PARTID@{REG\_PARTID}|hyperpage}{169}
+\indexentry{REG\_PARTID@{REG\_PARTID}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_PROXINTTHRESH@{REG\_PROXINTTHRESH}|hyperpage}{169}
+\indexentry{REG\_PROXINTTHRESH@{REG\_PROXINTTHRESH}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{169}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!REG\_REVISIONID@{REG\_REVISIONID}|hyperpage}{170}
+\indexentry{REG\_REVISIONID@{REG\_REVISIONID}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!RESET@{RESET}|hyperpage}{170}
+\indexentry{RESET@{RESET}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!ROLLOVER\_DISABLE@{ROLLOVER\_DISABLE}|hyperpage}{170}
+\indexentry{ROLLOVER\_DISABLE@{ROLLOVER\_DISABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!ROLLOVER\_ENABLE@{ROLLOVER\_ENABLE}|hyperpage}{170}
+\indexentry{ROLLOVER\_ENABLE@{ROLLOVER\_ENABLE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_1@{SAMPLEAVG\_1}|hyperpage}{170}
+\indexentry{SAMPLEAVG\_1@{SAMPLEAVG\_1}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_16@{SAMPLEAVG\_16}|hyperpage}{170}
+\indexentry{SAMPLEAVG\_16@{SAMPLEAVG\_16}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_2@{SAMPLEAVG\_2}|hyperpage}{170}
+\indexentry{SAMPLEAVG\_2@{SAMPLEAVG\_2}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_32@{SAMPLEAVG\_32}|hyperpage}{170}
+\indexentry{SAMPLEAVG\_32@{SAMPLEAVG\_32}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_4@{SAMPLEAVG\_4}|hyperpage}{170}
+\indexentry{SAMPLEAVG\_4@{SAMPLEAVG\_4}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLEAVG\_8@{SAMPLEAVG\_8}|hyperpage}{170}
+\indexentry{SAMPLEAVG\_8@{SAMPLEAVG\_8}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{170}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_100@{SAMPLERATE\_100}|hyperpage}{171}
+\indexentry{SAMPLERATE\_100@{SAMPLERATE\_100}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_1000@{SAMPLERATE\_1000}|hyperpage}{171}
+\indexentry{SAMPLERATE\_1000@{SAMPLERATE\_1000}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_1600@{SAMPLERATE\_1600}|hyperpage}{171}
+\indexentry{SAMPLERATE\_1600@{SAMPLERATE\_1600}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_200@{SAMPLERATE\_200}|hyperpage}{171}
+\indexentry{SAMPLERATE\_200@{SAMPLERATE\_200}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_3200@{SAMPLERATE\_3200}|hyperpage}{171}
+\indexentry{SAMPLERATE\_3200@{SAMPLERATE\_3200}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_400@{SAMPLERATE\_400}|hyperpage}{171}
+\indexentry{SAMPLERATE\_400@{SAMPLERATE\_400}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_50@{SAMPLERATE\_50}|hyperpage}{171}
+\indexentry{SAMPLERATE\_50@{SAMPLERATE\_50}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SAMPLERATE\_800@{SAMPLERATE\_800}|hyperpage}{171}
+\indexentry{SAMPLERATE\_800@{SAMPLERATE\_800}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SHUTDOWN@{SHUTDOWN}|hyperpage}{171}
+\indexentry{SHUTDOWN@{SHUTDOWN}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SLOT\_IR\_LED@{SLOT\_IR\_LED}|hyperpage}{171}
+\indexentry{SLOT\_IR\_LED@{SLOT\_IR\_LED}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{171}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SLOT\_IR\_PILOT@{SLOT\_IR\_PILOT}|hyperpage}{172}
+\indexentry{SLOT\_IR\_PILOT@{SLOT\_IR\_PILOT}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{172}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SLOT\_NONE@{SLOT\_NONE}|hyperpage}{172}
+\indexentry{SLOT\_NONE@{SLOT\_NONE}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{172}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SLOT\_NONE\_PILOT@{SLOT\_NONE\_PILOT}|hyperpage}{172}
+\indexentry{SLOT\_NONE\_PILOT@{SLOT\_NONE\_PILOT}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{172}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SLOT\_RED\_LED@{SLOT\_RED\_LED}|hyperpage}{172}
+\indexentry{SLOT\_RED\_LED@{SLOT\_RED\_LED}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{172}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!SLOT\_RED\_PILOT@{SLOT\_RED\_PILOT}|hyperpage}{172}
+\indexentry{SLOT\_RED\_PILOT@{SLOT\_RED\_PILOT}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{172}
+\indexentry{MAX30102.cpp@{MAX30102.cpp}!WAKEUP@{WAKEUP}|hyperpage}{172}
+\indexentry{WAKEUP@{WAKEUP}!MAX30102.cpp@{MAX30102.cpp}|hyperpage}{172}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h@{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h}|hyperpage}{172}
+\indexentry{MAX30102.h@{MAX30102.h}!DEFAULT\_INT\_GPIO@{DEFAULT\_INT\_GPIO}|hyperpage}{173}
+\indexentry{DEFAULT\_INT\_GPIO@{DEFAULT\_INT\_GPIO}!MAX30102.h@{MAX30102.h}|hyperpage}{173}
+\indexentry{MAX30102.h@{MAX30102.h}!I2C\_BUFFER\_LENGTH@{I2C\_BUFFER\_LENGTH}|hyperpage}{173}
+\indexentry{I2C\_BUFFER\_LENGTH@{I2C\_BUFFER\_LENGTH}!MAX30102.h@{MAX30102.h}|hyperpage}{173}
+\indexentry{MAX30102.h@{MAX30102.h}!I2C\_SPEED\_FAST@{I2C\_SPEED\_FAST}|hyperpage}{173}
+\indexentry{I2C\_SPEED\_FAST@{I2C\_SPEED\_FAST}!MAX30102.h@{MAX30102.h}|hyperpage}{173}
+\indexentry{MAX30102.h@{MAX30102.h}!I2C\_SPEED\_STANDARD@{I2C\_SPEED\_STANDARD}|hyperpage}{173}
+\indexentry{I2C\_SPEED\_STANDARD@{I2C\_SPEED\_STANDARD}!MAX30102.h@{MAX30102.h}|hyperpage}{173}
+\indexentry{MAX30102.h@{MAX30102.h}!MAX30102\_ADDRESS@{MAX30102\_ADDRESS}|hyperpage}{173}
+\indexentry{MAX30102\_ADDRESS@{MAX30102\_ADDRESS}!MAX30102.h@{MAX30102.h}|hyperpage}{173}
+\indexentry{MAX30102.h@{MAX30102.h}!STORAGE\_SIZE@{STORAGE\_SIZE}|hyperpage}{173}
+\indexentry{STORAGE\_SIZE@{STORAGE\_SIZE}!MAX30102.h@{MAX30102.h}|hyperpage}{173}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h@{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h}|hyperpage}{174}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/Sensor.cpp@{/home/sitcomlab/Projects/VigiSense/src/Sensor.cpp}|hyperpage}{175}
+\indexentry{Sensor.cpp@{Sensor.cpp}!crest@{crest}|hyperpage}{176}
+\indexentry{crest@{crest}!Sensor.cpp@{Sensor.cpp}|hyperpage}{176}
+\indexentry{Sensor.cpp@{Sensor.cpp}!dataBeenIncreasing@{dataBeenIncreasing}|hyperpage}{176}
+\indexentry{dataBeenIncreasing@{dataBeenIncreasing}!Sensor.cpp@{Sensor.cpp}|hyperpage}{176}
+\indexentry{Sensor.cpp@{Sensor.cpp}!hpf@{hpf}|hyperpage}{176}
+\indexentry{hpf@{hpf}!Sensor.cpp@{Sensor.cpp}|hyperpage}{176}
+\indexentry{Sensor.cpp@{Sensor.cpp}!lpf@{lpf}|hyperpage}{176}
+\indexentry{lpf@{lpf}!Sensor.cpp@{Sensor.cpp}|hyperpage}{176}
+\indexentry{Sensor.cpp@{Sensor.cpp}!nextPastPeaksIndex@{nextPastPeaksIndex}|hyperpage}{176}
+\indexentry{nextPastPeaksIndex@{nextPastPeaksIndex}!Sensor.cpp@{Sensor.cpp}|hyperpage}{176}
+\indexentry{Sensor.cpp@{Sensor.cpp}!R@{R}|hyperpage}{177}
+\indexentry{R@{R}!Sensor.cpp@{Sensor.cpp}|hyperpage}{177}
+\indexentry{Sensor.cpp@{Sensor.cpp}!SpO2@{SpO2}|hyperpage}{177}
+\indexentry{SpO2@{SpO2}!Sensor.cpp@{Sensor.cpp}|hyperpage}{177}
+\indexentry{Sensor.cpp@{Sensor.cpp}!trough@{trough}|hyperpage}{177}
+\indexentry{trough@{trough}!Sensor.cpp@{Sensor.cpp}|hyperpage}{177}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/Sensor.h@{/home/sitcomlab/Projects/VigiSense/src/Sensor.h}|hyperpage}{177}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/Sensor.h@{/home/sitcomlab/Projects/VigiSense/src/Sensor.h}|hyperpage}{178}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/shutdown.cpp@{/home/sitcomlab/Projects/VigiSense/src/shutdown.cpp}|hyperpage}{179}
+\indexentry{shutdown.cpp@{shutdown.cpp}!main@{main}|hyperpage}{180}
+\indexentry{main@{main}!shutdown.cpp@{shutdown.cpp}|hyperpage}{180}
+\indexentry{shutdown.cpp@{shutdown.cpp}!heartSensor@{heartSensor}|hyperpage}{180}
+\indexentry{heartSensor@{heartSensor}!shutdown.cpp@{shutdown.cpp}|hyperpage}{180}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.cpp@{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.cpp}|hyperpage}{180}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h@{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h}|hyperpage}{181}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h@{/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h}|hyperpage}{181}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/test.cpp@{/home/sitcomlab/Projects/VigiSense/src/test.cpp}|hyperpage}{182}
+\indexentry{test.cpp@{test.cpp}!main@{main}|hyperpage}{183}
+\indexentry{main@{main}!test.cpp@{test.cpp}|hyperpage}{183}
+\indexentry{test.cpp@{test.cpp}!heartSensor@{heartSensor}|hyperpage}{183}
+\indexentry{heartSensor@{heartSensor}!test.cpp@{test.cpp}|hyperpage}{183}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/testSpO2.cpp@{/home/sitcomlab/Projects/VigiSense/src/testSpO2.cpp}|hyperpage}{183}
+\indexentry{testSpO2.cpp@{testSpO2.cpp}!main@{main}|hyperpage}{184}
+\indexentry{main@{main}!testSpO2.cpp@{testSpO2.cpp}|hyperpage}{184}
+\indexentry{/home/sitcomlab/Projects/VigiSense/src/User.cpp@{/home/sitcomlab/Projects/VigiSense/src/User.cpp}|hyperpage}{185}
+\indexentry{User.cpp@{User.cpp}!addContact@{addContact}|hyperpage}{185}
+\indexentry{addContact@{addContact}!User.cpp@{User.cpp}|hyperpage}{185}
+\indexentry{User.cpp@{User.cpp}!User@{User}|hyperpage}{185}
+\indexentry{User@{User}!User.cpp@{User.cpp}|hyperpage}{185}
+\indexentry{User.cpp@{User.cpp}!contacts@{contacts}|hyperpage}{186}
+\indexentry{contacts@{contacts}!User.cpp@{User.cpp}|hyperpage}{186}
+\indexentry{User.cpp@{User.cpp}!name@{name}|hyperpage}{186}
+\indexentry{name@{name}!User.cpp@{User.cpp}|hyperpage}{186}

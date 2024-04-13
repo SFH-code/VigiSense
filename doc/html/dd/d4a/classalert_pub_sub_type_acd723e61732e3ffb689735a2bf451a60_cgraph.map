@@ -1,0 +1,9 @@
+<map id="alertPubSubType::alertPubSubType" name="alertPubSubType::alertPubSubType">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,197,87"/>
+<area shape="rect" id="Node000002" href="$d5/d9e/classalert.html#a61308837a6b807186d46140a5b83ae30" title="This function returns the maximum serialized size of the Key of an object depending on the buffer ali..." alt="" coords="245,5,492,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,47,285,31,286,36,198,52"/>
+<area shape="rect" id="Node000003" href="$d5/d9e/classalert.html#ae0f641812c0b824a027e0f13c9c5888b" title="This function returns the maximum serialized size of an object depending on the buffer alignment." alt="" coords="257,55,480,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,65,243,65,243,70,197,70"/>
+<area shape="rect" id="Node000004" href="$d5/d9e/classalert.html#a7d7e8144d92602e8f60b42ea5ffb9055" title="This function tells you if the Key has been defined for this type." alt="" coords="296,104,441,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,82,286,99,285,104,197,88"/>
+</map>

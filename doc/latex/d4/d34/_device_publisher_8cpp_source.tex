@@ -1,0 +1,159 @@
+\doxysection{Device\+Publisher.\+cpp}
+\hypertarget{_device_publisher_8cpp_source}{}\label{_device_publisher_8cpp_source}\index{/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp@{/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp}}
+\mbox{\hyperlink{_device_publisher_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ 2016\ Proyectos\ y\ Sistemas\ de\ Mantenimiento\ SL\ (eProsima).}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{alert_pub_sub_types_8h}{alertPubSubTypes.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <fastdds/dds/domain/DomainParticipant.hpp>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <fastdds/dds/domain/DomainParticipantFactory.hpp>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <fastdds/dds/publisher/DataWriter.hpp>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <fastdds/dds/publisher/DataWriterListener.hpp>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <fastdds/dds/publisher/Publisher.hpp>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <fastdds/dds/topic/TypeSupport.hpp>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{using\ namespace\ }eprosima::fastdds::dds;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_device_publisher}{DevicePublisher}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ DomainParticipant*\ \mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ Publisher*\ \mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ Topic*\ \mbox{\hyperlink{class_device_publisher_a8adaa24e65994c4c6eaa4c049a6be70a}{topic\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ DataWriter*\ \mbox{\hyperlink{class_device_publisher_a997e1b23b06a3e0a7bf64305bdb82bec}{writer\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ TypeSupport\ \mbox{\hyperlink{class_device_publisher_a0582b9b11ed59df59865d51b4e78b8a5}{type\_}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_device_publisher_1_1_pub_listener}{PubListener}}\ :\ \textcolor{keyword}{public}\ DataWriterListener}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_af7b8de05467c850123ce796f441d6827}{PubListener}}()}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a2a5c0b4e134759fb5c392c1d09a0dd3c}{matched\_}}(0)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a0172350a3957d7d833fb746aa88d14ea}{\string~PubListener}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a652394d445a61558d8a5b6b79b1f2943}{on\_publication\_matched}}(}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataWriter*,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ PublicationMatchedStatus\&\ info)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (info.current\_count\_change\ ==\ 1)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a2a5c0b4e134759fb5c392c1d09a0dd3c}{matched\_}}\ =\ info.total\_count;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Publisher\ matched."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (info.current\_count\_change\ ==\ -\/1)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a2a5c0b4e134759fb5c392c1d09a0dd3c}{matched\_}}\ =\ info.total\_count;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Publisher\ unmatched."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ info.current\_count\_change}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ is\ not\ a\ valid\ value\ for\ PublicationMatchedStatus\ current\ count\ change."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::atomic\_int\ \mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a2a5c0b4e134759fb5c392c1d09a0dd3c}{matched\_}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \}\ \mbox{\hyperlink{class_device_publisher_a7a82c1c5db0a786717a8e9a6e244d502}{listener\_}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a829939c5e25f2b6ce1c178df97bab432}{DevicePublisher}}()\ :\ \mbox{\hyperlink{class_device_publisher_a0582b9b11ed59df59865d51b4e78b8a5}{type\_}}(new\ \mbox{\hyperlink{classalert_pub_sub_type}{alertPubSubType}}())\ \{\}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_device_publisher_ab469a50f538849781eedd123167144c7}{\string~DevicePublisher}}()}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a997e1b23b06a3e0a7bf64305bdb82bec}{writer\_}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}}-\/>delete\_datawriter(\mbox{\hyperlink{class_device_publisher_a997e1b23b06a3e0a7bf64305bdb82bec}{writer\_}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}-\/>delete\_publisher(\mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a8adaa24e65994c4c6eaa4c049a6be70a}{topic\_}}\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}-\/>delete\_topic(\mbox{\hyperlink{class_device_publisher_a8adaa24e65994c4c6eaa4c049a6be70a}{topic\_}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ DomainParticipantFactory::get\_instance()-\/>delete\_participant(\mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}});}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_publisher_af499e17f8c19e19987fbed90b6cec470}{init}}()}
+\DoxyCodeLine{00109\ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ DomainParticipantQos\ participantQos;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ participantQos.name(\textcolor{stringliteral}{"{}Participant\_publisher"{}});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}\ =\ DomainParticipantFactory::get\_instance()-\/>create\_participant(0,\ participantQos);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register\ the\ Type}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a0582b9b11ed59df59865d51b4e78b8a5}{type\_}}.register\_type(\mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}});}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ publications\ Topic}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ !!\ Important\ that\ this\ matches\ with\ the\ name\ of\ message\ defined\ in\ HelloWorldMsg.idl\ !!}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a8adaa24e65994c4c6eaa4c049a6be70a}{topic\_}}\ =\ \mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}-\/>create\_topic(\textcolor{stringliteral}{"{}HelloWorldTopic"{}},\ \textcolor{stringliteral}{"{}alert"{}},\ TOPIC\_QOS\_DEFAULT);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a8adaa24e65994c4c6eaa4c049a6be70a}{topic\_}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ Publisher}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}}\ =\ \mbox{\hyperlink{class_device_publisher_a439f4f5f4cb4fdaf230dfb23a388eeb4}{participant\_}}-\/>create\_publisher(PUBLISHER\_QOS\_DEFAULT,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ the\ DataWriter}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a997e1b23b06a3e0a7bf64305bdb82bec}{writer\_}}\ =\ \mbox{\hyperlink{class_device_publisher_a1026d9107221c8a4775b29da8660820c}{publisher\_}}-\/>create\_datawriter(\mbox{\hyperlink{class_device_publisher_a8adaa24e65994c4c6eaa4c049a6be70a}{topic\_}},\ DATAWRITER\_QOS\_DEFAULT,\ \&\mbox{\hyperlink{class_device_publisher_a7a82c1c5db0a786717a8e9a6e244d502}{listener\_}});}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a997e1b23b06a3e0a7bf64305bdb82bec}{writer\_}}\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_device_publisher_abe1b6c067398e780a020c9556ffeaeff}{publish}}(\mbox{\hyperlink{classalert}{alert}}\&\ hello)}
+\DoxyCodeLine{00151\ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_device_publisher_a7a82c1c5db0a786717a8e9a6e244d502}{listener\_}}.\mbox{\hyperlink{class_device_publisher_1_1_pub_listener_a2a5c0b4e134759fb5c392c1d09a0dd3c}{matched\_}}\ >\ 0)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_device_publisher_a997e1b23b06a3e0a7bf64305bdb82bec}{writer\_}}-\/>write(\&hello);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \};}
+
+\end{DoxyCode}

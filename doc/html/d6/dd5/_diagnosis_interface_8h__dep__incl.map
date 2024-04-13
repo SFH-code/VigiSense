@@ -1,0 +1,17 @@
+<map id="/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h" name="/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="314,5,565,45"/>
+<area shape="rect" id="Node000002" href="$d5/d36/_h_r_tracker_8h.html" title=" " alt="" coords="231,93,423,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="405,56,354,95,351,91,402,52"/>
+<area shape="rect" id="Node000006" href="$d9/dc2/_s_p_o2_tracker_8h.html" title=" " alt="" coords="447,93,655,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="477,52,528,91,525,95,474,56"/>
+<area shape="rect" id="Node000003" href="$d5/d43/_h_r_tracker_8cpp.html" title=" " alt="" coords="5,181,212,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,141,158,184,156,179,266,136"/>
+<area shape="rect" id="Node000004" href="$df/dac/test_8cpp.html" title=" " alt="" coords="237,181,423,221"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="331,147,332,181,327,181,326,147"/>
+<area shape="rect" id="Node000005" href="$d3/d1a/test_sp_o2_8cpp.html" title=" " alt="" coords="447,181,650,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="389,136,501,179,499,184,388,141"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="491,141,379,184,377,179,489,136"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="553,147,552,181,547,181,548,147"/>
+<area shape="rect" id="Node000007" href="$d9/d97/_s_p_o2_tracker_8cpp.html" title=" " alt="" coords="675,181,897,221"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="617,136,736,179,734,184,615,141"/>
+</map>

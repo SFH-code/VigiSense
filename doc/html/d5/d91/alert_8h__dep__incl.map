@@ -1,0 +1,17 @@
+<map id="/home/sitcomlab/Projects/VigiSense/src/alert.h" name="/home/sitcomlab/Projects/VigiSense/src/alert.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="290,5,477,45"/>
+<area shape="rect" id="Node000002" href="$db/da1/alert_8cxx.html" title=" " alt="" coords="170,93,357,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,56,291,95,288,91,344,51"/>
+<area shape="rect" id="Node000003" href="$d5/db9/alert_pub_sub_types_8h.html" title=" " alt="" coords="381,93,625,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="423,51,478,91,475,95,420,56"/>
+<area shape="rect" id="Node000004" href="$d4/d34/_device_publisher_8cpp.html" title=" " alt="" coords="103,181,351,221"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="431,140,289,184,287,179,429,135"/>
+<area shape="rect" id="Node000007" href="$d8/dfc/_device_subscriber_8cpp.html" title=" " alt="" coords="375,181,631,221"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="506,147,506,181,501,181,501,147"/>
+<area shape="rect" id="Node000008" href="$d3/d6b/alert_pub_sub_types_8cxx.html" title=" " alt="" coords="655,181,914,221"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="579,135,724,179,722,184,577,140"/>
+<area shape="rect" id="Node000005" href="$d5/d43/_h_r_tracker_8cpp.html" title=" " alt="" coords="5,269,212,309"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="191,232,136,271,133,267,188,227"/>
+<area shape="rect" id="Node000006" href="$d9/d97/_s_p_o2_tracker_8cpp.html" title=" " alt="" coords="236,269,459,309"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="267,227,322,267,319,271,264,232"/>
+</map>

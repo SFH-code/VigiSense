@@ -1,0 +1,11 @@
+<map id="SPO2Tracker::start" name="SPO2Tracker::start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,42,145,67"/>
+<area shape="rect" id="Node000002" href="$dd/d3d/class_s_p_o2_tracker.html#aa32cfa3b341911d5649f2acd6c9edf23" title=" " alt="" coords="193,42,348,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,52,179,52,179,57,146,57"/>
+<area shape="rect" id="Node000003" href="$d4/d7c/classdiagnosis_interface.html#ac23cf5e69c20f19de5fda5b55e49f437" title=" " alt="" coords="396,5,556,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="348,41,382,36,383,41,348,46"/>
+<area shape="rect" id="Node000004" href="$dd/d3d/class_s_p_o2_tracker.html#a3c0ccec07835f9120be36775a1e2e64f" title=" " alt="" coords="401,70,551,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="348,63,388,68,387,73,348,68"/>
+<area shape="rect" id="Node000005" href="$dc/d01/classsensor.html#aefa7703703378c34987c71f84b1f0b48" title=" " alt="" coords="604,70,732,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="552,80,590,80,590,85,552,85"/>
+</map>

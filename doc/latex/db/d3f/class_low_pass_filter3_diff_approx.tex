@@ -1,0 +1,134 @@
+\doxysection{Low\+Pass\+Filter3\+Diff\+Approx Class Reference}
+\hypertarget{class_low_pass_filter3_diff_approx}{}\label{class_low_pass_filter3_diff_approx}\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+
+
+Class for third order high pass filter. This is designed using the approximated differtial approuch where s=(Z-\/1)/(Z\texorpdfstring{$\ast$}{*}T).  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Filters.\+h$>$}
+
+
+
+Inheritance diagram for Low\+Pass\+Filter3\+Diff\+Approx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{d2/db2/class_low_pass_filter3_diff_approx__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Low\+Pass\+Filter3\+Diff\+Approx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dca/class_low_pass_filter3_diff_approx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_low_pass_filter3_diff_approx_a72176a4c7ed1bfe464e39750414068d9}{Low\+Pass\+Filter3\+Diff\+Approx}} (double sample\+Time, double omega\+\_\+c, double ioutput=0)
+\item 
+double \mbox{\hyperlink{class_low_pass_filter3_diff_approx_a0d15deda1d403508a3ffe0619cee00de}{update}} (double new\+Value) final
+\item 
+double \mbox{\hyperlink{class_low_pass_filter3_diff_approx_a275b2f916d81c352bbea4785baeb6f46}{get\+Output}} () final
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{class_low_pass_filter3_diff_approx_ac7640d3a7149eee7e82e02887630b579}{xc}} \mbox{[}4\mbox{]}
+\item 
+const double \mbox{\hyperlink{class_low_pass_filter3_diff_approx_aaf9e144673e875fcd7c7284e525ca233}{yc}} \mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ double, 3 $>$ \mbox{\hyperlink{class_low_pass_filter3_diff_approx_a61a8130e9b5f54cbbb6a153a857381af}{y}}
+\item 
+\mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$ double, 4 $>$ \mbox{\hyperlink{class_low_pass_filter3_diff_approx_a78678261b898039826ebf75a86cc0be5}{x}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for third order high pass filter. This is designed using the approximated differtial approuch where s=(Z-\/1)/(Z\texorpdfstring{$\ast$}{*}T). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_low_pass_filter3_diff_approx_a72176a4c7ed1bfe464e39750414068d9}\label{class_low_pass_filter3_diff_approx_a72176a4c7ed1bfe464e39750414068d9} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{LowPassFilter3DiffApprox()}{LowPassFilter3DiffApprox()}}
+{\footnotesize\ttfamily Low\+Pass\+Filter3\+Diff\+Approx\+::\+Low\+Pass\+Filter3\+Diff\+Approx (\begin{DoxyParamCaption}\item[{double}]{sample\+Time,  }\item[{double}]{omega\+\_\+c,  }\item[{double}]{ioutput = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_low_pass_filter3_diff_approx_a275b2f916d81c352bbea4785baeb6f46}\label{class_low_pass_filter3_diff_approx_a275b2f916d81c352bbea4785baeb6f46} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily double Low\+Pass\+Filter3\+Diff\+Approx\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_a7fe3a1d7a5ed94d245d06412e1805acd}{Digital\+Filter$<$ double $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d3f/class_low_pass_filter3_diff_approx_a275b2f916d81c352bbea4785baeb6f46_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_low_pass_filter3_diff_approx_a0d15deda1d403508a3ffe0619cee00de}\label{class_low_pass_filter3_diff_approx_a0d15deda1d403508a3ffe0619cee00de} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!update@{update}}
+\index{update@{update}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily double Low\+Pass\+Filter3\+Diff\+Approx\+::update (\begin{DoxyParamCaption}\item[{double}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_digital_filter_add8ed2fd242acaf42e18cf44cdb314ac}{Digital\+Filter$<$ double $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d3f/class_low_pass_filter3_diff_approx_a0d15deda1d403508a3ffe0619cee00de_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_low_pass_filter3_diff_approx_a78678261b898039826ebf75a86cc0be5}\label{class_low_pass_filter3_diff_approx_a78678261b898039826ebf75a86cc0be5} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!x@{x}}
+\index{x@{x}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$double, 4$>$ Low\+Pass\+Filter3\+Diff\+Approx\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_diff_approx_ac7640d3a7149eee7e82e02887630b579}\label{class_low_pass_filter3_diff_approx_ac7640d3a7149eee7e82e02887630b579} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!xc@{xc}}
+\index{xc@{xc}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{xc}{xc}}
+{\footnotesize\ttfamily const double Low\+Pass\+Filter3\+Diff\+Approx\+::xc\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_diff_approx_a61a8130e9b5f54cbbb6a153a857381af}\label{class_low_pass_filter3_diff_approx_a61a8130e9b5f54cbbb6a153a857381af} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!y@{y}}
+\index{y@{y}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circular_delay}{Circular\+Delay}}$<$double, 3$>$ Low\+Pass\+Filter3\+Diff\+Approx\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_low_pass_filter3_diff_approx_aaf9e144673e875fcd7c7284e525ca233}\label{class_low_pass_filter3_diff_approx_aaf9e144673e875fcd7c7284e525ca233} 
+\index{LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}!yc@{yc}}
+\index{yc@{yc}!LowPassFilter3DiffApprox@{LowPassFilter3DiffApprox}}
+\doxysubsubsection{\texorpdfstring{yc}{yc}}
+{\footnotesize\ttfamily const double Low\+Pass\+Filter3\+Diff\+Approx\+::yc\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\mbox{\hyperlink{_digital_filters_8h}{Digital\+Filters.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,1708 @@
+\begin{theindex}
+
+  \item {/home/sitcomlab/Projects/VigiSense/src/CircularDelay.hpp}, 
+		\hyperpage{128, 129}
+  \item {/home/sitcomlab/Projects/VigiSense/src/DevicePublisher.cpp}, 
+		\hyperpage{131, 132}
+  \item {/home/sitcomlab/Projects/VigiSense/src/DeviceSubscriber.cpp}, 
+		\hyperpage{134}
+  \item {/home/sitcomlab/Projects/VigiSense/src/Diagnosis.cpp}, 
+		\hyperpage{135}
+  \item {/home/sitcomlab/Projects/VigiSense/src/Diagnosis.h}, 
+		\hyperpage{135, 136}
+  \item {/home/sitcomlab/Projects/VigiSense/src/DiagnosisInterface.h}, 
+		\hyperpage{137, 138}
+  \item {/home/sitcomlab/Projects/VigiSense/src/DigitalFilters.h}, 
+		\hyperpage{138}, \hyperpage{141}
+  \item {/home/sitcomlab/Projects/VigiSense/src/HRTracker.cpp}, 
+		\hyperpage{145}
+  \item {/home/sitcomlab/Projects/VigiSense/src/HRTracker.h}, 
+		\hyperpage{145, 146}
+  \item {/home/sitcomlab/Projects/VigiSense/src/MAX30102.cpp}, 
+		\hyperpage{161}
+  \item {/home/sitcomlab/Projects/VigiSense/src/MAX30102.h}, 
+		\hyperpage{172}, \hyperpage{174}
+  \item {/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.cpp}, 
+		\hyperpage{180}
+  \item {/home/sitcomlab/Projects/VigiSense/src/SPO2Tracker.h}, 
+		\hyperpage{181}
+  \item {/home/sitcomlab/Projects/VigiSense/src/Sensor.cpp}, 
+		\hyperpage{175}
+  \item {/home/sitcomlab/Projects/VigiSense/src/Sensor.h}, 
+		\hyperpage{177, 178}
+  \item {/home/sitcomlab/Projects/VigiSense/src/User.cpp}, 
+		\hyperpage{185}
+  \item {/home/sitcomlab/Projects/VigiSense/src/alert.cxx}, 
+		\hyperpage{121}
+  \item {/home/sitcomlab/Projects/VigiSense/src/alert.h}, 
+		\hyperpage{121}, \hyperpage{123}
+  \item {/home/sitcomlab/Projects/VigiSense/src/alert.idl}, 
+		\hyperpage{124, 125}
+  \item {/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.cxx}, 
+		\hyperpage{125}
+  \item {/home/sitcomlab/Projects/VigiSense/src/alertPubSubTypes.h}, 
+		\hyperpage{126, 127}
+  \item {/home/sitcomlab/Projects/VigiSense/src/i2c-\/dev.h}, 
+		\hyperpage{147}, \hyperpage{158}
+  \item {/home/sitcomlab/Projects/VigiSense/src/shutdown.cpp}, 
+		\hyperpage{179}
+  \item {/home/sitcomlab/Projects/VigiSense/src/test.cpp}, 
+		\hyperpage{182}
+  \item {/home/sitcomlab/Projects/VigiSense/src/testSpO2.cpp}, 
+		\hyperpage{183}
+  \item {\_Diagnoses}
+    \subitem {diagnosis}, \hyperpage{39}
+  \item {\_i2c}
+    \subitem {MAX30102}, \hyperpage{97}
+  \item {\_i2caddr}
+    \subitem {MAX30102}, \hyperpage{97}
+  \item {\_s}
+    \subitem {HRTracker}, \hyperpage{56}
+    \subitem {SPO2Tracker}, \hyperpage{117}
+  \item {\_sensor}
+    \subitem {sensor}, \hyperpage{111}
+  \item {\texorpdfstring{$\sim$}{\string~}DevicePublisher}
+    \subitem {DevicePublisher}, \hyperpage{34}
+  \item {\texorpdfstring{$\sim$}{\string~}DeviceSubscriber}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {\texorpdfstring{$\sim$}{\string~}HRTracker}
+    \subitem {HRTracker}, \hyperpage{54}
+  \item {\texorpdfstring{$\sim$}{\string~}PubListener}
+    \subitem {DevicePublisher::PubListener}, \hyperpage{100}
+  \item {\texorpdfstring{$\sim$}{\string~}SPO2Tracker}
+    \subitem {SPO2Tracker}, \hyperpage{115}
+  \item {\texorpdfstring{$\sim$}{\string~}SubListener}
+    \subitem {DeviceSubscriber::SubListener}, \hyperpage{119}
+  \item {\texorpdfstring{$\sim$}{\string~}alert}
+    \subitem {alert}, \hyperpage{12}
+  \item {\texorpdfstring{$\sim$}{\string~}alertPubSubType}
+    \subitem {alertPubSubType}, \hyperpage{20}
+  \item {\texorpdfstring{$\sim$}{\string~}sensor}
+    \subitem {sensor}, \hyperpage{107}
+
+  \indexspace
+
+  \item {activeLEDs}
+    \subitem {MAX30102}, \hyperpage{97}
+  \item {ADCRANGE\_16384}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {ADCRANGE\_2048}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {ADCRANGE\_4096}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {ADCRANGE\_8192}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {addContact}
+    \subitem {User.cpp}, \hyperpage{185}
+  \item {addr}
+    \subitem {i2c\_msg}, \hyperpage{57}
+  \item {alert}, \hyperpage{11}
+    \subitem {\texorpdfstring{$\sim$}{\string~}alert}, \hyperpage{12}
+    \subitem {alert}, \hyperpage{12, 13}
+    \subitem {deserialize}, \hyperpage{13}
+    \subitem {getCdrSerializedSize}, \hyperpage{13}
+    \subitem {getKeyMaxCdrSerializedSize}, \hyperpage{14}
+    \subitem {getMaxCdrSerializedSize}, \hyperpage{14}
+    \subitem {index}, \hyperpage{14, 15}, \hyperpage{18}
+    \subitem {isKeyDefined}, \hyperpage{15}
+    \subitem {m\_index}, \hyperpage{18}
+    \subitem {m\_message}, \hyperpage{18}
+    \subitem {message}, \hyperpage{15, 16}, \hyperpage{18}
+    \subitem {operator!=}, \hyperpage{16}
+    \subitem {operator=}, \hyperpage{16}
+    \subitem {operator==}, \hyperpage{17}
+    \subitem {serialize}, \hyperpage{17}
+    \subitem {serializeKey}, \hyperpage{17}
+  \item {alert.h}
+    \subitem {alert\_DllAPI}, \hyperpage{123}
+    \subitem {eProsima\_user\_DllExport}, \hyperpage{123}
+  \item {alert\_DllAPI}
+    \subitem {alert.h}, \hyperpage{123}
+  \item {alertPubSubType}, \hyperpage{19}
+    \subitem {\texorpdfstring{$\sim$}{\string~}alertPubSubType}, 
+		\hyperpage{20}
+    \subitem {alertPubSubType}, \hyperpage{20}
+    \subitem {createData}, \hyperpage{21}
+    \subitem {deleteData}, \hyperpage{21}
+    \subitem {deserialize}, \hyperpage{21}
+    \subitem {getKey}, \hyperpage{21}
+    \subitem {getSerializedSizeProvider}, \hyperpage{21}
+    \subitem {m\_keyBuffer}, \hyperpage{22}
+    \subitem {m\_md5}, \hyperpage{22}
+    \subitem {serialize}, \hyperpage{22}
+    \subitem {type}, \hyperpage{20}
+  \item {alertPubSubTypes.cxx}
+    \subitem {InstanceHandle\_t}, \hyperpage{125}
+    \subitem {SerializedPayload\_t}, \hyperpage{125}
+  \item {amplFac}
+    \subitem {HighPassFilter}, \hyperpage{49}
+    \subitem {LowPassFilter3MatchedZ}, \hyperpage{77}
+  \item {available}
+    \subitem {MAX30102}, \hyperpage{80}
+  \item {averageIRBPM}
+    \subitem {sensor}, \hyperpage{111}
+
+  \indexspace
+
+  \item {begin}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{25}
+    \subitem {MAX30102}, \hyperpage{80}
+    \subitem {sensor}, \hyperpage{107}
+  \item {bitMask}
+    \subitem {MAX30102}, \hyperpage{80}
+  \item {block}
+    \subitem {i2c\_smbus\_data}, \hyperpage{58}
+  \item {BPM\_BUFFER\_SIZE}
+    \subitem {sensor}, \hyperpage{111}
+  \item {bpmBuffer}
+    \subitem {sensor}, \hyperpage{111}
+  \item {buf}
+    \subitem {i2c\_msg}, \hyperpage{57}
+  \item {buffer}
+    \subitem {MovingAvarageFilter$<$ size $>$}, \hyperpage{99}
+  \item {byte}
+    \subitem {i2c\_smbus\_data}, \hyperpage{58}
+
+  \indexspace
+
+  \item {calcC\_Cr}
+    \subitem {DigitalFilters.h}, \hyperpage{140}
+  \item {check}
+    \subitem {MAX30102}, \hyperpage{81}
+  \item {CircularDelay}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{24}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{32}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{104}
+  \item {CircularDelay$<$ type, size $>$}, \hyperpage{23}
+    \subitem {begin}, \hyperpage{25}
+    \subitem {CircularDelay}, \hyperpage{24}
+    \subitem {data}, \hyperpage{26}
+    \subitem {end}, \hyperpage{25}
+    \subitem {get}, \hyperpage{25}
+    \subitem {push}, \hyperpage{25}
+    \subitem {rbegin}, \hyperpage{26}
+    \subitem {rend}, \hyperpage{26}
+    \subitem {setIterator}, \hyperpage{26}
+  \item {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{27}
+    \subitem {CircularDelay}, \hyperpage{29}
+    \subitem {const\_iterator}, \hyperpage{28}
+    \subitem {data\_}, \hyperpage{29}
+    \subitem {difference\_type}, \hyperpage{27}
+    \subitem {iterator\_category}, \hyperpage{27}
+    \subitem {operator!=}, \hyperpage{28}
+    \subitem {operator++}, \hyperpage{28}
+    \subitem {operator-\/$>$}, \hyperpage{29}
+    \subitem {operator-\/-\/}, \hyperpage{28, 29}
+    \subitem {operator==}, \hyperpage{29}
+    \subitem {operator[]}, \hyperpage{29}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{28}
+    \subitem {ptr\_}, \hyperpage{29}
+    \subitem {self\_type}, \hyperpage{27}
+  \item {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{30}
+    \subitem {CircularDelay}, \hyperpage{32}
+    \subitem {const\_reverse\_iterator}, \hyperpage{31}
+    \subitem {data\_}, \hyperpage{33}
+    \subitem {difference\_type}, \hyperpage{31}
+    \subitem {iterator\_category}, \hyperpage{31}
+    \subitem {operator!=}, \hyperpage{31}
+    \subitem {operator++}, \hyperpage{31, 32}
+    \subitem {operator-\/$>$}, \hyperpage{32}
+    \subitem {operator-\/-\/}, \hyperpage{32}
+    \subitem {operator==}, \hyperpage{32}
+    \subitem {operator[]}, \hyperpage{32}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{31}
+    \subitem {ptr\_}, \hyperpage{33}
+    \subitem {self\_type}, \hyperpage{31}
+  \item {CircularDelay$<$ type, size $>$::iterator}, \hyperpage{60}
+    \subitem {CircularDelay}, \hyperpage{62}
+    \subitem {data\_}, \hyperpage{62}
+    \subitem {difference\_type}, \hyperpage{60}
+    \subitem {iterator}, \hyperpage{61}
+    \subitem {iterator\_category}, \hyperpage{60}
+    \subitem {operator!=}, \hyperpage{61}
+    \subitem {operator++}, \hyperpage{61}
+    \subitem {operator-\/$>$}, \hyperpage{62}
+    \subitem {operator-\/-\/}, \hyperpage{61, 62}
+    \subitem {operator==}, \hyperpage{62}
+    \subitem {operator[]}, \hyperpage{62}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{61}
+    \subitem {ptr\_}, \hyperpage{62}
+    \subitem {self\_type}, \hyperpage{60}
+  \item {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{102}
+    \subitem {CircularDelay}, \hyperpage{104}
+    \subitem {data\_}, \hyperpage{105}
+    \subitem {difference\_type}, \hyperpage{103}
+    \subitem {iterator\_category}, \hyperpage{103}
+    \subitem {operator!=}, \hyperpage{103}
+    \subitem {operator++}, \hyperpage{103, 104}
+    \subitem {operator-\/$>$}, \hyperpage{104}
+    \subitem {operator-\/-\/}, \hyperpage{104}
+    \subitem {operator==}, \hyperpage{104}
+    \subitem {operator[]}, \hyperpage{104}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{103}
+    \subitem {ptr\_}, \hyperpage{105}
+    \subitem {reverse\_iterator}, \hyperpage{103}
+    \subitem {self\_type}, \hyperpage{103}
+  \item {clearFIFO}
+    \subitem {MAX30102}, \hyperpage{81}
+  \item {command}
+    \subitem {i2c\_smbus\_ioctl\_data}, \hyperpage{59}
+  \item {configOutput}
+    \subitem {HighPassFilter}, \hyperpage{48}
+    \subitem {LowPassFilter}, \hyperpage{65}
+    \subitem {LowPassFilter2}, \hyperpage{68}
+  \item {const\_iterator}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{28}
+  \item {const\_reverse\_iterator}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31}
+  \item {contact}, \hyperpage{33}
+    \subitem {email}, \hyperpage{33}
+    \subitem {name}, \hyperpage{33}
+    \subitem {phoneNum}, \hyperpage{33}
+  \item {contacts}
+    \subitem {User.cpp}, \hyperpage{186}
+  \item {createData}
+    \subitem {alertPubSubType}, \hyperpage{21}
+  \item {crest}
+    \subitem {Sensor.cpp}, \hyperpage{176}
+  \item {critCheck}
+    \subitem {diagnosis}, \hyperpage{39}
+  \item {CriticalHigh}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {CriticalLow}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {critRangeAlert}
+    \subitem {diagnosis}, \hyperpage{39}
+  \item {CustomDiagnoses}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {CustomDiagnosis}
+    \subitem {diagnosis}, \hyperpage{40}
+
+  \indexspace
+
+  \item {data}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{26}
+    \subitem {i2c\_smbus\_ioctl\_data}, \hyperpage{59}
+  \item {data\_}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{33}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{105}
+  \item {dataBeenIncreasing}
+    \subitem {Sensor.cpp}, \hyperpage{176}
+  \item {dataReady}
+    \subitem {MAX30102}, \hyperpage{81}
+  \item {DEFAULT\_INT\_GPIO}
+    \subitem {MAX30102.h}, \hyperpage{173}
+  \item {deleteData}
+    \subitem {alertPubSubType}, \hyperpage{21}
+  \item {Derivative}
+    \subitem {sensor}, \hyperpage{107}
+  \item {deserialize}
+    \subitem {alert}, \hyperpage{13}
+    \subitem {alertPubSubType}, \hyperpage{21}
+  \item {determineDiagnosis}
+    \subitem {diagnosis}, \hyperpage{39}
+  \item {determineSymptom}
+    \subitem {diagnosisInterface}, \hyperpage{41}
+  \item {DevicePublisher}, \hyperpage{34}
+    \subitem {\texorpdfstring{$\sim$}{\string~}DevicePublisher}, 
+		\hyperpage{34}
+    \subitem {DevicePublisher}, \hyperpage{34}
+    \subitem {init}, \hyperpage{35}
+    \subitem {listener\_}, \hyperpage{35}
+    \subitem {participant\_}, \hyperpage{35}
+    \subitem {publish}, \hyperpage{35}
+    \subitem {publisher\_}, \hyperpage{35}
+    \subitem {topic\_}, \hyperpage{35}
+    \subitem {type\_}, \hyperpage{35}
+    \subitem {writer\_}, \hyperpage{35}
+  \item {DevicePublisher::PubListener}, \hyperpage{100}
+    \subitem {\texorpdfstring{$\sim$}{\string~}PubListener}, 
+		\hyperpage{100}
+    \subitem {matched\_}, \hyperpage{101}
+    \subitem {on\_publication\_matched}, \hyperpage{101}
+    \subitem {PubListener}, \hyperpage{100}
+  \item {DeviceSubscriber}, \hyperpage{36}
+    \subitem {\texorpdfstring{$\sim$}{\string~}DeviceSubscriber}, 
+		\hyperpage{37}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+    \subitem {init}, \hyperpage{37}
+    \subitem {listener\_}, \hyperpage{37}
+    \subitem {participant\_}, \hyperpage{37}
+    \subitem {reader\_}, \hyperpage{37}
+    \subitem {subscriber\_}, \hyperpage{37}
+    \subitem {topic\_}, \hyperpage{37}
+    \subitem {type\_}, \hyperpage{37}
+  \item {DeviceSubscriber::SubListener}, \hyperpage{118}
+    \subitem {\texorpdfstring{$\sim$}{\string~}SubListener}, 
+		\hyperpage{119}
+    \subitem {on\_data\_available}, \hyperpage{119}
+    \subitem {on\_subscription\_matched}, \hyperpage{119}
+    \subitem {SubListener}, \hyperpage{119}
+  \item {Diagnoses}
+    \subitem {diagnosis::DiagnosesTable}, \hyperpage{38}
+  \item {diagnosis}, \hyperpage{38}
+    \subitem {\_Diagnoses}, \hyperpage{39}
+    \subitem {critCheck}, \hyperpage{39}
+    \subitem {CriticalHigh}, \hyperpage{40}
+    \subitem {CriticalLow}, \hyperpage{40}
+    \subitem {critRangeAlert}, \hyperpage{39}
+    \subitem {CustomDiagnoses}, \hyperpage{40}
+    \subitem {CustomDiagnosis}, \hyperpage{40}
+    \subitem {determineDiagnosis}, \hyperpage{39}
+    \subitem {diagnosis::DiagnosisRange}, \hyperpage{43}
+    \subitem {Diagnosis\_Range}, \hyperpage{39}
+    \subitem {displayDiagnosis}, \hyperpage{40}
+    \subitem {findMinMax}, \hyperpage{40}
+    \subitem {SetdiagnosisRanges}, \hyperpage{40}
+    \subitem {stdDiagnoses}, \hyperpage{40}
+    \subitem {stdDiagnosis}, \hyperpage{40}
+  \item {diagnosis::DiagnosesTable}, \hyperpage{38}
+    \subitem {Diagnoses}, \hyperpage{38}
+  \item {diagnosis::DiagnosisRange}, \hyperpage{42}
+    \subitem {diagnosis}, \hyperpage{43}
+    \subitem {max}, \hyperpage{43}
+    \subitem {min}, \hyperpage{43}
+  \item {Diagnosis\_Range}
+    \subitem {diagnosis}, \hyperpage{39}
+  \item {diagnosisInterface}, \hyperpage{41}
+    \subitem {determineSymptom}, \hyperpage{41}
+    \subitem {getVal}, \hyperpage{41}
+    \subitem {ping}, \hyperpage{42}
+    \subitem {start}, \hyperpage{42}
+    \subitem {stop}, \hyperpage{42}
+    \subitem {symptomRanges}, \hyperpage{42}
+  \item {difference\_type}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{27}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{60}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103}
+  \item {Differentiator}
+    \subitem {Differentiator$<$ T $>$}, \hyperpage{44}
+  \item {Differentiator$<$ T $>$}, \hyperpage{43}
+    \subitem {Differentiator}, \hyperpage{44}
+    \subitem {getOutput}, \hyperpage{44}
+    \subitem {sampleTime}, \hyperpage{45}
+    \subitem {update}, \hyperpage{44}
+    \subitem {x1}, \hyperpage{45}
+    \subitem {y}, \hyperpage{45}
+  \item {DigitalFilter$<$ Type $>$}, \hyperpage{45}
+    \subitem {getOutput}, \hyperpage{46}
+    \subitem {update}, \hyperpage{46}
+  \item {DigitalFilters.h}
+    \subitem {calcC\_Cr}, \hyperpage{140}
+    \subitem {squareOf}, \hyperpage{140}
+  \item {disableAFULL}
+    \subitem {MAX30102}, \hyperpage{82}
+  \item {disableALCOVF}
+    \subitem {MAX30102}, \hyperpage{82}
+  \item {disableDATARDY}
+    \subitem {MAX30102}, \hyperpage{82}
+  \item {disableDIETEMPRDY}
+    \subitem {MAX30102}, \hyperpage{83}
+  \item {disableFIFORollover}
+    \subitem {MAX30102}, \hyperpage{83}
+  \item {disablePROXINT}
+    \subitem {MAX30102}, \hyperpage{83}
+  \item {disableSlots}
+    \subitem {MAX30102}, \hyperpage{84}
+  \item {displayDiagnosis}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {dt}
+    \subitem {HighPassFilter}, \hyperpage{49}
+    \subitem {LowPassFilter}, \hyperpage{66}
+
+  \indexspace
+
+  \item {email}
+    \subitem {contact}, \hyperpage{33}
+  \item {enableAFULL}
+    \subitem {MAX30102}, \hyperpage{84}
+  \item {enableALCOVF}
+    \subitem {MAX30102}, \hyperpage{84}
+  \item {enableDATARDY}
+    \subitem {MAX30102}, \hyperpage{85}
+  \item {enableDIETEMPRDY}
+    \subitem {MAX30102}, \hyperpage{85}
+  \item {enableFIFORollover}
+    \subitem {MAX30102}, \hyperpage{85}
+  \item {enablePROXINT}
+    \subitem {MAX30102}, \hyperpage{86}
+  \item {enableSlot}
+    \subitem {MAX30102}, \hyperpage{86}
+  \item {end}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{25}
+  \item {epow}
+    \subitem {LowPassFilter}, \hyperpage{66}
+  \item {eprosima}, \hyperpage{9}
+  \item {eprosima::fastcdr}, \hyperpage{9}
+  \item {eProsima\_user\_DllExport}
+    \subitem {alert.h}, \hyperpage{123}
+
+  \indexspace
+
+  \item {findMinMax}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {flags}
+    \subitem {i2c\_msg}, \hyperpage{57}
+
+  \indexspace
+
+  \item {get}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{25}
+  \item {getCdrSerializedSize}
+    \subitem {alert}, \hyperpage{13}
+  \item {getFIFOIR}
+    \subitem {MAX30102}, \hyperpage{86}
+  \item {getFIFORed}
+    \subitem {MAX30102}, \hyperpage{87}
+  \item {getHR}
+    \subitem {sensor}, \hyperpage{108}
+  \item {getINT1}
+    \subitem {MAX30102}, \hyperpage{87}
+  \item {getINT2}
+    \subitem {MAX30102}, \hyperpage{87}
+  \item {getIR}
+    \subitem {MAX30102}, \hyperpage{87}
+  \item {getKey}
+    \subitem {alertPubSubType}, \hyperpage{21}
+  \item {getKeyMaxCdrSerializedSize}
+    \subitem {alert}, \hyperpage{14}
+  \item {getLatestTemperatureF}
+    \subitem {sensor}, \hyperpage{108}
+  \item {getMaxCdrSerializedSize}
+    \subitem {alert}, \hyperpage{14}
+  \item {getOutput}
+    \subitem {Differentiator$<$ T $>$}, \hyperpage{44}
+    \subitem {DigitalFilter$<$ Type $>$}, \hyperpage{46}
+    \subitem {HighPassFilter}, \hyperpage{48}
+    \subitem {HighPassFilter3}, \hyperpage{51}
+    \subitem {LowPassFilter}, \hyperpage{65}
+    \subitem {LowPassFilter2}, \hyperpage{68}
+    \subitem {LowPassFilter3}, \hyperpage{71}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{74}
+    \subitem {LowPassFilter3MatchedZ}, \hyperpage{76}
+  \item {getPeakThreshold}
+    \subitem {sensor}, \hyperpage{108}
+  \item {getReadPointer}
+    \subitem {MAX30102}, \hyperpage{88}
+  \item {getRed}
+    \subitem {MAX30102}, \hyperpage{88}
+  \item {getRevisionID}
+    \subitem {MAX30102}, \hyperpage{88}
+  \item {getSerializedSizeProvider}
+    \subitem {alertPubSubType}, \hyperpage{21}
+  \item {getSpO2}
+    \subitem {sensor}, \hyperpage{108}
+  \item {getVal}
+    \subitem {diagnosisInterface}, \hyperpage{41}
+    \subitem {HRTracker}, \hyperpage{54}
+    \subitem {SPO2Tracker}, \hyperpage{116}
+  \item {getWritePointer}
+    \subitem {MAX30102}, \hyperpage{88}
+  \item {gpioISR}
+    \subitem {MAX30102}, \hyperpage{88}
+
+  \indexspace
+
+  \item {hasSample}
+    \subitem {MAX30102}, \hyperpage{89}
+  \item {head}
+    \subitem {MAX30102::Record}, \hyperpage{101}
+  \item {heartSensor}
+    \subitem {shutdown.cpp}, \hyperpage{180}
+    \subitem {test.cpp}, \hyperpage{183}
+  \item {HighPassFilter}, \hyperpage{46}
+    \subitem {amplFac}, \hyperpage{49}
+    \subitem {configOutput}, \hyperpage{48}
+    \subitem {dt}, \hyperpage{49}
+    \subitem {getOutput}, \hyperpage{48}
+    \subitem {HighPassFilter}, \hyperpage{47}
+    \subitem {output}, \hyperpage{49}
+    \subitem {outputPointer}, \hyperpage{48}
+    \subitem {update}, \hyperpage{48}
+    \subitem {x1}, \hyperpage{49}
+    \subitem {y1c}, \hyperpage{49}
+  \item {HighPassFilter3}, \hyperpage{50}
+    \subitem {getOutput}, \hyperpage{51}
+    \subitem {HighPassFilter3}, \hyperpage{51}
+    \subitem {update}, \hyperpage{51}
+    \subitem {x}, \hyperpage{52}
+    \subitem {xc}, \hyperpage{52}
+    \subitem {y}, \hyperpage{52}
+    \subitem {yc}, \hyperpage{52}
+  \item {hpf}
+    \subitem {Sensor.cpp}, \hyperpage{176}
+  \item {HRcalc}
+    \subitem {sensor}, \hyperpage{108}
+  \item {HRTracker}, \hyperpage{52}
+    \subitem {\_s}, \hyperpage{56}
+    \subitem {\texorpdfstring{$\sim$}{\string~}HRTracker}, 
+		\hyperpage{54}
+    \subitem {getVal}, \hyperpage{54}
+    \subitem {HRTracker}, \hyperpage{54}
+    \subitem {ping}, \hyperpage{54}
+    \subitem {pingThread}, \hyperpage{55}
+    \subitem {start}, \hyperpage{55}
+    \subitem {stop}, \hyperpage{55}
+    \subitem {symptomRanges}, \hyperpage{56}
+    \subitem {threadRunning}, \hyperpage{56}
+    \subitem {tracker}, \hyperpage{56}
+
+  \indexspace
+
+  \item {i2c-\/dev.h}
+    \subitem {I2C\_FUNC\_10BIT\_ADDR}, \hyperpage{149}
+    \subitem {I2C\_FUNC\_I2C}, \hyperpage{149}
+    \subitem {I2C\_FUNC\_PROTOCOL\_MANGLING}, \hyperpage{149}
+    \subitem {I2C\_FUNC\_SMBUS\_BLOCK\_DATA}, \hyperpage{149}
+    \subitem {I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL}, \hyperpage{149}
+    \subitem {I2C\_FUNC\_SMBUS\_BYTE}, \hyperpage{149}
+    \subitem {I2C\_FUNC\_SMBUS\_BYTE\_DATA}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_HWPEC\_CALC}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_I2C\_BLOCK}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_PEC}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_PROC\_CALL}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_QUICK}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_READ\_BYTE}, \hyperpage{150}
+    \subitem {I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_WORD\_DATA}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_WRITE\_BYTE}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK}, \hyperpage{151}
+    \subitem {I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA}, \hyperpage{151}
+    \subitem {I2C\_FUNCS}, \hyperpage{151}
+    \subitem {I2C\_M\_IGNORE\_NAK}, \hyperpage{152}
+    \subitem {I2C\_M\_NO\_RD\_ACK}, \hyperpage{152}
+    \subitem {I2C\_M\_NOSTART}, \hyperpage{152}
+    \subitem {I2C\_M\_RD}, \hyperpage{152}
+    \subitem {I2C\_M\_REV\_DIR\_ADDR}, \hyperpage{152}
+    \subitem {I2C\_M\_TEN}, \hyperpage{152}
+    \subitem {I2C\_PEC}, \hyperpage{152}
+    \subitem {I2C\_RDRW\_IOCTL\_MAX\_MSGS}, \hyperpage{152}
+    \subitem {I2C\_RDWR}, \hyperpage{152}
+    \subitem {I2C\_RETRIES}, \hyperpage{152}
+    \subitem {I2C\_SLAVE}, \hyperpage{153}
+    \subitem {I2C\_SLAVE\_FORCE}, \hyperpage{153}
+    \subitem {I2C\_SMBUS}, \hyperpage{153}
+    \subitem {i2c\_smbus\_access}, \hyperpage{155}
+    \subitem {I2C\_SMBUS\_BLOCK\_DATA}, \hyperpage{153}
+    \subitem {I2C\_SMBUS\_BLOCK\_MAX}, \hyperpage{153}
+    \subitem {I2C\_SMBUS\_BLOCK\_PROC\_CALL}, \hyperpage{153}
+    \subitem {i2c\_smbus\_block\_process\_call}, \hyperpage{155}
+    \subitem {I2C\_SMBUS\_BYTE}, \hyperpage{153}
+    \subitem {I2C\_SMBUS\_BYTE\_DATA}, \hyperpage{153}
+    \subitem {I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}, \hyperpage{153}
+    \subitem {I2C\_SMBUS\_I2C\_BLOCK\_DATA}, \hyperpage{154}
+    \subitem {I2C\_SMBUS\_I2C\_BLOCK\_MAX}, \hyperpage{154}
+    \subitem {I2C\_SMBUS\_PROC\_CALL}, \hyperpage{154}
+    \subitem {i2c\_smbus\_process\_call}, \hyperpage{155}
+    \subitem {I2C\_SMBUS\_QUICK}, \hyperpage{154}
+    \subitem {I2C\_SMBUS\_READ}, \hyperpage{154}
+    \subitem {i2c\_smbus\_read\_block\_data}, \hyperpage{155}
+    \subitem {i2c\_smbus\_read\_byte}, \hyperpage{155}
+    \subitem {i2c\_smbus\_read\_byte\_data}, \hyperpage{156}
+    \subitem {i2c\_smbus\_read\_i2c\_block\_data}, \hyperpage{156}
+    \subitem {i2c\_smbus\_read\_word\_data}, \hyperpage{156}
+    \subitem {I2C\_SMBUS\_WORD\_DATA}, \hyperpage{154}
+    \subitem {I2C\_SMBUS\_WRITE}, \hyperpage{154}
+    \subitem {i2c\_smbus\_write\_block\_data}, \hyperpage{156}
+    \subitem {i2c\_smbus\_write\_byte}, \hyperpage{156}
+    \subitem {i2c\_smbus\_write\_byte\_data}, \hyperpage{157}
+    \subitem {i2c\_smbus\_write\_i2c\_block\_data}, \hyperpage{157}
+    \subitem {i2c\_smbus\_write\_quick}, \hyperpage{157}
+    \subitem {i2c\_smbus\_write\_word\_data}, \hyperpage{157}
+    \subitem {I2C\_TENBIT}, \hyperpage{154}
+    \subitem {I2C\_TIMEOUT}, \hyperpage{154}
+  \item {I2C\_BUFFER\_LENGTH}
+    \subitem {MAX30102.h}, \hyperpage{173}
+  \item {I2C\_FUNC\_10BIT\_ADDR}
+    \subitem {i2c-\/dev.h}, \hyperpage{149}
+  \item {I2C\_FUNC\_I2C}
+    \subitem {i2c-\/dev.h}, \hyperpage{149}
+  \item {I2C\_FUNC\_PROTOCOL\_MANGLING}
+    \subitem {i2c-\/dev.h}, \hyperpage{149}
+  \item {I2C\_FUNC\_SMBUS\_BLOCK\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{149}
+  \item {I2C\_FUNC\_SMBUS\_BLOCK\_PROC\_CALL}
+    \subitem {i2c-\/dev.h}, \hyperpage{149}
+  \item {I2C\_FUNC\_SMBUS\_BYTE}
+    \subitem {i2c-\/dev.h}, \hyperpage{149}
+  \item {I2C\_FUNC\_SMBUS\_BYTE\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_HWPEC\_CALC}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_I2C\_BLOCK}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_PEC}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_PROC\_CALL}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_QUICK}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_READ\_BLOCK\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_READ\_BYTE}
+    \subitem {i2c-\/dev.h}, \hyperpage{150}
+  \item {I2C\_FUNC\_SMBUS\_READ\_BYTE\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_READ\_I2C\_BLOCK}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_READ\_WORD\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_WORD\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_WRITE\_BLOCK\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_WRITE\_BYTE}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_WRITE\_BYTE\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_WRITE\_I2C\_BLOCK}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNC\_SMBUS\_WRITE\_WORD\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_FUNCS}
+    \subitem {i2c-\/dev.h}, \hyperpage{151}
+  \item {I2C\_M\_IGNORE\_NAK}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_M\_NO\_RD\_ACK}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_M\_NOSTART}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_M\_RD}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_M\_REV\_DIR\_ADDR}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_M\_TEN}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {i2c\_msg}, \hyperpage{57}
+    \subitem {addr}, \hyperpage{57}
+    \subitem {buf}, \hyperpage{57}
+    \subitem {flags}, \hyperpage{57}
+    \subitem {len}, \hyperpage{57}
+  \item {I2C\_PEC}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_RDRW\_IOCTL\_MAX\_MSGS}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_RDWR}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {i2c\_rdwr\_ioctl\_data}, \hyperpage{57}
+    \subitem {msgs}, \hyperpage{58}
+    \subitem {nmsgs}, \hyperpage{58}
+  \item {I2C\_RETRIES}
+    \subitem {i2c-\/dev.h}, \hyperpage{152}
+  \item {I2C\_SLAVE}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {I2C\_SLAVE\_FORCE}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {I2C\_SMBUS}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {i2c\_smbus\_access}
+    \subitem {i2c-\/dev.h}, \hyperpage{155}
+  \item {I2C\_SMBUS\_BLOCK\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {I2C\_SMBUS\_BLOCK\_MAX}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {I2C\_SMBUS\_BLOCK\_PROC\_CALL}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {i2c\_smbus\_block\_process\_call}
+    \subitem {i2c-\/dev.h}, \hyperpage{155}
+  \item {I2C\_SMBUS\_BYTE}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {I2C\_SMBUS\_BYTE\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {i2c\_smbus\_data}, \hyperpage{58}
+    \subitem {block}, \hyperpage{58}
+    \subitem {byte}, \hyperpage{58}
+    \subitem {word}, \hyperpage{58}
+  \item {I2C\_SMBUS\_I2C\_BLOCK\_BROKEN}
+    \subitem {i2c-\/dev.h}, \hyperpage{153}
+  \item {I2C\_SMBUS\_I2C\_BLOCK\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {I2C\_SMBUS\_I2C\_BLOCK\_MAX}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {i2c\_smbus\_ioctl\_data}, \hyperpage{59}
+    \subitem {command}, \hyperpage{59}
+    \subitem {data}, \hyperpage{59}
+    \subitem {read\_write}, \hyperpage{59}
+    \subitem {size}, \hyperpage{59}
+  \item {I2C\_SMBUS\_PROC\_CALL}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {i2c\_smbus\_process\_call}
+    \subitem {i2c-\/dev.h}, \hyperpage{155}
+  \item {I2C\_SMBUS\_QUICK}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {I2C\_SMBUS\_READ}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {i2c\_smbus\_read\_block\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{155}
+  \item {i2c\_smbus\_read\_byte}
+    \subitem {i2c-\/dev.h}, \hyperpage{155}
+  \item {i2c\_smbus\_read\_byte\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{156}
+  \item {i2c\_smbus\_read\_i2c\_block\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{156}
+  \item {i2c\_smbus\_read\_word\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{156}
+  \item {I2C\_SMBUS\_WORD\_DATA}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {I2C\_SMBUS\_WRITE}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {i2c\_smbus\_write\_block\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{156}
+  \item {i2c\_smbus\_write\_byte}
+    \subitem {i2c-\/dev.h}, \hyperpage{156}
+  \item {i2c\_smbus\_write\_byte\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{157}
+  \item {i2c\_smbus\_write\_i2c\_block\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{157}
+  \item {i2c\_smbus\_write\_quick}
+    \subitem {i2c-\/dev.h}, \hyperpage{157}
+  \item {i2c\_smbus\_write\_word\_data}
+    \subitem {i2c-\/dev.h}, \hyperpage{157}
+  \item {I2C\_SPEED\_FAST}
+    \subitem {MAX30102.h}, \hyperpage{173}
+  \item {I2C\_SPEED\_STANDARD}
+    \subitem {MAX30102.h}, \hyperpage{173}
+  \item {I2C\_TENBIT}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {I2C\_TIMEOUT}
+    \subitem {i2c-\/dev.h}, \hyperpage{154}
+  \item {index}
+    \subitem {alert}, \hyperpage{14, 15}, \hyperpage{18}
+  \item {init}
+    \subitem {DevicePublisher}, \hyperpage{35}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {InstanceHandle\_t}
+    \subitem {alertPubSubTypes.cxx}, \hyperpage{125}
+  \item {INT\_A\_FULL\_DISABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_A\_FULL\_ENABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_ALC\_OVF\_DISABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_ALC\_OVF\_ENABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_DATA\_RDY\_DISABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_DATA\_RDY\_ENABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_DIE\_TEMP\_RDY\_DISABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{164}
+  \item {INT\_DIE\_TEMP\_RDY\_ENABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {INT\_PROX\_INT\_DISABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {INT\_PROX\_INT\_ENABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {IR}
+    \subitem {MAX30102::Record}, \hyperpage{101}
+  \item {irLastValue}
+    \subitem {sensor}, \hyperpage{111}
+  \item {isKeyDefined}
+    \subitem {alert}, \hyperpage{15}
+  \item {iterator}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{61}
+  \item {iterator\_category}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{27}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{60}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103}
+
+  \indexspace
+
+  \item {latestIRBPM}
+    \subitem {sensor}, \hyperpage{111}
+  \item {latestRedBPM}
+    \subitem {sensor}, \hyperpage{111}
+  \item {latestSpO2}
+    \subitem {sensor}, \hyperpage{111}
+  \item {latestTemperature}
+    \subitem {sensor}, \hyperpage{111}
+  \item {LEDMODE\_MULTILED}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {LEDMODE\_REDIRONLY}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {LEDMODE\_REDONLY}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {len}
+    \subitem {i2c\_msg}, \hyperpage{57}
+  \item {listener\_}
+    \subitem {DevicePublisher}, \hyperpage{35}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {localMaximaIR}
+    \subitem {sensor}, \hyperpage{111}
+  \item {localMaximaRed}
+    \subitem {sensor}, \hyperpage{111}
+  \item {localMinimaIR}
+    \subitem {sensor}, \hyperpage{112}
+  \item {localMinimaRed}
+    \subitem {sensor}, \hyperpage{112}
+  \item {loopThread}
+    \subitem {sensor}, \hyperpage{108}
+  \item {LowPassFilter}, \hyperpage{63}
+    \subitem {configOutput}, \hyperpage{65}
+    \subitem {dt}, \hyperpage{66}
+    \subitem {epow}, \hyperpage{66}
+    \subitem {getOutput}, \hyperpage{65}
+    \subitem {LowPassFilter}, \hyperpage{64}
+    \subitem {output}, \hyperpage{66}
+    \subitem {outputPointer}, \hyperpage{65}
+    \subitem {update}, \hyperpage{65}
+  \item {LowPassFilter2}, \hyperpage{66}
+    \subitem {configOutput}, \hyperpage{68}
+    \subitem {getOutput}, \hyperpage{68}
+    \subitem {LowPassFilter2}, \hyperpage{67}
+    \subitem {update}, \hyperpage{68}
+    \subitem {x}, \hyperpage{69}
+    \subitem {xc}, \hyperpage{69}
+    \subitem {y}, \hyperpage{69}
+    \subitem {yc}, \hyperpage{69}
+  \item {LowPassFilter3}, \hyperpage{70}
+    \subitem {getOutput}, \hyperpage{71}
+    \subitem {LowPassFilter3}, \hyperpage{71}
+    \subitem {update}, \hyperpage{71}
+    \subitem {x}, \hyperpage{72}
+    \subitem {xc}, \hyperpage{72}
+    \subitem {y}, \hyperpage{72}
+    \subitem {yc}, \hyperpage{72}
+  \item {LowPassFilter3DiffApprox}, \hyperpage{72}
+    \subitem {getOutput}, \hyperpage{74}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{73}
+    \subitem {update}, \hyperpage{74}
+    \subitem {x}, \hyperpage{74}
+    \subitem {xc}, \hyperpage{74}
+    \subitem {y}, \hyperpage{74}
+    \subitem {yc}, \hyperpage{75}
+  \item {LowPassFilter3MatchedZ}, \hyperpage{75}
+    \subitem {amplFac}, \hyperpage{77}
+    \subitem {getOutput}, \hyperpage{76}
+    \subitem {LowPassFilter3MatchedZ}, \hyperpage{76}
+    \subitem {update}, \hyperpage{76}
+    \subitem {y}, \hyperpage{77}
+    \subitem {yc}, \hyperpage{77}
+  \item {lpf}
+    \subitem {Sensor.cpp}, \hyperpage{176}
+
+  \indexspace
+
+  \item {m\_index}
+    \subitem {alert}, \hyperpage{18}
+  \item {m\_keyBuffer}
+    \subitem {alertPubSubType}, \hyperpage{22}
+  \item {m\_md5}
+    \subitem {alertPubSubType}, \hyperpage{22}
+  \item {m\_message}
+    \subitem {alert}, \hyperpage{18}
+  \item {main}
+    \subitem {shutdown.cpp}, \hyperpage{180}
+    \subitem {test.cpp}, \hyperpage{183}
+    \subitem {testSpO2.cpp}, \hyperpage{184}
+  \item {MASK\_A\_FULL}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {MASK\_ADCRANGE}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {MASK\_INT\_A\_FULL}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {MASK\_INT\_ALC\_OVF}
+    \subitem {MAX30102.cpp}, \hyperpage{165}
+  \item {MASK\_INT\_DATA\_RDY}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_INT\_DIE\_TEMP\_RDY}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_INT\_PROX\_INT}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_LEDMODE}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_PULSEWIDTH}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_RESET}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_ROLLOVER}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_SAMPLEAVG}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_SAMPLERATE}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_SHUTDOWN}
+    \subitem {MAX30102.cpp}, \hyperpage{166}
+  \item {MASK\_SLOT1}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {MASK\_SLOT2}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {MASK\_SLOT3}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {MASK\_SLOT4}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {matched\_}
+    \subitem {DevicePublisher::PubListener}, \hyperpage{101}
+  \item {max}
+    \subitem {diagnosis::DiagnosisRange}, \hyperpage{43}
+    \subitem {symptomRange}, \hyperpage{120}
+  \item {MAX30102}, \hyperpage{78}
+    \subitem {\_i2c}, \hyperpage{97}
+    \subitem {\_i2caddr}, \hyperpage{97}
+    \subitem {activeLEDs}, \hyperpage{97}
+    \subitem {available}, \hyperpage{80}
+    \subitem {begin}, \hyperpage{80}
+    \subitem {bitMask}, \hyperpage{80}
+    \subitem {check}, \hyperpage{81}
+    \subitem {clearFIFO}, \hyperpage{81}
+    \subitem {dataReady}, \hyperpage{81}
+    \subitem {disableAFULL}, \hyperpage{82}
+    \subitem {disableALCOVF}, \hyperpage{82}
+    \subitem {disableDATARDY}, \hyperpage{82}
+    \subitem {disableDIETEMPRDY}, \hyperpage{83}
+    \subitem {disableFIFORollover}, \hyperpage{83}
+    \subitem {disablePROXINT}, \hyperpage{83}
+    \subitem {disableSlots}, \hyperpage{84}
+    \subitem {enableAFULL}, \hyperpage{84}
+    \subitem {enableALCOVF}, \hyperpage{84}
+    \subitem {enableDATARDY}, \hyperpage{85}
+    \subitem {enableDIETEMPRDY}, \hyperpage{85}
+    \subitem {enableFIFORollover}, \hyperpage{85}
+    \subitem {enablePROXINT}, \hyperpage{86}
+    \subitem {enableSlot}, \hyperpage{86}
+    \subitem {getFIFOIR}, \hyperpage{86}
+    \subitem {getFIFORed}, \hyperpage{87}
+    \subitem {getINT1}, \hyperpage{87}
+    \subitem {getINT2}, \hyperpage{87}
+    \subitem {getIR}, \hyperpage{87}
+    \subitem {getReadPointer}, \hyperpage{88}
+    \subitem {getRed}, \hyperpage{88}
+    \subitem {getRevisionID}, \hyperpage{88}
+    \subitem {getWritePointer}, \hyperpage{88}
+    \subitem {gpioISR}, \hyperpage{88}
+    \subitem {hasSample}, \hyperpage{89}
+    \subitem {MAX30102}, \hyperpage{80}
+    \subitem {nextSample}, \hyperpage{89}
+    \subitem {readMany}, \hyperpage{89}
+    \subitem {readPartID}, \hyperpage{90}
+    \subitem {readRevisionID}, \hyperpage{90}
+    \subitem {readTemperature}, \hyperpage{90}
+    \subitem {readTemperatureF}, \hyperpage{91}
+    \subitem {revisionID}, \hyperpage{97}
+    \subitem {safeCheck}, \hyperpage{91}
+    \subitem {sense}, \hyperpage{97}
+    \subitem {sense\_struct}, \hyperpage{80}
+    \subitem {setADCRange}, \hyperpage{91}
+    \subitem {setFIFOAlmostFull}, \hyperpage{92}
+    \subitem {setFIFOAverage}, \hyperpage{92}
+    \subitem {setLEDMode}, \hyperpage{92}
+    \subitem {setProximityThreshold}, \hyperpage{93}
+    \subitem {setPROXINTTHRESH}, \hyperpage{93}
+    \subitem {setPulseAmplitudeIR}, \hyperpage{93}
+    \subitem {setPulseAmplitudeProximity}, \hyperpage{94}
+    \subitem {setPulseAmplitudeRed}, \hyperpage{94}
+    \subitem {setPulseWidth}, \hyperpage{94}
+    \subitem {setSampleRate}, \hyperpage{95}
+    \subitem {setup}, \hyperpage{95}
+    \subitem {shutDown}, \hyperpage{96}
+    \subitem {softReset}, \hyperpage{96}
+    \subitem {wakeUp}, \hyperpage{97}
+  \item {MAX30102.cpp}
+    \subitem {ADCRANGE\_16384}, \hyperpage{164}
+    \subitem {ADCRANGE\_2048}, \hyperpage{164}
+    \subitem {ADCRANGE\_4096}, \hyperpage{164}
+    \subitem {ADCRANGE\_8192}, \hyperpage{164}
+    \subitem {INT\_A\_FULL\_DISABLE}, \hyperpage{164}
+    \subitem {INT\_A\_FULL\_ENABLE}, \hyperpage{164}
+    \subitem {INT\_ALC\_OVF\_DISABLE}, \hyperpage{164}
+    \subitem {INT\_ALC\_OVF\_ENABLE}, \hyperpage{164}
+    \subitem {INT\_DATA\_RDY\_DISABLE}, \hyperpage{164}
+    \subitem {INT\_DATA\_RDY\_ENABLE}, \hyperpage{164}
+    \subitem {INT\_DIE\_TEMP\_RDY\_DISABLE}, \hyperpage{164}
+    \subitem {INT\_DIE\_TEMP\_RDY\_ENABLE}, \hyperpage{165}
+    \subitem {INT\_PROX\_INT\_DISABLE}, \hyperpage{165}
+    \subitem {INT\_PROX\_INT\_ENABLE}, \hyperpage{165}
+    \subitem {LEDMODE\_MULTILED}, \hyperpage{165}
+    \subitem {LEDMODE\_REDIRONLY}, \hyperpage{165}
+    \subitem {LEDMODE\_REDONLY}, \hyperpage{165}
+    \subitem {MASK\_A\_FULL}, \hyperpage{165}
+    \subitem {MASK\_ADCRANGE}, \hyperpage{165}
+    \subitem {MASK\_INT\_A\_FULL}, \hyperpage{165}
+    \subitem {MASK\_INT\_ALC\_OVF}, \hyperpage{165}
+    \subitem {MASK\_INT\_DATA\_RDY}, \hyperpage{166}
+    \subitem {MASK\_INT\_DIE\_TEMP\_RDY}, \hyperpage{166}
+    \subitem {MASK\_INT\_PROX\_INT}, \hyperpage{166}
+    \subitem {MASK\_LEDMODE}, \hyperpage{166}
+    \subitem {MASK\_PULSEWIDTH}, \hyperpage{166}
+    \subitem {MASK\_RESET}, \hyperpage{166}
+    \subitem {MASK\_ROLLOVER}, \hyperpage{166}
+    \subitem {MASK\_SAMPLEAVG}, \hyperpage{166}
+    \subitem {MASK\_SAMPLERATE}, \hyperpage{166}
+    \subitem {MASK\_SHUTDOWN}, \hyperpage{166}
+    \subitem {MASK\_SLOT1}, \hyperpage{167}
+    \subitem {MASK\_SLOT2}, \hyperpage{167}
+    \subitem {MASK\_SLOT3}, \hyperpage{167}
+    \subitem {MASK\_SLOT4}, \hyperpage{167}
+    \subitem {MAX30102\_EXPECTEDPARTID}, \hyperpage{167}
+    \subitem {PULSEWIDTH\_118}, \hyperpage{167}
+    \subitem {PULSEWIDTH\_215}, \hyperpage{167}
+    \subitem {PULSEWIDTH\_411}, \hyperpage{167}
+    \subitem {PULSEWIDTH\_69}, \hyperpage{167}
+    \subitem {REG\_DIETEMPCONFIG}, \hyperpage{167}
+    \subitem {REG\_DIETEMPFRAC}, \hyperpage{168}
+    \subitem {REG\_DIETEMPINT}, \hyperpage{168}
+    \subitem {REG\_FIFOCONFIG}, \hyperpage{168}
+    \subitem {REG\_FIFODATA}, \hyperpage{168}
+    \subitem {REG\_FIFOOVERFLOW}, \hyperpage{168}
+    \subitem {REG\_FIFOREADPTR}, \hyperpage{168}
+    \subitem {REG\_FIFOWRITEPTR}, \hyperpage{168}
+    \subitem {REG\_INTENABLE1}, \hyperpage{168}
+    \subitem {REG\_INTENABLE2}, \hyperpage{168}
+    \subitem {REG\_INTSTAT1}, \hyperpage{168}
+    \subitem {REG\_INTSTAT2}, \hyperpage{169}
+    \subitem {REG\_LED1\_PULSEAMP}, \hyperpage{169}
+    \subitem {REG\_LED2\_PULSEAMP}, \hyperpage{169}
+    \subitem {REG\_LED\_PROX\_AMP}, \hyperpage{169}
+    \subitem {REG\_MODECONFIG}, \hyperpage{169}
+    \subitem {REG\_MULTILEDCONFIG1}, \hyperpage{169}
+    \subitem {REG\_MULTILEDCONFIG2}, \hyperpage{169}
+    \subitem {REG\_PARTICLECONFIG}, \hyperpage{169}
+    \subitem {REG\_PARTID}, \hyperpage{169}
+    \subitem {REG\_PROXINTTHRESH}, \hyperpage{169}
+    \subitem {REG\_REVISIONID}, \hyperpage{170}
+    \subitem {RESET}, \hyperpage{170}
+    \subitem {ROLLOVER\_DISABLE}, \hyperpage{170}
+    \subitem {ROLLOVER\_ENABLE}, \hyperpage{170}
+    \subitem {SAMPLEAVG\_1}, \hyperpage{170}
+    \subitem {SAMPLEAVG\_16}, \hyperpage{170}
+    \subitem {SAMPLEAVG\_2}, \hyperpage{170}
+    \subitem {SAMPLEAVG\_32}, \hyperpage{170}
+    \subitem {SAMPLEAVG\_4}, \hyperpage{170}
+    \subitem {SAMPLEAVG\_8}, \hyperpage{170}
+    \subitem {SAMPLERATE\_100}, \hyperpage{171}
+    \subitem {SAMPLERATE\_1000}, \hyperpage{171}
+    \subitem {SAMPLERATE\_1600}, \hyperpage{171}
+    \subitem {SAMPLERATE\_200}, \hyperpage{171}
+    \subitem {SAMPLERATE\_3200}, \hyperpage{171}
+    \subitem {SAMPLERATE\_400}, \hyperpage{171}
+    \subitem {SAMPLERATE\_50}, \hyperpage{171}
+    \subitem {SAMPLERATE\_800}, \hyperpage{171}
+    \subitem {SHUTDOWN}, \hyperpage{171}
+    \subitem {SLOT\_IR\_LED}, \hyperpage{171}
+    \subitem {SLOT\_IR\_PILOT}, \hyperpage{172}
+    \subitem {SLOT\_NONE}, \hyperpage{172}
+    \subitem {SLOT\_NONE\_PILOT}, \hyperpage{172}
+    \subitem {SLOT\_RED\_LED}, \hyperpage{172}
+    \subitem {SLOT\_RED\_PILOT}, \hyperpage{172}
+    \subitem {WAKEUP}, \hyperpage{172}
+  \item {MAX30102.h}
+    \subitem {DEFAULT\_INT\_GPIO}, \hyperpage{173}
+    \subitem {I2C\_BUFFER\_LENGTH}, \hyperpage{173}
+    \subitem {I2C\_SPEED\_FAST}, \hyperpage{173}
+    \subitem {I2C\_SPEED\_STANDARD}, \hyperpage{173}
+    \subitem {MAX30102\_ADDRESS}, \hyperpage{173}
+    \subitem {STORAGE\_SIZE}, \hyperpage{173}
+  \item {MAX30102::Record}, \hyperpage{101}
+    \subitem {head}, \hyperpage{101}
+    \subitem {IR}, \hyperpage{101}
+    \subitem {red}, \hyperpage{101}
+    \subitem {tail}, \hyperpage{101}
+  \item {MAX30102\_ADDRESS}
+    \subitem {MAX30102.h}, \hyperpage{173}
+  \item {MAX30102\_EXPECTEDPARTID}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {message}
+    \subitem {alert}, \hyperpage{15, 16}, \hyperpage{18}
+  \item {min}
+    \subitem {diagnosis::DiagnosisRange}, \hyperpage{43}
+    \subitem {symptomRange}, \hyperpage{120}
+  \item {MovingAvarageFilter$<$ size $>$}, \hyperpage{98}
+    \subitem {buffer}, \hyperpage{99}
+    \subitem {output}, \hyperpage{99}
+    \subitem {update}, \hyperpage{99}
+  \item {msgs}
+    \subitem {i2c\_rdwr\_ioctl\_data}, \hyperpage{58}
+
+  \indexspace
+
+  \item {name}
+    \subitem {contact}, \hyperpage{33}
+    \subitem {User.cpp}, \hyperpage{186}
+  \item {nextBPMBufferIndex}
+    \subitem {sensor}, \hyperpage{112}
+  \item {nextPastPeaksIndex}
+    \subitem {Sensor.cpp}, \hyperpage{176}
+  \item {nextSample}
+    \subitem {MAX30102}, \hyperpage{89}
+  \item {nextSPO2BufferIndex}
+    \subitem {sensor}, \hyperpage{112}
+  \item {nmsgs}
+    \subitem {i2c\_rdwr\_ioctl\_data}, \hyperpage{58}
+
+  \indexspace
+
+  \item {on\_data\_available}
+    \subitem {DeviceSubscriber::SubListener}, \hyperpage{119}
+  \item {on\_publication\_matched}
+    \subitem {DevicePublisher::PubListener}, \hyperpage{101}
+  \item {on\_subscription\_matched}
+    \subitem {DeviceSubscriber::SubListener}, \hyperpage{119}
+  \item {operator!=}
+    \subitem {alert}, \hyperpage{16}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{28}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{61}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103}
+  \item {operator++}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{28}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31, 32}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{61}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103, 104}
+  \item {operator-\/$>$}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{32}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{104}
+  \item {operator-\/-\/}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{28, 29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{32}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{61, 62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{104}
+  \item {operator=}
+    \subitem {alert}, \hyperpage{16}
+  \item {operator==}
+    \subitem {alert}, \hyperpage{17}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{32}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{104}
+  \item {operator[]}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{32}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{104}
+  \item {operator\texorpdfstring{$\ast$}{*}}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{28}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{61}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103}
+  \item {output}
+    \subitem {HighPassFilter}, \hyperpage{49}
+    \subitem {LowPassFilter}, \hyperpage{66}
+    \subitem {MovingAvarageFilter$<$ size $>$}, \hyperpage{99}
+  \item {outputPointer}
+    \subitem {HighPassFilter}, \hyperpage{48}
+    \subitem {LowPassFilter}, \hyperpage{65}
+
+  \indexspace
+
+  \item {participant\_}
+    \subitem {DevicePublisher}, \hyperpage{35}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {PAST\_PEAKS\_SIZE}
+    \subitem {sensor}, \hyperpage{112}
+  \item {pastMaximasIR}
+    \subitem {sensor}, \hyperpage{112}
+  \item {pastMaximasRed}
+    \subitem {sensor}, \hyperpage{112}
+  \item {pastMinimasIR}
+    \subitem {sensor}, \hyperpage{112}
+  \item {pastMinimasRed}
+    \subitem {sensor}, \hyperpage{112}
+  \item {peakDetect}
+    \subitem {sensor}, \hyperpage{109}
+  \item {phoneNum}
+    \subitem {contact}, \hyperpage{33}
+  \item {ping}
+    \subitem {diagnosisInterface}, \hyperpage{42}
+    \subitem {HRTracker}, \hyperpage{54}
+    \subitem {SPO2Tracker}, \hyperpage{116}
+  \item {pingThread}
+    \subitem {HRTracker}, \hyperpage{55}
+    \subitem {SPO2Tracker}, \hyperpage{116}
+  \item {pow}
+    \subitem {tps}, \hyperpage{9}
+  \item {ptr\_}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{29}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{33}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{62}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{105}
+  \item {publish}
+    \subitem {DevicePublisher}, \hyperpage{35}
+  \item {publisher\_}
+    \subitem {DevicePublisher}, \hyperpage{35}
+  \item {PubListener}
+    \subitem {DevicePublisher::PubListener}, \hyperpage{100}
+  \item {PULSEWIDTH\_118}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {PULSEWIDTH\_215}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {PULSEWIDTH\_411}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {PULSEWIDTH\_69}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {push}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{25}
+
+  \indexspace
+
+  \item {R}
+    \subitem {sensor}, \hyperpage{112}
+    \subitem {Sensor.cpp}, \hyperpage{177}
+  \item {rbegin}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{26}
+  \item {read\_write}
+    \subitem {i2c\_smbus\_ioctl\_data}, \hyperpage{59}
+  \item {reader\_}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {readMany}
+    \subitem {MAX30102}, \hyperpage{89}
+  \item {readPartID}
+    \subitem {MAX30102}, \hyperpage{90}
+  \item {readRevisionID}
+    \subitem {MAX30102}, \hyperpage{90}
+  \item {readTemperature}
+    \subitem {MAX30102}, \hyperpage{90}
+  \item {readTemperatureF}
+    \subitem {MAX30102}, \hyperpage{91}
+  \item {red}
+    \subitem {MAX30102::Record}, \hyperpage{101}
+  \item {redLastValue}
+    \subitem {sensor}, \hyperpage{113}
+  \item {REG\_DIETEMPCONFIG}
+    \subitem {MAX30102.cpp}, \hyperpage{167}
+  \item {REG\_DIETEMPFRAC}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_DIETEMPINT}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_FIFOCONFIG}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_FIFODATA}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_FIFOOVERFLOW}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_FIFOREADPTR}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_FIFOWRITEPTR}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_INTENABLE1}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_INTENABLE2}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_INTSTAT1}
+    \subitem {MAX30102.cpp}, \hyperpage{168}
+  \item {REG\_INTSTAT2}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_LED1\_PULSEAMP}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_LED2\_PULSEAMP}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_LED\_PROX\_AMP}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_MODECONFIG}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_MULTILEDCONFIG1}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_MULTILEDCONFIG2}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_PARTICLECONFIG}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_PARTID}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_PROXINTTHRESH}
+    \subitem {MAX30102.cpp}, \hyperpage{169}
+  \item {REG\_REVISIONID}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {rend}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{26}
+  \item {RESET}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {resetCalculations}
+    \subitem {sensor}, \hyperpage{109}
+  \item {reverse\_iterator}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103}
+  \item {revisionID}
+    \subitem {MAX30102}, \hyperpage{97}
+  \item {ROLLOVER\_DISABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {ROLLOVER\_ENABLE}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {runHRCalculationLoop}
+    \subitem {sensor}, \hyperpage{109}
+  \item {running}
+    \subitem {sensor}, \hyperpage{113}
+  \item {runningHR}
+    \subitem {sensor}, \hyperpage{113}
+
+  \indexspace
+
+  \item {safeCheck}
+    \subitem {MAX30102}, \hyperpage{91}
+  \item {SAMPLEAVG\_1}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {SAMPLEAVG\_16}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {SAMPLEAVG\_2}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {SAMPLEAVG\_32}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {SAMPLEAVG\_4}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {SAMPLEAVG\_8}
+    \subitem {MAX30102.cpp}, \hyperpage{170}
+  \item {SAMPLERATE\_100}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_1000}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_1600}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_200}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_3200}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_400}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_50}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SAMPLERATE\_800}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {sampleTime}
+    \subitem {Differentiator$<$ T $>$}, \hyperpage{45}
+  \item {self\_type}
+    \subitem {CircularDelay$<$ type, size $>$::const\_iterator}, 
+		\hyperpage{27}
+    \subitem {CircularDelay$<$ type, size $>$::const\_reverse\_iterator}, 
+		\hyperpage{31}
+    \subitem {CircularDelay$<$ type, size $>$::iterator}, 
+		\hyperpage{60}
+    \subitem {CircularDelay$<$ type, size $>$::reverse\_iterator}, 
+		\hyperpage{103}
+  \item {sense}
+    \subitem {MAX30102}, \hyperpage{97}
+  \item {sense\_struct}
+    \subitem {MAX30102}, \hyperpage{80}
+  \item {sensor}, \hyperpage{105}
+    \subitem {\_sensor}, \hyperpage{111}
+    \subitem {\texorpdfstring{$\sim$}{\string~}sensor}, \hyperpage{107}
+    \subitem {averageIRBPM}, \hyperpage{111}
+    \subitem {begin}, \hyperpage{107}
+    \subitem {BPM\_BUFFER\_SIZE}, \hyperpage{111}
+    \subitem {bpmBuffer}, \hyperpage{111}
+    \subitem {Derivative}, \hyperpage{107}
+    \subitem {getHR}, \hyperpage{108}
+    \subitem {getLatestTemperatureF}, \hyperpage{108}
+    \subitem {getPeakThreshold}, \hyperpage{108}
+    \subitem {getSpO2}, \hyperpage{108}
+    \subitem {HRcalc}, \hyperpage{108}
+    \subitem {irLastValue}, \hyperpage{111}
+    \subitem {latestIRBPM}, \hyperpage{111}
+    \subitem {latestRedBPM}, \hyperpage{111}
+    \subitem {latestSpO2}, \hyperpage{111}
+    \subitem {latestTemperature}, \hyperpage{111}
+    \subitem {localMaximaIR}, \hyperpage{111}
+    \subitem {localMaximaRed}, \hyperpage{111}
+    \subitem {localMinimaIR}, \hyperpage{112}
+    \subitem {localMinimaRed}, \hyperpage{112}
+    \subitem {loopThread}, \hyperpage{108}
+    \subitem {nextBPMBufferIndex}, \hyperpage{112}
+    \subitem {nextSPO2BufferIndex}, \hyperpage{112}
+    \subitem {PAST\_PEAKS\_SIZE}, \hyperpage{112}
+    \subitem {pastMaximasIR}, \hyperpage{112}
+    \subitem {pastMaximasRed}, \hyperpage{112}
+    \subitem {pastMinimasIR}, \hyperpage{112}
+    \subitem {pastMinimasRed}, \hyperpage{112}
+    \subitem {peakDetect}, \hyperpage{109}
+    \subitem {R}, \hyperpage{112}
+    \subitem {redLastValue}, \hyperpage{113}
+    \subitem {resetCalculations}, \hyperpage{109}
+    \subitem {runHRCalculationLoop}, \hyperpage{109}
+    \subitem {running}, \hyperpage{113}
+    \subitem {runningHR}, \hyperpage{113}
+    \subitem {sensor}, \hyperpage{107}
+    \subitem {SPO2\_BUFFER\_SIZE}, \hyperpage{113}
+    \subitem {spo2Buffer}, \hyperpage{113}
+    \subitem {stop}, \hyperpage{110}
+    \subitem {stopHRcalc}, \hyperpage{110}
+    \subitem {timeLastIRHeartBeat}, \hyperpage{113}
+    \subitem {timeLastLoopRan}, \hyperpage{113}
+    \subitem {timeLastRedHeartBeat}, \hyperpage{113}
+    \subitem {updateTemperature}, \hyperpage{110}
+  \item {Sensor.cpp}
+    \subitem {crest}, \hyperpage{176}
+    \subitem {dataBeenIncreasing}, \hyperpage{176}
+    \subitem {hpf}, \hyperpage{176}
+    \subitem {lpf}, \hyperpage{176}
+    \subitem {nextPastPeaksIndex}, \hyperpage{176}
+    \subitem {R}, \hyperpage{177}
+    \subitem {SpO2}, \hyperpage{177}
+    \subitem {trough}, \hyperpage{177}
+  \item {serialize}
+    \subitem {alert}, \hyperpage{17}
+    \subitem {alertPubSubType}, \hyperpage{22}
+  \item {SerializedPayload\_t}
+    \subitem {alertPubSubTypes.cxx}, \hyperpage{125}
+  \item {serializeKey}
+    \subitem {alert}, \hyperpage{17}
+  \item {setADCRange}
+    \subitem {MAX30102}, \hyperpage{91}
+  \item {SetdiagnosisRanges}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {setFIFOAlmostFull}
+    \subitem {MAX30102}, \hyperpage{92}
+  \item {setFIFOAverage}
+    \subitem {MAX30102}, \hyperpage{92}
+  \item {setIterator}
+    \subitem {CircularDelay$<$ type, size $>$}, \hyperpage{26}
+  \item {setLEDMode}
+    \subitem {MAX30102}, \hyperpage{92}
+  \item {setProximityThreshold}
+    \subitem {MAX30102}, \hyperpage{93}
+  \item {setPROXINTTHRESH}
+    \subitem {MAX30102}, \hyperpage{93}
+  \item {setPulseAmplitudeIR}
+    \subitem {MAX30102}, \hyperpage{93}
+  \item {setPulseAmplitudeProximity}
+    \subitem {MAX30102}, \hyperpage{94}
+  \item {setPulseAmplitudeRed}
+    \subitem {MAX30102}, \hyperpage{94}
+  \item {setPulseWidth}
+    \subitem {MAX30102}, \hyperpage{94}
+  \item {setSampleRate}
+    \subitem {MAX30102}, \hyperpage{95}
+  \item {setup}
+    \subitem {MAX30102}, \hyperpage{95}
+  \item {SHUTDOWN}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {shutDown}
+    \subitem {MAX30102}, \hyperpage{96}
+  \item {shutdown.cpp}
+    \subitem {heartSensor}, \hyperpage{180}
+    \subitem {main}, \hyperpage{180}
+  \item {size}
+    \subitem {i2c\_smbus\_ioctl\_data}, \hyperpage{59}
+  \item {SLOT\_IR\_LED}
+    \subitem {MAX30102.cpp}, \hyperpage{171}
+  \item {SLOT\_IR\_PILOT}
+    \subitem {MAX30102.cpp}, \hyperpage{172}
+  \item {SLOT\_NONE}
+    \subitem {MAX30102.cpp}, \hyperpage{172}
+  \item {SLOT\_NONE\_PILOT}
+    \subitem {MAX30102.cpp}, \hyperpage{172}
+  \item {SLOT\_RED\_LED}
+    \subitem {MAX30102.cpp}, \hyperpage{172}
+  \item {SLOT\_RED\_PILOT}
+    \subitem {MAX30102.cpp}, \hyperpage{172}
+  \item {softReset}
+    \subitem {MAX30102}, \hyperpage{96}
+  \item {SpO2}
+    \subitem {Sensor.cpp}, \hyperpage{177}
+  \item {SPO2\_BUFFER\_SIZE}
+    \subitem {sensor}, \hyperpage{113}
+  \item {spo2Buffer}
+    \subitem {sensor}, \hyperpage{113}
+  \item {SPO2Tracker}, \hyperpage{114}
+    \subitem {\_s}, \hyperpage{117}
+    \subitem {\texorpdfstring{$\sim$}{\string~}SPO2Tracker}, 
+		\hyperpage{115}
+    \subitem {getVal}, \hyperpage{116}
+    \subitem {ping}, \hyperpage{116}
+    \subitem {pingThread}, \hyperpage{116}
+    \subitem {SPO2Tracker}, \hyperpage{115}
+    \subitem {start}, \hyperpage{116}
+    \subitem {stop}, \hyperpage{117}
+    \subitem {symptomRanges}, \hyperpage{117}
+    \subitem {threadRunning}, \hyperpage{118}
+    \subitem {tracker}, \hyperpage{117}
+  \item {squareOf}
+    \subitem {DigitalFilters.h}, \hyperpage{140}
+  \item {start}
+    \subitem {diagnosisInterface}, \hyperpage{42}
+    \subitem {HRTracker}, \hyperpage{55}
+    \subitem {SPO2Tracker}, \hyperpage{116}
+  \item {stdDiagnoses}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {stdDiagnosis}
+    \subitem {diagnosis}, \hyperpage{40}
+  \item {stop}
+    \subitem {diagnosisInterface}, \hyperpage{42}
+    \subitem {HRTracker}, \hyperpage{55}
+    \subitem {sensor}, \hyperpage{110}
+    \subitem {SPO2Tracker}, \hyperpage{117}
+  \item {stopHRcalc}
+    \subitem {sensor}, \hyperpage{110}
+  \item {STORAGE\_SIZE}
+    \subitem {MAX30102.h}, \hyperpage{173}
+  \item {SubListener}
+    \subitem {DeviceSubscriber::SubListener}, \hyperpage{119}
+  \item {subscriber\_}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {symptom}
+    \subitem {symptomRange}, \hyperpage{120}
+  \item {symptomRange}, \hyperpage{119}
+    \subitem {max}, \hyperpage{120}
+    \subitem {min}, \hyperpage{120}
+    \subitem {symptom}, \hyperpage{120}
+  \item {symptomRanges}
+    \subitem {diagnosisInterface}, \hyperpage{42}
+    \subitem {HRTracker}, \hyperpage{56}
+    \subitem {SPO2Tracker}, \hyperpage{117}
+
+  \indexspace
+
+  \item {tail}
+    \subitem {MAX30102::Record}, \hyperpage{101}
+  \item {test.cpp}
+    \subitem {heartSensor}, \hyperpage{183}
+    \subitem {main}, \hyperpage{183}
+  \item {testSpO2.cpp}
+    \subitem {main}, \hyperpage{184}
+  \item {threadRunning}
+    \subitem {HRTracker}, \hyperpage{56}
+    \subitem {SPO2Tracker}, \hyperpage{118}
+  \item {timeLastIRHeartBeat}
+    \subitem {sensor}, \hyperpage{113}
+  \item {timeLastLoopRan}
+    \subitem {sensor}, \hyperpage{113}
+  \item {timeLastRedHeartBeat}
+    \subitem {sensor}, \hyperpage{113}
+  \item {topic\_}
+    \subitem {DevicePublisher}, \hyperpage{35}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+  \item {tps}, \hyperpage{9}
+    \subitem {pow}, \hyperpage{9}
+  \item {tracker}
+    \subitem {HRTracker}, \hyperpage{56}
+    \subitem {SPO2Tracker}, \hyperpage{117}
+  \item {trough}
+    \subitem {Sensor.cpp}, \hyperpage{177}
+  \item {type}
+    \subitem {alertPubSubType}, \hyperpage{20}
+  \item {type\_}
+    \subitem {DevicePublisher}, \hyperpage{35}
+    \subitem {DeviceSubscriber}, \hyperpage{37}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Differentiator$<$ T $>$}, \hyperpage{44}
+    \subitem {DigitalFilter$<$ Type $>$}, \hyperpage{46}
+    \subitem {HighPassFilter}, \hyperpage{48}
+    \subitem {HighPassFilter3}, \hyperpage{51}
+    \subitem {LowPassFilter}, \hyperpage{65}
+    \subitem {LowPassFilter2}, \hyperpage{68}
+    \subitem {LowPassFilter3}, \hyperpage{71}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{74}
+    \subitem {LowPassFilter3MatchedZ}, \hyperpage{76}
+    \subitem {MovingAvarageFilter$<$ size $>$}, \hyperpage{99}
+  \item {updateTemperature}
+    \subitem {sensor}, \hyperpage{110}
+  \item {User}
+    \subitem {User.cpp}, \hyperpage{185}
+  \item {User.cpp}
+    \subitem {addContact}, \hyperpage{185}
+    \subitem {contacts}, \hyperpage{186}
+    \subitem {name}, \hyperpage{186}
+    \subitem {User}, \hyperpage{185}
+
+  \indexspace
+
+  \item {WAKEUP}
+    \subitem {MAX30102.cpp}, \hyperpage{172}
+  \item {wakeUp}
+    \subitem {MAX30102}, \hyperpage{97}
+  \item {word}
+    \subitem {i2c\_smbus\_data}, \hyperpage{58}
+  \item {writer\_}
+    \subitem {DevicePublisher}, \hyperpage{35}
+
+  \indexspace
+
+  \item {x}
+    \subitem {HighPassFilter3}, \hyperpage{52}
+    \subitem {LowPassFilter2}, \hyperpage{69}
+    \subitem {LowPassFilter3}, \hyperpage{72}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{74}
+  \item {x1}
+    \subitem {Differentiator$<$ T $>$}, \hyperpage{45}
+    \subitem {HighPassFilter}, \hyperpage{49}
+  \item {xc}
+    \subitem {HighPassFilter3}, \hyperpage{52}
+    \subitem {LowPassFilter2}, \hyperpage{69}
+    \subitem {LowPassFilter3}, \hyperpage{72}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{74}
+
+  \indexspace
+
+  \item {y}
+    \subitem {Differentiator$<$ T $>$}, \hyperpage{45}
+    \subitem {HighPassFilter3}, \hyperpage{52}
+    \subitem {LowPassFilter2}, \hyperpage{69}
+    \subitem {LowPassFilter3}, \hyperpage{72}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{74}
+    \subitem {LowPassFilter3MatchedZ}, \hyperpage{77}
+  \item {y1c}
+    \subitem {HighPassFilter}, \hyperpage{49}
+  \item {yc}
+    \subitem {HighPassFilter3}, \hyperpage{52}
+    \subitem {LowPassFilter2}, \hyperpage{69}
+    \subitem {LowPassFilter3}, \hyperpage{72}
+    \subitem {LowPassFilter3DiffApprox}, \hyperpage{75}
+    \subitem {LowPassFilter3MatchedZ}, \hyperpage{77}
+
+\end{theindex}

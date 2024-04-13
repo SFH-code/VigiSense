@@ -1,0 +1,83 @@
+\doxysection{/home/sitcomlab/\+Projects/\+Vigi\+Sense/src/\+MAX30102.h File Reference}
+\hypertarget{_m_a_x30102_8h}{}\label{_m_a_x30102_8h}\index{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h@{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+Include dependency graph for MAX30102.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{d5/d5e/_m_a_x30102_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/da5/_m_a_x30102_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_m_a_x30102}{MAX30102}}
+\item 
+struct \mbox{\hyperlink{struct_m_a_x30102_1_1_record}{MAX30102\+::\+Record}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_m_a_x30102_8h_ad7327a848315960f1d8828a09316c6a9}{MAX30102\+\_\+\+ADDRESS}}~0x57
+\item 
+\#define \mbox{\hyperlink{_m_a_x30102_8h_a5ca8c5fbb2caa99ab0b7007ce2c11633}{I2\+C\+\_\+\+SPEED\+\_\+\+STANDARD}}~100000
+\item 
+\#define \mbox{\hyperlink{_m_a_x30102_8h_aef9d097ed2b58676498a33f3cf76f38d}{I2\+C\+\_\+\+SPEED\+\_\+\+FAST}}~400000
+\item 
+\#define \mbox{\hyperlink{_m_a_x30102_8h_aab040ced3ff06bdd71655d55a5f8db14}{I2\+C\+\_\+\+BUFFER\+\_\+\+LENGTH}}~32
+\item 
+\#define \mbox{\hyperlink{_m_a_x30102_8h_a27a208e4e7f622873178e583120fb4e5}{DEFAULT\+\_\+\+INT\+\_\+\+GPIO}}~0
+\item 
+\#define \mbox{\hyperlink{_m_a_x30102_8h_a8d6f782ffe53d87f0fd0327d4b09352c}{STORAGE\+\_\+\+SIZE}}~4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_m_a_x30102_8h_a27a208e4e7f622873178e583120fb4e5}\label{_m_a_x30102_8h_a27a208e4e7f622873178e583120fb4e5} 
+\index{MAX30102.h@{MAX30102.h}!DEFAULT\_INT\_GPIO@{DEFAULT\_INT\_GPIO}}
+\index{DEFAULT\_INT\_GPIO@{DEFAULT\_INT\_GPIO}!MAX30102.h@{MAX30102.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_INT\_GPIO}{DEFAULT\_INT\_GPIO}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+INT\+\_\+\+GPIO~0}
+
+\Hypertarget{_m_a_x30102_8h_aab040ced3ff06bdd71655d55a5f8db14}\label{_m_a_x30102_8h_aab040ced3ff06bdd71655d55a5f8db14} 
+\index{MAX30102.h@{MAX30102.h}!I2C\_BUFFER\_LENGTH@{I2C\_BUFFER\_LENGTH}}
+\index{I2C\_BUFFER\_LENGTH@{I2C\_BUFFER\_LENGTH}!MAX30102.h@{MAX30102.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_BUFFER\_LENGTH}{I2C\_BUFFER\_LENGTH}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+BUFFER\+\_\+\+LENGTH~32}
+
+\Hypertarget{_m_a_x30102_8h_aef9d097ed2b58676498a33f3cf76f38d}\label{_m_a_x30102_8h_aef9d097ed2b58676498a33f3cf76f38d} 
+\index{MAX30102.h@{MAX30102.h}!I2C\_SPEED\_FAST@{I2C\_SPEED\_FAST}}
+\index{I2C\_SPEED\_FAST@{I2C\_SPEED\_FAST}!MAX30102.h@{MAX30102.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_SPEED\_FAST}{I2C\_SPEED\_FAST}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+SPEED\+\_\+\+FAST~400000}
+
+\Hypertarget{_m_a_x30102_8h_a5ca8c5fbb2caa99ab0b7007ce2c11633}\label{_m_a_x30102_8h_a5ca8c5fbb2caa99ab0b7007ce2c11633} 
+\index{MAX30102.h@{MAX30102.h}!I2C\_SPEED\_STANDARD@{I2C\_SPEED\_STANDARD}}
+\index{I2C\_SPEED\_STANDARD@{I2C\_SPEED\_STANDARD}!MAX30102.h@{MAX30102.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_SPEED\_STANDARD}{I2C\_SPEED\_STANDARD}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+SPEED\+\_\+\+STANDARD~100000}
+
+\Hypertarget{_m_a_x30102_8h_ad7327a848315960f1d8828a09316c6a9}\label{_m_a_x30102_8h_ad7327a848315960f1d8828a09316c6a9} 
+\index{MAX30102.h@{MAX30102.h}!MAX30102\_ADDRESS@{MAX30102\_ADDRESS}}
+\index{MAX30102\_ADDRESS@{MAX30102\_ADDRESS}!MAX30102.h@{MAX30102.h}}
+\doxysubsubsection{\texorpdfstring{MAX30102\_ADDRESS}{MAX30102\_ADDRESS}}
+{\footnotesize\ttfamily \#define MAX30102\+\_\+\+ADDRESS~0x57}
+
+\Hypertarget{_m_a_x30102_8h_a8d6f782ffe53d87f0fd0327d4b09352c}\label{_m_a_x30102_8h_a8d6f782ffe53d87f0fd0327d4b09352c} 
+\index{MAX30102.h@{MAX30102.h}!STORAGE\_SIZE@{STORAGE\_SIZE}}
+\index{STORAGE\_SIZE@{STORAGE\_SIZE}!MAX30102.h@{MAX30102.h}}
+\doxysubsubsection{\texorpdfstring{STORAGE\_SIZE}{STORAGE\_SIZE}}
+{\footnotesize\ttfamily \#define STORAGE\+\_\+\+SIZE~4}
+

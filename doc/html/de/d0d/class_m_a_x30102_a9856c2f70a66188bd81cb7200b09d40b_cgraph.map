@@ -1,0 +1,9 @@
+<map id="MAX30102::enablePROXINT" name="MAX30102::enablePROXINT">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,208,56"/>
+<area shape="rect" id="Node000002" href="$de/d0d/class_m_a_x30102.html#a741f63f91f2b64df29c07311a8deb0ea" title=" " alt="" coords="256,31,408,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,41,242,41,242,46,208,46"/>
+<area shape="rect" id="Node000003" href="$df/dbf/i2c-dev_8h.html#aea6f5d01ddd9b73cba89994e500e0f57" title=" " alt="" coords="458,5,657,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,32,444,28,445,33,408,37"/>
+<area shape="rect" id="Node000004" href="$df/dbf/i2c-dev_8h.html#a77fd74b2c8d519ec584b44f182365f98" title=" " alt="" coords="456,55,659,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="408,49,442,52,442,58,408,54"/>
+</map>

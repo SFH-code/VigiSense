@@ -1,0 +1,146 @@
+\doxysection{MAX30102.\+h}
+\hypertarget{_m_a_x30102_8h_source}{}\label{_m_a_x30102_8h_source}\index{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h@{/home/sitcomlab/Projects/VigiSense/src/MAX30102.h}}
+\mbox{\hyperlink{_m_a_x30102_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/***************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ This\ is\ a\ library\ written\ for\ the\ Maxim\ MAX30102\ Optical\ Smoke\ Detector}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ It\ should\ also\ work\ with\ the\ MAX30102.\ However,\ the\ MAX30102\ does\ not\ have\ a\ Green\ LED.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ These\ sensors\ use\ I2C\ to\ communicate,\ as\ well\ as\ a\ single\ (optional)}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ interrupt\ line\ that\ is\ not\ currently\ supported\ in\ this\ driver.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ Written\ by\ Garettluu\ (https://github.com/garrettluu)}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ BSD\ license,\ all\ text\ above\ must\ be\ included\ in\ any\ redistribution.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *****************************************************/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00013\ \textcolor{comment}{Edited\ by\ Yu\ Kit\ Foo,\ to\ include\ data\ extraction\ using\ Interrupts}}
+\DoxyCodeLine{00014\ \textcolor{comment}{Functions\ changed:\ changed\ DEFAULT\_INT\_GPIO,\ added\ hasSample(),\ dataReady(),\ gpioISR()}}
+\DoxyCodeLine{00015\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ MAX30102\_ADDRESS\ \ \ \ 0x57}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ I2C\_SPEED\_STANDARD\ \ 100000}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ I2C\_SPEED\_FAST\ \ \ \ \ \ 400000}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ I2C\_BUFFER\_LENGTH\ \ \ 32}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ define\ the\ GPIO\ used\ for\ the\ sensor\ here}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ DEFAULT\_INT\_GPIO\ \ \ \ 0}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_m_a_x30102}{MAX30102}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_m_a_x30102_a631728e610c1c3eab45d2fc33e78dd50}{MAX30102}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_m_a_x30102_a6c1a98fb0974128d0e200fc4f9986efd}{begin}}(uint32\_t\ i2cSpeed\ =\ \mbox{\hyperlink{_m_a_x30102_8h_a5ca8c5fbb2caa99ab0b7007ce2c11633}{I2C\_SPEED\_STANDARD}},\ uint8\_t\ i2cAddr\ =\ \mbox{\hyperlink{_m_a_x30102_8h_ad7327a848315960f1d8828a09316c6a9}{MAX30102\_ADDRESS}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_m_a_x30102_a824883df0943c7accc013f05792e557d}{getRed}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//\ Returns\ immediate\ red\ value}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_m_a_x30102_ad06cdfa399f91057cc2e8e7c872877e0}{getIR}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//\ Returns\ immediate\ IR\ value}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_m_a_x30102_a82a6fa3dc9fb7dd83e57582ccd0a0c06}{safeCheck}}(uint8\_t\ maxTimeToCheck);\ \textcolor{comment}{//\ Given\ a\ max\ amount\ of\ time,\ checks\ for\ new\ data.}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configuration}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ab6c07c546e397bd5d87292f434a0ee8c}{wakeUp}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ac5c9b06bf3cf668e018bb81a17d5aa2f}{shutDown}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ad78ce89aa47f2c6e1a3cf07a6966c2c9}{softReset}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a19cae8ee364f876cb34da812d5a657f2}{setLEDMode}}(uint8\_t\ mode);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ab936f8072cde5aaf5b0bd8b9ec9c0e2f}{setADCRange}}(uint8\_t\ adcRange);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a78604b395ccf72fbd6366684aa99e646}{setSampleRate}}(uint8\_t\ sampleRate);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_aab527d480ff83e3059157bb793244644}{setPulseWidth}}(uint8\_t\ pulseWidth);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a92936c050f8a49ba8da5bda2069dd1f6}{setPulseAmplitudeRed}}(uint8\_t\ value);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a80aad8301d5ca50a72e72c02f9c824c9}{setPulseAmplitudeIR}}(uint8\_t\ value);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a2c3d0e2fb0ba82d0a2cbb4e5a5c2edd8}{setPulseAmplitudeProximity}}(uint8\_t\ value);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a5fd727b3f253f1007750534d5f40b562}{setProximityThreshold}}(uint8\_t\ thresMSB);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Multi-\/LED\ configuration\ mode}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a34426debd59ef446363a7af352bdbd8e}{enableSlot}}(uint8\_t\ slotNumber,\ uint8\_t\ device);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a07872942c5ee098cde2364b4d86ebec6}{disableSlots}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Data\ Collection}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupts}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_a535f24c507d05409d99bf4311fdb535c}{getINT1}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_af9e1c521388e59c718a2ab4c219d8d34}{getINT2}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a4d436e6c3874f03fc32ca1412fbd8dfb}{enableAFULL}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_aec4831802832defb3f6453f27649f9fd}{disableAFULL}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a2e9b9a516572433c2dec4a304acb67f7}{enableDATARDY}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a23ac69410cbbbd0479bc195205be492f}{disableDATARDY}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ae5b452eb18fbe798c99f238f49f64fe9}{enableALCOVF}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_aeb2a88238a3041b599bdd84269ebbcca}{disableALCOVF}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a9856c2f70a66188bd81cb7200b09d40b}{enablePROXINT}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a7b739fbb78fe2e9e5b485e108e8d8d69}{disablePROXINT}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ae94096eaaf7aa7e4ad9372675bcfea2a}{enableDIETEMPRDY}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a886cc28c8ef63019980fadaf74d059d5}{disableDIETEMPRDY}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIFO\ Configurations}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ae11f7b66a205c5e465668fa401427737}{setFIFOAverage}}(uint8\_t\ samples);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a13354720f66fc1ec7d579bb3e765a96d}{enableFIFORollover}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ac45e805b747d6723f59e41cbd6b0c8e9}{disableFIFORollover}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_abd8bade4eb3dbb809c364378f9017d25}{setFIFOAlmostFull}}(uint8\_t\ samples);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FIFO\ Reading}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_m_a_x30102_a023a175af4f01d54f24f632296f71775}{check}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_a1b147f6bf43019fe2fcaf8448657ad5a}{available}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a2c3f09f90f952e44aa2d1d6456c0ea0e}{nextSample}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_m_a_x30102_a2dd900a208752875bc47eaaa6de45c60}{getFIFORed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_m_a_x30102_a04ae15b45111ff3345fba97f3e558885}{getFIFOIR}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_aeaf1c7ea1764c7d0553386cabfb783e6}{getWritePointer}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_a99dd07d94cdca56a0116bd3bc40eeb66}{getReadPointer}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_afbac1a581d2acb9aeb9dbe12b2d83b00}{clearFIFO}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Proximity\ Mode\ Interrupt\ Threshold}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_aa770f6f38d4169d4e844de2db3443a95}{setPROXINTTHRESH}}(uint8\_t\ val);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Die\ Temperature}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_m_a_x30102_a7b9501442c658fdd5f88ceb0b883ccc5}{readTemperature}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_m_a_x30102_ac6087868468137544adb009e79ca8485}{readTemperatureF}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Detecting\ ID/Revision}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_a9864b29afe6f70f866e21f2c0b2a1df3}{getRevisionID}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_ac17326fd1347d61dfbfd5ab76d039fb2}{readPartID}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_aab729787b966462162f4e007b60c8075}{hasSample}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setup\ the\ sensor\ with\ user\ selectable\ settings}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ac20a8b68fcf978b71f3fde1bb516dde8}{setup}}(uint8\_t\ powerLevel\ =\ 0x1F,\ uint8\_t\ sampleAverage\ =\ 4,\ uint8\_t\ ledMode\ =\ 2,\ \textcolor{keywordtype}{int}\ sampleRate\ =\ 400,\ \textcolor{keywordtype}{int}\ pulseWidth\ =\ 411,\ \textcolor{keywordtype}{int}\ adcRange\ =\ 4096);}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_m_a_x30102_a9c3f044d300f7f1e0ceb013f94fb5473}{\_i2c}};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_ab4f2278d503855fd5304b21d3654bc52}{\_i2caddr}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_a63b9f6f2d5903ad915a61c7ff040a426}{activeLEDs}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_m_a_x30102_a263ab7d92815b15faef6bf647c1e5096}{revisionID}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a2f5ae5ddfaaaf856424f2b3e0b3a991a}{readRevisionID}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a741f63f91f2b64df29c07311a8deb0ea}{bitMask}}(uint8\_t\ reg,\ uint8\_t\ mask,\ uint8\_t\ thing);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::vector<uint8\_t>\ \mbox{\hyperlink{class_m_a_x30102_af0ad00b5666d727c58998ae2065b216e}{readMany}}(uint8\_t\ address,\ uint8\_t\ length);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#define\ STORAGE\_SIZE\ 4}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_m_a_x30102_1_1_record}{Record}}\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_m_a_x30102_1_1_record_ad29413a624f4b3158c36ae0715fd708a}{red}}[\mbox{\hyperlink{_m_a_x30102_8h_a8d6f782ffe53d87f0fd0327d4b09352c}{STORAGE\_SIZE}}];}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{struct_m_a_x30102_1_1_record_a561fa5e27d64b5e86192689b7feeed17}{IR}}[\mbox{\hyperlink{_m_a_x30102_8h_a8d6f782ffe53d87f0fd0327d4b09352c}{STORAGE\_SIZE}}];}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_a_x30102_1_1_record_a52d16805cda7ba2269f9d088f056852b}{head}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_m_a_x30102_1_1_record_a7506fe660391cf327f69b9f2bf8ad6b3}{tail}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}\ \mbox{\hyperlink{class_m_a_x30102_a726e8458fd5722f9a4c404ce7ca366b4}{sense\_struct}};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_m_a_x30102_1_1_record}{sense\_struct}}\ \mbox{\hyperlink{class_m_a_x30102_a913fc3dc70103ea8e9ecae046125ed63}{sense}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_ad43296be047dd4d8779a96fd2b1c1d3b}{dataReady}}();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_m_a_x30102_a622d1671f30bbc3217423eda54e2ee96}{gpioISR}}(\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int},\ uint32\_t,\ \textcolor{keywordtype}{void}*\ userdata)\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ ((\mbox{\hyperlink{class_m_a_x30102}{MAX30102}}*)userdata)-\/>dataReady();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \};}
+
+\end{DoxyCode}
