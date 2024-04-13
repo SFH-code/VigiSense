@@ -59,14 +59,17 @@ void SPO2Tracker::pingThread() {
 void SPO2Tracker::tracker(){
     // thread that checks using determineSymptom() and calls alert if conditions are met
     // use threadRunning to stop the thread
+    int count= 0;
     while (threadRunning) {
         int val = getVal();
-        if(val!=this->lastVal){
+        if(val!=this->lastVal||count>5){
             std::cout<<"SPO2 value: "<< val << " ";
             std::string symptom = determineSymptom(symptomRanges, val);
             std::cout<<symptom<<std::endl;
             this->lastVal = val;
+            count = 0;
         }
+        count++;
         // if (false) {
         //     // define out of range behaviour (check if crit low)
         //     // alert();
