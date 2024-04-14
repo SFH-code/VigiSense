@@ -194,7 +194,7 @@ bool sensor::peakDetect(int32_t data) {
 	//std::cout << "Threshold: " << threshold << ", max: " << localMaxima << ", min: " << localMinima << std::endl;
 	if (data > localMaximaIR) {
 		localMaximaIR = data;
-		if (data > 100) { //might want to calibrate this everytime sensor is used
+		if (10 > (data -localMinimaIR)) { //might want to calibrate this everytime sensor is used
 			crest = true;
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMaximaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
@@ -204,9 +204,9 @@ bool sensor::peakDetect(int32_t data) {
 		}
 	}
 
-	if (crest && data < localMinimaIR) {
+	if ( data < localMinimaIR) {
 		localMinimaIR = data;
-		if (crest && data < -100) { //might want to calibrate this everytime sensor is used
+		if (crest && -10 < (data -localMaximaIR)) { //might want to calibrate this everytime sensor is used
 			trough = true;
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMinimaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
