@@ -3,6 +3,7 @@
 #include "MAX30102.h"
 #include "Sensor.h"
 #include "SPO2Tracker.h"
+#include "HRTracker.h"
 
 using namespace std;
 
@@ -15,7 +16,11 @@ int main(void) {
 	SPO2Tracker spo2(&MAX30102_sensor);
 	spo2.start();
 	getchar();
-	spo2.stop();
+	HRTracker hr(&MAX30102_sensor);
+	hr.start();
+	getchar();
+	MAX30102_sensor.stopHRcalc();
+	//spo2.stop();
 	// at end of block destructor of sensor class is called which shutsdown max30102 instance s.
 	return 0;
 }
