@@ -5,21 +5,25 @@
 
 class HRTracker:public diagnosisInterface {
     public:
-        HRTracker(sensor *s);
+        HRTracker(testParent *s);
         ~HRTracker();
         void start();
         void stop();
         void ping();
         int getVal();
         void tracker();
-    protected:
-        sensor* _s; 
-        bool threadRunning = false;
-        void pingThread();
-        // define symptom table here
+	testParent* _s;
+	
+	// define symptom table here
 		std::vector<symptomRange> symptomRanges {
-			{0,60,"Bradycardia"},
+			{40,60,"Bradycardia"},
 			{60,100,"Normal resting heart rate"},
 			{100,200,"Tachyacardia"}};
+			
+    protected:
+         
+        bool threadRunning = false;
+        void pingThread();
+        
 
 };

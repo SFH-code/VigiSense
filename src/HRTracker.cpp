@@ -1,7 +1,7 @@
 #include "HRTracker.h"
 #include "DevicePublisher.cpp"
 
-HRTracker::HRTracker(sensor *s) {
+HRTracker::HRTracker(testParent *s) {
     HRTracker::_s = s;
 }
 

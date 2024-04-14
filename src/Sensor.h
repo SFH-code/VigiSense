@@ -12,7 +12,7 @@
 
 //Code refactored from HeartRate.h
 
-class sensor: public testParent{
+class sensor:public testParent{ 
 	public:
 		
 		sensor(MAX30102 *sensor);
@@ -27,8 +27,8 @@ class sensor: public testParent{
 
 		// getter for SPO2 and HR
 		// functions that are to be tested include override keyword
-		int getSpO2() override;
-		int getHR() override;
+		int getSpO2();
+		int getHR();
 
 	protected:
 		MAX30102* _sensor;
@@ -37,11 +37,11 @@ class sensor: public testParent{
 
         //Check which functions are fine as is and which need editing/removing
 		
-		const int static BPM_BUFFER_SIZE = 4; // Change based on how many samples you want to average
+		const int static BPM_BUFFER_SIZE = 100;
 		int32_t bpmBuffer[BPM_BUFFER_SIZE];
 		int nextBPMBufferIndex = 0;
 		
-		const int static SPO2_BUFFER_SIZE = 4; // Change based on how many samples you want to average
+		const int static SPO2_BUFFER_SIZE = 100;
 		int32_t spo2Buffer[SPO2_BUFFER_SIZE];
 		int nextSPO2BufferIndex = 0;
 

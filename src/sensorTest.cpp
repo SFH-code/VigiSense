@@ -28,8 +28,8 @@ void sensorTest::setHr(int i ) {
 
 void sensorTest::setData(double testFrequency, bool flat) {
 	// Test Parameters
-	bool flat = false;
-	double testFrequency = 1.2;  // Hz (Approximate normal heart rate) 
+	flat = false;
+	testFrequency = 1.2;  // Hz (Approximate normal heart rate) 
 	double samplingRate = 50.0;  // Hz (Adjust based on sensor)
 	double testDuration = 5.0;   // Seconds
 	int numSamples = testDuration * samplingRate;
@@ -130,12 +130,15 @@ bool sensorTest::peakDetect(int32_t testdata) {
 
 
 
-int32_t sensorTest::SpO2Calc(int32_t localMaximaIR, int32_t localMinimaIR, int32_t localMaximaRed, int32_t localMinimaRed){
-		if (localMinimaIR != 0 && localMinimaRed != 0) {
-			R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
+int32_t sensorTest::SpO2Calc(int32_t MaximaIR, int32_t MinimaIR, int32_t MaximaRed, int32_t MinimaRed){
+		if (MinimaIR != 0 && MinimaRed != 0) {
+			R = ((MaximaRed - MinimaRed) / MinimaRed) / ((MaximaIR - MinimaIR) / MinimaIR);
 			latestSpO2 = 104 - 17 * R;
+			return latestSpO2;
 		} else {
 			// Division by zero alert
 			std::cout << "Division by zero error for R calculation!" << std::endl;
+			return EXIT_FAILURE;
 		}
+		
 }

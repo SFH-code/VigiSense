@@ -1,3 +1,4 @@
+#pragma once
 class testParent {
     // make virtual functions for all functions to test (Eg: getSPO2)
     public:

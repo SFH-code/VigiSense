@@ -4,13 +4,13 @@
 #include "testParent.h"
 
 
-class sensorTest:public testParent{
+class sensorTest:public testParent{ 
 	public:
 		
 		sensorTest();
 		~sensorTest();
-		int getSpO2() override;
-		int getHR() override;
+		int getSpO2();
+		int getHR();
         void setSpO2(int i);
 		void setHr(int i);
 		void setData(double testFrequency, bool flat); //Creates a pseudo data set for testing the peak detection algorithm
