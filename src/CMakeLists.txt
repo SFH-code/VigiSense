@@ -14,7 +14,7 @@ find_package(fastrtps REQUIRED)
 # alert section
 add_custom_target(
     messages
-    COMMAND fastddsgen ../tests/alert.idl
+    COMMAND fastddsgen ../src/alert.idl
 )
 add_library(alert STATIC alert.cxx alertPubSubTypes.cxx)
 add_dependencies(alert messages)
