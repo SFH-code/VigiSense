@@ -1,11 +1,9 @@
-Unit tests can be found on the [Unit-Tests](https://github.com/2468513H/VigiSense/tree/Unit-Tests) branch.
+# Real-Time-Project
 
-To add a new unit test, you would need to figure out what function to test and which file the function resides in. This backhanded way uses derived and related classes to test is because classes rely on sensor values that come in intervals based on the interrupts. This means that functions are encapsulated in a process that separates the conversion of raw infrared and red intensity values to oxygen level and heart rate values. 
+Welcome to the Wiki page for VigiSense. VigiSense is a real-time embedded system that helps in the detection of anomalies in human conditions and provides an interface for appropriate action. This Wiki covers software and hardware design decisions and considerations made when implementing each function.
 
 
-## An example implementation:
 
-Check out our website: https://2468513h.github.io/VigiSense/
 
 Visit us on socials:
 
@@ -14,27 +12,8 @@ Linkedin: https://www.linkedin.com/company/vigisense11/
 
 Sensor used: MAX30102 for SP02 and Heart rate tracking.
 
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.teachmemicro.com%2Fwp-content%2Fuploads%2F2021%2F07%2Frcwl-0531-max30102-black.png&f=1&nofb=1&ipt=9ff3e6a089094f3931a784f4827127560ea252566191e61f5f050404fc3fe3a1&ipo=images" width="50%">
 
-Assuming you want to test the functionality of alerting another user using fastdds. Looking at the source code, this function resides in any implementation of the virtual class `DiagnosisInterface.h` as the function `ping()`. `ping` relies on `getSPO2` or `getHR` which is a function of both the `SPO2Tracker` class. To add a unit test:
-
-1. Make a header file specifically for unit test in this case: `testParent.h`, 
-
-2. Make a new class called `sensorTest` as a related class to `sensor` to override certain values. Make the `testParent.h` class defined as a virtual parent class of `sensorTest` and `sensor` class. Include the functions that are to be tested.
-
-![image](https://github.com/2468513H/VigiSense/assets/77401199/eb7b14dc-a864-4fef-b581-2f0720c5db58)
-
-
-![image](https://github.com/2468513H/VigiSense/assets/77401199/c7ed8618-1474-4968-b653-bee35b103eae)
-
-3. Define functions to control values that come in through raw sensor values. 
-
-![image](https://github.com/2468513H/VigiSense/assets/77401199/2db06daa-d6f6-46e8-a870-a7592c0d4d35)
-
-4. In the unit test implementation file (`unitTest.cpp`) define test cases using functions in [2]. Where the pointer pass into the `SPO2Tracker` constructor is an instance of `sensorTest` instead of `sensor`. 
-
-![image](https://github.com/2468513H/VigiSense/assets/77401199/a773dd88-9672-476a-aa2c-2ff2a21013c8)
-
-_**Check out the source code for how diagnosisInterface derived classes (such as `SPO2 Tracker`) are called for a better understanding of code architecture. It uses threads to call functions such as `getSPO2()` that are defined in either `sensor` or `sensorTest`.**_
 
 ## Prerequisites
 
@@ -273,3 +252,4 @@ The diagram above shows the time taken for ISR to run. It shows a bimodal distri
 ![image](https://github.com/2468513H/VigiSense/assets/77401199/a8d71751-7150-419b-8e09-17028af5620c)
 
 
+The diagram above shows the time taken to run the calculation for heart rate and SPO2. Showing a normal distribution with a mean around 0.55ms, which is well below the threshold.
