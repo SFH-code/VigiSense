@@ -63,6 +63,7 @@ void HRTracker::tracker(){
     std::cout<<"Started HR tracker"<<std::endl;
     while (threadRunning) {
         int val = getVal();
+        //restricts output message to only occur when value changes or significant number of runs elapsed
         if(val!=this->lastVal||count>16000000){
         std::cout<<"HR value: "<< val << " ";
         std::string symptom = determineSymptom(symptomRanges, val);
@@ -71,10 +72,7 @@ void HRTracker::tracker(){
         count = 0;
         }
         count++;
-        // if (false) {
-        //     // define out of range behaviour (check if crit low)
-        //     // alert();
-        // }
+       
     }
 }
 
