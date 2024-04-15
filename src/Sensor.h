@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <chrono>
 #include "MAX30102.h"
-#include "testParent.h"
+#include "sensor.h"
 
 // struct symptomRange{
 //     float min;
