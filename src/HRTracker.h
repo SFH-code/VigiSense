@@ -11,6 +11,7 @@ class HRTracker:public diagnosisInterface {
         void stop();
         void ping();
         int getVal();
+	void tracker();
 
 	      testParent* _s;
 
