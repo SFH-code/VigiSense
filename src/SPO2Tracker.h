@@ -2,7 +2,7 @@
 #include "DiagnosisInterface.h"
 #include "Sensor.h"
 #include <thread>
-#include "testParent.h"
+
 
 class SPO2Tracker:public diagnosisInterface {
     public:

@@ -2,6 +2,7 @@
 #include "DiagnosisInterface.h"
 #include "Sensor.h"
 #include <thread>
+#include "testParent.h"
 
 class HRTracker:public diagnosisInterface {
     public:
