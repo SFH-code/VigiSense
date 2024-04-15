@@ -2,11 +2,11 @@
 #include "DiagnosisInterface.h"
 #include "Sensor.h"
 #include <thread>
-
+#include "testParent.h"
 
 class SPO2Tracker:public diagnosisInterface {
     public:
-        SPO2Tracker(sensor *s);
+        SPO2Tracker(testParent *s);
         /**
          * 0. find what functions are called from the true constructor above (in this case: CTRL+F on _s(variable saved with the instance), then see which functions are called)
          * 1. make constructor for with input from new class
@@ -22,21 +22,18 @@ class SPO2Tracker:public diagnosisInterface {
         int getVal();
         void tracker();
 
-        
+        testParent* _s; 
         int lastVal = 0;
 
-	
-
-    protected:
-        sensor* _s;     
-        bool threadRunning = false;
-        void pingThread();
-
-        // define symptom table here
+	// define symptom table here
 	std::vector<symptomRange> symptomRanges {
 		{88,92,"Hypoxemia"},
         	{92,95,"Concerning Oxygen Concentration"},
 		{95,100,"Healthy Oxygen Concentration"}};
+
+    protected:
+        bool threadRunning = false;
+        void pingThread();
 
 
 };

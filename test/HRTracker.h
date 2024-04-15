@@ -2,10 +2,11 @@
 #include "DiagnosisInterface.h"
 #include "Sensor.h"
 #include <thread>
+#include "testParent.h"
 
 class HRTracker:public diagnosisInterface {
     public:
-        HRTracker(sensor *s);
+        HRTracker(testParent *s);
         ~HRTracker();
         void start();
         void stop();
@@ -13,19 +14,18 @@ class HRTracker:public diagnosisInterface {
         int getVal();
 	    void tracker();
 
-	      
+	      testParent* _s;
 
         int lastVal=0;
-
-    protected:
-        sensor* _s;
-        bool threadRunning = false;
-        void pingThread();
- // define symptom table here
+// define symptom table here
 		std::vector<symptomRange> symptomRanges {
 			{40,60,"Bradycardia"},
 			{60,100,"Normal resting heart rate"},
-			{100,120,"Tachyacardia"}};       
+			{100,120,"Tachyacardia"}};
+    protected:
+        bool threadRunning = false;
+        void pingThread();
+        
 
 
 };

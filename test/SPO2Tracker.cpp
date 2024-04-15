@@ -1,34 +1,34 @@
-#include "HRTracker.h"
+#include "SPO2Tracker.h"
 #include "DevicePublisher.cpp"
 
-HRTracker::HRTracker(sensor *s) {
-    HRTracker::_s = s;
+SPO2Tracker::SPO2Tracker(testParent *s) {
+    SPO2Tracker::_s = s; 
 }
 
-HRTracker::~HRTracker() {
+SPO2Tracker::~SPO2Tracker() {
     stop();
 }
 
-void HRTracker::start() {
+void SPO2Tracker::start() {
     // start threads
     threadRunning = true;
-    std::thread t1(&HRTracker::tracker, this);
+    std::thread t1(&SPO2Tracker::tracker, this);
     t1.detach();
 }
 
 // set false for thread and terminates it
-void HRTracker::stop() {
+void SPO2Tracker::stop() {
     threadRunning = false;
 }
 
 
-void HRTracker::ping() {
-	std::thread t2(&HRTracker::pingThread, this);
+void SPO2Tracker::ping() {
+	std::thread t2(&SPO2Tracker::pingThread, this);
 	t2.detach();
 }
 
 // thread for pinging SPO2 critical values, 
-void HRTracker::pingThread() {
+void SPO2Tracker::pingThread() {
     // start threads for FastDDS
     std::cout<<"Starting alert message"<<std::endl;
     // sends the same message 3 times
@@ -56,27 +56,26 @@ void HRTracker::pingThread() {
     }
 }
 
-void HRTracker::tracker(){
+void SPO2Tracker::tracker(){
     // thread that checks using determineSymptom() and calls alert if conditions are met
     // use threadRunning to stop the thread
-    int count = 0;
-    std::cout<<"Started HR tracker"<<std::endl;
+    int count= 0;
     while (threadRunning) {
         int val = getVal();
         //restricts output message to only occur when value changes or significant number of runs elapsed
-        if(val!=this->lastVal||count>16000000){
-        std::cout<<"HR value: "<< val << " ";
-        std::string symptom = determineSymptom(symptomRanges, val);
-        std::cout<<symptom<<std::endl;
-        this->lastVal = val;
-        count = 0;
+        if(val!=this->lastVal||count>5){
+            std::cout<<"SPO2 value: "<< val << " ";
+            std::string symptom = determineSymptom(symptomRanges, val);
+            std::cout<<symptom<<std::endl;
+            this->lastVal = val;
+            count = 0;
         }
         count++;
-       
+
     }
 }
 
-int HRTracker::getVal() {
+int SPO2Tracker::getVal() {
     // start threads
-    return _s->getHR();
+    return _s->getSpO2();
 }

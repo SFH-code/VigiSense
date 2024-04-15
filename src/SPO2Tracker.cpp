@@ -1,7 +1,7 @@
 #include "SPO2Tracker.h"
 #include "DevicePublisher.cpp"
 
-SPO2Tracker::SPO2Tracker(testParent *s) {
+SPO2Tracker::SPO2Tracker(sensor *s) {
     SPO2Tracker::_s = s; 
 }
 
@@ -62,6 +62,7 @@ void SPO2Tracker::tracker(){
     int count= 0;
     while (threadRunning) {
         int val = getVal();
+        //restricts output message to only occur when value changes or significant number of runs elapsed
         if(val!=this->lastVal||count>5){
             std::cout<<"SPO2 value: "<< val << " ";
             std::string symptom = determineSymptom(symptomRanges, val);
@@ -70,10 +71,7 @@ void SPO2Tracker::tracker(){
             count = 0;
         }
         count++;
-        // if (false) {
-        //     // define out of range behaviour (check if crit low)
-        //     // alert();
-        // }
+
     }
 }
 
