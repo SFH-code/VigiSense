@@ -14,8 +14,8 @@ class diagnosisInterface {
         virtual void stop() = 0;
         virtual void ping() = 0;
         virtual int getVal() = 0;
-        int critHigh;
-        int critLow;
+
+        int lastVal;
 
         static std::string determineSymptom(std::vector<symptomRange> symptomRanges, int val){
             if (val < symptomRanges[0].min) {
