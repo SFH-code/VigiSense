@@ -112,18 +112,9 @@ void sensor::runHRCalculationLoop() {
 		latestIRBPM = _irBPM;
 		bpmBuffer[nextBPMBufferIndex++] = _irBPM;
 		if (nextBPMBufferIndex >= BPM_BUFFER_SIZE) nextBPMBufferIndex = 0;
-		if (localMinimaIR != 0 && localMinimaRed != 0) { //Avoid division by zero
-			// Calculate R value
-			// See https://github.com/2468513H/VigiSense/files/14432156/max3010x-ev-kits-recommended-configurations-and-operating-profiles.pdf
-			// Page 6
-			// Before division, parameters should be transferred into float to avoid rounding to 0
-			float MaxR = localMaximaRed;
-			float MinR = localMinimaRed;
-			float MaxIR = localMaximaIR;
-			float MinIR = localMinimaIR;
-			R = ((MaxR-MinR)/MinR)/((MaxIR-MinIR)/MinIR); //converted to float because intermediate decimal value is being rounded to 0
-			//R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
-			latestSpO2 = 104 - 17 * R; //  best-fit straight-line approximation of SpO2 vs. R data.
+		if (localMinimaIR != 0 && localMinimaRed != 0) {
+			R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
+			latestSpO2 = 104 - 17 * R;
 		} else {
 			// Division by zero alert
 			std::cout << "Division by zero error for R calculation!" << std::endl;
@@ -208,9 +199,8 @@ bool sensor::peakDetect(int32_t data) {
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMaximaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
 			int32_t filteredRedValue = static_cast<int32_t>(localMaximaRedUnfilt);
-			filteredRedValue = lpf.update(filteredRedValue);
-			filteredRedValue = hpf.update(filteredRedValue);
-			localMaximaRed = filteredRedValue;
+			localMaximaRed = lpf.update(filteredRedValue);
+			localMaximaRed = hpf.update(filteredRedValue);
 		}
 	}
 
@@ -221,9 +211,8 @@ bool sensor::peakDetect(int32_t data) {
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMinimaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
 			int32_t filteredRedValue = static_cast<int32_t>(localMinimaRedUnfilt);
-			filteredRedValue = lpf.update(filteredRedValue);
-			filteredRedValue = hpf.update(filteredRedValue);
-			localMinimaRed = filteredRedValue;
+			localMinimaRed = lpf.update(filteredRedValue);
+			localMinimaRed = hpf.update(filteredRedValue);
 		}
 	}
 

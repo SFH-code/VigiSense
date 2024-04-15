@@ -1,8 +1,8 @@
 #include "SPO2Tracker.h"
 #include "DevicePublisher.cpp"
 
-SPO2Tracker::SPO2Tracker(sensor *s) {
-    SPO2Tracker::_s = s;
+SPO2Tracker::SPO2Tracker(testParent *s) {
+    SPO2Tracker::_s = s; 
 }
 
 SPO2Tracker::~SPO2Tracker() {

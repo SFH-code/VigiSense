@@ -5,13 +5,15 @@
 
 class HRTracker:public diagnosisInterface {
     public:
-        HRTracker(sensor *s);
+        HRTracker(testParent *s);
         ~HRTracker();
         void start();
         void stop();
         void ping();
         int getVal();
-        void tracker();
+
+	      testParent* _s;
+
         int lastVal=0;
     protected:
         sensor* _s; 
@@ -22,5 +24,6 @@ class HRTracker:public diagnosisInterface {
 			{40,60,"Bradycardia"},
 			{60,100,"Normal resting heart rate"},
 			{100,120,"Tachyacardia"}};
+
 
 };
