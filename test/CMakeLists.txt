@@ -32,7 +32,7 @@ target_link_libraries(spo2 sensor fastcdr fastrtps alert)
 add_library(hr HRTracker.cpp)
 target_link_libraries(hr sensor fastcdr fastrtps alert)
 
-add_library(sensortest sensorTest.cpp ../src/sensorTest.h)
+add_library(sensortest sensorTest.cpp sensorTest.h)
 target_link_libraries(sensortest spo2 hr sensor)
 
 
