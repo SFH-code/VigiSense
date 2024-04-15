@@ -1,5 +1,0 @@
-cmake_minimum_required (VERSION 3.7.0)
-project (UNITTESTING)
-add_subdirectory (src)
-enable_testing ()
-add_test (NAME TestSymptomCheck COMMAND Test)
