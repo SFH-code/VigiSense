@@ -18,7 +18,7 @@ class diagnosisInterface {
 
         static std::string determineSymptom(std::vector<symptomRange> symptomRanges, int val){
         	for (int i = 0; i < symptomRanges.size(); ++i){
-                if (val>symptomRanges[i].min && val<symptomRanges[i].max){
+                if (val>=symptomRanges[i].min && val<symptomRanges[i].max){
                     return symptomRanges[i].symptom;
                 }
             }    
