@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.7.0)
+project(VigiSenseLibs VERSION 1.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
 find_package (Boost COMPONENTS system filesystem unit_test_framework REQUIRED)
 include_directories (${DEMO_SOURCE_DIR}/src
  ${Boost_INCLUDE_DIRS}
@@ -68,6 +71,15 @@ ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
  )
 add_test (NAME TestSpO2Symptom COMMAND Test)
 
+add_executable(test
+  test.cpp
+)
+target_link_libraries(test max30102 sensor spo2 fastcdr fastrtps alert)
+
+add_executable(testSpO2 
+  testSpO2.cpp
+)
+target_link_libraries(testSpO2 max30102 sensor spo2 hr fastcdr fastrtps alert)
 
 
 
