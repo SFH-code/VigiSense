@@ -24,15 +24,15 @@ class SPO2Tracker:public diagnosisInterface {
         testParent* _s; 
         int lastVal = 0;
 
+	// define symptom table here
+	std::vector<symptomRange> symptomRanges {
+		{88,92,"Hypoxemia"},
+        	{93,94,"Concerning Oxygen Concentration"},
+		{95,100,"Healthy Oxygen Concentration"}};
+
     protected:
         bool threadRunning = false;
         void pingThread();
-
-        // define symptom table here
-		std::vector<symptomRange> symptomRanges {
-			{88,92,"Hypoxemia"},
-            {93,94,"Concerning Oxygen Concentration"},
-			{95,100,"Healthy Oxygen Concentration"}};
 
 
 };
