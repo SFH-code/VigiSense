@@ -37,11 +37,11 @@ class sensor:public testParent{
 
         //Check which functions are fine as is and which need editing/removing
 		
-		const int static BPM_BUFFER_SIZE = 100;
+		const int static BPM_BUFFER_SIZE = 4;
 		int32_t bpmBuffer[BPM_BUFFER_SIZE];
 		int nextBPMBufferIndex = 0;
 		
-		const int static SPO2_BUFFER_SIZE = 100;
+		const int static SPO2_BUFFER_SIZE = 4;
 		int32_t spo2Buffer[SPO2_BUFFER_SIZE];
 		int nextSPO2BufferIndex = 0;
 
