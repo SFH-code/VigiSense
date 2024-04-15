@@ -68,9 +68,8 @@ class sensor:public testParent{
 		int32_t pastMinimasIR[PAST_PEAKS_SIZE];
 		int32_t pastMaximasRed[PAST_PEAKS_SIZE];
 		int32_t pastMinimasRed[PAST_PEAKS_SIZE];
-		// SpO2 data
-		int R;
-		int latestSpO2;
+
+		float latestSpO2;
 
 
 		void loopThread();
@@ -82,27 +81,3 @@ class sensor:public testParent{
 		bool peakDetect(int32_t data);
 };
 
-// class spO2Measure : public sensor{
-// 	public:
-// 		std::vector<symptomRange> symptomRanges {
-// 			{0,88,"Critically Low Oxygen concentration"},
-// 			{88,92,"Concerningly Low Oxygen Concentration"},
-// 			{92,100,"Healthy Oxygen Concentration"}};
-// 		float critLow = 88;
-// 		int getSpO2();
-// 		std::string determineSymptom(float baseline);
-// };
-
-// class heartRateMeasure : public sensor{
-// 	public:
-// 		std::vector<symptomRange> symptomRanges {
-// 			{0,60,"Bradycardia"},
-// 			{60,100,"Normal resting heart rate"},
-// 			{100,200,"Tachyacardia"}};
-// 		float critHigh = 120;
-// 		float critLow = 40;
-// 		int getSafeIRHeartRate();
-// 		int getLatestIRHeartRate();
-// 		int getLatestRedHeartRate();
-// 		std::string determineSymptom(float baseline);
-// };
