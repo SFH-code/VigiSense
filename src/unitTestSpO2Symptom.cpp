@@ -9,7 +9,9 @@
 
 
 
+//Unit test module for the SPO2 symptom determination function in the SPO2Tracker class
 
+//Test case for hypoxemia
 
 BOOST_AUTO_TEST_CASE(SuccessTestRangeMid) {
     sensorTest s;
@@ -19,6 +21,8 @@ BOOST_AUTO_TEST_CASE(SuccessTestRangeMid) {
     BOOST_CHECK_EQUAL("Hypoxemia", spo2.determineSymptom(spo2.symptomRanges,90));
 
 }
+
+//test case for concerning oxygen concentration
 
 BOOST_AUTO_TEST_CASE(SuccessTestRangeTop) {
     sensorTest s;
@@ -38,6 +42,8 @@ BOOST_AUTO_TEST_CASE(FailTestRange) {
 
 }
 
+//test case for critically low oxygen concentration
+
 BOOST_AUTO_TEST_CASE(SuccessTestCritical) {
     sensorTest s;
     SPO2Tracker spo2(&s);
@@ -46,6 +52,7 @@ BOOST_AUTO_TEST_CASE(SuccessTestCritical) {
     BOOST_CHECK_EQUAL("critLow", spo2.determineSymptom(spo2.symptomRanges,80));
 
 }
+
 
 BOOST_AUTO_TEST_CASE(FailTestCritical) {
     sensorTest s;
@@ -56,6 +63,8 @@ BOOST_AUTO_TEST_CASE(FailTestCritical) {
 
 }
 
+//test case for negative oxygen concentration
+
 BOOST_AUTO_TEST_CASE(SuccessTestNegative) {
     sensorTest s;
     SPO2Tracker spo2(&s);
@@ -63,6 +72,8 @@ BOOST_AUTO_TEST_CASE(SuccessTestNegative) {
     //s.setSpO2(102);
     BOOST_CHECK_EQUAL("critLow", spo2.determineSymptom(spo2.symptomRanges,-1));
 }
+
+//Test case to check if the function works as expected at the boundaries between ranges
 
 BOOST_AUTO_TEST_CASE(SuccessBoundarylow) {
     sensorTest s;
@@ -72,6 +83,8 @@ BOOST_AUTO_TEST_CASE(SuccessBoundarylow) {
     BOOST_CHECK_EQUAL("Hypoxemia", spo2.determineSymptom(spo2.symptomRanges,88));
 }
 
+//Test case to check if the function works as expected at the boundaries between ranges
+
 BOOST_AUTO_TEST_CASE(SuccessBoundaryMid) {
     sensorTest s;
     SPO2Tracker spo2(&s);
@@ -79,6 +92,8 @@ BOOST_AUTO_TEST_CASE(SuccessBoundaryMid) {
     //s.setSpO2(102);
     BOOST_CHECK_EQUAL("Concerning Oxygen Concentration", spo2.determineSymptom(spo2.symptomRanges,92));
 }
+
+//Test case to check if the function works as expected at the boundaries between ranges
 
 BOOST_AUTO_TEST_CASE(SuccessBoundaryTop) {
     sensorTest s;
