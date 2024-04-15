@@ -27,7 +27,7 @@ class SPO2Tracker:public diagnosisInterface {
 	// define symptom table here
 	std::vector<symptomRange> symptomRanges {
 		{88,92,"Hypoxemia"},
-        	{93,94,"Concerning Oxygen Concentration"},
+        	{92,95,"Concerning Oxygen Concentration"},
 		{95,100,"Healthy Oxygen Concentration"}};
 
     protected:

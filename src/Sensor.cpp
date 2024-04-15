@@ -22,6 +22,7 @@ uint8_t dataBeenIncreasing = 0;
 uint8_t nextPastPeaksIndex = 0;
 
 
+
 /**
  * Constructor to initialize the MAX30102 sensor with the default I2C address and start communication
  * Could also change the class name to "MAX30102Sensor" OR have "MAX30102Sensor" inherit from "sensor".  
@@ -124,12 +125,13 @@ void sensor::runHRCalculationLoop() {
 			R = ((MaxR-MinR)/MinR)/((MaxIR-MinIR)/MinIR); //converted to float because intermediate decimal value is being rounded to 0
 			//R = ((localMaximaRed - localMinimaRed) / localMinimaRed) / ((localMaximaIR - localMinimaIR) / localMinimaIR);
 			latestSpO2 = 104 - 17 * R; //  best-fit straight-line approximation of SpO2 vs. R data.
+			spo2Buffer[nextSPO2BufferIndex++] = latestSpO2;
+			if (nextSPO2BufferIndex >= SPO2_BUFFER_SIZE) nextSPO2BufferIndex = 0;
 		} else {
 			// Division by zero alert
 			std::cout << "Division by zero error for R calculation!" << std::endl;
 		}
-		spo2Buffer[nextSPO2BufferIndex++] = latestSpO2;
-		if (nextSPO2BufferIndex >= SPO2_BUFFER_SIZE) nextSPO2BufferIndex = 0;
+		
 
 		// Update timeLastIRHeartBeat for next time.
 		timeLastIRHeartBeat = timeCurrent;
@@ -203,27 +205,27 @@ bool sensor::peakDetect(int32_t data) {
 	//std::cout << "Threshold: " << threshold << ", max: " << localMaxima << ", min: " << localMinima << std::endl;
 	if (data > localMaximaIR) {
 		localMaximaIR = data;
-		if (10 > (data -localMinimaIR)) { //might want to calibrate this everytime sensor is used
+		if (10 < (data -localMinimaIR)) { //might want to calibrate this everytime sensor is used
 			crest = true;
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMaximaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
 			int32_t filteredRedValue = static_cast<int32_t>(localMaximaRedUnfilt);
-			localMaximaRed = lpf.update(filteredRedValue);
+			filteredRedValue = lpf.update(filteredRedValue);
 			localMaximaRed = hpf.update(filteredRedValue);
-			localMaximaRed = filteredRedValue;
+			//localMaximaRed = filteredRedValue;
 		}
 	}
 
 	if ( data < localMinimaIR) {
 		localMinimaIR = data;
-		if (crest && -10 < (data -localMaximaIR)) { //might want to calibrate this everytime sensor is used
+		if (crest && -10 > (data -localMaximaIR)) { //might want to calibrate this everytime sensor is used
 			trough = true;
 			//filter red value only at crest and trough for efficiency
 			uint32_t localMinimaRedUnfilt = _sensor->getRed(); //Only needed when crest and trough are detected
 			int32_t filteredRedValue = static_cast<int32_t>(localMinimaRedUnfilt);
-			localMinimaRed = lpf.update(filteredRedValue);
+			filteredRedValue = lpf.update(filteredRedValue);
 			localMinimaRed = hpf.update(filteredRedValue);
-			localMinimaRed = filteredRedValue;
+			//localMinimaRed = filteredRedValue;
 		}
 	}
 
