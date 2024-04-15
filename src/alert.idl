@@ -1,0 +1,5 @@
+struct alert
+{
+    unsigned long index;
+    string message;
+};
