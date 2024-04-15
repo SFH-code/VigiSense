@@ -53,6 +53,26 @@ cmake ..
 make
 sudo ./test
 ```
+To run unitTest for heart rate:
+```
+git clone https://github.com/2468513H/VigiSense.git
+cd VigiSense/test
+mkdir build
+cd build
+cmake ..
+make
+sudo ./unitTestHrSymptom
+```
+To run unitTest for Blood oxygen:
+```
+git clone https://github.com/2468513H/VigiSense.git
+cd VigiSense/test
+mkdir build
+cd build
+cmake ..
+make
+sudo ./unitTestSpO2Symptom
+```
 
 
 
